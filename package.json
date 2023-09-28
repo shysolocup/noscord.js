@@ -1,0 +1,31 @@
+{
+    "name": "diswire",
+    "version": "1.0.0",
+    "author": "paigeroid",
+    "description": "write later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/paigeroid/diswire.git"
+    },
+    "bugs": {
+        "url": "https://github.com/paigeroid/diswire/issues"
+    },
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/paigeroid/diswire/blob/main/LICENSE"
+    },
+    "dependencies": {
+        "discord.js": "latest",
+        "node-fetch": "latest",
+        "stews": "latest",
+        "aepl": "latest"
+    },
+    "keywords": [
+        "discord.js",
+        "discord",
+        "aepl",
+        "stews"
+    ],
+    "homepage": "https://github.com/paigeroid/diswire",
+    "main": "src/index.js"
+}
