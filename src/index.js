@@ -1,5 +1,15 @@
 const cl = require('aepl');
+const { Soup } = require('stews');
 
-cl.init("Client");
+const exp = new Soup(Object);
+exp.push("Client", cl.from(Client));
 
-module.exports = { Client };
+
+class Client {
+    constructor() {
+        
+    }
+}
+
+
+module.exports = exp;
