@@ -27,24 +27,6 @@ class Client {
         });
         
     }
-
-    
-    // creates event listener
-    on(event, func) {
-        this.events.get(event).listen(func);
-    }
-
-
-    // remove event listener
-    off(event, func) {
-        this.events.get(event).listeners.remove(func);
-    }
-
-
-    // login
-    login() {
-        this.shit.login(this.token);
-    }
 }
 
 
