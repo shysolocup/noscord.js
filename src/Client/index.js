@@ -5,7 +5,6 @@ const fetch = import('fetch');
 const eventList = require('./Eventing/list.js');
 
 const exp = new Soup(Object);
-exp.push("Client", cl.from(Client));
 
 
 class Client {
@@ -30,4 +29,5 @@ class Client {
 }
 
 
+exp.pull("Client", cl.from(Client));
 module.exports = exp;
