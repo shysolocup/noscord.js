@@ -1,18 +1,18 @@
 {
-    "name": "diswire",
+    "name": "deswire",
     "version": "1.0.0",
     "author": "paigeroid",
     "description": "write later",
     "repository": {
         "type": "git",
-        "url": "https://github.com/paigeroid/diswire.git"
+        "url": "https://github.com/paigeroid/deswire.git"
     },
     "bugs": {
-        "url": "https://github.com/paigeroid/diswire/issues"
+        "url": "https://github.com/paigeroid/deswire/issues"
     },
     "license": {
         "type": "MIT",
-        "url": "https://github.com/paigeroid/diswire/blob/main/LICENSE"
+        "url": "https://github.com/paigeroid/deswire/blob/main/LICENSE"
     },
     "dependencies": {
         "discord.js": "latest",
@@ -26,6 +26,6 @@
         "aepl",
         "stews"
     ],
-    "homepage": "https://github.com/paigeroid/diswire",
+    "homepage": "https://github.com/paigeroid/deswire",
     "main": "src/index.js"
 }
