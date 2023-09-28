@@ -12,13 +12,22 @@ class Client {
         this.token = token;
 
 
+        /* service compiling */
+        let serv_dir = require('../Services/funky_dir');
+        const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
+
+        Services.forEach( (folder) => {
+           require(`../Services/${folder}/build`);
+        });
+
+
         
         /* function compiling */
         let func_dir = require('./functions/funky_dir');
         let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
         
         functions.forEach( (file) => {
-            require(`../functions/${file}`);
+            require(`./functions/${file}`);
         });
 
         
