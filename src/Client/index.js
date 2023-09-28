@@ -2,7 +2,7 @@ const cl = require('aepl');
 const { Soup } = require('stews');
 const fs = require('fs');
 
-const eventList = require('./Eventing/list.js');
+const eventList = require('../EventService/list.js');
 
 const exp = new Soup(Object);
 
