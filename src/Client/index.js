@@ -1,6 +1,6 @@
 const cl = require('aepl');
 const { Soup } = require('stews');
-const fetch = import('fetch');
+const fs = require('fs');
 
 const eventList = require('./Eventing/list.js');
 
@@ -12,13 +12,25 @@ class Client {
         this.token = token;
 
 
-        // command handling
+        
+        /* function compiling */
+        let func_dir = require('./functions/funky_dir');
+        let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+        
+        functions.forEach( (file) => {
+            require(`../functions/${file}`);
+        });
+
+        
+
+        /* command handling */
         this.commands = new Soup({
             msg: new Soup(Object),
             slash: new Soup(Object)
         });
         
 
+        
         /* event handling */
         this.events = new Soup(Object);
         eventList.forEach( (name) => {
