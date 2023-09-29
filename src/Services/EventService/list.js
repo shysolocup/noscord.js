@@ -1,3 +1,3 @@
 module.exports = [ 
-    "ready"
+    ["ready", "run", "login"]
 ];
