@@ -17,7 +17,7 @@
 - [x] main class
 - [ ] functions
 - [ ] properties
-- [ ] functionality
+- [x] functionality
 
 <br>
 
