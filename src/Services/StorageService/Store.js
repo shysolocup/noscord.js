@@ -1,8 +1,8 @@
-const { Client } = require('../Client/index.js');
+const StorageService = require('./index.js');
 const { Soup } = require('stews');
 
 
-Client.newC("Store", class {
+StorageService.newC("Store", class {
     constructor(contents) {
         this.contents = new Soup(contents);
     }
