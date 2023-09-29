@@ -1,4 +1,4 @@
 module.exports = { 
-    ["ready", "run", "login"],             // login
-    ["messageCreate", "messageSent"]       // message sent
+    "ready",              // login
+    "messageCreate"       // message sent
 };
