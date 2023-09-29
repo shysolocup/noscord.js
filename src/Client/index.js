@@ -29,26 +29,30 @@ class WumperClient {
         this.token = undefined;
         this.shit = new Client(...Array.from(arguments));
 
+
+
+        /* service compiling */
+        let serv_dir = require('../Services/_funkydir');
+        const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
+
+        Services.forEach( (folder) => {
+            require(`../Services/${folder}`);
+        });
+
+
+
+        /* function compiling */
+        let func_dir = require('./functions/_funkydir');
+        let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+        
+        functions.forEach( (file) => {
+            require(`./functions/${file}`);
+        });
+
+
+
+        // stuff
         this.shit.on("ready", () => {
-            /* service compiling */
-            let serv_dir = require('../Services/_funkydir');
-            const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
-
-            Services.forEach( (folder) => {
-                require(`../Services/${folder}`);
-            });
-
-
-            
-            /* function compiling */
-            let func_dir = require('./functions/_funkydir');
-            let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
-            
-            functions.forEach( (file) => {
-                require(`./functions/${file}`);
-            });
-
-            
 
             /* command handling */
             this.commands = new Soup(Object);
