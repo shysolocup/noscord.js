@@ -6,9 +6,18 @@ ComponentService.newC("Row", class {
         let args = Array.from(arguments);
         let data;
 
+
+        // if an array is given
+        // ie: new Row([ a, b, c]);
+        
         if (args.length == 1 && args[0].isArray()) {
             data = args[0]
         }
+
+
+        // if the arguments are kinda just like normal
+        // ie: new Row(a, b, c);
+        
         else {
             data = args;
         }
