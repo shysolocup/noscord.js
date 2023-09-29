@@ -35,6 +35,8 @@ ComponentService.newC("Button", class {
                                                   1; // default to primary if not given
             })()
         })(data.style);
-        
+
+
+        return data;
     }
 });
