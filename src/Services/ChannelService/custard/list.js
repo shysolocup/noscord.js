@@ -3,5 +3,5 @@ const { Soup } = require('stews');
 
 
 ChannelService.newF("list", async function() {
-    return await this.parent.shit.channels.fetch().catch(e=>{});
+    return Soup.from(await this.parent.shit.channels.fetch().catch(e=>{}));
 });
