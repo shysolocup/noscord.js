@@ -65,7 +65,7 @@ class WumperClient {
 
 
         /* ready stuff */
-        this.shit.on("ready", () => {
+        this.shit.on("ready", function () {
             this.events.ready.fire(...Array.from(arguments));
         });
     }
