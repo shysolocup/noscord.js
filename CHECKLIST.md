@@ -1,8 +1,8 @@
 ## Client
-- [ ] main class
+- [x] main class
 - [ ] functions
 - [ ] properties
-- [ ] functionality
+- [x] functionality
 
 <br>
 
@@ -14,7 +14,7 @@
 <br>
 
 ## Channel Service
-- [ ] main class
+- [x] main class
 - [ ] functions
 - [ ] properties
 - [ ] functionality
@@ -34,7 +34,7 @@
 - [x] ~~Selection class~~
 - [x] ~~Embed class~~
 - [x] ~~Row class~~
-- [ ] functionality 
+- [x] functionality 
 
 <br>
 
@@ -42,7 +42,7 @@
 - [x] ~~main class~~
 - [x] ~~Event class~~ 
 - [x] ~~functions~~
-- [ ] functionality
+- [x] functionality
 
 <br>
 
