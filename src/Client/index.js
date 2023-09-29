@@ -35,10 +35,7 @@ class Client {
         
 
         /* command handling */
-        this.commands = new Soup({
-            msg: new Soup(Object),
-            slash: new Soup(Object)
-        });
+        this.commands = new Soup(Object);
         
 
         
