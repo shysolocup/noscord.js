@@ -11,6 +11,7 @@ const exp = new Soup(Object);
 class Client {
     constructor() {
         this.shit = new Client(...Array.from(arguments));
+        this.token = undefined;
         
         
         /* service compiling */
