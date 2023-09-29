@@ -1,8 +1,8 @@
 ## Client
-- [x] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [x] functionality
+- [x] ~~functionality~~
 
 <br>
 
@@ -14,10 +14,10 @@
 <br>
 
 ## Channel Service
-- [x] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [x] functionality
+- [x] ~~functionality~~
 
 <br>
 
@@ -34,7 +34,7 @@
 - [x] ~~Selection class~~
 - [x] ~~Embed class~~
 - [x] ~~Row class~~
-- [x] functionality 
+- [x] ~~functionality~~
 
 <br>
 
@@ -42,12 +42,12 @@
 - [x] ~~main class~~
 - [x] ~~Event class~~ 
 - [x] ~~functions~~
-- [x] functionality
+- [x] ~~functionality~~
 
 <br>
 
 ## Guild Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
 - [ ] functionality
@@ -79,8 +79,8 @@
 <br>
 
 ## Storage Service
-- [x] main class
-- [x] Store
+- [ ] main class
+- [ ] Store
 - [ ] functionality
 
 <br>
