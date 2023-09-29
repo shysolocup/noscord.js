@@ -11,10 +11,21 @@ client.on("ready", (ctx) => {
 
 
 const { Command } = { CommandService } = client;
+const { Event } = { EventService } = client;
+
+
+let event = new Event();
+client.events.push("pingCmd", event);
+
+
+client.on("pingCmd", (ctx) => {
+    console.log(`ping command ran (${ctx.id})`);
+});
 
 
 new Command({ name: "ping", description: "replies with pong" }, (ctx) => {
     ctx.reply("pong!");
+    event.fire(ctx);
 });
 
 
