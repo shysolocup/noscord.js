@@ -23,7 +23,7 @@ client.on("pingCmd", (ctx) => {
 });
 
 
-new Command({ name: "ping", description: "replies with pong" }, (ctx) => {
+new Command({ name: "ping", desc: "replies with pong" }, (ctx) => {
     ctx.reply("pong!");
     event.fire(ctx);
 });
