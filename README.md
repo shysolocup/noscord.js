@@ -4,6 +4,7 @@ WumpCli is a customized Discord.JS API that uses a more service-based approach t
 const { Client } = require('wumpcli');
 const client = new Client(token);
 
+
 client.on("ready", (ctx) => {
     console.log(`logged in as ${ctx.user.username}`);
 });
