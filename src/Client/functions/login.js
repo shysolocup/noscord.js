@@ -1,6 +1,7 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("login", function() {
-    this.shit.login(this.token);
+Client.newF("login", function(token) {
+    this.token = token;
+    this.shit.login(token);
 });
