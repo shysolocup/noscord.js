@@ -9,7 +9,7 @@ ButtonService.newC("Button", class {
 
         
         // custom id
-        data.custom_id = (data.id && !data.custom_id) ? data.id : (data.customId) ? data.customId : data.custom_id;
+        data.custom_id = (data.id && !data.custom_id) ? data.id : (data.customId && !data.custom_id) ? data.customId : data.custom_id;
 
         
         // style
