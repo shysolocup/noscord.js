@@ -1,4 +1,5 @@
 const ChannelService = require('../index.js');
+const { Soup } = require('stews');
 
 
 ChannelService.newF("list", async function() {
