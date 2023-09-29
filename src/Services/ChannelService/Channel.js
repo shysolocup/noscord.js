@@ -1,4 +1,4 @@
-const ChannelService = require('../index.js');
+const ChannelService = require('./index.js');
 
 
 ChannelService.newC("Channel", class {
