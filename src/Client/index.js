@@ -58,12 +58,18 @@ class WumperClient {
             
          /* event handling */
          let events = this.events = new Soup(Object);
-         eventList.forEach( (list) => {
+         eventList.forEach( (thing) => {
 			 let event = new this.Event();
-			 
-			 list.forEach( (name) => {
-             	this.events.push( name, event);
+
+
+			 // events with multiple names
+			 if (thing instanceof Array) thing.forEach( (name) => {
+             	this.events.push(name, event);
 			 });
+
+
+			 // events with one name
+			 else this.events.push(thing, event);
 		 });
 
 
