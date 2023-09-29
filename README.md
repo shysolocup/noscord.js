@@ -10,8 +10,8 @@ client.on("ready", (ctx) => {
 });
 
 
-const { Command } = client.CommandService;
-const { Event } = client.EventService;
+new client.CommandService;
+new client.EventService;
 
 
 let event = new Event();
