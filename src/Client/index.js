@@ -18,7 +18,7 @@ const fs = require('fs');
 const { Soup } = require('stews');
 const { Client } = require('discord.js');
 
-const eventList = require('../Services/EventService/list.js');
+const eventList = require('../Services/EventService/list.json');
 
 const exp = new Soup(Object);
 
