@@ -9,7 +9,7 @@ let channels = new client.ChannelService;
 
 
 client.on("ready", async (ctx) => {
-    let channel = await channels.get("test");
+    let channel = await channels.get("783530393567625219");
 
 
     let btns = [
