@@ -1,7 +1,7 @@
-const { ButtonService } = require('./index.js');
+const ComponentService = require('./index.js');
 
 
-ButtonService.newC("Button", class {
+ComponentService.newC("Button", class {
     constructor(data) {
         
         // component type
