@@ -2,12 +2,14 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
 ## Addon Service
 - [x] ~~main class~~
 - [ ] Addon class
+- [ ] functionality
 
 <br>
 
@@ -15,12 +17,14 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
 ## Command Service
 - [ ] main class
 - [ ] Command class
+- [ ] functionality
 
 <br>
 
@@ -29,7 +33,8 @@
 - [x] ~~Button class~~
 - [x] ~~Selection class~~
 - [x] ~~Embed class~~
-- [x] ~~Row class~~   
+- [x] ~~Row class~~
+- [ ] functionality 
 
 <br>
 
@@ -37,6 +42,7 @@
 - [x] ~~main class~~
 - [x] ~~Event class~~ 
 - [x] ~~functions~~
+- [ ] functionality
 
 <br>
 
@@ -44,6 +50,7 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
@@ -51,6 +58,7 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
@@ -58,6 +66,7 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
@@ -65,13 +74,14 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
 ## Storage Service
-- [ ] main class
-- [ ] functions
-- [ ] properties
+- [x] main class
+- [x] Store
+- [ ] functionality
 
 <br>
 
@@ -79,6 +89,7 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
 
@@ -86,5 +97,6 @@
 - [ ] main class
 - [ ] functions
 - [ ] properties
+- [ ] functionality
 
 <br>
