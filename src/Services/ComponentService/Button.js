@@ -40,3 +40,5 @@ ComponentService.newC("Button", class {
         return data;
     }
 });
+
+module.exports = Button;
