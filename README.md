@@ -2,7 +2,7 @@
 WumpCli is a customized Discord.JS API that uses a more service-based approach to creating discord bots
 ```js
 const { Client } = require('wumpcli');
-const client = new Client(token);
+const client = new Client(/* stuff */);
 
 
 client.on("ready", (ctx) => {
@@ -29,5 +29,5 @@ new Command({ name: "ping", description: "replies with pong" }, (ctx) => {
 });
 
 
-client.login();
+client.login(token);
 ```
