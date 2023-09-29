@@ -4,15 +4,15 @@ const ChannelService = require('../index.js');
 ChannelService.newF("get", async function(id) {
     if (!id) return null; 
     
-    let rawChannel = id; 
+    let raw = id; 
     
-    if (rawChannel.startsWith('<#') && rawChannel.endsWith('>')) {
-        rawChannel = rawChannel.slice(2, -1);
+    if (raw.startsWith('<#') && raw.endsWith('>')) {
+        raw = raw.slice(2, -1);
     } 
     
-    rawChannel = rawChannel.split("").join(""); 
+    raw = raw.split("").join(""); 
     
-    let channel = await this.parent.shit.channels.fetch(rawChannel).catch(e=>{});
+    let thing = await this.parent.shit.channels.fetch(raw).catch(e=>{});
     
-    return (!channel) ? null : new this.Channel(channel);
+    return (!thing) ? null : new this.Channel(thing);
 });
