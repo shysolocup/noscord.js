@@ -3,7 +3,7 @@ const { Soup } = require('stews');
 const { Client } = require('discord.js');
 const fs = require('fs');
 
-const eventList = require('../EventService/list.js');
+const eventList = require('../Services/EventService/list.js');
 
 const exp = new Soup(Object);
 
@@ -19,7 +19,7 @@ class Client {
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
 
         Services.forEach( (folder) => {
-           require(`../Services/${folder}/build`);
+           require(`../Services/${folder}`);
         });
 
 
