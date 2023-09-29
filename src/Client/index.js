@@ -19,7 +19,7 @@ class Client {
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
 
         Services.forEach( (folder) => {
-           require(`../Services/${folder}`);
+           this[folder] = require(`../Services/${folder}`);
         });
 
 
