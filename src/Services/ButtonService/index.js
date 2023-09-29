@@ -4,4 +4,4 @@ Client.newC("ButtonService");
 
 module.exports = ButtonService;
 
-require('../Button.js');
+require('./Button.js');
