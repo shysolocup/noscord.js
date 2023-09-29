@@ -1,5 +1,6 @@
 const cl = require('aepl');
 const { Soup } = require('stews');
+const { Client } = require('discord.js');
 const fs = require('fs');
 
 const eventList = require('../EventService/list.js');
@@ -8,10 +9,10 @@ const exp = new Soup(Object);
 
 
 class Client {
-    constructor(token) {
-        this.token = token;
-
-
+    constructor() {
+        this.shit = new Client(...Array.from(arguments));
+        
+        
         /* service compiling */
         let serv_dir = require('../Services/funky_dir');
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
