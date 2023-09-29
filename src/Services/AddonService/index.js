@@ -1,11 +1,7 @@
 const { Client } = require('../../Client');
 
-
-Client.newC("AddonService", class {
-    constructor() {
-        
-    }
-});
-
+Client.newC("AddonService");
 
 module.exports = AddonService;
+
+require('./Addon.js');
