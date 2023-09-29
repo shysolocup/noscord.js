@@ -73,11 +73,7 @@ class WumperClient {
 		 });
 
 
-
-        /* ready stuff */
-        this.shit.on("ready", function () {
-            events.ready.fire(...Array.from(arguments));
-        });
+		 this.EventSetup();
     }
 }
 
