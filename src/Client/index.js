@@ -57,7 +57,7 @@ class WumperClient {
 
             
          /* event handling */
-         this.events = new Soup(Object);
+         let events = this.events = new Soup(Object);
          eventList.forEach( (name) => {
              this.events.push( name, new this.Event() );
          });
@@ -66,7 +66,7 @@ class WumperClient {
 
         /* ready stuff */
         this.shit.on("ready", function () {
-            this.events.ready.fire(...Array.from(arguments));
+            events.ready.fire(...Array.from(arguments));
         });
     }
 }
