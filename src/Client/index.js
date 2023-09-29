@@ -10,12 +10,11 @@ const exp = new Soup(Object);
 
 class Client {
     constructor() {
-        this.shit = new Client(...Array.from(arguments));
         this.token = undefined;
         
         
         /* service compiling */
-        let serv_dir = require('../Services/funky_dir');
+        let serv_dir = require('../Services/_funkydir');
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
 
         Services.forEach( (folder) => {
@@ -25,7 +24,7 @@ class Client {
 
         
         /* function compiling */
-        let func_dir = require('./functions/funky_dir');
+        let func_dir = require('./functions/_funkydir');
         let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
         
         functions.forEach( (file) => {
