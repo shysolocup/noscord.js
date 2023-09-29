@@ -1,4 +1,4 @@
-const { Client } = require('../Client/index.js');
+const { Client } = require('../../Client');
 const { Soup } = require('stews');
 
 
