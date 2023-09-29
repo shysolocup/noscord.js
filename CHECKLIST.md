@@ -7,8 +7,7 @@
 
 ## Addon Service
 - [ ] main class
-- [ ] functions
-- [ ] properties
+- [ ] Addon class
 
 <br>
 
@@ -19,27 +18,24 @@
 
 <br>
 
-## Addon Service
-- [ ] main class
-
-<br>
-
 ## Command Service
 - [ ] main class
+- [ ] Command class
 
 <br>
 
 ## Component Service
 - [x] ~~main class~~
-- [x] ~~Button~~
-- [x] ~~Selection~~
-- [x] ~~Embed~~
-- [x] ~~Row~~   
+- [x] ~~Button class~~
+- [x] ~~Selection class~~
+- [x] ~~Embed class~~
+- [x] ~~Row class~~   
 
 <br>
 
 ## Event Service
 - [x] ~~main class~~
+- [x] ~~Event class~~ 
 - [x] ~~functions~~
 
 <br>
