@@ -42,6 +42,3 @@ ComponentService.newC("Button", class {
 });
 
 module.exports = Button;
-
-require('./functions/lock.js');
-require('./functions/lock.js');
