@@ -71,9 +71,6 @@ class WumperClient {
 			 // events with one name
 			 else this.events.push(thing, event);
 		 });
-
-
-		 this.EventSetup();
     }
 }
 
