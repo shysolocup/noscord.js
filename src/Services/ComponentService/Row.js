@@ -10,7 +10,7 @@ ComponentService.newC("Row", class {
         // if an array is given
         // ie: new Row([ a, b, c]);
         
-        if (args.length == 1 && args[0].isArray()) {
+        if (args.length == 1 && args[0] instanceof Array) {
             data = args[0]
         }
 
