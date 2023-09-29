@@ -1,48 +1,66 @@
+/*
+	:: WumpCli :: Version 1.0.0 | 09/29/23 ::
+	https://github.com/paigeroid/wumpcli
+
+*/
+
+/* :: Created by @paigeroid using :: *//*
+    - aepl: https://github.com/paigeroid/aepl
+	- Stews: https://github.com/paigeroid/stews
+    - Discord.JS: https://github.com/discordjs/discord.js
+*/
+
+
+
 const cl = require('aepl');
-const { Soup } = require('stews');
 const fs = require('fs');
+
+const { Soup } = require('stews');
+const { Client } = require('discord.js');
 
 const eventList = require('../Services/EventService/list.js');
 
 const exp = new Soup(Object);
 
 
+
 class WumpCliClient {
-    constructor() {
+    constructor(/**/) {
         this.token = undefined;
-        
-        
-        /* service compiling */
-        let serv_dir = require('../Services/_funkydir');
-        const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
+        this.shit = new Client(...Array.from(arguments));
 
-        Services.forEach( (folder) => {
-            require(`../Services/${folder}`);
+        this.shit.on("ready", () => {
+            /* service compiling */
+            let serv_dir = require('../Services/_funkydir');
+            const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
+
+            Services.forEach( (folder) => {
+                require(`../Services/${folder}`);
+            });
+
+
+            
+            /* function compiling */
+            let func_dir = require('./functions/_funkydir');
+            let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+            
+            functions.forEach( (file) => {
+                require(`./functions/${file}`);
+            });
+
+            
+
+            /* command handling */
+            this.commands = new Soup(Object);
+            
+
+            
+            /* event handling */
+            this.events = new Soup(Object);
+            eventList.forEach( (name) => {
+                this.events.push( name, new this.Event() );
+            });
         });
-
-
-        
-        /* function compiling */
-        let func_dir = require('./functions/_funkydir');
-        let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
-        
-        functions.forEach( (file) => {
-            require(`./functions/${file}`);
-        });
-
-        
-
-        /* command handling */
-        this.commands = new Soup(Object);
-        
-
-        
-        /* event handling */
-        this.events = new Soup(Object);
-        eventList.forEach( (name) => {
-            this.events.push( name, new this.Event() );
-        });
-        
     }
 }
 
