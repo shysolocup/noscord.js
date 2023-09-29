@@ -51,19 +51,22 @@ class WumperClient {
 
 
 
-        // stuff
+         /* command handling */
+         this.commands = new Soup(Object);
+            
+
+            
+         /* event handling */
+         this.events = new Soup(Object);
+         eventList.forEach( (name) => {
+             this.events.push( name, new this.Event() );
+         });
+
+
+
+        /* ready stuff */
         this.shit.on("ready", () => {
-
-            /* command handling */
-            this.commands = new Soup(Object);
-            
-
-            
-            /* event handling */
-            this.events = new Soup(Object);
-            eventList.forEach( (name) => {
-                this.events.push( name, new this.Event() );
-            });
+            this.events.ready.fire(...Array.from(arguments));
         });
     }
 }
