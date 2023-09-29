@@ -1,6 +1,5 @@
 const cl = require('aepl');
 const { Soup } = require('stews');
-const { Client } = require('discord.js');
 const fs = require('fs');
 
 const eventList = require('../Services/EventService/list.js');
@@ -8,7 +7,7 @@ const eventList = require('../Services/EventService/list.js');
 const exp = new Soup(Object);
 
 
-class Client {
+class WumpCliClient {
     constructor() {
         this.token = undefined;
         
@@ -18,7 +17,7 @@ class Client {
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
 
         Services.forEach( (folder) => {
-           this[folder] = require(`../Services/${folder}`);
+            require(`../Services/${folder}`);
         });
 
 
@@ -48,5 +47,5 @@ class Client {
 }
 
 
-exp.pull("Client", cl.from(Client));
+exp.pull("Client", cl.from(WumpCliClient));
 module.exports = exp;
