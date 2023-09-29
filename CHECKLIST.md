@@ -6,7 +6,7 @@
 <br>
 
 ## Addon Service
-- [x] main class
+- [x] ~~main class~~
 - [ ] Addon class
 
 <br>
