@@ -25,7 +25,8 @@
         "discord",
         "aepl",
         "stews",
-        "wumper"
+        "wumpcli",
+        "node:fetch"
     ],
     "homepage": "https://github.com/paigeroid/wumpcli",
     "main": "src/index.js"
