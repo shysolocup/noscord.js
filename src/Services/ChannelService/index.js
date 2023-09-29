@@ -6,9 +6,9 @@ Client.newC("ChannelService");
 module.exports = ChannelService;
 
 
-let func_dir = require('./functions/_funkydir');
-let functions = fs.readdirSync(func_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+let cust_dir = require('./custard/_funkydir');
+let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
 
-functions.forEach( (file) => {
-    require(`./functions/${file}`);
+cust.forEach( (file) => {
+    require(`./custard/${file}`);
 });
