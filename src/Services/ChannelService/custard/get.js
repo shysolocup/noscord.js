@@ -12,7 +12,7 @@ ChannelService.newF("get", async function(id) {
     
     rawChannel = rawChannel.split("").join(""); 
     
-    let channel = this.parent.shit.channels.fetch(rawChannel).catch(e=>{});
+    let channel = await this.parent.shit.channels.fetch(rawChannel).catch(e=>{});
     
     return (!channel) ? null : new this.Channel(channel);
 });
