@@ -3,5 +3,11 @@ const { Soup } = require('stews');
 
 
 GuildService.newF("list", async function() {
-    return Soup.from(await this.parent.shit.guilds.fetch().catch(e=>{})).pour();
+    let guilds = Soup.from(await this.parent.shit.guilds.fetch().catch(e=>{}));
+	
+	for (let i = 0; i < guilds.length; i++) {
+		guilds[i] = await this.get(guilds.keys[i]);
+	};
+
+	return guilds.pour();
 });
