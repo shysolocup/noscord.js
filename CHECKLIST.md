@@ -8,7 +8,7 @@
 
 ## Addon Service
 - [x] ~~main class~~
-- [ ] Addon class
+- [x] ~~Addon class~~
 - [ ] functionality
 
 <br>
@@ -22,7 +22,7 @@
 <br>
 
 ## Command Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] Command class
 - [ ] functionality
 
@@ -50,7 +50,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [ ] functionality
+- [x] ~~functionality~~
 
 <br>
 
