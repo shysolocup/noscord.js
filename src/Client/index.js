@@ -1,5 +1,5 @@
 /*
-	:: WumpCli :: Alpha 1.0.0 | 09/30/23 ::
+	:: WumpCli :: Alpha 0.0.0 | 09/30/23 ::
 	https://github.com/paigeroid/wumpcli
 
 */
