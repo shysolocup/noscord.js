@@ -2,7 +2,7 @@ const { Client } = require('../index.js');
 
 
 Client.newF("on", function(event, func) {
-	if (this.defEvents.has(event)) {
+	if (this.DefEvents.has(event)) {
 		this.shit.on(event, func);
 	}
 	else {
