@@ -18,8 +18,8 @@ client.on("ready", (ctx) => {
 });
 
 
-new client.CommandService;
-new client.EventService;
+new client.CommandService; // imports the command service for creating commands
+new client.EventService; // imports the event service for creating events
 
 
 let event = new Event();
