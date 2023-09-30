@@ -1,5 +1,5 @@
 /*
-	:: WumpCli :: Alpha 0.0.3 | 09/30/23 ::
+	:: WumpCli :: Alpha 0.0.4 | 09/30/23 ::
 	https://github.com/paigeroid/wumpcli
 
 */
@@ -66,11 +66,17 @@ class WumpClient {
 			this.events.push( name, new this.Event() );
 		});
 
+
+		this.CustEvents = require('../Services/EventService/_custlist.json');
+		
+		this.CustEvents.forEach( (name) => {
+			this.events.push( name, new this.Event() );
+		});
 		
 
 		// registering slash commands
 		this.shit.on("ready", async (ctx) => {
-			if (this.commands.length <= 0) return
+			if (this.commands.length <= 0) return;
 			let token = this.token;
 
 
@@ -102,30 +108,34 @@ class WumpClient {
 					);
 			})
 			.catch(console.error);
+		});
 
-
-
-			// registering commands
-			this.shit.on("interactionCreate", async (ctx) => {
-				if (ctx.isChatInputCommand() && this.commands.has(ctx.commandName)) {
-					let raw = this.commands.get(ctx.commandName);
-
-					ctx.author = ctx.user;
-					
-					let cmd = Soup.from({
-						name: raw.info.get("name"),
-						description: raw.info.get("description"),
-						cooldown: raw.info.get("cooldown"),
-						options: raw.info.get("options"),
-						nsfw: raw.info.get("nsfw"),
-						data: raw.data
 		
-					}).copy().pour();
-					cmd.args = ctx.options.data;
+		// interaction stuff
+		this.shit.on("interactionCreate", async (ctx) => {
+			if (ctx.isButton()) { await this.events.buttonPress.fire(ctx); }
+			if (ctx.isStringSelectMenu()) { await this.events.selectionSubmit.fire(ctx); }
+			if (ctx.isButton() || ctx.isSelection()) { await this.events.rowAction.fire(ctx); }
+			
+			
+			if (ctx.isChatInputCommand() && this.commands.has(ctx.commandName)) {
+				let raw = this.commands.get(ctx.commandName);
+				ctx.author = ctx.user;
+				
+				let cmd = Soup.from({
+					name: raw.info.get("name"),
+					description: raw.info.get("description"),
+					cooldown: raw.info.get("cooldown"),
+					options: raw.info.get("options"),
+					nsfw: raw.info.get("nsfw"),
+					data: raw.data
+	
+				}).copy().pour();
+				cmd.args = ctx.options.data;
 
-					return await raw.data(ctx, cmd);
-				}
-			});
+				await raw.data(ctx, cmd);
+				await this.events.commandRan.fire(ctx, cmd);
+			}
 		});
     }
 }
