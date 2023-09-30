@@ -31,3 +31,17 @@ new Command({ name: "ping", desc: "replies with pong" }, (ctx) => {
 
 client.login(token);
 ```
+
+<br><br>
+
+## Developers
+
+<table>
+    
+  <tr>
+    <td align="center"><a href="https://github.com/paigeroid"><img src="https://avatars.githubusercontent.com/u/88659700?v=4?s=100" width="100px;" alt=""/><br /><sub><b>paigeroid</b></sub></a><br/>
+    <td align="center"><a href="https://github.com/polish-penguin-dev"><img src="https://avatars.githubusercontent.com/u/74113025?v=4?s=100" width="100px;" alt=""/><br /><sub><b>penguin dev</b></sub></a><br/>
+</td>
+    
+      
+</table>
