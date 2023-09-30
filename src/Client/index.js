@@ -1,5 +1,5 @@
 /*
-	:: WumpCli :: Alpha 0.0.2 | 09/30/23 ::
+	:: WumpCli :: Alpha 0.0.3 | 09/30/23 ::
 	https://github.com/paigeroid/wumpcli
 
 */
@@ -30,14 +30,15 @@ class WumpClient {
     constructor(/**/) {
         this.token = undefined;
         this.shit = new Client(...Array.from(arguments));
-
+		this.services = new Soup(Object);
 
 
         /* service compiling */
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
 
         Services.forEach( (folder) => {
-            require(`../Services/${folder}`);
+            let serv = require(`../Services/${folder}`);
+			this.services.push(serv.name, serv);
         });
 
 
