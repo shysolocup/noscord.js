@@ -56,7 +56,7 @@
 <br>
 
 ## Message Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
 - [ ] functionality
@@ -64,7 +64,7 @@
 <br>
 
 ## Permission Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
 - [ ] functionality
@@ -72,7 +72,7 @@
 <br>
 
 ## Role Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
 - [ ] functionality
@@ -80,14 +80,14 @@
 <br>
 
 ## Storage Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] Store
 - [ ] functionality
 
 <br>
 
 ## User Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
 - [ ] functionality
@@ -95,7 +95,7 @@
 <br>
 
 ## Voice Service
-- [ ] main class
+- [x] ~~main class~~
 - [ ] functions
 - [ ] properties
 - [ ] functionality
