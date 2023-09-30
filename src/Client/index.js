@@ -108,6 +108,8 @@ class WumpClient {
 			this.shit.on("interactionCreate", async (ctx) => {
 				if (ctx.isChatInputCommand() && this.commands.has(ctx.commandName)) {
 					let raw = this.commands.get(ctx.commandName);
+
+					ctx.author = ctx.user;
 					
 					let cmd = Soup.from({
 						name: raw.info.get("name"),
