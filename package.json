@@ -16,7 +16,7 @@
     },
     "dependencies": {
         "discord.js": "latest",
-        "node-fetch": "latest",
+        "node:fetch": "latest",
         "stews": "latest",
         "aepl": "latest",
         "node:fetch": "latest"
