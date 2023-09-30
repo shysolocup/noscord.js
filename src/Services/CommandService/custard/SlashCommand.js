@@ -1,9 +1,10 @@
 const CommandService = require('../index.js');
+const { Soup } = require('stews');
 
 
 CommandService.newC("SlashCommand", class {
 	constructor(info, data) {
-		this.info = info;
+		this.info = new Soup(info);
 		this.data = data;
 	}
 });
