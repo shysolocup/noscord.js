@@ -22,7 +22,7 @@ const exp = new Soup(Object);
 
 
 
-class WumperClient {
+class WumpClient {
     constructor(/**/) {
         this.token = undefined;
         this.shit = new Client(...Array.from(arguments));
@@ -66,5 +66,5 @@ class WumperClient {
 }
 
 
-exp.pull("Client", cl.from(WumperClient));
+exp.pull("Client", cl.from(WumpClient));
 module.exports = exp;
