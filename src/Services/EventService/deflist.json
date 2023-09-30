@@ -1,4 +1,87 @@
 [ 
     "ready",
-    "messageCreate"
+	
+	"message",
+    "messageCreate",
+	"messageUpdate",
+	"messageDelete",
+	"messageDeleteBulk",
+	"channelPinsUpdate",
+
+	"interactionCreate",
+
+	"guildMemberAdd",
+	"guildMemberUpdate",
+	"guildMemberRemove",
+	"guildBanAdd",
+	"guildBanRemove",
+	"userUpdate",
+	"typingStart",
+	"guildMemberAvailable",
+	"guildMemberChunk",
+
+	"applicationCommandCreate",
+	"applicationCommandUpdate",
+	"applicationCommandDelete",
+
+	"channelCreate",
+	"channelUpdate",
+	"channelDelete",
+
+	"threadCreate",
+	"threadUpdate",
+	"threadDelete",
+	"threadListSync",
+	"threadMemberUpdate",
+	"threadMembersUpdate",
+
+	"stageInstanceCreate",
+	"stageInstanceUpdate",
+	"stageInstanceDelete",
+
+	"inviteCreate",
+	"inviteDelete",
+
+	"guildCreate",
+	"guildUpdate",
+	"guildDelete",
+	"guildUnavailable",
+	"guildIntegrationsUpdate",
+
+	"roleCreate",
+	"roleUpdate",
+	"roleDelete",
+
+	"emojiCreate",
+	"emojiUpdate",
+	"emojiDelete",
+
+	"stickerCreate",
+	"stickerUpdate",
+	"stickerDelete",
+
+	"messageReactionAdd",
+	"messageReactionRemove",
+	"messageReactionRemoveAll",
+	"messageReactionRemoveEmoji",
+
+	"shardReconnecting",
+	"shardDisconnecting",
+	"shardDisconnect",
+	"shardReady",
+	"shardResume",
+	"shardError",
+
+	"voiceStateUpdate",
+
+	"webhookUpdate",
+	
+	"presenceUpdate",
+
+	"rateLimit",
+	"debug",
+	"warn",
+	"error",
+	"invalidRequestWarning",
+	"invalidated"
 ]
