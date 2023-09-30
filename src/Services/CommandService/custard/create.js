@@ -12,7 +12,7 @@ CommandService.newF("create", function(info={name:null, description:null, option
 		var options = Soup.from(info.options)
 
 		options = options.map( (v) => {
-			v.type = this.parent.optionType(v.type);
+			v.type = this.optionType(v.type);
 			if (v.desc && !v.description) v.description = v.desc;
 			return v;
 		})
