@@ -42,7 +42,7 @@
 ## Event Service
 - [x] ~~main class~~
 - [x] ~~Event class~~ 
-- [ ] full deflist
+- [x] ~~full deflist~~
 - [x] ~~functionality~~
 
 <br>
@@ -59,7 +59,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [ ] functionality
+- [x] ~~functionality~~
 
 <br>
 
@@ -90,7 +90,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [ ] functionality
+- [x] ~~functionality~~
 
 <br>
 
@@ -99,5 +99,14 @@
 - [ ] functions
 - [ ] properties
 - [ ] functionality
+
+<br>
+
+## ~~App Service~~
+- [x] ~~main class~~
+- [x] ~~Timestamp class~~
+- [x] ~~time~~
+- [x] ~~random~~
+- [x] ~~sleep~~
 
 <br>
