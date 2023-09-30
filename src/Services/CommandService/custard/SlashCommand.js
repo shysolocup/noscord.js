@@ -9,4 +9,4 @@ CommandService.newC("SlashCommand", class {
 });
 
 
-module.exports = Command;
+module.exports = SlashCommand;
