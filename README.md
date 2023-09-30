@@ -1,4 +1,9 @@
 # WumpCli
+
+<a href="https://www.npmjs.com/package/wumpcli"><img src="https://img.shields.io/npm/v/wumpcli?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
+<a href="https://www.npmjs.com/package/wumpcli"><img src="https://img.shields.io/npm/dt/wumpclie?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
+<img src="https://github.com/paigeroid/wumpcli/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
+
 WumpCli is a customized Discord.JS API that uses a more service-based approach to creating discord bots similar to how Roblox Studio uses services
 ```js
 const { Client } = require('wumpcli');
