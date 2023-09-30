@@ -6,7 +6,7 @@
 
 <br>
 
-## Addon Service
+## ~~Addon Service~~
 - [x] ~~main class~~
 - [x] ~~Addon class~~
 - [x] ~~functionality~~
@@ -28,7 +28,7 @@
 
 <br>
 
-## Component Service
+## ~~Component Service~~
 - [x] ~~main class~~
 - [x] ~~Button class~~
 - [x] ~~Selection class~~
@@ -41,7 +41,7 @@
 ## Event Service
 - [x] ~~main class~~
 - [x] ~~Event class~~ 
-- [x] ~~functions~~
+- [ ] full deflist
 - [x] ~~functionality~~
 
 <br>
