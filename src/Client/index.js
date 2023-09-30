@@ -18,8 +18,6 @@ const fs = require('fs');
 const { Soup } = require('stews');
 const { Client } = require('discord.js');
 
-const eventList = require('../Services/EventService/list.json');
-
 const exp = new Soup(Object);
 
 
@@ -59,7 +57,9 @@ class WumperClient {
          /* event handling */
          this.events = new Soup(Object);
 		
-         eventList.forEach( (name) => {
+		 this.DefEvents = require('../Services/EventService/deflist.json');
+         
+		 this.DefEvents.forEach( (name) => {
 			 this.events.push( name, new this.Event() );
 		 });
     }
