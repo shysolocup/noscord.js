@@ -60,7 +60,7 @@ class WumpClient {
         /* event handling */
         this.events = new Soup(Object);
 		
-		this.DefEvents = require('../Services/EventService/deflist.json');
+		this.DefEvents = require('../Services/EventService/_deflist.json');
          
 		this.DefEvents.forEach( (name) => {
 			this.events.push( name, new this.Event() );
