@@ -115,7 +115,7 @@ class WumpClient {
 		this.shit.on("interactionCreate", async (ctx) => {
 			if (ctx.isButton()) { await this.events.buttonPress.fire(ctx); }
 			if (ctx.isStringSelectMenu()) { await this.events.selectionSubmit.fire(ctx); }
-			if (ctx.isButton() || ctx.isSelection()) { await this.events.rowAction.fire(ctx); }
+			if (ctx.isButton() || ctx.isStringSelectMenu()) { await this.events.rowAction.fire(ctx); }
 			
 			
 			if (ctx.isChatInputCommand() && this.commands.has(ctx.commandName)) {
