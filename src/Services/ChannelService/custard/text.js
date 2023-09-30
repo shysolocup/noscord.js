@@ -7,6 +7,6 @@ ChannelService.newF("text", async function(guild=null) {
         .fetch()
         .catch(e=>{})
     )
-		.filter( (id, channel) => { return channel.type == 2; })
+		.filter( (id, channel) => { return channel.type == 0; })
 		.pour();
 });
