@@ -9,7 +9,7 @@
 ## Addon Service
 - [x] ~~main class~~
 - [x] ~~Addon class~~
-- [ ] functionality
+- [x] ~~functionality~~
 
 <br>
 
