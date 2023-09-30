@@ -18,8 +18,8 @@ client.on("ready", (ctx) => {
 });
 
 
-new client.CommandService; // imports the command service for creating commands
 new client.EventService; // imports the event service for creating events
+let cmd = new client.CommandService; // imports the command service for creating slash commands
 let channels = new client.ChannelService; // imports the channel service
 
 
@@ -33,7 +33,7 @@ client.on("pingCmd", async (ctx) => {
 });
 
 
-new Command({ name: "ping", desc: "replies with pong" }, (ctx) => {
+cmd.create("ping", "replies with pong", (ctx) => {
     ctx.reply("pong!");
     event.fire(ctx);
 });
