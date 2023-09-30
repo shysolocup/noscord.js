@@ -28,7 +28,7 @@ client.events.push("pingCmd", event);
 
 
 client.on("pingCmd", async (ctx) => {
-    let channel = channels.get("channel id");
+    let channel = await channels.get("channel id");
     channel.send(`ping command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
 });
 
