@@ -2,7 +2,7 @@
     "name": "wumpcli",
     "version": "0.0.0",
     "author": "paigeroid",
-    "description": "write later",
+    "description": "HOLDER",
     "repository": {
         "type": "git",
         "url": "https://github.com/paigeroid/wumpcli.git"
@@ -18,15 +18,15 @@
         "discord.js": "latest",
         "node-fetch": "latest",
         "stews": "latest",
-        "aepl": "latest"
+        "aepl": "latest",
+        "node:fetch": "latest"
     },
     "keywords": [
         "discord.js",
         "discord",
         "aepl",
         "stews",
-        "wumpcli",
-        "node:fetch"
+        "wumpcli"
     ],
     "homepage": "https://github.com/paigeroid/wumpcli",
     "main": "src/Client/index.js"
