@@ -20,14 +20,16 @@ client.on("ready", (ctx) => {
 
 new client.CommandService; // imports the command service for creating commands
 new client.EventService; // imports the event service for creating events
+let channels = new client.ChannelService; // imports the channel service
 
 
 let event = new Event();
 client.events.push("pingCmd", event);
 
 
-client.on("pingCmd", (ctx) => {
-    console.log(`ping command ran (${ctx.id})`);
+client.on("pingCmd", async (ctx) => {
+    let channel = channels.get("channel id");
+    channel.send(`ping command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
 });
 
 
