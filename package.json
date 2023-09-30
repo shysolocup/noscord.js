@@ -29,5 +29,5 @@
         "node:fetch"
     ],
     "homepage": "https://github.com/paigeroid/wumpcli",
-    "main": "src/index.js"
+    "main": "src/Client/index.js"
 }
