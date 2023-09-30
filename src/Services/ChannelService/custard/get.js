@@ -14,5 +14,5 @@ ChannelService.newF("get", async function(id) {
     
     let thing = await this.parent.shit.channels.fetch(raw).catch(e=>{});
     
-    return (!thing) ? null : new this.Channel(thing);
+    return (!thing) ? null : thing;
 });
