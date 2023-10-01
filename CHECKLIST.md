@@ -39,7 +39,7 @@
 
 <br>
 
-## Event Service
+## ~~Event Service~~
 - [x] ~~main class~~
 - [x] ~~Event class~~ 
 - [x] ~~full deflist~~
