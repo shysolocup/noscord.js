@@ -1,6 +1,6 @@
 /*
-	:: WumpCli :: Alpha 0.0.4 | 09/30/23 ::
-	https://github.com/paigeroid/wumpcli
+	:: Sercord :: Alpha 0.0.5 | 09/30/23 ::
+	https://github.com/paigeroid/sercord
 
 */
 
@@ -26,7 +26,7 @@ const exp = new Soup(Object);
 
 
 
-class WumpClient {
+class SerClient {
     constructor(/**/) {
         this.token = undefined;
         this.shit = new Client(...Array.from(arguments));
@@ -141,5 +141,5 @@ class WumpClient {
 }
 
 
-exp.pull("Client", cl.from(WumpClient));
+exp.pull("Client", cl.from(SerClient));
 module.exports = exp;
