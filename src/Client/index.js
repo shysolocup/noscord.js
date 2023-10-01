@@ -1,5 +1,5 @@
 /*
-	:: Sercord :: Alpha 0.0.5 | 09/30/23 ::
+	:: Sercord :: Alpha 0.0.6 | 10/01/23 ::
 	https://github.com/paigeroid/sercord
 
 */
@@ -60,12 +60,7 @@ class SerClient {
         /* event handling */
         this.events = new Soup(Object);
 		
-		this.DefEvents = require('../Services/EventService/_deflist.json');
-         
-		this.DefEvents.forEach( (name) => {
-			this.events.push( name, new this.Event() );
-		});
-
+		this.DefEvents = require('../Services/EventService/_deflist.js');
 
 		this.CustEvents = require('../Services/EventService/_custlist.json');
 		
@@ -137,7 +132,7 @@ class SerClient {
 				await this.events.commandRan.fire(ctx, cmd);
 			}
 		});
-    }
+	}
 }
 
 
