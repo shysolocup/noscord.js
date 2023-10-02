@@ -73,6 +73,13 @@ class SerClient {
 		this.CustEvents.forEach( (name) => {
 			this.events.push( name, new this.Event() );
 		});
+
+
+
+		// send event
+		this.shit.on("messageCreate", async function() {
+			await this.events.get("send").fire(...Array.from(arguments));
+		});
 		
 
 		// registering slash commands
