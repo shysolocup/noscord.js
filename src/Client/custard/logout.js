@@ -1,10 +1,6 @@
 const { Client } = require('../index.js');
 
 
-function logout() {
+Client.newF("logout", function() {
     return this.shit.destroy();
-}
-
-
-Client.newF("logout", logout);
-Client.newF("logout", destroy);
+});
