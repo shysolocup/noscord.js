@@ -3,8 +3,15 @@ const PermissionService = require('../index.js');
 
 
 PermissionService.newF("cache", async function(obj) {
-    if (obj.constructor.toString() == "GuildMember") {
-        let stuff = Soup.from(obj.permissions.serialize());
+    const users = new this.parent.UserService;
+    const channels = new this.parent.ChannelService;
+    const roles = new this.parent.RoleService;
+
+
+    if (await users.get(obj.id, obj.guild)) {
+        let user = await users.get(obj.id, obj.guild);
+
+        let stuff = Soup.from(user.permissions.serialize());
 
         stuff = stuff.mapKey( (name) => {
             return Noodle.from(name).toLowerCase(0).toString();
@@ -12,10 +19,23 @@ PermissionService.newF("cache", async function(obj) {
 
         return stuff.pour();
     }
-    else {
-        let roles = new this.parent.RoleService;
+    
+    else if (await roles.get(obj.id, obj.guild)) {
+        let role = await roles.get(obj.id, obj.guild);
 
-        let overwrites = Soup.from(obj.permissionOverwrites.cache);
+        let stuff = Soup.from(role.permissions.serialize());
+
+        stuff = stuff.mapKey( (name) => {
+            return Noodle.from(name).toLowerCase(0).toString();
+        });
+
+        return stuff.pour();
+    }
+
+    else if (await channels.get(obj.id, obj.guild)) {
+        let channel = await channels.get(obj.id, obj.guild);
+
+        let overwrites = Soup.from(channel.permissionOverwrites.cache);
         let perms = Soup.from(await this.parent.DefPerms);
 
         let returns = new Soup(Object);
