@@ -17,7 +17,7 @@ PermissionService.newF("cache", async function(obj) {
         for (let i = 0; i < overwrites.length; i++) {
             let [id, ow] = overwrites.entries[i];
 
-            let role = await roles.get(id);
+            let role = await roles.get(id, ow.channel.guild);
 
             returns.push(id, new Soup({
                 id: id,
