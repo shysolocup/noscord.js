@@ -56,8 +56,13 @@ PermissionService.newF("cache", async function(obj) {
                 return Noodle.from(name).toLowerCase(0).toString();
             });
             
-
+            
             // adding to list
+
+            b = b.filter( (name) => {
+                return !a.includes(name);
+            });
+
             a.forEach( (name) => {
                 p.push(name, true);
             });
