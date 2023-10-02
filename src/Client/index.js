@@ -54,7 +54,6 @@ class SerClient {
 
         /* command handling */
         this.commands = new Soup(Object);
-		this.locals = new Soup(Object);
             
 
             
@@ -151,6 +150,6 @@ class SerClient {
 
 
 exp.pull("Client", cl.from(SerClient));
-exp.pull("Global", Soup.new(Object));
+exp.pull("globals", Soup.new(Object));
 
 module.exports = exp;
