@@ -62,7 +62,7 @@ PermissionService.newF("cache", async function(obj) {
                 p.push(name, true);
             });
             b.forEach( (name) => {
-                p.push(name, true);
+                p.push(name, false);
             });
         }
 
