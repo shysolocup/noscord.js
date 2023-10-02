@@ -1,7 +1,8 @@
 const AppService = require('../index.js');
+const { Soup } = require('stews');
 
 
-AppService.newP("colors", {
+AppService.newP("colors", new Soup({
 		white:"#FFFFFF",
 		black:'#000000',
 		teal:'#1abc9c',
@@ -32,4 +33,4 @@ AppService.newP("colors", {
 		fish:'#EA7E00',
 		water:'#2F99E3',
 		nut:"#FFEC67"
-	});
+	}));
