@@ -1,7 +1,7 @@
 const RoleService = require('../index.js');
 
 
-RoleService.newF("get", async function(id) {
+RoleService.newF("get", async function(id, guild) {
     if (!id) return null; 
     
     let raw = id; 
@@ -12,7 +12,7 @@ RoleService.newF("get", async function(id) {
     
     raw = raw.split("").join(""); 
     
-    let thing = await this.parent.shit.roles.fetch(raw).catch(e=>{});
+    let thing = await guild.roles.fetch(raw).catch(e=>{});
     
     return (!thing) ? null : thing;
 });
