@@ -1,5 +1,5 @@
 /*
-	:: Sercord :: Alpha 0.0.6 | 10/01/23 ::
+	:: Sercord :: Alpha 0.0.6 | 10/02/23 ::
 	https://github.com/paigeroid/sercord
 
 */
@@ -59,9 +59,14 @@ class SerClient {
             
         /* event handling */
         this.events = new Soup(Object);
-		
-		this.DefEvents = require('../Services/EventService/_deflist.js');
 
+		
+		// need to be awaited
+		this.DefEvents = require('../Services/EventService/_deflist.js');
+		this.DefPerms = require('../Services/PermissionService/_deflist.js');
+
+		
+		// custom events
 		this.CustEvents = require('../Services/EventService/_custlist.json');
 		
 		this.CustEvents.forEach( (name) => {
