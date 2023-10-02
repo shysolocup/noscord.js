@@ -50,7 +50,7 @@ PermissionService.newF("list", async function(obj) {
                 role: role,
                 channel: ow.channel,
                 guild: ow.channel.guild,
-                perms: new Soup(Object)
+                perms: new Soup(Array)
             }));
 
             let thing = returns.get(id);
@@ -73,7 +73,7 @@ PermissionService.newF("list", async function(obj) {
             
             // add to list
             a.forEach( (name) => {
-                p.push(name, true);
+                p.push(name);
             });
         }
 
