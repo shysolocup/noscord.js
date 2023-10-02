@@ -1,0 +1,71 @@
+{
+    "invite": "CreateInstantInvite",
+    
+    "kick": "KickMembers",
+    
+    "ban": "BanMembers",
+    
+    "admin": "Administrator",
+    
+    "react": "AddReactions",
+    
+    "logs": "ViewAuditLog",
+    "auditLogs": "ViewAuditLog",
+
+    "priority": "PrioritySpeaker",
+    
+    "send": "sendMessages",
+    
+    "sendTTS": "SendTTSMessages",
+    "tts": "SendTTSMessages",
+
+    "links": "EmbedLinks",
+    "embed": "EmbedLinks",
+
+    "files": "AttachFiles",
+
+    "history": "ReadMessageHistory",
+    "readHistory": "ReadMessageHistory",
+
+    "everyone": "MentionEveryone",
+
+    "extEmojis": "UseExternalEmojis",
+
+    "insights": "ViewGuildInsights",
+
+    "mute": "MuteMembers",
+    
+    "deafen": "DeafenMembers",
+
+    "move": "MoveMembers",
+
+    "vad": "UseVAD",
+
+    "nickname": "ChangeNickname",
+    "nick": "ChangeNickname",
+
+    "manageNick": "ChangeNickname",
+
+    "emojis": "ManageEmojisAndStickers",
+    "stickers": "ManageEmojisAndStickers",
+
+    "expressions": "ManageGuildExpressions",
+
+    "commands": "UseApplicationCommands",
+    "slashCommands": "UseApplicationCommands",
+    "cmd": "UseApplicationCommands",
+
+    "publicThreads": "CreatePublicThreads",
+
+    "privataeThreads": "CreatePrivateThreads",
+
+    "extStickers": "UseExternalStickers",
+
+    "messageThreads": "SendMessagesInThreads",
+    "msgThreads": "SendMessagesInThreads",
+
+    "activities": "UseEmbeddedActivities",
+
+    "monetization": "ViewCreatorMonetizationAnalytics",
+    "analytics": "ViewCreatorMonetizationAnalytics"
+}
