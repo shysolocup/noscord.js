@@ -16,7 +16,7 @@ const cl = require('aepl');
 const fs = require('fs');
 import('node-fetch');
 
-const { Soup } = require('stews');
+const { Soup, Noodle } = require('stews');
 const { Client, Routes, REST } = require('discord.js');
 
 const serv_dir = require('../Services/_funkydir');
@@ -57,8 +57,9 @@ class SerClient {
             
 
             
-        /* event handling */
+        /* event and permission handling */
         this.events = new Soup(Object);
+		this.permissions = new Soup(Object);
 
 		
 		// need to be awaited
@@ -66,11 +67,24 @@ class SerClient {
 		this.DefPerms = require('../Services/PermissionService/_deflist.js');
 
 		
-		// custom events
+		// custom events and permissions
 		this.CustEvents = require('../Services/EventService/_custlist.json');
+		this.CustPerms = Soup.from(require('../Services/PermissionService/_custlist.json'));
 		
 		this.CustEvents.forEach( (name) => {
 			this.events.push( name, new this.Event() );
+		});
+
+		this.CustPerms.forEach( (name, tie) => {
+			tie = Noodle.from(tie);
+			let origin = tie.copy();
+			
+			if (tie.get(0).toUpperCase() == tie.get(0)) {
+				tie = tie.toLowerCase(0);
+				this.events.push(tie, origin.toString());
+			}
+			
+			this.events.push( name, origin.toString() );
 		});
 		
 
