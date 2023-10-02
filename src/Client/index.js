@@ -77,8 +77,8 @@ class SerClient {
 
 
 		// send event
-		this.shit.on("messageCreate", async function() {
-			await this.events.get("send").fire(...Array.from(arguments));
+		this.shit.on("messageCreate", async (ctx) => {
+			await this.events.get("send").fire(ctx);
 		});
 		
 
