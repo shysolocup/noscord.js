@@ -44,7 +44,7 @@ PermissionService.newF("cache", async function(obj) {
                 return bit == allow;
             });
             let b = perms.filter( (perm, bit) => {
-                return bit = deny;
+                return bit == deny;
             });
 
 
@@ -55,17 +55,13 @@ PermissionService.newF("cache", async function(obj) {
             b = b.mapKey( (name) => {
                 return Noodle.from(name).toLowerCase(0).toString();
             });
-            
-            
-            // adding to list
 
-            b = b.filter( (name) => {
-                return !a.includes(name);
-            });
-
+            
+            // add to list
             a.forEach( (name) => {
                 p.push(name, true);
             });
+
             b.forEach( (name) => {
                 p.push(name, false);
             });
