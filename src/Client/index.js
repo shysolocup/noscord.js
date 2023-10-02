@@ -150,4 +150,6 @@ class SerClient {
 
 
 exp.pull("Client", cl.from(SerClient));
+exp.pull("Stores", Soup.new(Object));
+
 module.exports = exp;
