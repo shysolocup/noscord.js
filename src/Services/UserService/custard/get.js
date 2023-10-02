@@ -13,7 +13,7 @@ UserService.newF("get", async function(id, guild=null) {
     raw = raw.split("").join(""); 
     
     let thing = await ( 
-		(guild) ? guild.users.fetch(raw).catch(e=>{}) : 
+		(guild) ? guild.members.fetch(raw).catch(e=>{}) : 
 		this.parent.shit.users.fetch(raw).catch(e=>{})
 	);
     
