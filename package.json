@@ -15,6 +15,7 @@
         "url": "https://github.com/paigeroid/sercord/blob/main/LICENSE"
     },
     "dependencies": {
+        "discord-api-types": "latest",
         "discord.js": "latest",
         "node-fetch": "latest",
         "stews": "latest",
