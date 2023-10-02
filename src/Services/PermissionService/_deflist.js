@@ -13,7 +13,6 @@ module.exports = (async () => {
     stuff.scoop( (v, i) => {
         return i < index0 || i >= index1;
     });
-
     
     return eval(stuff.toString());
 })();
