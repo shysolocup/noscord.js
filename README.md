@@ -4,7 +4,17 @@
 <a href="https://www.npmjs.com/package/sercord"><img src="https://img.shields.io/npm/dt/sercord?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
 <img src="https://github.com/paigeroid/sercord/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-Sercord is a customized Discord.JS API that uses a more service-based approach to creating discord bots similar to how Roblox Studio uses services
+Sercord is a customized Discord.JS API that uses a more service-based system to creating discord bots. <br>
+there are multiple services that you can require into your scripts that makes development easier such as slash commands, components, events, etc.
+
+<br>
+
+```console
+npm i sercord
+```
+```console
+npm i paigeroid/sercord
+```
 
 <br>
 
