@@ -81,10 +81,10 @@ class SerClient {
 			
 			if (tie.get(0).toUpperCase() == tie.get(0)) {
 				tie = tie.toLowerCase(0);
-				this.events.push(tie, origin.toString());
+				this.permissions.push(tie, origin.toString());
 			}
 			
-			this.events.push( name, origin.toString() );
+			this.permissions.push( name, origin.toString() );
 		});
 		
 
