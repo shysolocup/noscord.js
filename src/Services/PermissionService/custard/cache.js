@@ -4,7 +4,13 @@ const PermissionService = require('../index.js');
 
 PermissionService.newF("cache", async function(obj) {
     if (obj.constructor.toString() == "GuildMember") {
-        return obj.permissions.serialize();
+        let stuff = Soup.from(obj.permissions.serialize());
+
+        stuff = stuff.mapKey( (name) => {
+            return Noodle.from(name).toLowerCase(0).toString();
+        });
+
+        return stuff.pour();
     }
     else {
         let roles = new this.parent.RoleService;
