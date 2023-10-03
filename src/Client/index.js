@@ -1,5 +1,5 @@
 /*
-	:: Sercord :: Alpha 0.0.6 | 10/02/23 ::
+	:: Sercord :: Alpha 0.0.6 | 10/03/23 ::
 	https://github.com/paigeroid/sercord
 
 */
