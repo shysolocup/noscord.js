@@ -8,7 +8,6 @@
 	"edit",
 	"update",
 	"reaction",
-	"removeReaction",
 	"typing",
 	"join",
 	"leave",
