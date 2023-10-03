@@ -29,6 +29,7 @@ const exp = new Soup(Object);
 class SerClient {
     constructor(/**/) {
         this.token = undefined;
+		this.user = undefined;
         this.shit = new Client(...Array.from(arguments));
 		this.services = new Soup(Object);
 
@@ -149,7 +150,10 @@ class SerClient {
 		// registering slash commands
 		this.shit.on("ready", async (ctx) => {
 			if (this.commands.length <= 0) return;
+
 			let token = this.token;
+			this.user = ctx.user;
+			this.application = ctx.application;
 
 
 			// registering commands
@@ -163,23 +167,12 @@ class SerClient {
 				
 			});
 	
-			this.rest = new REST().setToken(token)
-			fetch('https://discordapp.com/api/oauth2/applications/@me', {
-				headers: {
-					authorization: `Bot ${token}`,
-				},
-			})
-	
-				.then(result => result.json())
-				.then( async (response) => {
-					const { id } = response;
-					
-					await this.rest.put(
-						Routes.applicationCommands(id),
-						{ body: jsonCommands }
-					);
-			})
-			.catch(console.error);
+			this.rest = new REST().setToken(token);
+
+			await this.rest.put(
+				Routes.applicationCommands(this.application.id),
+				{ body: jsonCommands }
+			);
 		});
 
 		
@@ -215,6 +208,5 @@ class SerClient {
 
 exp.pull("Client", cl.from(SerClient));
 exp.pull("globals", Soup.new(Object));
-
 
 module.exports = exp;
