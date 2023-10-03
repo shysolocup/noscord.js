@@ -1,4 +1,4 @@
-const ComponentService = require('./index.js');
+const ComponentService = require('../index.js');
 
 
 ComponentService.newC("Button", class {
