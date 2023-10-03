@@ -75,10 +75,74 @@ class SerClient {
 		});
 
 
+		let events = this.events;
+
 
 		// send event
-		this.shit.on("messageCreate", async (ctx) => {
-			await this.events.get("send").fire(ctx);
+		this.shit.on("messageCreate", async function() {
+			await events.get("send").fire(...Array.from(arguments));
+		});
+
+
+		// delete event
+		this.shit.on("messageDelete", async function() {
+			await events.get("delete").fire(...Array.from(arguments));
+		});
+
+
+		// edit event
+		this.shit.on("messageUpdate", async function() {
+			await events.get("edit").fire(...Array.from(arguments));
+		});
+
+
+		// react event
+		this.shit.on("messageReactionAdd", async function() {
+			await events.get("react").fire(...Array.from(arguments));
+		});
+
+
+		// react event
+		this.shit.on("messageReactionAdd", async function() {
+			await events.get("reaction").fire(...Array.from(arguments));
+		});
+
+
+		// join event
+		this.shit.on("guildMemberAdd", async function() {
+			await events.get("join").fire(...Array.from(arguments));
+		});
+
+
+		// leave/kick events
+		this.shit.on("guildMemberRemove", async function(member) {
+			await events.get("leave").fire(...Array.from(arguments));
+
+			const logs = await member.guild.fetchAuditLogs({
+				limit: 1,
+				type: 'MEMBER_KICK',
+			});
+
+			const log = fetchedLogs.entries.first();
+			if (!log) return;
+
+			const { executor, target } = log;
+
+			if (member.id == target.id) {
+				await events.get("kick").fire(...Array.from(arguments));
+			}
+		});
+
+
+		// ban event
+		this.shit.on("guildBanAdd", async function() {
+			await events.get("ban").fire(...Array.from(arguments));
+		});
+
+
+		// unban event
+		this.shit.on("guildBanRemove", async function() {
+			await events.get("unban").fire(...Array.from(arguments));
 		});
 		
 
@@ -151,5 +215,6 @@ class SerClient {
 
 exp.pull("Client", cl.from(SerClient));
 exp.pull("globals", Soup.new(Object));
+
 
 module.exports = exp;
