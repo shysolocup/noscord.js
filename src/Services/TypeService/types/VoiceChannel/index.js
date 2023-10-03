@@ -1,4 +1,4 @@
-const TypeService = require('../index.js');
+const TypeService = require('../../index.js');
 
 TypeService.newC("VoiceChannel", class {
   constructor(ctx) {
