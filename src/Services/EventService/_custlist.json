@@ -1,7 +1,18 @@
 [
 	"buttonPress",
-	"selectionSubmit",
+	"selectSubmit",
 	"rowAction",
 	"commandRan",
-	"send"
+	"send",
+	"delete",
+	"edit",
+	"update",
+	"reaction",
+	"removeReaction",
+	"typing",
+	"join",
+	"leave",
+	"ban",
+	"unban",
+	"kick"
 ]
