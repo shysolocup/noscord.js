@@ -99,12 +99,6 @@ class SerClient {
 
 		// react event
 		this.shit.on("messageReactionAdd", async function() {
-			await events.get("react").fire(...Array.from(arguments));
-		});
-
-
-		// react event
-		this.shit.on("messageReactionAdd", async function() {
 			await events.get("reaction").fire(...Array.from(arguments));
 		});
 
