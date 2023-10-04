@@ -19,14 +19,10 @@ MessageReply.newF("reply", function(/**/) { return (async () => {
         settings.content = args[0];
     }
 
-    if (settings.deleteAfter) {
-        setTimeout( () => {
-                msg.delete().catch(e=>{});
-        }, app.parse(settings.deleteAfter)*1000 );
-    }
-
     let reply = new types.MessageReply();
     await reply.apply( await msg.reply(settings) );
+
+    if (settings.deleteAfter) await reply.delete(settings.deleteAfter);
 
     return reply;
     
