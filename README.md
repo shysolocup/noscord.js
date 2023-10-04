@@ -1,26 +1,26 @@
-# Sercord
+# Noscord
 
-<a href="https://www.npmjs.com/package/sercord"><img src="https://img.shields.io/npm/v/sercord?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
-<a href="https://www.npmjs.com/package/sercord"><img src="https://img.shields.io/npm/dt/sercord?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
-<img src="https://github.com/paigeroid/sercord/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
+<a href="https://www.npmjs.com/package/noscord"><img src="https://img.shields.io/npm/v/noscord?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
+<a href="https://www.npmjs.com/package/noscord"><img src="https://img.shields.io/npm/dt/noscord?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
+<img src="https://github.com/paigeroid/noscord/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-Sercord is a customized Discord.JS API that uses a more service-based system to creating discord bots. <br><br>
+Noscord is a customized Discord.JS API that uses a more service-based system to creating discord bots. <br><br>
 
 there are multiple services that you can require into your scripts that makes development easier such as slash commands, components, events, etc.
 
 <br>
 
 ```console
-npm i sercord
+npm i noscord
 ```
 ```console
-npm i paigeroid/sercord
+npm i paigeroid/noscord
 ```
 
 <br>
 
 ```js
-const { Client } = require('sercord');
+const { Client } = require('noscord');
 const client = new Client(/* stuff */);
 
 
