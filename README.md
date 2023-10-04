@@ -1,10 +1,10 @@
-# Noscord.JS
+# NOSCORD.JS
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
 <img src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-Noscord.JS is a customized Discord.JS API that uses a more service-based system to creating discord bots. <br><br>
+NOSCORD.JS is a customized Discord.JS API that uses a more service-based system to creating discord bots. <br><br>
 
 there are multiple services that you can require into your scripts that makes development easier such as slash commands, components, events, etc.
 
