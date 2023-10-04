@@ -59,7 +59,8 @@ msg.newF("apply", async function(ctx) {
     this.editedAt = ctx.editedTimestamp;
     this.activity = ctx.activity;
     this.referece = ctx.reference;
-    this.interaction = ctx.interaction
+    this.interaction = ctx.interaction;
+    this.raw = ctx;
 });
 
 
