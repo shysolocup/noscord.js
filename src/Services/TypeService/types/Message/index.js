@@ -2,9 +2,10 @@ const TypeService = require('../../index.js');
 const { Soup } = require('stews');
 
 
-TypeService.newC("Message", class {
-  constructor(ctx) { (async () => {
+let msg = TypeService.newC("Message");
 
+
+msg.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     const guilds = new client.GuildService;
     const channels = new client.ChannelService;
@@ -40,11 +41,11 @@ TypeService.newC("Message", class {
 
 
     // lists
-    this.embeds = Soup.from(ctx.embeds);
-    this.components = Soup.from(ctx.components);
-    this.attachments = Soup.from(ctx.attachments);
-    this.stickers = Soup.from(ctx.stickers);
-    this.flags = Soup.from(ctx.flags);
+    this.embeds = ctx.embeds;
+    this.components = ctx.components;
+    this.attachments = ctx.attachments;
+    this.stickers = ctx.stickers;
+    this.flags = ctx.flags;
 
 
     // even even more more stuff stuff
@@ -56,9 +57,7 @@ TypeService.newC("Message", class {
     this.activity = ctx.activity;
     this.referece = ctx.reference;
     this.interaction = ctx.interaction
-    
-  })()}
 });
 
 
-module.exports = Message;
+module.exports = msg;
