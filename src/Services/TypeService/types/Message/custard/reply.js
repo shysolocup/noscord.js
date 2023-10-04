@@ -22,7 +22,7 @@ Message.newF("reply", function(/**/) { return (async () => {
     if (settings.deleteAfter) {
         setTimeout( () => {
                 msg.delete().catch(e=>{});
-        }, app.parse(settings.deleteAfter) );
+        }, app.parse(settings.deleteAfter)*1000 );
     }
 
     let reply = new types.MessageReply();
