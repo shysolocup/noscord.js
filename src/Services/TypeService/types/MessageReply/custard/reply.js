@@ -15,8 +15,7 @@ MessageReply.newF("reply", function(/**/) { return (async () => {
         settings.content = args[0].toString();
     }
     else {
-        settings = {};
-        settings.content = args[0];
+        settings = args[0];
     }
 
     let reply = new types.MessageReply();
