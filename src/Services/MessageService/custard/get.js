@@ -2,9 +2,15 @@ const MessageService = require('../index.js');
 
 
 MessageService.newF("get", async function(id, channel) {
+    const types = new this.parent.TypeService;
     if (!id || !channel) return null;
     
     let thing = await channel.messages.fetch(id).catch(e=>{});
     
-    return (!thing) ? null : thing;
+    if (!thing) return;
+
+    let msg = (thing.reference) ? new types.MessageReply() : new types.Message();
+    msg.apply(thing);
+
+    return msg;
 });
