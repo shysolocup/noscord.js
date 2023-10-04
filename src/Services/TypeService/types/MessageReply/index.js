@@ -1,9 +1,9 @@
 const TypeService = require('../../index.js');
 
-TypeService.newC("Reply", class {
+TypeService.newC("MessageReply", class {
   constructor(ctx) {
     
   }
 });
 
-module.exports = Reply;
+module.exports = MessageReply;
