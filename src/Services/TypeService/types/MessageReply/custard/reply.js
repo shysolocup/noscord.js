@@ -1,7 +1,7 @@
-const Message = require('../index.js');
+const MessageReply = require('../index.js');
 
 
-Message.newF("reply", function(/**/) { return (async () => {
+MessageReply.newF("reply", function(/**/) { return (async () => {
     const client = this.parent.parent;
     const app = new client.AppService;
     const types = new client.TypeService;
