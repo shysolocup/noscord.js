@@ -1,5 +1,5 @@
 /*
-	:: Sercord :: Alpha 0.0.6 | 10/03/23 ::
+	:: Sercord :: Alpha 0.0.6 | 10/04/23 ::
 	https://github.com/paigeroid/sercord
 
 */
@@ -143,11 +143,14 @@ class SerClient {
 
 		// registering slash commands
 		this.shit.on("ready", async (ctx) => {
-			if (this.commands.length <= 0) return;
 
+			// setup
 			let token = this.token;
 			this.user = ctx.user;
 			this.application = ctx.application;
+
+
+			if (this.commands.length <= 0) return;
 
 
 			// registering commands
@@ -202,5 +205,6 @@ class SerClient {
 
 exp.pull("Client", cl.from(SerClient));
 exp.pull("globals", Soup.new(Object));
+
 
 module.exports = exp;
