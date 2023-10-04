@@ -1,7 +1,7 @@
 const Message = require('../index.js');
 
 
-Message.newF("reply", function(/**/) { (async () => {
+Message.newF("reply", function(/**/) { return (async () => {
     const client = this.parent.parent;
     const app = new client.AppService;
     const types = new client.TypeService;
@@ -25,12 +25,9 @@ Message.newF("reply", function(/**/) { (async () => {
         }, app.parse(settings.deleteAfter) );
     }
 
-    /*
     let reply = new types.MessageReply();
     await reply.apply( await msg.reply(settings) );
 
     return reply;
-    */
-
-    return msg.reply(settings);
+    
 })(); });
