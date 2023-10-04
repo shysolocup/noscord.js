@@ -2,29 +2,27 @@ const Message = require('../index.js');
 
 
 Message.newF("reply", function() { (async (/**/) => {
+    const client = this.client;
+    const app = new client.AppService;
+    
     let msg = this.raw;
     let args = Array.from(this.arguments);
-    let [content, settings] = [ "", {} ];
+    let settings;
 
-    if (args.length > 1) {
-        args.forEach( (arg) => {
-            if (typeof arg == "string") settings.content = arg;
-            if (arg instanceof Object && !(arg instanceof Array)) settings = Object.entries(settings).forEach( (a) => {
-                let [key, val] = a;
-                settings[key] = val;
-            });
-        });
+    if (args[1] && args[1] instanceof Object) {
+        settings = args[1];
+        settings.content = args[0].toString();
     }
-    
-    if (args[0] instanceof Array) {
-        args[0] = args[0].join(",");
+    else {
+        settings = {};
+        settings.content = args[0];
     }
 
-    if (args[0] instanceof Number) {
-        args[0] = parseFloat(args[0]);
+    if (settings.deleteAfter) {
+        setTimeout( () => {
+                msg.delete().catch(e=>{});
+        }, app.parse(settings.deleteAfter) );
     }
-    
-    if (args[0] instanceof Object) {
-        
-    }
+
+    return await msg.reply(settings);
 })(); });
