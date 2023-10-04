@@ -1,7 +1,7 @@
 const Message = require('../index.js');
 
 
-Message.newF("reply", function() { (async (/**/) => {
+Message.newF("reply", function(/**/) { (async () => {
     const client = this.client;
     const app = new client.AppService;
     
