@@ -2,11 +2,12 @@ const Message = require('../index.js');
 
 
 Message.newF("reply", function(/**/) { (async () => {
-    const client = this.client;
+    const client = this.parent.parent;
     const app = new client.AppService;
+    const types = new client.TypeService;
     
     let msg = this.raw;
-    let args = Array.from(this.arguments);
+    let args = Array.from(arguments);
     let settings;
 
     if (args[1] && args[1] instanceof Object) {
@@ -24,5 +25,12 @@ Message.newF("reply", function(/**/) { (async () => {
         }, app.parse(settings.deleteAfter) );
     }
 
-    return await msg.reply(settings);
+    /*
+    let reply = new types.MessageReply();
+    await reply.apply( await msg.reply(settings) );
+
+    return reply;
+    */
+
+    return msg.reply(settings);
 })(); });
