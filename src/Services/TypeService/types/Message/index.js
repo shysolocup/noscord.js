@@ -11,6 +11,10 @@ msg.newF("apply", async function(ctx) {
     const channels = new client.ChannelService;
     const users = new client.UserService;
 
+    
+    // content
+    this.content = ctx.content;
+
 
     // ids
     this.id = ctx.id;
@@ -31,7 +35,6 @@ msg.newF("apply", async function(ctx) {
     this.createdAt = ctx.createdTimestamp;
     this.type = ctx.type;
     this.system = ctx.system;
-    this.content = ctx.content;
 
 
     // even more stuff
