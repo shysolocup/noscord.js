@@ -10,8 +10,8 @@ VoiceService.newF("play", async function(settings) {
 
     
     // stuff
-    let resource = voice.createAudioResource(settings.audio, settings.audioSettings);
-    let player = (settings.player) ? settings.player : voice.createAudioPlayer(settings.playerSettings);
+    let resource = voice.createAudioResource(settings.audio, settings.metadata);
+    let player = (settings.player) ? settings.player : voice.createAudioPlayer(settings.behaviors);
 
 
     // plays the audio
