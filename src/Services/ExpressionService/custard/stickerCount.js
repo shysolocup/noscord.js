@@ -3,5 +3,5 @@ const { Soup } = require('stews');
 
 
 ExpressionService.newF("stickerCount", async function(guild) {
-    return Soup.from(await guild.stickers.fetch()).length;
+    return Soup.from(await this.stickers(guild)).length;
 });
