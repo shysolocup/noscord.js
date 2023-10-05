@@ -15,7 +15,7 @@
 
 ## Channel Service
 - [x] ~~main class~~
-- [x] ~~functions~~
+- [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
 
