@@ -16,6 +16,7 @@
 	"kick",
 	"joinVoice",
 	"leaveVoice",
+	"moveVoice",
 	"playAudio",
 	"pauseAudio",
 	"resumeAudio",
