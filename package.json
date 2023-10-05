@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "discord-api-types": "latest",
+        "@discordjs/voice": "latest",
         "discord.js": "latest",
         "node-fetch": "latest",
         "stews": "latest",
