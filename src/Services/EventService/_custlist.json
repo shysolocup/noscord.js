@@ -13,5 +13,11 @@
 	"leave",
 	"ban",
 	"unban",
-	"kick"
+	"kick",
+	"joinVoice",
+	"leaveVoice",
+	"playAudio",
+	"pauseAudio",
+	"resumeAudio",
+	"stopAudio"
 ]
