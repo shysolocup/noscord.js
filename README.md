@@ -1,3 +1,5 @@
+[stupid thing]: <> (hopefully this should fix the problem with npm)
+
 # NOSCORD.JS | Alpha
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
