@@ -5,10 +5,7 @@ ErrorService.newC("NosError", class {
     constructor(attachment) {
         const { stackTraceLimit } = Error;
         Error.stackTraceLimit = 0;
-        
         this.attachment = attachment;
-        this.crash = crash;
-        
         Error.stackTraceLimit = stackTraceLimit;
     }
     
@@ -21,7 +18,8 @@ ErrorService.newC("NosError", class {
         // settings
         error.name = name;
         error.message = message;
-        
+
+        // if it should crash
         if (crash) throw error;
         else console.log(error);
     }
