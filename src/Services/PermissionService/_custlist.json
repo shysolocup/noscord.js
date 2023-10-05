@@ -44,7 +44,7 @@
     "nickname": "ChangeNickname",
     "nick": "ChangeNickname",
 
-    "manageNick": "ChangeNickname",
+    "manageNick": "ManageNickname",
 
     "emojis": "ManageEmojisAndStickers",
     "stickers": "ManageEmojisAndStickers",
