@@ -43,6 +43,9 @@ class SerClient {
         });
 
 
+		this.types = new this.TypeService;
+
+
 
         /* function compiling */
         let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
