@@ -140,6 +140,14 @@ class SerClient {
 		this.shit.on("guildBanRemove", async function() {
 			await events.get("unban").fire(...Array.from(arguments));
 		});
+
+
+		// join/leave/move vc event
+		this.shit.on("voiceStateUpdate", async function(oldVS, newVS) {
+			if (!oldVS.channelID && newVS) await events.get("joinVoice").fire(...Array.from(arguments));
+			else if (!newVS.channelID && oldVS) await events.get("leaveVoice").fire(...Array.from(arguments));
+			else await events.get("moveVoice").fire(...Array.from(arguments));
+		});
 		
 
 		// registering slash commands
