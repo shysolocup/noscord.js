@@ -16,7 +16,7 @@ VoiceService.newF("me", async function(user, guild=null) {
     
             let channel = await this.find(client.user, guild);
     
-            if (channel) channels.push(channel.id, channel);
+            if (channel) channels.push(guild.id, channel);
         }
 
         channels = channels.pour();
