@@ -3,14 +3,14 @@ const voice = require('@discordjs/voice');
 const { Soup } = require('stews');
 
 
-VoiceService.newF("play", async function(settings) {
+VoiceService.newF("play", async function(audioDir, settings) {
     
     // gets channels the bot is in
     let me = Soup.from(await this.me(settings.guild));
 
     
     // stuff
-    let resource = voice.createAudioResource(settings.audio, settings.metadata);
+    let resource = voice.createAudioResource(audioDir, settings.metadata);
     let player = (settings.player) ? settings.player : voice.createAudioPlayer(settings.behaviors);
 
 
