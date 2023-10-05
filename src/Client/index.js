@@ -80,8 +80,9 @@ class SerClient {
 
 
 		// send event
-		this.shit.on("messageCreate", async function() {
+		this.shit.on("messageCreate", async function(ctx) {
 			await events.get("send").fire(...Array.from(arguments));
+			if (ctx.reference) await events.get("reply").fire(...Array.from(arguments));
 		});
 
 
