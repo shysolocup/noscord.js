@@ -3,7 +3,7 @@ const { Soup } = require('stews');
 
 
 VoiceService.newF("me", async function(user, guild=null) {
-    const client = this.parent.parent;
+    const client = this.parent;
     const gs = new client.GuildService;
     const cs = new client.ChannelService;
 
