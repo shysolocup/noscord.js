@@ -22,5 +22,8 @@ VoiceService.newF("play", async function(audioDir, guild=null) {
     me.forEach( (id, channel) => {
         let connection = this.get(channel); 
         connection.subscribe(channel);
-    })
+    });
+
+    
+    return player;
 });
