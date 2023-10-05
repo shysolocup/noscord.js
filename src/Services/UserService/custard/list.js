@@ -15,6 +15,5 @@ UserService.newF("list", async function(guild=null) {
 	
 
 	return users
-		.filter( (id, user) => { return !user.bot })
 		.pour();
 });
