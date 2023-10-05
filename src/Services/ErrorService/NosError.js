@@ -2,7 +2,7 @@ const ErrorService = require('./index.js');
 
 
 ErrorService.newC("NosError", class {
-    constructor(attachment, crash=true) {
+    constructor(attachment) {
         const { stackTraceLimit } = Error;
         Error.stackTraceLimit = 0;
         
@@ -22,7 +22,7 @@ ErrorService.newC("NosError", class {
         error.name = name;
         error.message = message;
         
-        if (crash || this.crash) throw error
+        if (crash) throw error;
         else console.log(error);
     }
 });
