@@ -4,6 +4,7 @@
 	"rowAction",
 	"commandRan",
 	"send",
+	"reply",
 	"delete",
 	"edit",
 	"update",
