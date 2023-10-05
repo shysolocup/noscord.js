@@ -1,5 +1,6 @@
 [stupid thing]: <> (hopefully this should fix the problem with npm)
 
+---
 # noscord.JS | Dev
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
@@ -21,6 +22,10 @@ npm i paigeroid/noscord.js
 ```
 
 <br>
+
+--- 
+
+<br><br>
 
 ```js
 const { Client } = require('noscord.js');
