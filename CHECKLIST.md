@@ -15,7 +15,7 @@
 
 ## Channel Service
 - [x] ~~main class~~
-- [ ] functions
+- [x] ~~functions~~
 - [ ] properties
 - [x] ~~functionality~~
 
@@ -67,7 +67,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [ ] functionality
+- [x] ~~functionality~~
 
 <br>
 
@@ -75,14 +75,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [ ] properties
-- [ ] functionality
-
-<br>
-
-## Storage Service
-- [x] ~~main class~~
-- [ ] Store
-- [ ] functionality
+- [x] ~~functionality~~
 
 <br>
 
@@ -108,5 +101,14 @@
 - [x] ~~time~~
 - [x] ~~random~~
 - [x] ~~sleep~~
+
+<br>
+
+
+## ~~Error Service~~
+- [x] ~~main class~~
+- [x] ~~NosError class~~
+- [x] ~~functions~~
+- [x] ~~functionality~~
 
 <br>
