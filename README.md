@@ -21,8 +21,6 @@ npm i noscord.js
 npm i paigeroid/noscord.js
 ```
 
-<br>
-
 --- 
 
 <br><br>
