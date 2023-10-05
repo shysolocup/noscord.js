@@ -1,6 +1,6 @@
 /*
-	:: Sercord :: Dev 0.0.11 | 10/05/23 ::
-	https://github.com/paigeroid/sercord
+	:: noscord.JS :: Dev 0.0.11 | 10/05/23 ::
+	https://github.com/paigeroid/noscord.js
 
 */
 
@@ -26,7 +26,7 @@ const exp = new Soup(Object);
 
 
 
-class SerClient {
+class NosClient {
     constructor(/**/) {
         this.token = undefined;
 		this.user = undefined;
@@ -215,8 +215,6 @@ class SerClient {
 }
 
 
-exp.pull("Client", cl.from(SerClient));
-exp.pull("globals", Soup.new(Object));
-
+exp.pull("Client", cl.from(NosClient));
 
 module.exports = exp;
