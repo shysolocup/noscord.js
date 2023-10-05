@@ -1,4 +1,5 @@
 const ExpressionService = require('../index.js');
+const { Soup } = require('stews');
 
 
 ExpressionService.newF("emojiList", async function(guild) {
