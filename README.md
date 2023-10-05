@@ -1,12 +1,12 @@
 [stupid thing]: <> (hopefully this should fix the problem with npm)
 
-# NOSCORD.JS | Alpha
+# noscord.JS | Alpha
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
 <img src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-NOSCORD.JS is a customized Discord.JS API that has more accessibility and quality of life changes to make development easier <br>
+noscord.JS is a customized Discord.JS API that has more accessibility and quality of life changes to make development easier <br>
 It uses a plethora of services built into the API that you can use to more easily access elements<br><br>
 
 there are multiple services that you can add into your scripts that makes development easier. 
