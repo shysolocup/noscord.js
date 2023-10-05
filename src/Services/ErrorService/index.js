@@ -1,7 +1,12 @@
 const { Client } = require('../../Client');
+const Soup = require('stews');
 const fs = require('fs');
 
-Client.newC("ErrorService");
+Client.newC("ErrorService", class {
+    constructor() {
+        this.errors = new Soup(Object);
+    }
+});
 
 module.exports = ErrorService;
 
