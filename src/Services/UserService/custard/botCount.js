@@ -3,6 +3,5 @@ const { Soup } = require('stews');
 
 
 UserService.newF("botCount", async function(guild) {
-    let users = Soup.from(await this.bots(guild));
-    return users.length;
+    return Soup.from(await this.bots(guild)).length;
 });
