@@ -6,4 +6,4 @@ Client.newC("ErrorService");
 
 module.exports = ErrorService;
 
-require('./NosError.js);
+require('./NosError.js');
