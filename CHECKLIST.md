@@ -105,6 +105,27 @@
 <br>
 
 
+## Type Service
+- [x] ~~main class~~
+- [ ] ButtonPress type
+- [ ] Category type
+- [ ] ClientUser type
+- [ ] CommandRan type
+- [ ] Guild type
+- [ ] GuildMember type
+- [ ] Message type
+- [ ] MessageEdit type
+- [ ] MessageReply type
+- [ ] Role type
+- [ ] SelectionSubmit type
+- [ ] TextChannel type
+- [ ] ThreadChannel type
+- [ ] User type
+- [ ] VoiceChannel type
+
+<br>
+
+
 ## ~~Error Service~~
 - [x] ~~main class~~
 - [x] ~~NosError class~~
