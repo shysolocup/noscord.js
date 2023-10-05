@@ -1,4 +1,4 @@
-const ErrorService = require('../index.js');
+const ErrorService = require('./index.js');
 
 
 ErrorService.newC("NosError", class {
