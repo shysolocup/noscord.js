@@ -4,8 +4,8 @@ const Canvas = require('@napi-rs/canvas');
 
 
 AttachmentService.newC("Attachment", class {
-    constructor(settings) {
-        let image = await Canvas.loadImage(iconURL);
+    constructor(imgUrl, settings) {
+        let image = await Canvas.loadImage(imgUrl);
         
         let width = (settings.width) ? settings.width : image.width;
         let height = (settings.height) ? settings.height : image.height;
