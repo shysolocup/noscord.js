@@ -6,7 +6,7 @@ AttachmentService.newF("create", async function(img, settings={}) {
 	const client = this.parent;
     let types = new client.TypeService;
 
-    if (img.constructor instanceof types.Attachment) img = img.png.attachment;
+    if (img instanceof types.Attachment) img = img.png.attachment;
     else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
 	
 	let image = await Canvas.loadImage(img);
