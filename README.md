@@ -1,5 +1,3 @@
-[stupid thing]: <> (hopefully this should fix the problem with npm)
-
 ---
 # N⦿SCORD.JS | Dev
 
