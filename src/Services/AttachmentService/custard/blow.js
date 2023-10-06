@@ -11,8 +11,8 @@ AttachmentService.newF("blow", async function(img, amount, settings={}) {
 
 	let image = await Canvas.loadImage(img);
 	
-	width = (width) ? width*amount : image.width*amount;
-	height = (height) ? height*amount : image.height*amount;
+	width = ((width) ? width : image.width)*amount;
+	height = ((height) ? height : image.height)*amount;
 	
 	let canvas = Canvas.createCanvas(width, height);
 	let context = canvas.getContext('2d');
