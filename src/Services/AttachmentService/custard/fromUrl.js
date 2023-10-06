@@ -1,5 +1,5 @@
 const { AttachmentBuilder } = require('discord.js');
-const AttachmentService = require('./index.js');
+const AttachmentService = require('../index.js');
 const Canvas = require('@napi-rs/canvas');
 
 
