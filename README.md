@@ -11,8 +11,8 @@ noscord.JS is a customized Discord.JS API that has more accessibility and qualit
 It uses a plethora of services built into the API that you can use to more easily access elements<br>
 making development much easier<br><br>
 
-⚠️ ${\textsf{\color{orange}PLEASE NOTE:}}$
-this package is currently in development ⚠️ 
+⚠️ ___PLEASE NOTE:___
+this package is currently in development and is far from finished ⚠️ 
 
 <br>
 
