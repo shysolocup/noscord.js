@@ -1,5 +1,7 @@
-const TypeService = require('../../index.js');
 const { AttachmentBuilder } = require('discord.js');
+const TypeService = require('../../index.js');
+const fs = require('fs');
+
 
 TypeService.newC("Attachment", class {
     constructor(canvas, settings={}) {
@@ -16,7 +18,9 @@ TypeService.newC("Attachment", class {
     }
 });
 
+
 module.exports = Attachment;
+
 
 let cust_dir = require('./custard/_funkydir');
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
