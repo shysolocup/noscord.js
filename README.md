@@ -9,7 +9,9 @@
 noscord.JS is a customized Discord.JS API that has more accessibility and quality of life changes to make development easier to understand and implement into your bots<br><br>
 
 It uses a plethora of services built into the API that you can use to more easily access elements<br>
-making development much easier
+making development much easier<br><br>
+
+this package is IN DEVELOPMENT and not currently finished thus the dev stuff
 
 <br>
 
