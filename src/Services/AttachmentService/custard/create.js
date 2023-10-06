@@ -3,7 +3,7 @@ const AttachmentService = require('./index.js');
 const Canvas = require('@napi-rs/canvas');
 
 
-AttachmentService.newF("create", async function(imgUrl, settings) {
+AttachmentService.newF("create", async function(imgUrl, settings={}) {
 	let image = await Canvas.loadImage(imgUrl);
 	
 	let width = (settings.width) ? settings.width : image.width;
