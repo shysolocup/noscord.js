@@ -1,7 +1,7 @@
 [stupid thing]: <> (hopefully this should fix the problem with npm)
 
 ---
-# noscord.JS | Dev
+# N｢•｣SCORD.JS | Dev
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
