@@ -7,9 +7,7 @@ AttachmentService.newF("resize", async function(img, width, height, settings={})
     const client = this.parent;
     let types = new client.TypeService;
 
-    console.log(Object.getOwnPropertyDescriptors(img));
-
-    if (img.name) img = img.png.attachment;
+    if (img.png) img = img.png.attachment;
     else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
 
 	let image = await Canvas.loadImage(img);
