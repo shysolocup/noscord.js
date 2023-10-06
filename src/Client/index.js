@@ -44,6 +44,7 @@ class NosClient {
 
 
 		this.types = new this.TypeService;
+		this.command = (new this.CommandService).create
 
 
 
