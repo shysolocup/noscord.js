@@ -15,7 +15,7 @@ AttachmentService.newC("Attachment", class {
 
         context.drawImage(image, 0, 0, width, height);
 
-        return new AttachmentBuilder(canvas.toBuffer("image/png"), settings);
+        return new AttachmentBuilder( canvas.toBuffer("image/png"), settings );
     }
 });
 
