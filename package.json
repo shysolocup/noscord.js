@@ -17,6 +17,7 @@
     "dependencies": {
         "discord-api-types": "latest",
         "@discordjs/voice": "latest",
+        "@napi-rs/canvas": "latest",
         "discord.js": "latest",
         "node-fetch": "latest",
         "stews": "latest",
