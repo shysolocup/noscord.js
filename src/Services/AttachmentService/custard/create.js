@@ -3,7 +3,13 @@ const AttachmentService = require('../index.js');
 const Canvas = require('@napi-rs/canvas');
 
 
-AttachmentService.newF("fromUrl", async function(imgUrl, settings={}) {
+AttachmentService.newF("create", async function(imgUrl, settings={}) {
+	const client = this.parent;
+    let types = new client.TypeService;
+
+    if (img.constructor instanceof types.Attachment) img = img.png.attachment;
+    else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
+	
 	let image = await Canvas.loadImage(imgUrl);
 	
 	let width = (settings.width) ? settings.width : image.width;
@@ -14,10 +20,5 @@ AttachmentService.newF("fromUrl", async function(imgUrl, settings={}) {
 	
 	context.drawImage(image, 0, 0, width, height);
 	
-	return {
-		png: new AttachmentBuilder( canvas.toBuffer("image/png"), settings ),
-		jpeg: new AttachmentBuilder( canvas.toBuffer("image/jpeg"), settings ),
-		url: canvas.toDataURL(),
-		raw: canvas
-	};
+	return new types.Attachment(canvas, settings);
 });
