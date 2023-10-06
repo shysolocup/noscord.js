@@ -107,6 +107,7 @@
 
 ## Type Service
 - [x] ~~main class~~
+- [x] ~~Attachment type~~
 - [ ] ButtonPress type
 - [ ] Category type
 - [ ] ClientUser type
@@ -138,6 +139,14 @@
 ## Expression Service
 - [x] ~~main class~~
 - [ ] functions
-- [ ] functionality
+- [x] ~~functionality~~
+
+<br>
+
+
+## ~~Attachment Service~~
+- [x] ~~main class~~
+- [x] ~~functions~~
+- [x] ~~functionality~~
 
 <br>
