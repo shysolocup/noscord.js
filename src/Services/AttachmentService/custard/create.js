@@ -15,7 +15,8 @@ AttachmentService.newF("create", async function(imgUrl, settings) {
 	context.drawImage(image, 0, 0, width, height);
 	
 	return {
-		attachment: new AttachmentBuilder( canvas.toBuffer("image/png"), settings ),
+		png: new AttachmentBuilder( canvas.toBuffer("image/png"), settings ),
+		jpeg: new AttachmentBuilder( canvas.toBuffer("image/jpeg"), settings ),
 		url: canvas.toDataURL(),
 		raw: canvas
 	};
