@@ -1,15 +1,17 @@
 ---
 
-<img height=70 src="https://github.com/paigeroid/noscord.js/blob/main/assets/noscord.js%20logo.svg" alt="N⦿SCORD.JS">
+<br>
+
+<a href="https://github.com/paigeroid/noscord.js"><img height=85 src="https://github.com/paigeroid/noscord.js/blob/main/assets/noscord.js%20logo.svg" alt="N⦿SCORD.JS">
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
 <a href="https://www.npmjs.com/package/discord.js"><img src="https://img.shields.io/badge/powered by-Discord.JS-blue?style=flat&color=5539cc&logo=discord&logoColor=white" alt="discord.js" />
 <img src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-noscord.JS is a customized Discord.JS API that has more accessibility and quality of life changes to make development easier to understand and implement into your bots<br><br>
+- noscord.JS is a customized Discord.JS API that has more accessibility and quality of life changes to make development easier to understand and implement into your bots<br><br>
 
-It uses a plethora of services built into the API that you can use to more easily access elements<br>
+- It uses a plethora of services built into the API that you can use to more easily access elements<br>
 making development much easier<br><br>
 
 ⚠️ __PLEASE NOTE:__
