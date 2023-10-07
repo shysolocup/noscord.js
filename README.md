@@ -1,4 +1,7 @@
 ---
+
+<br>
+
 <img height=75 src="https://github.com/paigeroid/noscord.js/blob/main/assets/noscord.js%20logo.svg" alt="N⦿SCORD.JS">
 
 <a href="https://www.npmjs.com/package/noscord.js"><img src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
@@ -22,6 +25,8 @@ npm i noscord.js
 ```console
 npm i paigeroid/noscord.js
 ```
+
+<br>
 
 --- 
 
