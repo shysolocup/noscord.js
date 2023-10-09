@@ -1,34 +1,47 @@
+# random stuff
 /CHECKLIST.md
 /.github
 /assets
 
 
+# src readmes
 /src/README.md
 /src/Client/README.md
 /src/Services/README.md
 
+
+# A
 /src/Services/AddonService/README.md
 /src/Services/AppService/README.md
 /src/Services/AttachmentService/README.md
 
+# C
 /src/Services/ChannelService/README.md
 /src/Services/CommandService/README.md
 /src/Services/ComponentService/README.md
 
+# E
 /src/Services/ErrorService/README.md
 /src/Services/EventService/README.md
 /src/Services/ExpressionService/README.md
 
+# G
 /src/Services/GuildService/README.md
 
+# M
 /src/Services/MessageService/README.md
 
+# P
 /src/Services/PermissionService/README.md
 
+# R
 /src/Services/RoleService/README.md
 
+# T
 /src/Services/TypeService/README.md
 
+# U
 /src/Services/UserService/README.md
 
+# V
 /src/Services/VoiceService/README.md
