@@ -31,33 +31,33 @@ class NosClient {
         this.token = undefined;
 		this.user = undefined;
         this.shit = new Client(...Array.from(arguments));
-		let srv = new Soup(Object);
 
 
         /* service compiling */
         const Services = fs.readdirSync(serv_dir).filter( folder => (folder.endsWith("Service")) );
 
         Services.forEach( (folder) => {
-            let serv = require(`../Services/${folder}`);
-			srv.push(serv.name, serv);
+            require(`../Services/${folder}`);
         });
 		
+
+
 		this.services = {
-			types: new srv.TypeService,
-			users: new srv.UserService,
-			events: new srv.EventService,
-			commands: new srv.CommandService,
-			guilds: new srv.GuildService,
-			roles: new srv.RoleService,
-			errors: new srv.ErrorService,
-			channel: new srv.ChannelService,
-			app: new srv.AppService,
-			attachments: new srv.AttachmentService,
-			components: new srv.ComponentService,
-			expressions: new srv.ExpressionService,
-			messages: new srv.MessageService,
-			permissions: new srv.PermissionService,
-			voice: new srv.VoiceService,
+			types: new this.TypeService,
+			users: new this.UserService,
+			events: new this.EventService,
+			commands: new this.CommandService,
+			guilds: new this.GuildService,
+			roles: new this.RoleService,
+			errors: new this.ErrorService,
+			channel: new this.ChannelService,
+			app: new this.AppService,
+			attachments: new this.AttachmentService,
+			components: new this.ComponentService,
+			expressions: new this.ExpressionService,
+			messages: new this.MessageService,
+			permissions: new this.PermissionService,
+			voice: new this.VoiceService,
 		}
 
 		this.types = this.services.types;
