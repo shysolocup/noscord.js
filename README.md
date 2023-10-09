@@ -42,7 +42,7 @@ client.on("ready", (ctx) => {
 });
 
 
-const { commands, channels } = client;
+const { channels } = client;
 
 
 let event = new client.Event();
@@ -55,7 +55,7 @@ client.on("pingCmd", async (ctx) => {
 });
 
 
-commands.create("ping", "replies with pong", (ctx) => {
+client.command("ping", "replies with pong", (ctx) => {
     ctx.reply("pong!");
     event.fire(ctx);
 });
