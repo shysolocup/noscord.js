@@ -82,12 +82,12 @@ commands.create({ name: "avatar", desc: "sends a users' avatar", options: option
 
     let embed = new components.Embed({
         title: `${user.username}'s avatar`,
-        image: png
+        image: png,
         timestamp: timestamp.embed
     });
 
 
-    ctx.reply({ embeds: [embed] files: [png] });
+    ctx.reply({ embeds: [embed], files: [png] });
 });
 
 
