@@ -47,7 +47,7 @@ class NosClient {
 			users: new srv.UserService,
 			events: new srv.EventService,
 			commands: new srv.CommandService,
-			guilds: new srv.GuildsService,
+			guilds: new srv.GuildService,
 			roles: new srv.RoleService,
 			errors: new srv.ErrorService,
 			channel: new srv.ChannelService,
