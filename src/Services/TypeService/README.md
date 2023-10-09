@@ -5,11 +5,14 @@ it's mostly for developer use though
 const types = new client.TypeService;
 
 
-new types.Message(rawMsg);
+let msg = new types.Message();
+await msg.apply(rawMsg);
 
 
-new types.TextChannel(rawTC);
+let tc = new types.TextChannel();
+await tc.apply(rawTC);
 
 
-new types.VoiceChannel(rawVC);
+let vc = new types.VoiceChannel();
+await vc.apply(rawVC);
 ```
