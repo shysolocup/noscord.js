@@ -9,10 +9,9 @@
 <a href="https://www.npmjs.com/package/discord.js"><img src="https://img.shields.io/badge/powered by-Discord.JS-blue?style=flat&color=5539cc&logo=discord&logoColor=white" alt="discord.js" />
 <img src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-- noscord.JS is a customized Discord.JS API that has more accessibility and quality of life changes to make development easier to understand and implement into your bots<br><br>
+- noscord.JS is a customized Discord API for Node.JS that is similar to older versions of Discord.JS in that you can access most of the API from the client instead of having to go through types though because it's built on the latest versions of Discord.JS you can still use them if you wish<br><br>
 
-- It uses a plethora of services built into the API that you can use to more easily access elements<br>
-making development much easier<br><br>
+- It contains a plethora of services letting you more easily access parts of the API from the tips of your fingers<br><br>
 
 ⚠️ __PLEASE NOTE:__
 this package is currently in development and is far from finished ⚠️ 
@@ -42,22 +41,53 @@ client.on("ready", (ctx) => {
 });
 
 
-const { commands, channels, events } = client.services;
+const { commands, channels, users, events, components, app } = client.services;
 
 
 let event = events.create();
 client.events.push("pingCmd", event);
 
 
-client.on("pingCmd", async (ctx) => {
+client.on("pingCmd", async (ctx, cmd) => {
     let channel = await channels.get("channel id");
-    channel.send(`ping command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
+    channel.send(`${cmd.name} command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
 });
 
 
-commands.create("ping", "replies with pong", (ctx) => {
+commands.create("ping", "replies with pong", (ctx, cmd) => {
     ctx.reply("pong!");
-    event.fire(ctx);
+    event.fire(ctx, cmd);
+});
+
+
+let options = [{
+    name: "user",
+    description: "user to get the avatar of",
+    type: "user",
+    required: false
+}];
+
+
+commands.create({ name: "avatar", desc: "sends a users' avatar", options: options }, async (ctx, cmd) => {
+    let user;
+
+
+    if (cmd.args[0]) user = await users.get(cmd.args[0].value);
+    else user = ctx.author;
+
+
+    let { png } = await users.avatar(user, { width: 100, height: 100 });
+    let timestamp = new app.Timestamp();
+
+
+    let embed = new components.Embed({
+        title: `${user.username}'s avatar`,
+        image: png
+        timestamp: timestamp.embed
+    });
+
+
+    ctx.reply({ embeds: [embed] files: [png] });
 });
 
 
