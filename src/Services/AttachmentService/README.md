@@ -5,13 +5,13 @@ it includes built in functions for resizing images and making attachments from i
 const att = new client.AttachmentService;
 
 
-let img = att.create(url, {
+let img = await att.create(url, {
     width: 50,
     height: 50
 });
 
 
-img = img.resize(50, 50);
+img = await img.resize(50, 50);
 
 
 ctx.reply({ files: [img.png, img.jpeg] });
