@@ -36,24 +36,34 @@ const { Client } = require('noscord.js');
 const client = new Client(/* stuff */);
 
 
+
+// runs when the bot logs in
 client.on("ready", (ctx) => {
     console.log(`logged in as ${ctx.user.username}`);
 });
 
 
+
+// imports stuff
 const { commands, channels, users, events, components, app } = client.services;
 
 
+
+// creates a new event called pingCmd
 let event = events.create();
 client.events.push("pingCmd", event);
 
 
+
+// creates a listener for the pingCmd event
 client.on("pingCmd", async (ctx, cmd) => {
     let channel = await channels.get("channel id");
     channel.send(`${cmd.name} command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
 });
 
 
+
+// creates a ping command
 commands.create("ping", "replies with pong", (ctx, cmd) => {
     let timestamp = new app.Timestamp();
 
@@ -70,6 +80,8 @@ commands.create("ping", "replies with pong", (ctx, cmd) => {
 });
 
 
+
+// options for the avatar command
 let options = [{
     name: "user",
     description: "user to get the avatar of",
@@ -78,6 +90,8 @@ let options = [{
 }];
 
 
+
+// avatar command
 commands.create({ name: "avatar", desc: "sends a users' avatar", options: options }, async (ctx, cmd) => {
     let user;
 
@@ -93,6 +107,8 @@ commands.create({ name: "avatar", desc: "sends a users' avatar", options: option
 });
 
 
+
+// logs into the bot
 client.login(token);
 ```
 
