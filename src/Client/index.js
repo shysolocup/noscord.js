@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: Dev 0.0.19 | 10/06/23 ::
+	:: noscord.js :: Dev 0.0.20 | 10/09/23 ::
 	https://github.com/paigeroid/noscord.js
 
 */
