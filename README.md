@@ -45,7 +45,7 @@ client.on("ready", (ctx) => {
 
 
 // imports stuff
-const { commands, channels, users, events, components, app } = client.services;
+client.import("commands", "channels", "users", "events", "components", "app");
 
 
 
