@@ -3,6 +3,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [x] ~~readme~~ 
 
 <br>
 
@@ -10,6 +11,7 @@
 - [x] ~~main class~~
 - [x] ~~Addon class~~
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -18,6 +20,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -26,6 +29,7 @@
 - [x] ~~command creation~~
 - [ ] command cooldown
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -36,6 +40,7 @@
 - [x] ~~Embed class~~
 - [x] ~~Row class~~
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -44,6 +49,7 @@
 - [x] ~~Event class~~ 
 - [x] ~~full deflist~~
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -52,6 +58,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [ ] readme
 
 <br>
 
@@ -60,6 +67,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [ ] readme
 
 <br>
 
@@ -68,6 +76,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [ ] readme
 
 <br>
 
@@ -76,6 +85,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [ ] readme
 
 <br>
 
@@ -84,6 +94,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
+- [ ] readme
 
 <br>
 
@@ -92,6 +103,7 @@
 - [ ] functions
 - [ ] properties
 - [ ] functionality
+- [ ] readme
 
 <br>
 
@@ -101,6 +113,7 @@
 - [x] ~~time~~
 - [x] ~~random~~
 - [x] ~~sleep~~
+- [x] ~~readme~~
 
 <br>
 
@@ -123,6 +136,7 @@
 - [ ] ThreadChannel type
 - [ ] User type
 - [ ] VoiceChannel type
+- [ ] readme
 
 <br>
 
@@ -132,6 +146,7 @@
 - [x] ~~NosError class~~
 - [x] ~~functions~~
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -140,6 +155,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [x] ~~functionality~~
+- [ ] readme
 
 <br>
 
