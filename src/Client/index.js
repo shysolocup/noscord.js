@@ -31,7 +31,7 @@ class NosClient {
         this.token = undefined;
 		this.user = undefined;
         this.shit = new Client(...Array.from(arguments));
-		this.services = new Soup(Object);
+		let srv = new Soup(Object);
 
 
         /* service compiling */
@@ -39,12 +39,29 @@ class NosClient {
 
         Services.forEach( (folder) => {
             let serv = require(`../Services/${folder}`);
-			this.services.push(serv.name, serv);
+			srv.push(serv.name, serv);
         });
+		
+		this.services = {
+			types: new srv.TypeService,
+			users: new srv.UserService,
+			events: new srv.EventService,
+			commands: new srv.CommandService,
+			guilds: new srv.GuildsService,
+			roles: new srv.RoleService,
+			errors: new srv.ErrorService,
+			channel: new srv.ChannelService,
+			app: new srv.AppService,
+			attachments: new srv.AttachmentService,
+			components: new srv.ComponentService,
+			expressions: new srv.ExpressionService,
+			messages: new srv.MessageService,
+			permissions: new srv.PermissionService,
+			voice: new srv.VoiceService,
+		}
 
-
-		this.types = new this.TypeService;
-		this.command = (new this.CommandService).create
+		this.types = services.types;
+		this.command = services.commands.create;
 
 
 
