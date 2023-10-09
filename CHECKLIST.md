@@ -94,7 +94,7 @@
 - [ ] functions
 - [ ] properties
 - [x] ~~functionality~~
-- [ ] readme
+- [x] ~~readme~~
 
 <br>
 
