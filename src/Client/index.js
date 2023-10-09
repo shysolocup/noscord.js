@@ -60,8 +60,8 @@ class NosClient {
 			voice: new srv.VoiceService,
 		}
 
-		this.types = services.types;
-		this.command = services.commands.create;
+		this.types = this.services.types;
+		this.command = this.services.commands.create;
 
 
 
