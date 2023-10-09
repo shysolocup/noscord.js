@@ -44,6 +44,12 @@ ComponentService.newC("Embed", class {
         }
 
 
+        // color
+        if (data.color && typeof data.color == "string") {
+            data.color = parseInt(`0x${data.color.replace("#", "")}`);
+        }
+
+
         return data;
     }
 });
