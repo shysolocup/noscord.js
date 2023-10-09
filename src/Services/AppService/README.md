@@ -14,7 +14,7 @@ await app.sleep("1s");
 app.parse("1s"); // 1
 
 
-colors.blurple;
+app.colors.blurple;
 
 
 new Timestamp();
