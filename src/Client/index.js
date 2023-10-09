@@ -50,7 +50,7 @@ class NosClient {
 			guilds: new this.GuildService,
 			roles: new this.RoleService,
 			errors: new this.ErrorService,
-			channel: new this.ChannelService,
+			channels: new this.ChannelService,
 			app: new this.AppService,
 			attachments: new this.AttachmentService,
 			components: new this.ComponentService,
