@@ -8,3 +8,4 @@ let error = errors.create();
 
 
 error.fire("thing error", "you did a bad thing");
+```
