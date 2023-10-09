@@ -155,7 +155,7 @@
 - [x] ~~main class~~
 - [ ] functions
 - [x] ~~functionality~~
-- [ ] readme
+- [x] ~~readme~~
 
 <br>
 
