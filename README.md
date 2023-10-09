@@ -42,12 +42,10 @@ client.on("ready", (ctx) => {
 });
 
 
-new client.EventService; // imports the event service for creating events
-const commands = new client.CommandService; // imports the command service for creating slash commands
-const channels = new client.ChannelService; // imports the channel service
+const { commands, channels } = client;
 
 
-let event = new Event();
+let event = new client.Event();
 client.events.push("pingCmd", event);
 
 
