@@ -136,7 +136,7 @@
 - [ ] ThreadChannel type
 - [ ] User type
 - [ ] VoiceChannel type
-- [ ] readme
+- [x] ~~readme~~
 
 <br>
 
