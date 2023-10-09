@@ -55,7 +55,17 @@ client.on("pingCmd", async (ctx, cmd) => {
 
 
 commands.create("ping", "replies with pong", (ctx, cmd) => {
-    ctx.reply("pong!");
+    let timestamp = new app.Timestamp();
+
+
+    let embed = new components.Embed({
+        description: "# Pong!",
+        timestamp: timestamp.embed,
+        color: app.colors.blurple
+    });
+
+    
+    ctx.reply({ embeds: [embed] });
     event.fire(ctx, cmd);
 });
 
@@ -77,17 +87,9 @@ commands.create({ name: "avatar", desc: "sends a users' avatar", options: option
 
 
     let { png } = await users.avatar(user, { width: 100, height: 100 });
-    let timestamp = new app.Timestamp();
 
 
-    let embed = new components.Embed({
-        title: `${user.username}'s avatar`,
-        image: png,
-        timestamp: timestamp.embed
-    });
-
-
-    ctx.reply({ embeds: [embed], files: [png] });
+    ctx.reply({ files: [png] });
 });
 
 
