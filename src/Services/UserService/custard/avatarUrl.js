@@ -1,6 +1,6 @@
 const UserService = require('../index.js');
 
 
-UserService.newF("avatarURL", function(user) {
+UserService.newF("avatarUrl", function(user) {
     return user.displayAvatarURL(settings.dynamic);
 });
