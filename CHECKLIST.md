@@ -103,7 +103,7 @@
 - [ ] functions
 - [ ] properties
 - [ ] functionality
-- [ ] readme
+- [x] ~~readme~~
 
 <br>
 
