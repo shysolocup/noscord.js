@@ -4,10 +4,10 @@
 
 <a href="https://github.com/paigeroid/noscord.js"><img height=95 src="https://github.com/paigeroid/noscord.js/blob/main/assets/noscord.js%20logo.png" alt="N⦿SCORD.JS">
 
-<a href="https://www.npmjs.com/package/noscord.js"><img height=23 src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
-<a href="https://www.npmjs.com/package/noscord.js"><img height=23 src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
-<a href="https://www.npmjs.com/package/discord.js"><img height=23 src="https://img.shields.io/badge/powered by-Discord.JS-blue?style=flat&color=5539cc&logo=discord&logoColor=white" alt="discord.js" />
-<img height=23 src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
+<a href="https://www.npmjs.com/package/noscord.js"><img height=22 src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
+<a href="https://www.npmjs.com/package/noscord.js"><img height=22 src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
+<a href="https://www.npmjs.com/package/discord.js"><img height=22 src="https://img.shields.io/badge/powered by-Discord.JS-blue?style=flat&color=5539cc&logo=discord&logoColor=white" alt="discord.js" />
+<img height=22 src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
 - noscord.JS is a customized Discord API for Node.JS that is similar to older versions of Discord.JS in that you can access most of the API from the client instead of having to go through types though because it's built on the latest versions of Discord.JS you can still use them if you wish<br><br>
 
