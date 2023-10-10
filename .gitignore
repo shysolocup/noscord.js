@@ -5,5 +5,5 @@
 
 
 # removes readmes hopefully
-*.md
-!README.md
+.md
+!/README.md
