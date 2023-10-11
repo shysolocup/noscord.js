@@ -71,7 +71,8 @@ commands.create("ping", "replies with pong", (ctx, cmd) => {
     let embed = new components.Embed({
         description: "# Pong!",
         timestamp: timestamp.embed,
-        color: app.colors.blurple
+        color: app.colors.blurple,
+        footer: `latency: ${Date.now() - ctx.createdTimestamp}ms`
     });
 
     
