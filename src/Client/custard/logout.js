@@ -2,5 +2,5 @@ const { Client } = require('../index.js');
 
 
 Client.newF("logout", function() {
-    return this.shit.destroy();
+    return this._base.destroy();
 });
