@@ -92,15 +92,9 @@ class NosClient {
 		// custom events and permissions
 		this.CustEvents = require('../Services/EventService/_custlist.json');
 		this.CustPerms = require('../Services/PermissionService/_custlist.json');
-		
-		this.CustEvents.forEach( (name) => {
-			this.events.push( name, new this.Event() );
-		});
 
 
-		let events = this.events;
-
-
+		/*
 		// send event
 		this._base.on("messageCreate", async function(ctx) {
 			await events.get("send").fire(...Array.from(arguments));
@@ -170,6 +164,7 @@ class NosClient {
 			else if (!newVS.channelID && oldVS) await events.get("leaveVoice").fire(...Array.from(arguments));
 			else await events.get("moveVoice").fire(...Array.from(arguments));
 		});
+		*/
 		
 
 		// registering slash commands
