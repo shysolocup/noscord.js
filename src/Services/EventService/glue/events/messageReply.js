@@ -17,7 +17,7 @@ module.exports = (handler) => { handler.init(
     glue = "messageCreate", // what discord.js event it's tied to
 
     
-    term = function(ctx) {
+    term = function(ctx) { // specific action that triggers the event
         return !!ctx.reference;
     }
 )}
