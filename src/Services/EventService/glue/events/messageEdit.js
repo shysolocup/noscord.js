@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = ["messageEdit", "edit"],  // names of the event
+    name = ["messageEdit", "messageUpdate", "edit"],  // names of the event
 
     
     func = async function (/**/) { // formatting for types and stuff
@@ -14,5 +14,5 @@ module.exports = (handler) => { handler.init(
     }, 
 
     
-    glue = "messageEdit", // what discord.js event it's tied to
+    glue = "messageUpdate", // what discord.js event it's tied to
 )}
