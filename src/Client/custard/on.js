@@ -2,13 +2,6 @@ const { Client } = require('../index.js');
 
 
 Client.newF("on", function(event, func) { ( async () => {
-	let types = new this.TypeService;
-	
-	if ((await this.DefEvents).includes(event)) {
-		this._base.on(event, func);
-	}
-		
-	else {
-    	this.events.get(event).listen(func);
-	}
+	let handler = this._handler;
+	handler.on(event, func);
 })()});
