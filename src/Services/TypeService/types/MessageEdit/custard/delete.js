@@ -1,7 +1,7 @@
-const MessageReply = require('../index.js');
+const MessageEdit = require('../index.js');
 
 
-MessageReply.newF("delete", function(after=0) {
+MessageEdit.newF("delete", function(after=0) {
     const client = this.parent.parent;
     const app = new client.AppService;
     let msg = this.raw;
