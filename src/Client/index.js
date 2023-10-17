@@ -62,6 +62,7 @@ class NosClient {
 
 		this.types = this.services.types;
 		this.command = this.services.commands.create;
+		this._handler = new this.EventHandler;
 
 
 
