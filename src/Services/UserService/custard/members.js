@@ -3,7 +3,7 @@ const { Soup } = require('stews');
 
 
 UserService.newF("members", async function(guild=null) {
-    let users = new Soup( await ( (guild) ? guild.members : this.parent.shit.users)
+    let users = new Soup( await ( (guild) ? guild.members : this.parent._base.users)
         .fetch()
         .catch(e=>{})
     );
