@@ -1,14 +1,14 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = ["memberKick", "kick", "guildKickAdd"],  // names of the event
+    name = ["memberKick", "kick", "guildKickAdd", "guildMemberKick"],  // names of the event
 
     
     func = async function (member) { // formatting for types and stuff
         let types = this.types;
         let mbm = new types.GuildMemberAction;
         
-        await mbm.apply(member);
+        await mbm.apply(member, 1);
         
         return [mbm, mbm.moderator, mbm.guild];
     },
