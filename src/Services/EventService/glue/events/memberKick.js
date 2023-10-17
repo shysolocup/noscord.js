@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = ["memberKick", "kick"],  // names of the event
+    name = ["memberKick", "kick", "guildKickAdd"],  // names of the event
 
     
     func = async function (member) { // formatting for types and stuff
