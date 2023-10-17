@@ -18,12 +18,14 @@ module.exports = (handler) => { handler.init(
 
     
     term = async function(member) { // specific action that triggers the event
-        const logs = await member.guild.fetchAuditLogs({
+        const { AuditLogEvent } = require('discord.js');
+        
+        const logs = await ctx.guild.fetchAuditLogs({
             limit: 1,
-            type: 'MEMBER_KICK',
+            type: AuditLogEvent.MemberKick,
         });
 
-        const log = fetchedLogs.entries.first();
+        const log = logs.entries.first();
         if (!log) return;
 
         const { executor, target } = log;
