@@ -3,7 +3,7 @@ const { Soup } = require('stews');
 const fs = require('fs');
 
 
-EventService.newC("EventHandler", class {
+EventService.newC("GlueHandler", class {
     constructor() {
         this.client = this.parent.parent;
         this.types = this.client.types;
@@ -26,7 +26,7 @@ EventService.newC("EventHandler", class {
 });
 
 
-module.exports = EventHandler;
+module.exports = GlueHandler;
 
 
 const cust_dir = require('./custard/_funkydir');
