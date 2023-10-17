@@ -5,7 +5,7 @@ module.exports = (handler) => { handler.init(
 
     
     func = async function (/**/) { // formatting for types and stuff
-        return Array.from(arguments);
+        return [this.client];
     }, 
 
     
