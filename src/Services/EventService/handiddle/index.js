@@ -5,12 +5,12 @@ const fs = require('fs');
 
 EventService.newC("EventHandler", class {
     constructor() {
-        let client = this.client = this.parent.parent;
-        this.types = client.types;
-        this._base = client._base;
+        this.client = this.parent.parent;
+        this.types = this.client.types;
+        this._base = this.client._base;
         
-        this.default = client.DefEvents;
-        this.custom = client.CustEvents;
+        this.default = this.client.DefEvents;
+        this.custom = this.client.CustEvents;
 
         this.events = new Soup(Object);
 
