@@ -72,7 +72,7 @@ class NosClient {
 
 		this.types = this.services.types;
 		this.command = this.services.commands.create;
-		this._handler = new this.services.events.EventHandler;
+		this._handler = new this.services.events.GlueHandler;
 
 
 
