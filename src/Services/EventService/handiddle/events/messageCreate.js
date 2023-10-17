@@ -1,6 +1,6 @@
-module.exports = async (handler) => {
+module.exports = (handler) => {
     
-    await handler.init("messageCreate", async (/**/) => {
+    handler.init("messageCreate", async (/**/) => {
         let types = this.types;
         let msg = new types.Message;
         
