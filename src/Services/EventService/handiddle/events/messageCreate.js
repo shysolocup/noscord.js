@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = "messageCreate",  // name of the event
+    name = ["messageCreate", "send"],  // names of the event
 
     
     func = async function (/**/) { // formatting for types and stuff
