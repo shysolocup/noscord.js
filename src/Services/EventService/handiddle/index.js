@@ -18,7 +18,7 @@ EventService.newC("EventHandler", class {
         let ev = fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
                 
         ev.forEach( (file) => {
-            require(`./events/${file}`);
+            require(`./events/${file}`)(this);
         });
     }
 });
