@@ -1,7 +1,7 @@
-const EventHandler = require('../index.js');
+const GlueHandler = require('../index.js');
 
 
-EventHandler.newF("init", async function(name, func, glue=null, term=null) {
+GlueHandler.newF("init", async function(name, func, glue=null, term=null) {
 	let client = this.client;
 	
 	let event = new client.Event();
