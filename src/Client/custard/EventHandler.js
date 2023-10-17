@@ -14,3 +14,6 @@ Client.newC("EventHandler", class {
         
     }
 });
+
+
+module.exports = EventHandler;
