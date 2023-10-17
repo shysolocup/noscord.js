@@ -12,10 +12,10 @@ EventHandler.newF("init", async function(name, func, glue=null, term=null) {
 	if (glue) {
 		this._base.on(glue, async function (/**/) {
 			if (term && await term(...Array.from(arguments))) {
-            	event.fire( await func(...Array.from(arguments)) );
+            	event.fire( ...await func(...Array.from(arguments)) );
 			}
 			else {
-				event.fire( await func(...Array.from(arguments)) );
+				event.fire( ...await func(...Array.from(arguments)) );
 			}
         });
     };
