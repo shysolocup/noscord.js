@@ -12,6 +12,14 @@ EventService.newC("EventHandler", class {
         this.custom = client.CustEvents;
 
         this.events = new Soup(Object);
+
+        
+        const ev_dir = require('./events/_funkydir');
+        let ev = fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+                
+        ev.forEach( (file) => {
+            require(`./events/${file}`);
+        });
     }
 });
 
@@ -24,12 +32,4 @@ let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || fi
         
 cust.forEach( (file) => {
     require(`./custard/${file}`);
-});
-
-
-const ev_dir = require('./events/_funkydir');
-let ev = fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
-        
-ev.forEach( (file) => {
-    require(`./events/${file}`);
 });
