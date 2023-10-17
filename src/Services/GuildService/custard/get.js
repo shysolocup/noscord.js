@@ -6,7 +6,7 @@ GuildService.newF("get", async function(id) {
     
     let raw = id; 
     
-    let thing = await this.parent.shit.guilds.fetch(raw).catch(e=>{});
+    let thing = await this.parent._base.guilds.fetch(raw).catch(e=>{});
     
     return (!thing) ? null : thing;
 });
