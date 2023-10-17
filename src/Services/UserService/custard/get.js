@@ -14,7 +14,7 @@ UserService.newF("get", async function(id, guild=null) {
     
     let thing = await ( 
 		(guild) ? guild.members.fetch(raw).catch(e=>{}) : 
-		this.parent.shit.users.fetch(raw).catch(e=>{})
+		this.parent._base.users.fetch(raw).catch(e=>{})
 	);
     
     return (!thing) ? null : thing;
