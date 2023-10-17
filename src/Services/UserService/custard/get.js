@@ -3,6 +3,7 @@ const UserService = require('../index.js');
 
 UserService.newF("get", async function(id, guild=null) {
 	const client = this.parent;
+	client.import("types");
 	
     if (!id) return null; 
     
@@ -19,7 +20,7 @@ UserService.newF("get", async function(id, guild=null) {
 		this.parent._base.users.fetch(raw).catch(e=>{})
 	);
 
-	let typed = (guild) ? new client.types.GuildMember : new client.types.User;
+	let typed = (guild) ? new types.GuildMember : new types.User;
 	if (thing) typed.apply(thing);
 	
     return (!thing) ? null : typed;
