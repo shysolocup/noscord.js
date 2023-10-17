@@ -1,11 +1,11 @@
-const EventHandler = require('./index.js');
+const EventHandler = require('../index.js');
 
 
-EventHandler.init("messageCreate", (/**/) => {
+EventHandler.init("messageCreate", async (/**/) => {
     let types = this.types;
     let msg = new types.Message;
     
-    msg.apply(...Array.from(arguments));
+    await msg.apply(...Array.from(arguments));
 
-    return msg
+    return msg;
 });
