@@ -16,6 +16,7 @@ GlueHandler.newF("init", async function(name, func, glue=null, term=null) {
 	}
 
 	func = func.bind(this);
+	term = term.bind(this);
 	
 	if (glue) {
 		this._base.on(glue, async function (/**/) {
