@@ -2,6 +2,13 @@ const { Client } = require('../index.js');
 
 
 Client.newF("on", function(event, func) { ( async () => {
-	let handler = this._handler;
-	return await handler.on(event, func);
+	if (this.events.has(event)) {
+		this.events.get(event).listen(func);
+	}
+
+	else {
+		this._base.on(event, func);
+	}
+
+	return func;
 })()});
