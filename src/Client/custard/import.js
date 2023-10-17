@@ -3,55 +3,40 @@ const { Soup } = require('stews');
 
 
 Client.newF("import", function(/**/) {
-    let args = Soup.from(Array.from(arguments));
+    let args = Array.from(arguments);
+    let defs = new Soup(Object);
 
 
-    // if it's an object ({ name: "service" })
-    if (args.length == 1 && args[0] instanceof Object && !(args[0] instanceof Array)) {
-        let stuff = Soup.from(args[0]);
-        let services = stuff.values;
+    args.forEach( (arg) => {
 
+        if (arg instanceof Object && !(arg instanceof Array)) {
+            let stuff = Soup.from(arg);
 
-        services = services.map( (service) => {
-            return this.services[service];
-        });
+            stuff.forEach( (name, service) => {
+                defs.push(name, this.services[service]);
+            })
+        }
 
+        else if (arg instanceof Array) {
+            let stuff = Soup.from(arg);
 
-        return new Function("services", `
-            return [${stuff.keys.join(",")}] = services;
-        `)(services);
-    }
+            stuff.forEach( (service) => {
+                defs.push(service, this.services[service]);
+            })
+        }
+
+        else {
+            defs.push(arg, this.services[arg]);
+        }
+    });
+
     
-
-    // if it's an array ([ "service" ])
-    else if (args.length == 1 && args[0] instanceof Array) {
-        let stuff = Soup.from(args[0]);
-        let services = new Soup(Object);
+    defs.map( (name, service) => {
+        return this.services[service];
+    });
 
 
-        stuff.forEach( (service) => {
-            services.push(service, this.services[service]);
-        });
-
-
-        return new Function("services", `
-            return [${services.keys.join(",")}] = services;
-        `)(services.values);
-    }
-
-
-    // if it just uses arguments
-    else {
-        let services = new Soup(Object);
-
-
-        args.forEach( (service) => {
-            services.push(service, this.services[service]);
-        });
-
-
-        return new Function("services", `
-            return [${services.keys.join(",")}] = services;
-        `)(services.values);
-    }
+    return new Function("services", `
+        return [${defs.keys.join(",")}] = services;
+    `)(defs.values);
 });
