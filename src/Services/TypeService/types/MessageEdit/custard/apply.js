@@ -3,21 +3,18 @@ const MessageEdit = require('../index.js');
 
 MessageEdit.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    const guilds = new client.GuildService;
-    const channels = new client.ChannelService;
-    const users = new client.UserService;
-    const messages = new client.MessageService;
+    client.import("guilds", "channels", "users", "messages");
 
 
     // circle stuff but can we get much higher (so hiigghhh)
-    this.guild = await guilds.get(this.guildId);
-    this.channel = await channels.get(this.channelId);
+    this.guild = await guilds.get(ctx.guildId);
+    this.channel = await channels.get(ctx.channelId, this.guild);
 
     
     // contents
     this.content = ctx.content;
-    this.to = await messages.get(ctx.id, this.channel);
-    if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, channel);
+    this.to = await messages.get(ctx.id, ctx.channel);
+    if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, this.channel);
     
 
 
