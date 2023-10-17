@@ -1,24 +1,23 @@
 const GuildMemberAction = require('../index.js');
+const { AuditLogEvent } = require('discord.js');
 
 
 GuildMemberAction.newF("apply", async function(ctx, actionType) {
-    const client = this.parent.parent;
-    client.import("guilds", "channels", "users");
-
     
-    this.actionType = actionType;
+    this.isKick = (actionType == 1);
+    this.isBan = (actionType == 2);
+    this.isUnban = (actionType == 3);
+
     this.id = ctx.id;
     this.bot = ctx.bot;
-    this.me = (ctx.id == client.id);
 
-
-    if (actionType == 1) { // kick
+    if (this.isKick) {
         const logs = await ctx.guild.fetchAuditLogs({
             limit: 1,
-            type: 'MEMBER_KICK',
+            type: AuditLogEvent.MemberKick,
         });
 
-        const log = fetchedLogs.entries.first();
+        const log = logs.entries.first();
 
         if (log) {
             this.moderator = await users.get(log.executor.id, ctx.guild);
