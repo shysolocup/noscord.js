@@ -5,7 +5,15 @@ EventHandler.newF("init", async function(name, func, glue=null, term=null) {
 	let client = this.client;
 	
 	let event = new client.Event();
-	client.events.push(name, event);
+
+	if (name instanceof Array) {
+		name.forEach( (n) => {
+			client.events.push(n, event);
+		});
+	}
+	else {
+		client.events.push(name, event);
+	}
 
 	func = func.bind(this);
 	
