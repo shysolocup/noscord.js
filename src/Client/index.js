@@ -39,6 +39,16 @@ class NosClient {
         Services.forEach( (folder) => {
             require(`../Services/${folder}`);
         });
+
+		
+
+		/* command handling */
+        this.commands = new Soup(Object);
+            
+
+            
+        /* event and permission handling */
+        this.events = new Soup(Object);
 		
 
 
@@ -72,16 +82,6 @@ class NosClient {
         cust.forEach( (file) => {
             require(`./custard/${file}`);
         });
-
-
-
-        /* command handling */
-        this.commands = new Soup(Object);
-            
-
-            
-        /* event and permission handling */
-        this.events = new Soup(Object);
 
 		
 		// need to be awaited
