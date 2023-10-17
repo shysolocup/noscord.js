@@ -6,7 +6,7 @@ module.exports = (handler) => { handler.init(
     
     func = async function (member) { // formatting for types and stuff
         let types = this.types;
-        let mbm = new types.GuildMemberKick;
+        let mbm = new types.GuildMemberAction;
         
         await mbm.apply(member);
         
