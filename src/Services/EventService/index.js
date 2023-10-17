@@ -9,4 +9,4 @@ Client.newC("EventService", class {
 module.exports = EventService;
 
 require('./Event.js');
-require('./EventHandler.js');
+require('./handiddle');
