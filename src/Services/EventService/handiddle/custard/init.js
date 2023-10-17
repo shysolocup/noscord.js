@@ -6,6 +6,8 @@ EventHandler.newF("init", async function(name, func, glue=null, term=null) {
 	
 	let event = new client.Event();
 	client.events.push(name, event);
+
+	func = func.bind(this);
 	
 	if (glue) {
 		this._base.on(glue, async function (/**/) {
