@@ -14,12 +14,15 @@ EventService.newC("EventHandler", class {
         this.events = new Soup(Object);
 
         
-        const ev_dir = require('./events/_funkydir');
-        let ev = fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
-                
-        ev.forEach( (file) => {
-            require(`./events/${file}`)(this);
-        });
+        let ev_dir = require('./events/_funkydir');
+        let ev = Soup.from(fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) )));
+
+        (async () => {
+            for (let i = 0; i < ev.length; i++) {
+                let file = ev.get(i);
+                await require(`./events/${file}`)(this);
+            }
+        })();
     }
 });
 
