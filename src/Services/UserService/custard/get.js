@@ -2,6 +2,8 @@ const UserService = require('../index.js');
 
 
 UserService.newF("get", async function(id, guild=null) {
+	const client = this.parent;
+	
     if (!id) return null; 
     
     let raw = id; 
@@ -16,6 +18,9 @@ UserService.newF("get", async function(id, guild=null) {
 		(guild) ? guild.members.fetch(raw).catch(e=>{}) : 
 		this.parent._base.users.fetch(raw).catch(e=>{})
 	);
-    
-    return (!thing) ? null : thing;
+
+	let typed = (guild) ? new client.types.GuildMember : new client.types.User;
+	if (thing) typed.apply(thing);
+	
+    return (!thing) ? null : typed;
 });
