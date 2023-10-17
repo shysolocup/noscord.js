@@ -1,7 +1,7 @@
 const EventHandler = require('../index.js');
 
 
-EventHandler.newF("init", async function(name, func, glue=null) {
+EventHandler.newF("init", async function(name, func, glue=null, term=null) {
 	let client = this.client;
 	
 	let event = new client.Event();
@@ -9,7 +9,9 @@ EventHandler.newF("init", async function(name, func, glue=null) {
 	
 	if (glue) {
 		this._base.on(glue, async function (/**/) {
-            await event.fire( await func(...Array.from(arguments)) );
+			if (term && await term(...Array.from(arguments))) {
+            	event.fire( await func(...Array.from(arguments)) );
+			}
         });
     };
 });
