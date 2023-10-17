@@ -1,7 +1,7 @@
 const GlueHandler = require('../index.js');
 
 
-GlueHandler.newF("init", async function(name, func, glue=null, term=null) {
+GlueHandler.newF("init", async function(name, func, glue, term) {
 	let client = this.client;
 	
 	let event = new client.Event();
@@ -23,7 +23,7 @@ GlueHandler.newF("init", async function(name, func, glue=null, term=null) {
 			if (term && await term(...Array.from(arguments))) {
             	event.fire( ...await func(...Array.from(arguments)) );
 			}
-			else {
+			else if (!term) {
 				event.fire( ...await func(...Array.from(arguments)) );
 			}
         });
