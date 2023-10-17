@@ -16,7 +16,7 @@ MessageEdit.newF("apply", async function(ctx) {
     
     // contents
     this.content = ctx.content;
-    this.to = await messages.get(ctx.id, channel);
+    this.to = await messages.get(ctx.id, this.channel);
     if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, channel);
     
 
