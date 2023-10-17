@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = "ready",  // name of the event
+    name = ["ready", "login"],  // name of the event
 
     
     func = async function (/**/) { // formatting for types and stuff
