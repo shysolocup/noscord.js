@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: Dev 0.0.23 | 10/11/23 ::
+	:: noscord.js :: Dev 0.0.24 | 10/17/23 ::
 	https://github.com/paigeroid/noscord.js
 
 */
@@ -30,7 +30,7 @@ class NosClient {
     constructor(/**/) {
         this.token = undefined;
 		this.user = undefined;
-        this.shit = new Client(...Array.from(arguments));
+        this._base = new Client(...Array.from(arguments));
 
 
         /* service compiling */
@@ -101,38 +101,38 @@ class NosClient {
 
 
 		// send event
-		this.shit.on("messageCreate", async function(ctx) {
+		this._base.on("messageCreate", async function(ctx) {
 			await events.get("send").fire(...Array.from(arguments));
 			if (ctx.reference) await events.get("reply").fire(...Array.from(arguments));
 		});
 
 
 		// delete event
-		this.shit.on("messageDelete", async function() {
+		this._base.on("messageDelete", async function() {
 			await events.get("delete").fire(...Array.from(arguments));
 		});
 
 
 		// edit event
-		this.shit.on("messageUpdate", async function() {
+		this._base.on("messageUpdate", async function() {
 			await events.get("edit").fire(...Array.from(arguments));
 		});
 
 
 		// react event
-		this.shit.on("messageReactionAdd", async function() {
+		this._base.on("messageReactionAdd", async function() {
 			await events.get("reaction").fire(...Array.from(arguments));
 		});
 
 
 		// join event
-		this.shit.on("guildMemberAdd", async function() {
+		this._base.on("guildMemberAdd", async function() {
 			await events.get("join").fire(...Array.from(arguments));
 		});
 
 
 		// leave/kick events
-		this.shit.on("guildMemberRemove", async function(member) {
+		this._base.on("guildMemberRemove", async function(member) {
 			await events.get("leave").fire(...Array.from(arguments));
 
 			const logs = await member.guild.fetchAuditLogs({
@@ -152,19 +152,19 @@ class NosClient {
 
 
 		// ban event
-		this.shit.on("guildBanAdd", async function() {
+		this._base.on("guildBanAdd", async function() {
 			await events.get("ban").fire(...Array.from(arguments));
 		});
 
 
 		// unban event
-		this.shit.on("guildBanRemove", async function() {
+		this._base.on("guildBanRemove", async function() {
 			await events.get("unban").fire(...Array.from(arguments));
 		});
 
 
 		// join/leave/move vc event
-		this.shit.on("voiceStateUpdate", async function(oldVS, newVS) {
+		this._base.on("voiceStateUpdate", async function(oldVS, newVS) {
 			if (!oldVS.channelID && newVS) await events.get("joinVoice").fire(...Array.from(arguments));
 			else if (!newVS.channelID && oldVS) await events.get("leaveVoice").fire(...Array.from(arguments));
 			else await events.get("moveVoice").fire(...Array.from(arguments));
@@ -172,7 +172,7 @@ class NosClient {
 		
 
 		// registering slash commands
-		this.shit.on("ready", async (ctx) => {
+		this._base.on("ready", async (ctx) => {
 
 			// setup
 			let token = this.token;
@@ -204,7 +204,7 @@ class NosClient {
 
 		
 		// interaction stuff
-		this.shit.on("interactionCreate", async (ctx) => {
+		this._base.on("interactionCreate", async (ctx) => {
 			if (ctx.isButton()) { await this.events.buttonPress.fire(ctx); }
 			if (ctx.isStringSelectMenu()) { await this.events.selectionSubmit.fire(ctx); }
 			if (ctx.isButton() || ctx.isStringSelectMenu()) { await this.events.rowAction.fire(ctx); }
@@ -234,5 +234,4 @@ class NosClient {
 
 
 exp.pull("Client", cl.from(NosClient));
-
 module.exports = exp;
