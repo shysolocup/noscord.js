@@ -4,8 +4,9 @@ module.exports = (handler) => { handler.init(
     name = "messageCreate",  // name of the event
 
         
-    func = async (/**/) => { // formatting for types and stuff
+    func = async function (/**/) { // formatting for types and stuff
         let types = this.types;
+        console.log(types);
         let msg = new types.Message;
         
         await msg.apply(...Array.from(arguments));
