@@ -3,13 +3,14 @@ const { AuditLogEvent } = require('discord.js');
 
 
 GuildMemberAction.newF("apply", async function(ctx, actionType) {
+    const client = this.parent.parent;
+    client.import("users");
     
     this.isKick = (actionType == 1);
     this.isBan = (actionType == 2);
     this.isUnban = (actionType == 3);
 
-    this.id = ctx.id;
-    this.bot = ctx.bot;
+    this.victim = await users.get(ctx.id, ctx.guild);
 
     if (this.isKick) {
         const logs = await ctx.guild.fetchAuditLogs({
