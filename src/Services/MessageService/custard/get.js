@@ -9,7 +9,7 @@ MessageService.newF("get", async function(id, channel) {
     
     if (!thing) return;
 
-    let msg = (thing.reference) ? new types.MessageReply() : new types.Message();
+    let msg = new types.Message();
     msg.apply(thing);
 
     return msg;
