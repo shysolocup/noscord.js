@@ -21,6 +21,13 @@ TypeService.newC("Attachment", class {
 
         this.settings = settings;
     }
+
+
+	[Symbol.toPrimitive](hint) {
+        if (hint === "string") {
+            return this.embed;
+        }
+    }
 });
 
 
