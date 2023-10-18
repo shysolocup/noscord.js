@@ -11,7 +11,6 @@ GuildMember.newF("kick", async function(settings={ /* reason */ }) {
     if (!user.bannable) e.fire(null, "User cannot be kicked");
     else {
         let thing = user.kick(settings).catch(e=>{});
-
         return thing;
     }
 });
