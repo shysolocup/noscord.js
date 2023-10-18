@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = "buttonPress",  // names of the event
+    name = ["buttonPress", "button", "press"],  // names of the event
 
     
     func = function (/**/) { // formatting for types and stuff
