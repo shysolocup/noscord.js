@@ -2,7 +2,7 @@ const AttachmentService = require('../index.js');
 const Canvas = require('@napi-rs/canvas');
 
 
-AttachmentService.newF("circlify", async function(img, radius, settings={}) {
+AttachmentService.newF("circlify", async function(img, settings={}) {
     const client = this.parent;
     let types = new client.TypeService;
 
