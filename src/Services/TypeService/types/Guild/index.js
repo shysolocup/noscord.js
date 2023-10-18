@@ -9,7 +9,7 @@ TypeService.newC("Guild", class {
     }
 });
 
-module.exports = GuildMember;
+module.exports = Guild;
 
 /*
 let cust_dir = require('./custard/_funkydir');
