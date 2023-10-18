@@ -9,6 +9,9 @@ User.newF("apply", async function(ctx) {
     this.id = ctx.id;
     this.username = ctx.username;
     this.tag = (ctx.tag.endsWith("#0")) ? ctx.username : ctx.tag;
+    this.presence = ctx.presence;
+    this.status = ctx.presence.status;
+    this.activity = ctx.presence.activity;
     this.bot = false;
 
 
