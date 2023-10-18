@@ -7,6 +7,11 @@ TypeService.newC("Attachment", class {
     constructor(canvas, settings={}) {
         this.png = new AttachmentBuilder( canvas.toBuffer("image/png"), settings );
 		this.jpeg = new AttachmentBuilder( canvas.toBuffer("image/jpeg"), settings );
+		
+		this.pngString = `attachment://${png.name}`
+		this.jpegString = `attachment://${jpeg.name}`
+
+		this.base = png.attachment;
 
 		this.url = canvas.toDataURL();
 		this.raw = canvas;
