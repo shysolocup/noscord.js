@@ -3,9 +3,7 @@ const Message = require('../index.js');
 
 Message.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    const guilds = new client.GuildService;
-    const channels = new client.ChannelService;
-    const users = new client.UserService;
+    client.import("guilds", "messages", "channels", "users");
 
     
     // content
