@@ -89,8 +89,7 @@ class NosClient {
 		this.DefPerms = require('../Services/PermissionService/_deflist.js');
 
 		
-		// custom events and permissions
-		this.CustEvents = require('../Services/EventService/_custlist.json');
+		// custom permissions
 		this.CustPerms = require('../Services/PermissionService/_custlist.json');
 
 
