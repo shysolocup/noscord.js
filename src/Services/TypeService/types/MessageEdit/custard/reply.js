@@ -32,6 +32,8 @@ MessageEdit.newF("reply", function(/**/) { return (async () => {
                 embed.thumbnail.url = `attachment://${tn.name}`;
                 (settings.files) ? settings.files.push(tn) : ()=>{ settings.files = []; settings.files.push(tn); }();
             }
+
+            return embed;
         });
     }
 
