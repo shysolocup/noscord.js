@@ -17,6 +17,7 @@ Message.newF("apply", async function(ctx) {
     this.guildId = ctx.guildId;
     this.webhookId = ctx.webhookId;
     this.appId = ctx.applicationId;
+    this.url = `https://discord.com/channels/${ctx.guild.id}/${ctx.channel.id}/${ctx.id}`;
 
 
     // circle thingstuff
