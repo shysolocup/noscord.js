@@ -17,9 +17,9 @@ AttachmentService.newF("circle", async function(img, width, height, settings={})
 	let canvas = Canvas.createCanvas(width, height);
 	let context = canvas.getContext('2d');
 
-    context.strokeRect(0, 0, s, s);
+    context.strokeRect(0, 0, width, height);
 	context.beginPath();
-	context.arc(125, 125, 100, 0, Math.PI * 2, true);
+	context.arc(width/2, height/2, 100, 0, Math.PI * 2, true);
 	context.closePath();
 	context.clip();
 	
