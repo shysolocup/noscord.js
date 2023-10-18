@@ -9,7 +9,7 @@ GuildMember.newF("ban", function(settings={ /* reason and duration */ }) {
 
     let user = this.raw;
     if (!user.bannable) e.fire(null, "User cannot be banned");
-    let thing = user.ban({ reason: settings.reason }).catch(e=>{});
+    let thing = user.ban(settings).catch(e=>{});
 
     if (settings.duration) setTimeout( () => {
          user.guild.members.unban(user.id);
