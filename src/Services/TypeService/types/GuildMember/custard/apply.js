@@ -11,6 +11,7 @@ GuildMember.newF("apply", async function(ctx) {
     this.tag = (ctx.tag.endsWith("#0")) ? ctx.username : ctx.tag;
     this.bannable = ctx.bannable;
     this.nickname = ctx.nickname;
+    this.presence = ctx.presence;
     this.bot = false;
 
 
