@@ -10,6 +10,7 @@ Message.newF("apply", async function(ctx) {
     
     // content
     this.content = ctx.content;
+    if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, ctx.channel)
 
 
     // ids
