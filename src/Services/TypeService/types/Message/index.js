@@ -1,7 +1,7 @@
 const TypeService = require('../../index.js');
 const fs = require('fs');
 
-TypeService.newC("Guild", class {
+TypeService.newC("Message", class {
     [Symbol.toPrimitive](hint) {
         if (hint === "string") {
             return this.url
@@ -9,13 +9,11 @@ TypeService.newC("Guild", class {
     }
 });
 
-module.exports = Guild;
+module.exports = Message;
 
-/*
 let cust_dir = require('./custard/_funkydir');
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
 
 cust.forEach( (file) => {
     require(`./custard/${file}`);
 });
-*/
