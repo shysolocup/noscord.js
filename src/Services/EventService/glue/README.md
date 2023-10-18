@@ -23,8 +23,9 @@ module.exports = (handler) => { handler.init( // sets up the handler and initial
 
 
     /*
-        :: name of the event
-        :: can be an array for multiple names or just a string
+        == NAME ==
+            :: name of the event
+            :: can be an array for multiple names or just a string
     */
 
 
@@ -32,8 +33,9 @@ module.exports = (handler) => { handler.init( // sets up the handler and initial
 
 
     /*
-        :: function that formats the event from discord.js types to noscord.js types
-        :: IMPORTANT: should always return an array or else it'll break
+        == FUNC ==
+            :: function that formats the event from discord.js types to noscord.js types
+            :: IMPORTANT: should always return an array or else it'll break
     */
 
 
@@ -41,8 +43,9 @@ module.exports = (handler) => { handler.init( // sets up the handler and initial
 
 
     /*
-        :: glue is what discord.js event it's tied to
-        :: when that event is fired it'll then fire the glued noscord.js event
+        == GLUE ==
+            :: glue is what discord.js event it's tied to
+            :: when that event is fired it'll then fire the glued noscord.js event
     */
 
 
@@ -50,9 +53,10 @@ module.exports = (handler) => { handler.init( // sets up the handler and initial
 
 
     /*
-        :: term is optional it's mostly for if you want to specifically stop it from firing if a requirement is not met
-        :: when the event is firing it'll check if this exists and if it is true or not
-        :: also can be async if you want it to it's awaited in the init function
+        == TERM ==
+            :: term is optional it's mostly for if you want to specifically stop it from firing if a requirement is not met
+            :: when the event is firing it'll check if this exists and if it is true or not
+            :: also can be async if you want it to it's awaited in the init function
     */
 
 
