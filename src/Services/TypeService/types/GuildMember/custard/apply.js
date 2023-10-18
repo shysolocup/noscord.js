@@ -12,6 +12,8 @@ GuildMember.newF("apply", async function(ctx) {
     this.bannable = ctx.bannable;
     this.nickname = ctx.nickname;
     this.presence = ctx.presence;
+    this.status = ctx.presence.status;
+    this.activity = ctx.presence.activity;
     this.bot = false;
 
 
