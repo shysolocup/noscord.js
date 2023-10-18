@@ -8,7 +8,7 @@ MessageEdit.newF("edit", function(/**/) { return (async () => {
     
     let msg = this.raw;
     let args = Array.from(arguments);
-    let settings;
+    let settings = {};
 
     if (args[1] && args[1] instanceof Object) {
         settings = args[1];
@@ -25,12 +25,12 @@ MessageEdit.newF("edit", function(/**/) { return (async () => {
             
             if (img instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
                 embed.image.url = `attachment://${img.name}`;
-                (settings.files) ? settings.files.push(img) : ()=>{ settings.files = []; settings.files.push(img); }();
+                (settings.files) ? settings.files.push(img) : (()=>{ settings.files = []; settings.files.push(img); })();
             }
             
-            if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder) {
+            if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
                 embed.thumbnail.url = `attachment://${tn.name}`;
-                (settings.files) ? settings.files.push(tn) : ()=>{ settings.files = []; settings.files.push(tn); }();
+                (settings.files) ? settings.files.push(tn) : (()=>{ settings.files = []; settings.files.push(tn); })();
             }
 
             return embed;
