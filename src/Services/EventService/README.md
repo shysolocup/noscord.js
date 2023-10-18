@@ -1,8 +1,7 @@
 # event service
-the event service is where events and stuff are managed<br>
-if you want to see the events ported from discord.js you can run the script in the [_deflist.js](https://github.com/paigeroid/noscord.js/blob/main/src/Services/EventService/_deflist.js) file<br>
-if you want to see the custom list of events you can look at the [_custlist.json](https://github.com/paigeroid/noscord.js/blob/main/src/Services/EventService/_custlist.json) file<br>
-if you want to create custom events you can use the create function or use the Event class
+the event service is where events and stuff are managed and stored<br>
+if you want to create custom events you can use the create function or use the Event class<br>
+for more advanced uses look to the [glue folder](https://github.com/paigeroid/noscord.js/tree/main/src/Services/EventService/glue) for more info because that's where discord.js event binding and stuff is
 ```js
 const events = new client.EventService;
 
