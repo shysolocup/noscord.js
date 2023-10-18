@@ -14,6 +14,7 @@ User.newF("apply", async function(ctx) {
     
     // ids
     this.id = ctx.id;
+    this.mention = `<@${ctx.id}>`
     this.flags = ctx.flags;
     this.bot = ctx.bot;
 
