@@ -6,7 +6,7 @@ module.exports = (handler) => { handler.init(
     
     func = async function (/**/) { // formatting for types and stuff
         let types = this.types;
-        let msg = new types.MessageReply;
+        let msg = new types.Message;
         
         await msg.apply(...Array.from(arguments));
     
