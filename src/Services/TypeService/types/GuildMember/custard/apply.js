@@ -7,6 +7,7 @@ GuildMember.newF("apply", async function(ctx) {
 
     // ids
     this.id = ctx.id;
+    this.mention = `<@${ctx.id}>`
     this.username = ctx.username;
     this.tag = (ctx.tag.endsWith("#0")) ? ctx.username : ctx.tag;
     this.user = await users.get(ctx.id);
