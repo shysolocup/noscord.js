@@ -1,7 +1,7 @@
 const GuildMember = require('../index.js');
 
 
-GuildMember.newF("unban", function(settings={ /* reason and duration */ }) {
+GuildMember.newF("unban", async function(settings={ /* reason and duration */ }) {
     const client = this.parent.parent;
     client.import("app", "errors", "users");
     
