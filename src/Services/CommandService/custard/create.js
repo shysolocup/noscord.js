@@ -3,6 +3,11 @@ const { Soup } = require('stews');
 
 
 CommandService.newF("create", function(info={name:null, description:null, options:null, cooldown:null, nsfw:false}, dataA, dataB=null) {
+	const client = this.parent;
+	client.import({ err: "errors" });
+	
+	let e = err.create(this, "Slash Command Creation");
+	
 	if (typeof info == "string") {
 		let thing = info;
 		info = { name: thing, description:null, options:null, nsfw:false };
@@ -33,11 +38,11 @@ CommandService.newF("create", function(info={name:null, description:null, option
 	var [name, description] = [info.name, info.description];
 	
 	if (!name || typeof name != "string" || name.length <= 0) {
-		throw new CoolError("Slash Command Creation", "Invalid slash command name.\n\nPossible reasons:\n    • doesn't exist\n    • not a string\n    • blank string\n\nActual error stuff:");
+		e.fire(null, "Invalid slash command name.\n\nPossible reasons:\n    • doesn't exist\n    • not a string\n    • blank string\n\nActual error stuff:");
 	}
 
 	if (!description || typeof description != "string" || description.length <= 0) {
-		throw new CoolError("Slash Command Creation", "Invalid slash command description.\n\nPossible reasons:\n    • not a string\n    • blank string\n\nActual error stuff:");
+		e.fire(null, "Slash Command Creation", "Invalid slash command description.\n\nPossible reasons:\n    • not a string\n    • blank string\n\nActual error stuff:");
 	}
 
 	let cmd = new this.SlashCommand(info, data);
