@@ -9,6 +9,7 @@ MessageEdit.newF("apply", async function(ctx) {
     // circle stuff but can we get much higher (so hiigghhh)
     this.guild = await guilds.get(ctx.guildId);
     this.channel = await channels.get(ctx.channelId, this.guild);
+    this.url = `https://discord.com/channels/${ctx.guild.id}/${ctx.channel.id}/${ctx.id}`;
 
     
     // contents
