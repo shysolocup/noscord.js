@@ -3,8 +3,7 @@ const MessageEdit = require('../index.js');
 
 MessageEdit.newF("edit", function(/**/) { return (async () => {
     const client = this.parent.parent;
-    const app = new client.AppService;
-    const types = new client.TypeService;
+    client.import("app", "types", "components");
     
     let msg = this.raw;
     let args = Array.from(arguments);
@@ -20,6 +19,8 @@ MessageEdit.newF("edit", function(/**/) { return (async () => {
 
     if (settings.embeds) {
         settings.embeds.map( (embed) => {
+            embed = new Embed(embed);
+            
             let img = embed.image.url;
             let tn = embed.thumbnail.url;
             
