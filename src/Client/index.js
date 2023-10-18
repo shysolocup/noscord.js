@@ -90,7 +90,6 @@ class NosClient {
 
 		
 		// custom events and permissions
-		this.CustEvents = require('../Services/EventService/_custlist.json');
 		this.CustPerms = require('../Services/PermissionService/_custlist.json');
 
 
