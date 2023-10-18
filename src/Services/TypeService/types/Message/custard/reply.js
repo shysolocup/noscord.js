@@ -18,7 +18,7 @@ Message.newF("reply", function(/**/) { return (async () => {
         settings = args[0];
     }
 
-    let reply = new types.MessageReply();
+    let reply = new types.Message();
     await reply.apply( await msg.reply(settings) );
 
     if (settings.deleteAfter) await reply.delete(settings.deleteAfter);
