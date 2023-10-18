@@ -25,12 +25,12 @@ MessageEdit.newF("reply", function(/**/) { return (async () => {
             
             if (img instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
                 embed.image.url = `attachment://${img.name}`;
-                (settings.files) ? settings.files.push(img) : ()=>{ settings.files = []; settings.files.push(img); }();
+                (settings.files) ? settings.files.push(img) : (()=>{ settings.files = []; settings.files.push(img); })();
             }
             
             if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder) {
                 embed.thumbnail.url = `attachment://${tn.name}`;
-                (settings.files) ? settings.files.push(tn) : ()=>{ settings.files = []; settings.files.push(tn); }();
+                (settings.files) ? settings.files.push(tn) : (()=>{ settings.files = []; settings.files.push(tn); })();
             }
 
             return embed;
