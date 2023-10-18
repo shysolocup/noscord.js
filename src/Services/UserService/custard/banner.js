@@ -7,6 +7,8 @@ UserService.newF("banner", async function(user, settings={}) {
 
     let bannerUrl = user.bannerURL(settings.dynamic);
 
+    if (!settings.name) settings.name = `${user.id}-banner`;
+
     let stuff = att.create(bannerUrl, settings);
     stuff.originUrl = bannerUrl;
 
