@@ -3,7 +3,7 @@ const User = require('../index.js');
 
 User.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("guilds", "messages", "channels", "users");
+    client.import("guilds", "messages", "channels", "users", "app");
 
     // names
     this.username = ctx.username;
@@ -40,6 +40,12 @@ User.newF("apply", async function(ctx) {
     this.activity = ctx.presence.activity;
     this.system = ctx.system;
     this.partial = ctx.partial;
+
+
+    // times
+    this.times = {
+        created: new Timestamp(ctx.createdAt),
+    };
 
 
     this.dms = ctx.dmChannel
