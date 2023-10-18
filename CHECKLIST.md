@@ -164,6 +164,7 @@
 - [x] ~~main class~~
 - [x] ~~functions~~
 - [x] ~~functionality~~
+- [x] ~~readme~~
 
 <br>
 
@@ -172,5 +173,6 @@
 - [x] ~~main class~~
 - [x] functions
 - [x] functionality
+- [x] readme
 
 <br>
