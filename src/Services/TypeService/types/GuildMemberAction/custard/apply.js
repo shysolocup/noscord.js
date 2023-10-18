@@ -12,6 +12,10 @@ GuildMemberAction.newF("apply", async function(ctx, actionType) {
     this.isTimeout = (actionType == 4);
 
     this.victim = await users.get(ctx.id, ctx.guild);
+    this.victimId = ctx.id;
+
+    this.guild = await guilds.get(ctx.guildId);
+    this.guildId = ctx.guildId;
 
     if (this.isKick) {
         const logs = await ctx.guild.fetchAuditLogs({
@@ -38,6 +42,7 @@ GuildMemberAction.newF("apply", async function(ctx, actionType) {
 
         if (log) {
             this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.modId = log.executor.id;
             this.reason = log.reason;
             this.log = log;
         }
@@ -54,6 +59,7 @@ GuildMemberAction.newF("apply", async function(ctx, actionType) {
 
         if (log) {
             this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.modId = log.executor.id;
             this.reason = log.reason;
             this.log = log;
         }
