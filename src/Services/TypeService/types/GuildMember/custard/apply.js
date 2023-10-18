@@ -10,6 +10,7 @@ GuildMember.newF("apply", async function(ctx) {
     this.mention = `<@${ctx.id}>`
     this.username = ctx.username;
     this.tag = (ctx.tag.endsWith("#0")) ? ctx.username : ctx.tag;
+    this.discriminator = ctx.discriminator;
     this.user = await users.get(ctx.id);
     this.nickname = ctx.displayName;
     this.flags = ctx.flags;
@@ -22,8 +23,12 @@ GuildMember.newF("apply", async function(ctx) {
 
 
     // avatar
-    this.avatar = await users.avatar(ctx);
-    this.avatarUrl = await users.avatarUrl(ctx);
+    this.avatar = this.user.avatar;
+    this.avatarUrl = this.user.avatarUrl;
+    this.decor = this.user.decor;
+    this.decorUrl = this.user.decorUrl;
+    this.banner = this.user.banner;
+    this.bannerUrl = this.user.bannerUrl;
 
 
     // presence
