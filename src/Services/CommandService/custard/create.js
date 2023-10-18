@@ -2,50 +2,72 @@ const CommandService = require('../index.js');
 const { Soup } = require('stews');
 
 
-CommandService.newF("create", function(info={name:null, description:null, options:null, cooldown:null, nsfw:false}, dataA, dataB=null) {
+CommandService.newF("create", function(...args) {
+
+	// error handling
 	const client = this.parent;
 	client.import({ err: "errors" });
-	
-	let e = err.create(this, "Slash Command Creation");
-	
+	let e = err.create(this, "Slash Command Error");
+
+
+	// getting the function
+	let func = args.pop();
+
+
+	// if there isn't a name given
+	if (args.length == 0) e.fire(null, `Name of the command must be given.`)
+
+
+	// getting the info
+	let info = args.shift();
+	info = (info instanceof Object) ? info : info.toString();
+
+
+	// check if it's a function or not
+	if (!(func instanceof Function)) e.fire(null, `Last argument must be a function.\ngiven arg: ${func}\n`);
+
+
+	// string stuff
 	if (typeof info == "string") {
-		let thing = info;
-		info = { name: thing, description:null, options:null, nsfw:false };
+		let description = (args.length > 0) ? args.shift() : "undefined";
+		let options = (args.length > 0) ? args.shift() : null;
+		let nsfw = (args.length > 0) ? args.shift() : false;
+		
+		info = { name: info, description: description, options: options, nsfw: nsfw };
 	}
 
+
+	// formatting description
+	if (info.desc && !info.description) info.description = info.desc
+	info.description = (info.description instanceof Object) ? info.description : info.description.toString();
+
+
+	// option formatting
 	if (info.options && info.options instanceof Array) {
 		var options = Soup.from(info.options)
 
 		options = options.map( (v) => {
+
+
+			// typing
 			v.type = this.optionType(v.type);
 			if (v.desc && !v.description) v.description = v.desc;
+
+
+			// turning into strings
+			if (typeof v.name != "string") v.name = v.name.toString();
+			if (typeof v.description != "string") v.description = v.description.toString();
+
+
 			return v;
-		})
+		});
 	}
 
-	if (info.desc && !info.description) info.description = info.desc
 
-	var data
-	if (typeof dataA == "string" && !info.description) {
-		info.description = dataA
-		data = dataB
-	}
-	else if (info.description) {
-		data = dataA
-	}
+	// creates a slash command
+	let cmd = new this.SlashCommand(info, func);
 	
-	
-	var [name, description] = [info.name, info.description];
-	
-	if (!name || typeof name != "string" || name.length <= 0) {
-		e.fire(null, "Invalid slash command name.\n\nPossible reasons:\n    • doesn't exist\n    • not a string\n    • blank string\n\nActual error stuff:");
-	}
 
-	if (!description || typeof description != "string" || description.length <= 0) {
-		e.fire(null, "Slash Command Creation", "Invalid slash command description.\n\nPossible reasons:\n    • not a string\n    • blank string\n\nActual error stuff:");
-	}
-
-	let cmd = new this.SlashCommand(info, data);
-	
+	// adds it to the list
 	this.parent.commands.push(cmd.info.name, cmd);
 });
