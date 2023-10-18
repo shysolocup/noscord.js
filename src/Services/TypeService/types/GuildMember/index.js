@@ -1,7 +1,13 @@
 const TypeService = require('../../index.js');
 const fs = require('fs');
 
-TypeService.newC("GuildMember");
+TypeService.newC("GuildMember", class {
+    [Symbol.toPrimitive](hint) {
+        if (hint === "string") {
+            return `<@${this.id}>`
+        }
+    }
+});
 
 module.exports = GuildMember;
 
