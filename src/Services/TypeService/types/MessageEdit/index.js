@@ -1,7 +1,13 @@
 const TypeService = require('../../index.js');
 const fs = require('fs');
 
-TypeService.newC("MessageEdit");
+TypeService.newC("MessageEdit", class {
+    [Symbol.toPrimitive](hint) {
+        if (hint === "string") {
+            return this.url
+        }
+    }
+});
 
 module.exports = MessageEdit;
 
