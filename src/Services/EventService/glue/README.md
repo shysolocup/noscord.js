@@ -1,8 +1,19 @@
 # glue handlers
 
-glue handling is how discord.js events and noscord.js events are tied together<br>
-it uses a few systems to convert discord.js events into noscord.js events<br><br>
+glue handling is how discord.js events and noscord.js events are stuck together<br>
+noscord.js glue events act as sort of a middle-man between discord.js and the user<br><br><br>
 
+
+### discord.js
+reacts when events are ran and is used as a basis for the events<br><br>
+↓ ↓ ↓
+### noscord.js
+gets the response from discord.js and alters the info then sends it to the user<br><br>
+↓ ↓ ↓
+### user
+the user gets the info and uses it in the bot
+
+<br><br>
 
 the main events are stored in the [events folder](https://github.com/paigeroid/noscord.js/tree/main/src/Services/EventService/glue/events)<br>
 most of the events have a somewhat simple setup if you want to mod them in any way<br>
