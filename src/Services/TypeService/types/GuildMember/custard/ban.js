@@ -13,7 +13,7 @@ GuildMember.newF("ban", async function(settings={ /* reason and duration */ }) {
         let thing = user.kick(settings).catch(e=>{});
 
         if (settings.duration) setTimeout( () => {
-             user.guild.members.unban(user.id);
+             user.unban({ reason: "duration" });
         }, app.parseMs(settings.duration) );
 
         return thing;
