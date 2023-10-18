@@ -6,10 +6,10 @@ const fs = require('fs');
 TypeService.newC("Attachment", class {
     constructor(canvas, settings={}) {
         this.png = new AttachmentBuilder( canvas.toBuffer("image/png"), settings );
-		this.jpeg = new AttachmentBuilder( canvas.toBuffer("image/jpeg"), settings );
-		
-		this.pngString = `attachment://${png.name}`
-		this.jpegString = `attachment://${jpeg.name}`
+	
+		this.name = png.name
+		this.description = png.description;
+		this.embed = `attachment://${png.name}`
 
 		this.base = png.attachment;
 
