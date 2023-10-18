@@ -28,7 +28,7 @@ MessageEdit.newF("reply", function(/**/) { return (async () => {
                 (settings.files) ? settings.files.push(img) : (()=>{ settings.files = []; settings.files.push(img); })();
             }
             
-            if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder) {
+            if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
                 embed.thumbnail.url = `attachment://${tn.name}`;
                 (settings.files) ? settings.files.push(tn) : (()=>{ settings.files = []; settings.files.push(tn); })();
             }
