@@ -7,7 +7,7 @@ GuildMember.newF("unban", function(settings={ /* reason and duration */ }) {
     
     let e = errors.create("Member Unbanning");
 
-    let user = this.raw;
+    let user = await users.get(this.id, this.guild);
     let thing = user.unban(settings).catch(e=>{});
 
     if (settings.duration) setTimeout( () => {
