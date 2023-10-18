@@ -89,7 +89,8 @@ class NosClient {
 		this.DefPerms = require('../Services/PermissionService/_deflist.js');
 
 		
-		// custom permissions
+		// custom events and permissions
+		this.CustEvents = require('../Services/EventService/_custlist.json');
 		this.CustPerms = require('../Services/PermissionService/_custlist.json');
 
 
@@ -169,6 +170,7 @@ class NosClient {
 		// registering slash commands
 		this._base.on("ready", async (ctx) => {
 
+			
 			// setup
 			let token = this.token;
 			this.user = ctx.user;
@@ -200,16 +202,13 @@ class NosClient {
 		
 		// interaction stuff
 		this._base.on("interactionCreate", async (ctx) => {
-			if (ctx.isButton()) { await this.events.buttonPress.fire(ctx); }
-			if (ctx.isStringSelectMenu()) { await this.events.selectionSubmit.fire(ctx); }
-			if (ctx.isButton() || ctx.isStringSelectMenu()) { await this.events.rowAction.fire(ctx); }
-			
-			
+
 			if (ctx.isChatInputCommand() && this.commands.has(ctx.commandName)) {
 				let raw = this.commands.get(ctx.commandName);
 				ctx.author = ctx.user;
 				
 				let cmd = Soup.from({
+
 					name: raw.info.get("name"),
 					description: raw.info.get("description"),
 					cooldown: raw.info.get("cooldown"),
@@ -221,7 +220,6 @@ class NosClient {
 				cmd.args = ctx.options.data;
 
 				await raw.data(ctx, cmd);
-				await this.events.commandRan.fire(ctx, cmd);
 			}
 		});
 	}
