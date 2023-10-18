@@ -1,7 +1,7 @@
 # glue handlers
 
 glue handling is how discord.js events and noscord.js events are stuck together<br>
-noscord.js glue events act as sort of a middle-man between discord.js and the user<br><br><br>
+noscord.js glue events act as sort of a middle-man between discord.js and the user, sticking discord.js events and noscord.js events together through a goofy system<br><br><br>
 
 
 ### discord.js
