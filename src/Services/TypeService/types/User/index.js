@@ -1,7 +1,13 @@
 const TypeService = require('../../index.js');
 const fs = require('fs');
 
-TypeService.newC("User");
+TypeService.newC("User", class {
+    [Symbol.toPrimitive](hint) {
+        if (hint === "string") {
+            return `<@${this.id}>`
+        }
+    }
+});
 
 module.exports = User;
 
