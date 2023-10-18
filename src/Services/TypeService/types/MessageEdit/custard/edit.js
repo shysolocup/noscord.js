@@ -18,6 +18,25 @@ MessageEdit.newF("edit", function(/**/) { return (async () => {
         settings = args[0];
     }
 
+    if (settings.embeds) {
+        settings.embeds.map( (embed) => {
+            let img = embed.image.url;
+            let tn = embed.thumbnail.url;
+            
+            if (img instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
+                embed.image.url = `attachment://${img.name}`;
+                (settings.files) ? settings.files.push(img) : ()=>{ settings.files = []; settings.files.push(img); }();
+            }
+            
+            if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder) {
+                embed.thumbnail.url = `attachment://${tn.name}`;
+                (settings.files) ? settings.files.push(tn) : ()=>{ settings.files = []; settings.files.push(tn); }();
+            }
+
+            return embed;
+        });
+    }
+
     let edit = new types.MessageEdit();
     await edit.apply( await msg.edit(settings) );
 
