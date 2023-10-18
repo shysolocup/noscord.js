@@ -17,26 +17,7 @@ Message.newF("reply", function(/**/) { return (async () => {
         settings = args[0];
     }
 
-    if (settings.embeds) {
-        settings.embeds.map( (embed) => {
-            embed = new Embed(embed);
-            
-            let img = embed.image.url;
-            let tn = embed.thumbnail.url;
-            
-            if (img instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
-                embed.image.url = `attachment://${img.name}`;
-                (settings.files) ? settings.files.push(img) : (()=>{ settings.files = []; settings.files.push(img); })();
-            }
-            
-            if (tn instanceof types.Attachment || img.constructor.name == "AttachmentBuilder") {
-                embed.thumbnail.url = `attachment://${tn.name}`;
-                (settings.files) ? settings.files.push(tn) : (()=>{ settings.files = []; settings.files.push(tn); })();
-            }
-
-            return embed;
-        });
-    }
+    settings.files = [];
 
     let reply = new types.Message();
     await reply.apply( await msg.reply(settings) );
