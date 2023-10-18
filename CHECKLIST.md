@@ -167,12 +167,3 @@
 - [x] ~~readme~~
 
 <br>
-
-
-## Me Service
-- [x] ~~main class~~
-- [x] functions
-- [x] functionality
-- [x] readme
-
-<br>
