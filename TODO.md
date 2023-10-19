@@ -27,6 +27,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟠 | finish voice play stuff |
 | 🟢 | add has functions |
 | 🔴 | make symbol stuff |
+| 🔴 | start channel types |
 <br>
 
 | 🔴 | TypeDev 10/18/23 |
