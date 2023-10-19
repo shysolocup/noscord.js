@@ -1,13 +1,15 @@
 const MessageService = require('../index.js');
 
 
-MessageService.newF("delete", async function(msg, after=0) {
+MessageService.newF("delete", async function(msg, settings={}) {
     const client = this.parent;
     client.import("app");
 
-    setTimeout( () => {
-        msg.delete().catch(e=>{});
-    }, app.parse(after)*1000 );
+    if (settings.after) {
+        setTimeout( () => {
+            msg.delete().catch(e=>{});
+        }, app.parseMs(settings.after) );
+    }
 
     return this;
 });
