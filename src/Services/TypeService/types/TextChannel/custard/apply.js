@@ -32,7 +32,8 @@ TextChannel.newF("apply", async function(ctx) {
 
 
     // messages
-    this.messages = await messages.list(ctx);
+    this.messages = ctx.messages;
+    this.msgList = await messages.list(ctx);
     this.lastMsg = await messages.get(ctx.lastMessageId);
     this.lastMsgId = ctx.lastMessageId;
 
