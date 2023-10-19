@@ -1,7 +1,7 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("on", function(event, func) { ( async () => {
+Client.newF("on", function(event, func) {
 	if (event instanceof Array) {
 		event.forEach( (e) => {
 			if (this.events.has(e)) {
@@ -24,4 +24,4 @@ Client.newF("on", function(event, func) { ( async () => {
 	}
 
 	return func;
-})()});
+});
