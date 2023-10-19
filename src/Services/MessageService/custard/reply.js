@@ -3,11 +3,12 @@ const MessageService = require('../index.js');
 
 MessageService.newF("reply", async function(...args) {
     const client = this.parent;
-    client.import("app", "types", "components");
+    client.import("app", "types", "components", "messages");
     
     let msg = args.shift();
-    msg = await this.get(msg.id, msg.channel);
-    let settings;
+    console.log(msg);
+    msg = await messages.get(msg.id, msg.channel);
+    let settings = {};
 
     if (args[1] && args[1] instanceof Object) {
         settings = args[1];
@@ -16,6 +17,8 @@ MessageService.newF("reply", async function(...args) {
     else {
         settings = args[0];
     }
+
+    settings.files = [];
 
     let reply = new types.Message();
     await reply.apply( await msg.reply(settings).catch(e=>{}) );
