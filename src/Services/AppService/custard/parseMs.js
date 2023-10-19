@@ -8,8 +8,8 @@ AppService.newF("parseMs", function(string) {
 	let t = string.split("");
 	let thing = t.pop();
 
-	if (thing == "s") { return parseFloat(t.join("")); }
-	else if (thing == "ms") { return parseFloat(t.join(""))*1000; }
+	if (thing == "s") { return parseFloat(t.join(""))*1000; }
+	else if (thing == "ms") { return parseFloat(t.join("")); }
 	else if (thing == "m") { return parseFloat(t.join(""))*60*1000; }
 	else if (thing == "h") { return parseFloat(t.join(""))*60*60*1000; }
 	else if (thing == "d") { return parseFloat(t.join(""))*60*60*24*1000; }
