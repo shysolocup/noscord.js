@@ -4,14 +4,16 @@ const { AuditLogEvent } = require('discord.js');
 
 GuildMemberAction.newF("apply", async function(ctx, actionType) {
     const client = this.parent.parent;
-    client.import("users");
+    client.import("users", "types");
     
     this.isKick = (actionType == 1);
     this.isBan = (actionType == 2);
     this.isUnban = (actionType == 3);
     this.isTimeout = (actionType == 4);
 
-    this.victim = await users.get(ctx.id, ctx.guild);
+    this.victim = new types.GuildMember;
+    this.victim.apply(ctx);
+    
     this.victimId = ctx.id;
 
     this.guild = await guilds.get(ctx.guildId);
