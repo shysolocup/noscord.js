@@ -24,11 +24,12 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
-| 🔵 | TypeDev 10/19/23 |
+| 🔴 | TypeDev 10/19/23 |
 | - | - |
+| 🔴 | update services to use types |
 | 🔵 | finish voice play stuff |
-| 🟢 | add has functions |
 | 🔵 | make symbol stuff |
+| 🟢 | add has functions |
 | 🟢 | start channel types |
 <br>
 
