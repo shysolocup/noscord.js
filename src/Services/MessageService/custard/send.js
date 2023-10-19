@@ -3,9 +3,10 @@ const MessageService = require('../index.js');
 
 MessageService.newF("send", async function(...args) {
     const client = this.parent;
-    client.import("app", "types", "components");
+    client.import("app", "types", "components", "channels");
     
     let channel = args.shift();
+    channel = await channels.get(channel.id);
     let settings = {};
 
     if (args[1] && args[1] instanceof Object) {
