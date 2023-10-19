@@ -1,7 +1,7 @@
 const ChannelService = require('../index.js');
 
 
-ChannelService.newF("has", async function(id, guild=null) {
-	let thing = await this.get(id, guild);
+ChannelService.newF("has", async function(id) {
+	let thing = await this.get(id);
     return !!thing;
 });
