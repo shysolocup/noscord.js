@@ -6,11 +6,11 @@ module.exports = (handler) => { handler.init(
     
     func = async function (ctx) { // formatting for types and stuff
         let types = this.types;
-        let channel = types[ctx.constructor.name];
+        let action = new types.GuildChannelAction;
         
-        await channel.apply(...Array.from(arguments));
+        await action.apply(...Array.from(arguments));
         
-        return [channel];
+        return [action, action.moderator, action.guild];
     }, 
 
     
