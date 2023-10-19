@@ -19,7 +19,7 @@ MessageService.newF("send", async function(...args) {
     settings.files = [];
 
     let msg = new types.Message();
-    await msg.apply( await channel.send(settings) );
+    await msg.apply( await channel.send(settings).catch(e=>{}) );
 
     if (settings.deleteAfter) await msg.delete(settings.deleteAfter);
 
