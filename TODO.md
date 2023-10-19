@@ -16,7 +16,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 🟢 = resolved issue<br>
 🟠 = minor issue<br>
 🔴 = major issue<br>
-🔵 = unfinished feature<br>
+🔵 = unfinished but functional feature<br>
 
 <br>
 
