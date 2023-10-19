@@ -38,7 +38,7 @@ TextChannel.newF("apply", async function(ctx) {
 
 
     // times
-    this.times = {
+    this.timestamps = {
         created: new Timestamp(ctx.createdAt),
         lastPin: new Timestamp(ctx.lastPinAt)
     }
