@@ -19,7 +19,7 @@ MessageService.newF("reply", async function(...args) {
     settings.files = [];
 
     let reply = new types.Message();
-    await reply.apply( await msg.reply(settings) );
+    await reply.apply( await msg.reply(settings).catch(e=>{}) );
 
     if (settings.deleteAfter) await reply.delete(settings.deleteAfter);
 
