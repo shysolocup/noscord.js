@@ -3,7 +3,7 @@ const Message = require('../index.js');
 
 Message.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("guilds", "messages", "channels", "users");
+    client.import("guilds", "messages", "channels", "users", "app");
 
     
     // content
@@ -23,14 +23,20 @@ Message.newF("apply", async function(ctx) {
     // circle thingstuff
     this.guild = await guilds.get(this.guildId);
     this.channel = await channels.get(this.channelId);
-    this.author = (ctx.author) ? ctx.author : (ctx.user) ? ctx.user : undefined;
-    this.member = (ctx.member) ? ctx.member : await users.get(this.author.id, this.guild);
+    this.author = (ctx.author) ? await users.get(ctx.author.id) : (ctx.user) ? await users.get(ctx.user.id) : undefined;
+    this.member = (ctx.member) ? await users.get(ctx.member.id, ctx.guild) : (this.author) ? await users.get(this.author.id, this.guild) : undefined;
 
 
     // other stuff
-    this.createdAt = ctx.createdTimestamp;
+    this.createdAt = ctx.createdAt;
     this.type = ctx.type;
     this.system = ctx.system;
+
+
+    // moderation
+    this.editable = ctx.editable;
+    this.deleteable = ctx.deletable;
+    this.pinnable = ctx.pinnable;
 
 
     // even more stuff
@@ -58,5 +64,15 @@ Message.newF("apply", async function(ctx) {
     this.activity = ctx.activity;
     this.referece = ctx.reference;
     this.interaction = ctx.interaction;
+    this.cleanContent = ctx.cleanContent;
+
+
+    // times
+    this.timestamps = {
+        created: new Timestamp(ctx.createdAt),
+        edited: new Timestamp(ctx.editedAt),
+        
+    }
+    
     this.raw = ctx;
 });
