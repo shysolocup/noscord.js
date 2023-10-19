@@ -5,8 +5,7 @@ MessageService.newF("reply", async function(...args) {
     const client = this.parent;
     client.import("app", "types", "components", "messages");
     
-    let rawMsg = args.shift();
-    let msg = await messages.get(rawMsg.id, rawMsg.channel);
+    let msg = args.shift();
     let settings = {};
 
     if (args[1] && args[1] instanceof Object) {
