@@ -1,18 +1,36 @@
 [assets]: <> ( 
   🟢
+  🟠
   🔴
 )
+
+
+---
 
 
 # TODO
 this list is for active issues that are being worked on<br>
 in the source for this file there's a comment with the emoji assets used for easier access
 
+🟢 = resolved issues<br>
+🟠 = minor issues<br>
+🔴 = major issues<br>
+
 <br>
 
+---
+
+<br>
+
+| 🟠 | TypeDev 10/19/23 |
+| - | - |
+| 🟠 | finish voice play stuff |
+| 🟢 | add has functions |
+| 🔴 | make symbol stuff |
+<br>
 
 | 🔴 | TypeDev 10/18/23 |
 | - | - |
-| 🔴 | fix embed files |
+| 🟠 | fix embed files |
 | 🔴 | finish user/member types |
 <br>
