@@ -7,7 +7,7 @@ MessageService.newF("reply", async function(...args) {
     
     let msg = args.shift();
     msg = await this.get(msg.id, msg.channel);
-    let settings = {};
+    let settings;
 
     if (args[1] && args[1] instanceof Object) {
         settings = args[1];
@@ -16,8 +16,6 @@ MessageService.newF("reply", async function(...args) {
     else {
         settings = args[0];
     }
-
-    settings.files = [];
 
     let reply = new types.Message();
     await reply.apply( await msg.reply(settings).catch(e=>{}) );
