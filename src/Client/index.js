@@ -85,12 +85,12 @@ class NosClient {
 
 		
 		// need to be awaited
-		this.DefEvents = require('../Services/EventService/_deflist.js');
-		this.DefPerms = require('../Services/PermissionService/_deflist.js');
+		this._defEvents = require('../Services/EventService/_deflist.js');
+		this._defPerms = require('../Services/PermissionService/_deflist.js');
 
 		
 		// custom events and permissions
-		this.CustPerms = require('../Services/PermissionService/_custlist.json');
+		this._custPerms = require('../Services/PermissionService/_custlist.json');
 
 
 		/*
