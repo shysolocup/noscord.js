@@ -47,6 +47,7 @@ User.newF("apply", async function(ctx) {
     this.timestamps = {
         created: new Timestamp(ctx.createdAt),
     };
+    this.createdAt = ctx.createdAt;
 
 
     this.dms = ctx.dmChannel
