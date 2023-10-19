@@ -46,7 +46,10 @@ client.on("ready", (ctx) => {
 
 
 // imports stuff
-client.import("commands", "channels", "users", "events", "components", "app");
+client.import(
+    { com: "commands", comp: "components", att: "attachments" },
+    [ "channels", "users", "events", "app" ]
+);
 
 
 
@@ -65,15 +68,15 @@ client.on("pingCmd", async (ctx, cmd) => {
 
 
 // creates a ping command
-commands.create("ping", "replies with pong", (ctx, cmd) => {
+com.create("ping", "replies with pong", (ctx, cmd) => {
     let timestamp = new app.Timestamp();
 
 
-    let embed = new components.Embed({
+    let embed = new comp.Embed({
         description: "# Pong!",
         timestamp: timestamp.embed,
         color: app.colors.blurple,
-        footer: `latency: ${Date.now() - ctx.createdTimestamp}ms`
+        footer: `latency: ${Date.now() - ctx.timestamps.created}ms`
     });
 
     
@@ -94,7 +97,7 @@ let options = [{
 
 
 // avatar command
-commands.create({ name: "avatar", desc: "sends a users' avatar", options: options }, async (ctx, cmd) => {
+com.create("avatar", "sends a users' avatar", options, async (ctx, cmd) => {
     let user;
 
 
@@ -103,9 +106,10 @@ commands.create({ name: "avatar", desc: "sends a users' avatar", options: option
 
 
     let { png } = await users.avatar(user, { width: 100, height: 100 });
+    let circle = await att.circlify(png);
 
 
-    ctx.reply({ files: [png] });
+    ctx.reply({ files: [circle] });
 });
 
 
