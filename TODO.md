@@ -27,6 +27,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔴 | TypeDev 10/19/23 |
 | - | - |
 | 🔴 | update services to use types |
+| 🔴 | finish GuildChannelAction type |
 | 🔵 | finish voice play stuff |
 | 🔵 | make symbol stuff |
 | 🟢 | add has functions |
