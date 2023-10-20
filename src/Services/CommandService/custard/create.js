@@ -64,10 +64,6 @@ CommandService.newF("create", function(...args) {
 	}
 
 
-	// creates a slash command
-	let cmd = new this.SlashCommand(info, func);
-	
-
-	// adds it to the list
-	this.parent.commands.push(cmd.info.name, cmd);
+	// creates the slash command
+	return new this.SlashCommand(info, func);
 });
