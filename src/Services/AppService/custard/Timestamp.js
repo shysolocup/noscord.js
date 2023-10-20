@@ -13,8 +13,8 @@ AppService.newC("Timestamp", class {
 		this.longTime = `<t:${Math.round(dt.getTime() / 1000)}:T>`;
 		this.shortDate = `<t:${Math.round(dt.getTime() / 1000)}:d>`;
 		this.longDate = `<t:${Math.round(dt.getTime() / 1000)}:D>`;
-		this.shortDT = `<t:${Math.round(dt.getTime() / 1000)}:f>`;
-		this.longDT = `<t:${Math.round(dt.getTime() / 1000)}:F>`;
+		this.short = `<t:${Math.round(dt.getTime() / 1000)}:f>`;
+		this.long = `<t:${Math.round(dt.getTime() / 1000)}:F>`;
 		this.relative = `<t:${Math.round(dt.getTime() / 1000)}:R>`;
 	}
 });
