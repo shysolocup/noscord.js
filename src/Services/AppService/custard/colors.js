@@ -26,11 +26,12 @@ AppService.newP("colors", new Soup({
 		light_grey:'#979c9f',
 		darker_grey:'#546e7a',
 		blurple:'#7289da',
+		new_blurple: "#5865f2",
+		hybrid_blurple: "#6577e6",
 		greyple:'#99aab5',
 		clam:'#FF523A',
 		dynastio:'#852C34',
 		boobie:'#B00B1E',
 		fish:'#EA7E00',
-		water:'#2F99E3',
-		nut:"#FFEC67"
+		water:'#2F99E3'
 	}));
