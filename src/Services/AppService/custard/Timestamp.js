@@ -16,5 +16,6 @@ AppService.newC("Timestamp", class {
 		this.short = `<t:${Math.round(dt.getTime() / 1000)}:f>`;
 		this.long = `<t:${Math.round(dt.getTime() / 1000)}:F>`;
 		this.relative = `<t:${Math.round(dt.getTime() / 1000)}:R>`;
+		this.raw = `${Math.round(dt.getTime() / 1000)}`;
 	}
 });
