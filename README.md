@@ -92,7 +92,7 @@ let options = [{ name: "user", desc: "user to get the avatar of", type: "user" }
 
 
 // avatar command
-com.create("avatar", "sends a users' avatar", options, async (ctx) => {
+com.create("avatar", "sends a user's avatar", options, async (ctx) => {
     let user = (ctx.args[0]) ? await users.get(ctx.args[0].value) : ctx.author;
 
 
