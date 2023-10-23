@@ -24,6 +24,7 @@ module.exports = (handler) => { handler.init(
             }).copy().pour();
             cmd.args = ctx.options.data;
         }
+
         
         await command.apply(ctx, cmd);
         return [command, cmd];
