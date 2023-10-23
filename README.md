@@ -86,13 +86,8 @@ com.create("ping", "replies with pong", (ctx) => {
 
 
 
-// options for the avatar command
-let options = [{
-    name: "user",
-    description: "user to get the avatar of",
-    type: "user",
-    required: false
-}];
+// option for the avatar command
+let options = [{ name: "user", desc: "user to get the avatar of", type: "user" }];
 
 
 
