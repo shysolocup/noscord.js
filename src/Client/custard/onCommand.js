@@ -1,7 +1,7 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("onSubmit", function(a, b) { ( async () => {
+Client.newF("onCommand", function(a, b) {
 	if (b && b instanceof Function) {
 		this.on("commandRun", async (ctx) => {
 			if (ctx.name == a) await b(ctx);
@@ -10,4 +10,4 @@ Client.newF("onSubmit", function(a, b) { ( async () => {
 	else {
 		this.on("commandRun", a);
 	}
-})()});
+});
