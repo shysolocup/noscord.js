@@ -7,7 +7,7 @@ UserService.newF("decor", async function(user, settings={}) {
 
     let decorUrl = user.avatarDecorationURL(settings.dynamic);
 
-    if (!settings.name) settings.name = `${user.id}-decor`;
+    if (!settings.name) settings.name = `${user.id}-decor.png`;
 
     let stuff = att.create(decorUrl, settings);
     stuff.originUrl = decorUrl;
