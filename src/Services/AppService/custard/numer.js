@@ -7,7 +7,7 @@ AppService.newF("numer", function (number, settings={}) {
     if (!settings.currency) settings.currency = "";
 
     
-    const formatter = new Intl.NumberFormat('en-US', {
+    let formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
         maximumFractionDigits: settings.round
