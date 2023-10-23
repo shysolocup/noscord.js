@@ -27,6 +27,7 @@
 ## Command Service
 - [x] ~~main class~~
 - [x] ~~command creation~~
+- [ ] command types
 - [ ] command cooldown
 - [x] ~~functionality~~
 - [x] ~~readme~~
