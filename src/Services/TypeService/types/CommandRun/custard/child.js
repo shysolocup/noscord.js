@@ -1,5 +1,3 @@
-this.child = ctx.fetchReply
-
 const CommandRun = require('../index.js');
 
 
