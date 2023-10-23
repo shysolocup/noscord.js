@@ -12,5 +12,8 @@ AppService.newF("numer", function (number, settings={}) {
         maximumFractionDigits: settings.round
     });
     
-    return formatter.format(number).replace("$", settings.currency);
+    let formatted = formatter.format(number).replace("$", settings.currency);
+
+    
+    return new this.Numer(formatted, number, settings.currency, settings.round);
 });
