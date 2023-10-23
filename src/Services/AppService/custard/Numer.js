@@ -18,7 +18,7 @@ AppService.newC("Numer", class {
             return this.value;
         }
 
-        if (hint == "number") {
+        if (hint == "default") {
             return this.raw;
         }
     }
