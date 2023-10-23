@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.1 | 10/23/23 ::
+	:: noscord.js :: TypeDev 0.1.2 | 10/23/23 ::
 	https://github.com/paigeroid/noscord.js
 
 */
