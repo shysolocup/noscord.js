@@ -20,6 +20,7 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     
 
     // more slash command info shitters
+    this.latency = new Date() - ctx.createdTimestamp
     this.deferred = ctx.deferred;
     this.replied = ctx.replied;
     this.ephemeral = ctx.ephemeral;
