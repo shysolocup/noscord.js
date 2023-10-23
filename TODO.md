@@ -40,8 +40,8 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | start channel types |
 <br>
 
-| 🔵 | TypeDev 10/18/23 |
+| 🟢 | TypeDev 10/18/23 |
 | - | - |
-| 🔵 | fix embed attachments |
-| 🔵 | finish user/member types |
+| 🟢 | fix attachments |
+| 🟢 | finish user/member types |
 <br>
