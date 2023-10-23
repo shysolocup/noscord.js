@@ -149,7 +149,9 @@ class NosClient {
 		
 		// runs slash commands
 		this.on("commandRan", async (ctx, cmd) => {
-			await ctx.data(ctx, cmd);
+			if (this.commands.has(ctx.name)) {
+				await ctx.data(ctx, cmd);
+			}
 		});
 	}
 }
