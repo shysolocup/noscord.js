@@ -16,8 +16,6 @@ MessageService.newF("reply", async function(...args) {
         settings = (args[0] instanceof Object) ? args[0] : args[0].toString();
     }
 
-    settings.files = [];
-
     let reply = new types.Message();
     await reply.apply( await msg.reply(settings).catch(e=>{}) );
 
