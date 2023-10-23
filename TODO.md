@@ -27,6 +27,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔴 | TypeDev 10/23/23 |
 | - | - |
 | 🔴 | fix client.command() |
+| 🔴 | test command stuff |
 <br>
 
 | 🔴 | TypeDev 10/19/23 |
