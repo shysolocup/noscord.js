@@ -28,6 +28,13 @@ ComponentService.newC("Selection", class {
         data.max_values = (data.max && !data.max_values) ? data.max : (data.maximum && !data.max_values) ? data.maximum : data.max_values;
 
 
+        // options formatting
+        data.options.map( (opt) => {
+            if (opt.desc && !opt.description) opt.description = opt.desc;
+            return obt;
+        });
+        
+        
         return data;
     }
 });
