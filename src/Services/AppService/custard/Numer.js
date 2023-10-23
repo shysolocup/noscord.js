@@ -23,3 +23,6 @@ AppService.newC("Numer", class {
         }
     }
 });
+
+
+module.exports = Numer;
