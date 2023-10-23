@@ -9,20 +9,23 @@ module.exports = (handler) => { handler.init(
         let types = this.types;
         
         let command = new types.CommandRun;
+        let cmd = {};
+
         
-        let raw = client.commands.get(ctx.commandName);
-        let cmd = Soup.from({
-            name: raw.info.get("name"),
-            description: raw.info.get("description"),
-            cooldown: raw.info.get("cooldown"),
-            options: raw.info.get("options"),
-            nsfw: raw.info.get("nsfw"),
-            data: raw.data
-        }).copy().pour();
-        cmd.args = ctx.options.data;
+        if (client.commands.has(ctx.commandName)) {
+            let raw = client.commands.get(ctx.commandName);
+            cmd = Soup.from({
+                name: raw.info.get("name"),
+                description: raw.info.get("description"),
+                cooldown: raw.info.get("cooldown"),
+                options: raw.info.get("options"),
+                nsfw: raw.info.get("nsfw"),
+                data: raw.data
+            }).copy().pour();
+            cmd.args = ctx.options.data;
+        }
         
         await command.apply(ctx, cmd);
-        
         return [command, cmd];
     }, 
 
