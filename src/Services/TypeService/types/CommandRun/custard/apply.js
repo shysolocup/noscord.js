@@ -1,9 +1,49 @@
 const CommandRun = require('../index.js');
 
 
-CommandRun.newF("apply", async function(ctx, cmd) {
+CommandRun.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     client.import("guilds", "messages", "channels", "users", "app");
+
+    
+    // info shitters
+    this.id = ctx.commandId;
+    this.name = ctx.commandName;
+    this.type = ctx.commandType;
+    this.options = ctx.options;
+    
+
+    // more slash command info shitters
+    this.deferred = ctx.deferred;
+    this.repleid = ctx.replied;
+    this.ephemeral = ctx.ephemeral;
+
+    
+    // stuff
+    this.applicationId = ctx.applicationId;
+    this.channelId = ctx.channelId;
+    this.guildId = ctx.guildId;
+    this.channel = await channels.get(ctx.channelId);
+    this.guild = await guilds.get(ctx.guildId);
+
+    
+    // author and user and member stuff
+    this.user = await users.get(ctx.user.id);
+    this.author = this.user;
+
+    this.userId = ctx.user.id;
+    this.authorId = ctx.user.id
+    
+    this.member = await users.get(ctx.user.id, ctx.guildId);
+
+
+    // some random shit
+    this.version = ctx.version;
+    this.appPerms = ctx.appPermissions;
+    this.memberPerms = ctx.memberPermissions;
+    this.locale = ctx.locale;
+    this.guildLocale = ctx.guildLocale;
+    this.webhook = ctx.webhook;
     
     this.raw = ctx;
 });
