@@ -153,9 +153,20 @@ class NosClient {
 				await ctx.data(ctx, cmd);
 			}
 		});
+
+
+		this._instances = NosClient._instances;
+		this._instances.push(this);
 	}
 }
 
 
+
+Object.defineProperty(NosClient, "_instances", {
+	value: new Soup(Array)
+});
+
+
 exp.pull("Client", cl.from(NosClient));
+exp.pull("Instances", NosClient._instances);
 module.exports = exp;
