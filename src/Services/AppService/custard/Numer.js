@@ -8,6 +8,9 @@ AppService.newC("Numer", class {
         this.raw = raw;
         this.currency = currency;
         this.round = round;
+
+		this.even = (raw % 2 == 0);
+        this.odd = (raw % 2 == 1);
 	}
 
     [Symbol.toPrimitive](hint) {
