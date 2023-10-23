@@ -8,7 +8,7 @@ AddonService.newC("Addon", class {
         let cl = Client.newC(className, classData);
         
         instances.forEach( (client) => {
-            client.services.push(importName, new client[ClassName]());
+            client.services.push(importName, new client[className]());
         });
         
         return cl;
