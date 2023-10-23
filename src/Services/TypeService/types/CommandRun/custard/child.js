@@ -4,5 +4,5 @@ const CommandRun = require('../index.js');
 
 
 CommandRun.newP("child", function() {
-    return ctx.fetchReply;
+    return this.raw.fetchReply();
 });
