@@ -14,8 +14,6 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     this.cooldown = cmd.cooldown;
     this.nsfw = cmd.nsfw;
     this.data = cmd.data;
-
-    this.child = await ctx.fetchReply()
     
     this.type = ctx.commandType;
     this.options = ctx.options;
