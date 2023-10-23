@@ -4,12 +4,6 @@ const Canvas = require('@napi-rs/canvas');
 
 Attachment.newF("circlify", async function(settings={}) {
     let img = this.png.attachment;
-    
-    const client = this.parent;
-    let types = new client.TypeService;
-
-    if (img instanceof types.Attachment) img = img.png.attachment;
-    else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
 
 	let image = await Canvas.loadImage(img);
 	
@@ -27,5 +21,5 @@ Attachment.newF("circlify", async function(settings={}) {
 	
 	context.drawImage(image, 0, 0, width, height);
 	
-	return new types.Attachment(canvas, settings);
+	return new Attachment(canvas, settings);
 });
