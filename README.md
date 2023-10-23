@@ -101,8 +101,8 @@ com.create("avatar", "sends a users' avatar", options, async (ctx) => {
     let user = (ctx.args[0]) ? await users.get(ctx.args[0].value) : ctx.author;
 
 
-    let { png } = await users.avatar(user, { width: 100, height: 100 });
-    let circle = await att.circlify(png);
+    let avatar = await users.avatar(user, { width: 100, height: 100 });
+    let circle = await avatar.circlify();
 
 
     ctx.reply({ files: [circle] });
