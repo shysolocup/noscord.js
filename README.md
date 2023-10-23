@@ -60,15 +60,15 @@ client.events.push("pingCmd", event);
 
 
 // creates a listener for the pingCmd event
-client.on("pingCmd", async (ctx, cmd) => {
+client.on("pingCmd", async (ctx) => {
     let channel = await channels.get("channel id");
-    channel.send(`${cmd.name} command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
+    channel.send(`${ctx.name} command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
 });
 
 
 
 // creates a ping command
-com.create("ping", "replies with pong", (ctx, cmd) => {
+com.create("ping", "replies with pong", (ctx) => {
     let timestamp = new app.Timestamp();
 
 
@@ -97,12 +97,8 @@ let options = [{
 
 
 // avatar command
-com.create("avatar", "sends a users' avatar", options, async (ctx, cmd) => {
-    let user;
-
-
-    if (cmd.args[0]) user = await users.get(cmd.args[0].value);
-    else user = ctx.author;
+com.create("avatar", "sends a users' avatar", options, async (ctx) => {
+    let user = (ctx.args[0]) ? await users.get(ctx.args[0].value) : ctx.author;
 
 
     let { png } = await users.avatar(user, { width: 100, height: 100 });
