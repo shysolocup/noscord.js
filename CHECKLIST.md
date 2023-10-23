@@ -1,6 +1,6 @@
 ## Client
 - [x] ~~main class~~
-- [ ] functions
+- [x] ~~functions~~
 - [ ] properties
 - [x] ~~functionality~~
 - [x] ~~readme~~ 
