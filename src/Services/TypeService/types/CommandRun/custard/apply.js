@@ -1,7 +1,7 @@
 const CommandRun = require('../index.js');
 
 
-CommandRun.newF("apply", async function(ctx) {
+CommandRun.newF("apply", async function(ctx, cmd) {
     const client = this.parent.parent;
     client.import("guilds", "messages", "channels", "users", "app");
 
@@ -9,6 +9,12 @@ CommandRun.newF("apply", async function(ctx) {
     // info shitters
     this.id = ctx.commandId;
     this.name = ctx.commandName;
+    this.description = cmd.description;
+    this.args = cmd.args;
+    this.cooldown = cmd.cooldown;
+    this.nsfw = cmd.nsfw;
+    this.data = cmd.data;
+    
     this.type = ctx.commandType;
     this.options = ctx.options;
     
