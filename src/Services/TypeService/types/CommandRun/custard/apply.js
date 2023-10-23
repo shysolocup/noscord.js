@@ -53,6 +53,9 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     this.guildLocale = ctx.guildLocale;
     this.webhook = ctx.webhook;
     this.createdTimestamp = ctx.createdTimestamp;
+    this.commandName = ctx.commandName;
+    this.commandId = ctx.commandId;
+    this.commandType = ctx.commandType;
     
     this.raw = ctx;
 });
