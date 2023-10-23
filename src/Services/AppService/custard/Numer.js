@@ -3,11 +3,11 @@ const { Soup } = require('stews');
 
 
 AppService.newC("Numer", class {
-	constructor(formatted, currency, round, raw) {
+	constructor(formatted, raw, currency, round) {
 		this.value = formatted;
+        this.raw = raw;
         this.currency = currency;
         this.round = round;
-        this.raw = raw;
 	}
 
     [Symbol.toPrimitive](hint) {
