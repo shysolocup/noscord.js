@@ -20,7 +20,8 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     
 
     // more slash command info shitters
-    this.latency = new Date() - ctx.createdTimestamp
+    this.ranAt = new Timestamp(ctx.createdTimestamp);
+    this.latency = new Date() - ranAt.date;
     this.deferred = ctx.deferred;
     this.replied = ctx.replied;
     this.ephemeral = ctx.ephemeral;
@@ -51,6 +52,7 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     this.locale = ctx.locale;
     this.guildLocale = ctx.guildLocale;
     this.webhook = ctx.webhook;
+    this.createdTimestamp = ctx.createdTimestamp;
     
     this.raw = ctx;
 });
