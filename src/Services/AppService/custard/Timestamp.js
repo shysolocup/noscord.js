@@ -18,4 +18,9 @@ AppService.newC("Timestamp", class {
 		this.relative = `<t:${Math.round(dt.getTime() / 1000)}:R>`;
 		this.raw = `${Math.round(dt.getTime() / 1000)}`;
 	}
+
+	latency(msg) {
+	    return this.date - msg.createdTimestamp
+	}
+	
 });
