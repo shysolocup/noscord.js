@@ -22,8 +22,8 @@ AppService.newC("Timestamp", class {
 	latency(msg) {
 		console.log(msg.constructor.name);
 		if (msg.constructor.name == "ChatInputCommandInteraction") return this.date - msg.createdTimestamp
-		else if (msg.constructor.name == "Message") return this.date - msg.timestamps.created.time;
-		else if (msg.constructor.name == "MessageEdit") return this.date - msg.timestampes.edited.time;
+		else if (msg.constructor.name == "Message") return this.date - msg.timestamps.created.date;
+		else if (msg.constructor.name == "MessageEdit") return this.date - msg.timestampes.edited.date;
 		else return this.date - msg.createdAt;
 	}
 	
