@@ -71,7 +71,7 @@ class NosClient {
 		}
 
 		this.types = this.services.types;
-		this.command = this.services.commands.create;
+		this.command = this.services.commands.create.bind(this.services.commands);
 		this._handler = new this.services.events.GlueHandler;
 		this.Embed = this.services.components.Embed;
 		this.Button = this.services.components.Button;
