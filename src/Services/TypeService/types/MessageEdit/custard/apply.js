@@ -3,20 +3,13 @@ const MessageEdit = require('../index.js');
 
 MessageEdit.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("guilds", "channels", "users", "messages");
-
-
-    // circle stuff but can we get much higher (so hiigghhh)
-    this.guild = await guilds.get(ctx.guildId);
-    this.channel = await channels.get(ctx.channelId, this.guild);
-    this.url = `https://discord.com/channels/${ctx.guild.id}/${ctx.channel.id}/${ctx.id}`;
+    client.import("guilds", "messages", "channels", "users", "app");
 
     
-    // contents
+    // content
     this.content = ctx.content;
+    if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, ctx.channel)
     this.to = await messages.get(ctx.id, ctx.channel);
-    if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, this.channel);
-    
 
 
     // ids
@@ -25,17 +18,26 @@ MessageEdit.newF("apply", async function(ctx) {
     this.guildId = ctx.guildId;
     this.webhookId = ctx.webhookId;
     this.appId = ctx.applicationId;
+    this.url = `https://discord.com/channels/${ctx.guild.id}/${ctx.channel.id}/${ctx.id}`;
 
 
     // circle thingstuff
-    this.author = (ctx.author) ? ctx.author : (ctx.user) ? ctx.user : undefined;
-    this.member = (ctx.member) ? ctx.member : await users.get(this.author.id, this.guild);
+    this.guild = await guilds.get(this.guildId);
+    this.channel = await channels.get(this.channelId);
+    this.author = (ctx.author) ? await users.get(ctx.author.id) : (ctx.user) ? await users.get(ctx.user.id) : undefined;
+    this.member = (ctx.member) ? await users.get(ctx.member.id, ctx.guild) : (this.author) ? await users.get(this.author.id, this.guild) : undefined;
 
 
     // other stuff
-    this.createdAt = ctx.createdTimestamp;
+    this.createdAt = ctx.createdAt;
     this.type = ctx.type;
     this.system = ctx.system;
+
+
+    // moderation
+    this.editable = ctx.editable;
+    this.deleteable = ctx.deletable;
+    this.pinnable = ctx.pinnable;
 
 
     // even more stuff
@@ -63,5 +65,16 @@ MessageEdit.newF("apply", async function(ctx) {
     this.activity = ctx.activity;
     this.referece = ctx.reference;
     this.interaction = ctx.interaction;
+    this.cleanContent = ctx.cleanContent;
+
+
+    // times
+    this.timestamps = {
+        created: new Timestamp(ctx.createdAt),
+        edited: new Timestamp(ctx.editedAt),
+    }
+    this.latency = new Date() - this.timestamps.edited.date;
+
+    
     this.raw = ctx;
 });
