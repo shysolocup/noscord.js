@@ -1,6 +1,11 @@
 const CommandRun = require('../index.js');
 
 
-CommandRun.newP("child", function() {
-    return this.raw.fetchReply();
+CommandRun.newP("child", async function() {
+    const client = this.parent.parent;
+    client.import("messages");
+    
+    let msg = await this.raw.fetchReply();
+
+    return await messages.get(msg.id, this.channel);
 });
