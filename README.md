@@ -76,7 +76,7 @@ com.create("ping", "replies with pong", (ctx, cmd) => {
         description: "# Pong!",
         timestamp: timestamp.embed,
         color: app.colors.blurple,
-        footer: `latency: ${ctx.latency}ms`
+        footer: `latency: ${timestamp.latency(ctx)}ms`
     });
 
     
