@@ -13,7 +13,7 @@ MessageService.newF("reply", async function(...args) {
         settings.content = args[0].toString();
     }
     else {
-        settings = args[0];
+        settings = (args[0] instanceof Object) ? args[0] : args[0].toString();
     }
 
     settings.files = [];
