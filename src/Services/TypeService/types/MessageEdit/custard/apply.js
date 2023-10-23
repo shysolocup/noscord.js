@@ -18,7 +18,7 @@ MessageEdit.newF("apply", async function(ctx) {
     this.guildId = ctx.guildId;
     this.webhookId = ctx.webhookId;
     this.appId = ctx.applicationId;
-    this.url = `https://discord.com/channels/${ctx.guild.id}/${ctx.channel.id}/${ctx.id}`;
+    this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.channelId}/${ctx.id}`;
 
 
     // circle thingstuff
