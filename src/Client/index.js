@@ -98,66 +98,10 @@ class NosClient {
 
 
 		/*
-		// send event
-		this._base.on("messageCreate", async function(ctx) {
-			await events.get("send").fire(...Array.from(arguments));
-			if (ctx.reference) await events.get("reply").fire(...Array.from(arguments));
-		});
-
-
-		// delete event
-		this._base.on("messageDelete", async function() {
-			await events.get("delete").fire(...Array.from(arguments));
-		});
-
-
-		// edit event
-		this._base.on("messageUpdate", async function() {
-			await events.get("edit").fire(...Array.from(arguments));
-		});
-
 
 		// react event
 		this._base.on("messageReactionAdd", async function() {
 			await events.get("reaction").fire(...Array.from(arguments));
-		});
-
-
-		// join event
-		this._base.on("guildMemberAdd", async function() {
-			await events.get("join").fire(...Array.from(arguments));
-		});
-
-
-		// leave/kick events
-		this._base.on("guildMemberRemove", async function(member) {
-			await events.get("leave").fire(...Array.from(arguments));
-
-			const logs = await member.guild.fetchAuditLogs({
-				limit: 1,
-				type: 'MEMBER_KICK',
-			});
-
-			const log = fetchedLogs.entries.first();
-			if (!log) return;
-
-			const { executor, target } = log;
-
-			if (member.id == target.id) {
-				await events.get("kick").fire(...Array.from(arguments));
-			}
-		});
-
-
-		// ban event
-		this._base.on("guildBanAdd", async function() {
-			await events.get("ban").fire(...Array.from(arguments));
-		});
-
-
-		// unban event
-		this._base.on("guildBanRemove", async function() {
-			await events.get("unban").fire(...Array.from(arguments));
 		});
 
 
