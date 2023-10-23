@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.0 | 10/17/23 ::
+	:: noscord.js :: TypeDev 0.1.1 | 10/23/23 ::
 	https://github.com/paigeroid/noscord.js
 
 */
@@ -203,27 +203,9 @@ class NosClient {
 		});
 
 		
-		// interaction stuff
-		this._base.on("interactionCreate", async (ctx) => {
-
-			if (ctx.isChatInputCommand() && this.commands.has(ctx.commandName)) {
-				let raw = this.commands.get(ctx.commandName);
-				ctx.author = ctx.user;
-				
-				let cmd = Soup.from({
-
-					name: raw.info.get("name"),
-					description: raw.info.get("description"),
-					cooldown: raw.info.get("cooldown"),
-					options: raw.info.get("options"),
-					nsfw: raw.info.get("nsfw"),
-					data: raw.data
-	
-				}).copy().pour();
-				cmd.args = ctx.options.data;
-
-				await raw.data(ctx, cmd);
-			}
+		// runs slash commands
+		this.on("commandRan", async (ctx, cmd) => {
+			await ctx.data(ctx, cmd);
 		});
 	}
 }
