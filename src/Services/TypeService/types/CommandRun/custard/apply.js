@@ -15,7 +15,7 @@ CommandRun.newF("apply", async function(ctx) {
 
     // more slash command info shitters
     this.deferred = ctx.deferred;
-    this.repleid = ctx.replied;
+    this.replied = ctx.replied;
     this.ephemeral = ctx.ephemeral;
 
     
