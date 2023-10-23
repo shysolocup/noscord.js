@@ -21,7 +21,7 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
 
     // more slash command info shitters
     this.ranAt = new Timestamp(ctx.createdTimestamp);
-    this.latency = new Date() - ranAt.date;
+    this.latency = new Date() - this.ranAt.date;
     this.deferred = ctx.deferred;
     this.replied = ctx.replied;
     this.ephemeral = ctx.ephemeral;
