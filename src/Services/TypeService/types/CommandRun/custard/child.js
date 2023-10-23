@@ -7,5 +7,5 @@ CommandRun.newP("child", async function() {
     
     let msg = await this.raw.fetchReply();
 
-    return await messages.get(msg.id, this.channel);
+    return messages.get(msg.id, this.channel);
 });
