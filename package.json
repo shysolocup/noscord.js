@@ -1,6 +1,6 @@
 {
     "name": "noscord.js",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": "paigeroid",
     "description": "A customized Discord API wrapper for Node.JS that is similar to older versions of Discord.JS in that you can access most of the API from the client instead of having to go through types though because it's built on the latest versions of Discord.JS you can still use them if you wish",
     "repository": {
