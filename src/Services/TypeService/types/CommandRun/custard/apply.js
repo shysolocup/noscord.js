@@ -34,7 +34,7 @@ CommandRun.newF("apply", async function(ctx) {
     this.userId = ctx.user.id;
     this.authorId = ctx.user.id
     
-    this.member = await users.get(ctx.user.id, ctx.guildId);
+    this.member = await users.get(ctx.user.id, this.guild);
 
 
     // some random shit
