@@ -16,6 +16,13 @@ MessageService.newF("reply", async function(...args) {
         settings = (args[0] instanceof Object) ? args[0] : args[0].toString();
     }
 
+    if (settings.files) {
+        settings.files = settings.files.map( (file) => {
+            if (file instanceof types.Attachment) return file.png;
+            else return file;
+        });
+    }
+
     let reply = new types.Message();
     await reply.apply( await msg.reply(settings).catch(e=>{}) );
 
