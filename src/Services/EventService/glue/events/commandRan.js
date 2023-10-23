@@ -4,7 +4,7 @@ module.exports = (handler) => { handler.init(
     name = "commandRan",  // names of the event
 
     
-    func = function (ctx) { // formatting for types and stuff
+    func = async function (ctx) { // formatting for types and stuff
         let client = this.parent.parent;
         let types = this.types;
         
