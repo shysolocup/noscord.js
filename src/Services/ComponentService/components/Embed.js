@@ -50,6 +50,12 @@ ComponentService.newC("Embed", class {
         }
 
 
+        // fields
+        if (data.fields) {
+            data.fields = this.parent._fieldForm(data.fields);
+        }
+
+
         return data;
     }
 });
