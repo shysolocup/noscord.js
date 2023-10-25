@@ -1,4 +1,6 @@
-const ComponentService = require('./index.js');
+const ComponentService = require('../index.js');
+const { Soup } = require('stews');
+
 
 ComponentService.newF("_fieldForm", (fields) => {
 	fields = Soup.from(fields);
