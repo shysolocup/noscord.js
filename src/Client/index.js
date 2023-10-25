@@ -28,7 +28,6 @@ const exp = new Soup(Object);
 
 class NosClient {
     constructor(/**/) {
-        this.token = undefined;
 		this.user = undefined;
         this._base = new Client(...Array.from(arguments));
 
@@ -142,7 +141,8 @@ class NosClient {
 				return info.toJSON()
 				
 			});
-	
+
+			
 			this.rest = new REST().setToken(token);
 
 			await this.rest.put(
@@ -162,6 +162,10 @@ class NosClient {
 
 		this._instances = NosClient._instances;
 		this._instances.push(this);
+
+
+		// moved to the bottom of the class for screenshot protection
+        this.token = undefined;
 	}
 }
 
