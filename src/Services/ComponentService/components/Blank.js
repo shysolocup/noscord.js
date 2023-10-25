@@ -2,8 +2,8 @@ const ComponentService = require('../index.js');
 
 
 ComponentService.newC("Blank", class {
-    constructor(inline=false) {
-        return { name: "** **", value: "** **", inline: inline }
+    constructor(settinngs={}) {
+        return { name: "** **", value: "** **", line: settings.line inline: (settings.inline || settings.line) true : false }
     }
 });
 
