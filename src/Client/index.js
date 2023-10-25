@@ -125,7 +125,7 @@ class NosClient {
 
 
 			this.spreads.forEach( async (s) => {
-				await s.data(...s.contents);
+				await s.data(...s.content);
 			});
 
 
