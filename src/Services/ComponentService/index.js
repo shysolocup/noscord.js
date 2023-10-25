@@ -1,7 +1,9 @@
 const { Client } = require('../../Client');
 const fs = require('fs');
 
-Client.newC("ComponentService");
+Client.newC("ComponentService", class {
+    this.blank = { name: "** **", value: "** **", inline: false }
+});
 
 module.exports = ComponentService;
 
