@@ -49,6 +49,7 @@ class NosClient {
             
         /* event and permission handling */
         this.events = new Soup(Object);
+		this.spreads = new Soup(Array);
 		
 
 
@@ -121,6 +122,11 @@ class NosClient {
 			let token = this.token;
 			this.user = ctx.user;
 			this.application = ctx.application;
+
+
+			this.spreads.forEach( async (s) => {
+				await s.data(s.contents);
+			});
 
 
 			if (this.commands.length <= 0) return;
