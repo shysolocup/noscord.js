@@ -160,8 +160,7 @@ class NosClient {
 }
 
 
-
-Object.defineProperty(NosClient, "_instances", {
+if (!NosClient._instances) Object.defineProperty(NosClient, "_instances", {
 	value: new Soup(Array)
 });
 
