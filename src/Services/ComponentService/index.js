@@ -5,9 +5,17 @@ Client.newC("ComponentService");
 
 module.exports = ComponentService;
 
-let comp_dir = require('./components/_funkydir');
-let components = fs.readdirSync(comp_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+let cust_dir = require('./custard/_funkydir');
+let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
 
-components.forEach( (file) => {
+cust.forEach( (file) => {
+    require(`./custard/${file}`);
+});
+
+
+let comp_dir = require('./components/_funkydir');
+let comp = fs.readdirSync(comp_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
+
+comp.forEach( (file) => {
     require(`./components/${file}`);
 });
