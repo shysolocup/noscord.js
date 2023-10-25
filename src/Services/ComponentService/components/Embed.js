@@ -59,9 +59,9 @@ ComponentService.newC("Embed", class {
         // headers
         if (data.header) {
             if (!data.description) data.description = "";
-            if (data.header instanceof Object) data.description = data.description.padStart( data.description.length + ((data.size) ? data.size : 1), "#");
             let text = (typeof data.header == "string") ? data.header : data.header.text;
-            data.description = data.description.padStart(data.description.length + text.length, `${text}\n`);
+            data.description = ` ${text}\n${data.description}`;
+            if (data.header instanceof Object) data.description = data.description.padStart( data.description.length + ((data.size) ? data.size : 1), "#");
         }
 
 
