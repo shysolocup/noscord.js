@@ -24,6 +24,12 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
+| 🔵 | TypeDev 10/25/23 |
+| - | - |
+| 🔵 | make doc page for Components.Embed.fields |
+| 🔵 | make doc page for Components.Button.style |
+<br>
+
 | 🔴 | TypeDev 10/23/23 |
 | - | - |
 | 🔴 | fix client.command() |
