@@ -30,10 +30,10 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔵 | make doc page for Components.Button.style |
 <br>
 
-| 🔴 | TypeDev 10/23/23 |
+| 🟢 | TypeDev 10/23/23 |
 | - | - |
-| 🔴 | fix client.command() |
-| 🔴 | test command stuff |
+| 🟢 | fix client.command() |
+| 🟢 | test command stuff |
 <br>
 
 | 🔴 | TypeDev 10/19/23 |
