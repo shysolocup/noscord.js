@@ -6,8 +6,9 @@ ComponentService.newC("Embed", class {
 
         // author
         if (data.author) {
-  			if (data.author.icon) { data.author.icon_url = data.author.icon; }
-  			else if (data.author.iconURL) { data.author.icon_url = data.author.iconURL; }
+            if (typeof data.author == "string") data.author = { name: data.author };
+  			else if (data.author.icon) data.author.icon_url = data.author.icon;
+  			else if (data.author.iconURL) data.author.icon_url = data.author.iconURL;
   		}
 
 
