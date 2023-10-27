@@ -14,10 +14,18 @@ CooldownHandle.newC("CooldownUserHandle", class {
         this.end = new Timestamp(new Date( Date.now() + this.timeMs ));
         
         this.data = this.parent.data;
+
+		this.timeout = setTimeout( () => {
+			
+			this.data.remove(this.user.id);
+			clearTimeout(this.timeout);
+			
+		}, this.timeMs );
 	}
 
     remove() {
-        this.data.remove(user.id);
+		clearTimeout(this.timeout);
+        this.data.remove(this.user.id);
     }
 
     get remaining() {
