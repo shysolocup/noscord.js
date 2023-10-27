@@ -21,7 +21,7 @@ UserService.newF("get", async function(id, guild=null) {
 	);
 
 	let typed = (guild) ? new types.GuildMember : new types.User;
-	if (thing) typed.apply(thing);
+	if (thing) await typed.apply(thing);
  
     return (!thing) ? null : typed;
 });
