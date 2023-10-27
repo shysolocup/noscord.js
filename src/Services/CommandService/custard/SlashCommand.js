@@ -11,6 +11,7 @@ CommandService.newC("SlashCommand", class {
 		this.name = info.name;
 		this.description = info.description;
 		this.options = info.options;
+		this.cooldown = info.cooldown;
 		this.nsfw = info.nsfw;
 			
 		this.data = data;
@@ -26,6 +27,7 @@ CommandService.newC("SlashCommand", class {
 			name: stuff.name, 
 			description: stuff.description, 
 			options: stuff.options, 
+			cooldown: stuff.coolodwn,
 			nsfw: stuff.nsfw 
 		});
 	}
