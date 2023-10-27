@@ -170,6 +170,7 @@ class NosClient {
 			if (this.commands.has(ctx.name)) {
 				
 				await ctx.data(ctx, cmd);
+				if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
 				if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
 				
 			}
