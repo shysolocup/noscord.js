@@ -7,7 +7,7 @@ User.newF("apply", async function(ctx) {
 
     // names
     this.username = ctx.username;
-    this.tag = (ctx.tag.endsWith("#0")) ? ctx.username : ctx.tag;
+    this.tag = (ctx.tag && ctx.tag.endsWith("#0")) ? ctx.username : (ctx.tag) ? ctx.tag : null;
     this.discriminator = ctx.discriminator;
     this.globalName = ctx.globalName;
     
@@ -17,15 +17,18 @@ User.newF("apply", async function(ctx) {
     this.mention = `<@${ctx.id}>`
     this.flags = ctx.flags;
     this.bot = ctx.bot;
+    this.system = ctx.system;
 
 
     // accessories
     this.avatar = await users.avatar(ctx);
     this.avatarUrl = users.avatarUrl(ctx);
+    /*
     this.decor = await users.decor(ctx);
     this.decorUrl = users.decorUrl(ctx)
     this.banner = await users.banner(ctx);
     this.bannerUrl = await users.bannerUrl(ctx);
+    */
 
     
     this.accent = {
@@ -37,9 +40,8 @@ User.newF("apply", async function(ctx) {
 
     // presence
     this.presence = ctx.presence;
-    this.status = ctx.presence.status;
-    this.activity = ctx.presence.activity;
-    this.system = ctx.system;
+    this.status = (ctx.presence) ? ctx.presence.status : null;
+    this.activity = (ctx.presence) ? ctx.presence.activity : null;
     this.partial = ctx.partial;
 
 
