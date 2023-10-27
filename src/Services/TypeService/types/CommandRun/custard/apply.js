@@ -13,7 +13,7 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     this.args = ctx.options.data;
     this.cooldown = cmd.cooldown;
     this.onCooldown = cmd.onCooldown;
-    this.userCooldown = cmd.cooldown.get(ctx.user.id);
+    this.userCooldown = (cmd.cooldown) ? cmd.cooldown.get(ctx.user.id) : undefined
     
     if (this.userCooldown) {
         this.cooldown.remaining = this.userCooldown.remaining;
