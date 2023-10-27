@@ -36,6 +36,10 @@ CommandService.newC("CooldownHandle", class {
 		return this.data.get( (user.id) ? user.id : user );
 	}
 
+	has(user) {
+		return this.data.has( (user.id) ? user.id : user );
+	}
+
 	wipe() {
 		let stuff = this.data.copy();
 		this.data = this.data.clear();
