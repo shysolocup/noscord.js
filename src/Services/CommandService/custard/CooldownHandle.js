@@ -31,6 +31,12 @@ CommandService.newC("CooldownHandle", class {
 		handle.remove();
 		return handle;
 	}
+
+	wipe() {
+		let stuff = this.data.copy();
+		this.data = this.data.clear();
+		return stuff;
+	}
 });
 
 
