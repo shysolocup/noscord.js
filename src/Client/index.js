@@ -169,7 +169,7 @@ class NosClient {
 		this.on("commandRan", async (ctx, cmd) => {
 			if (this.commands.has(ctx.name) && !ctx.onCooldown) {
 				await ctx.data(ctx, cmd);
-				if (ctx.cooldown) ctx.cooldown.add(ctx.user.id);
+				if (ctx.cooldown) ctx.cooldown.add(ctx.user);
 			}
 			else if (ctx.onCooldown) {
 				await this.events.get("cooldown").fire(ctx, cmd);
