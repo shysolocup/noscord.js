@@ -50,7 +50,6 @@ GuildMember.newF("apply", async function(ctx) {
 
     // times
     let user = this.user;
-    console.log(user);
     this.timestamps = {
         joined: new Timestamp(ctx.joinedAt),
         disabled: new Timestamp(ctx.communicationDisabledUntil),
