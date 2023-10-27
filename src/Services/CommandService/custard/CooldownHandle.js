@@ -31,6 +31,10 @@ CommandService.newC("CooldownHandle", class {
 		handle.remove();
 		return handle;
 	}
+	
+	get(user) {
+		return this.data.get( (user.id) ? user.id : user );
+	}
 
 	wipe() {
 		let stuff = this.data.copy();
