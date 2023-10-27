@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.5 | 10/25/23 ::
+	:: noscord.js :: TypeDev 0.1.5 | 10/27/23 ::
 	https://github.com/paigeroid/noscord.js
 
 */
@@ -52,7 +52,7 @@ class NosClient {
 		
 
 
-		this.services = {
+		this.services = Soup.from({
 			types: new this.TypeService,
 			users: new this.UserService,
 			events: new this.EventService,
@@ -68,7 +68,7 @@ class NosClient {
 			messages: new this.MessageService,
 			permissions: new this.PermissionService,
 			voice: new this.VoiceService,
-		}
+		})
 
 		this.types = this.services.types;
 		this._handler = new this.services.events.GlueHandler;
