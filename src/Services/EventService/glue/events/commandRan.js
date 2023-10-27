@@ -20,7 +20,7 @@ module.exports = (handler) => { handler.init(
                 name: raw.info.get("name"),
                 description: raw.info.get("description"),
                 cooldown: raw.info.get("cooldown"),
-                onCooldown: cooldown.has(ctx.user.id),
+                onCooldown: (cooldown) ? cooldown.has(ctx.user.id) : false,
                 options: raw.info.get("options"),
                 nsfw: raw.info.get("nsfw"),
                 data: raw.data
