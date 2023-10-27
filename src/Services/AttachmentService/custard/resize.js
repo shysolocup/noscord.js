@@ -4,7 +4,7 @@ const Canvas = require('@napi-rs/canvas');
 
 AttachmentService.newF("resize", async function(img, width, height, settings={}) {
     const client = this.parent;
-    let types = new client.TypeService;
+    client.import("types", "app")
 
     if (img instanceof types.Attachment) img = img.png.attachment;
     else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
@@ -18,6 +18,8 @@ AttachmentService.newF("resize", async function(img, width, height, settings={})
 	let context = canvas.getContext('2d');
 	
 	context.drawImage(image, 0, 0, width, height);
+
+	if (!settings.name) settings.name = app.genCode(9);
 	
 	return new types.Attachment(canvas, settings);
 });
