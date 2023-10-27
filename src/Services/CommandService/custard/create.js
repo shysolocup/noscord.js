@@ -31,7 +31,13 @@ CommandService.newF("create", function(...args) {
 	if (typeof info == "string") {
 		let description = (args.length > 0) ? args.shift() : "undefined";
 		let options = (args.length > 0) ? args.shift() : null;
-		let cooldown = (args.length > 0) ? args.shift() : null;
+		let cooldown;
+		
+		if (args.length > 0) {
+			args.forEach( (arg) => {
+				if ((typeof arg == "number" || typeof arg == "string") && app.parse(arg)) let cooldown = arg;
+			});
+		}
 		let nsfw = (args.length > 0) ? args.shift() : false;
 		
 		info = { name: info, description: description, options: options, cooldown: cooldown, nsfw: nsfw };
