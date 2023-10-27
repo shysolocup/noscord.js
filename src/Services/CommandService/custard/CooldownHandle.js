@@ -19,9 +19,11 @@ CommandService.newC("CooldownHandle", class {
 	}
 
 	cool(user) {
-		let handle = new this.CooldownUserHandle(user);
-		this.data.push(user.id, handle);
-		return handle;
+		if (this.active) {
+			let handle = new this.CooldownUserHandle(user);
+			this.data.push(user.id, handle);
+			return handle;
+		}
 	}
 });
 
