@@ -27,7 +27,7 @@ CommandService.newC("SlashCommand", class {
 			name: stuff.name, 
 			description: stuff.description, 
 			options: stuff.options, 
-			cooldown: stuff.coolodwn,
+			cooldown: stuff.cooldown,
 			nsfw: stuff.nsfw 
 		});
 	}
