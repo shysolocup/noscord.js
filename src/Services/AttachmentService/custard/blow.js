@@ -4,7 +4,7 @@ const Canvas = require('@napi-rs/canvas');
 
 AttachmentService.newF("blow", async function(img, amount, settings={}) {
     const client = this.parent;
-    let types = new client.TypeService;
+    client.import("types", "app")
 
     if (img instanceof types.Attachment) img = img.png.attachment;
     else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
@@ -16,6 +16,8 @@ AttachmentService.newF("blow", async function(img, amount, settings={}) {
 	
 	let canvas = Canvas.createCanvas(width, height);
 	let context = canvas.getContext('2d');
+
+	if (!settings.name) settings.name = app.genCode(9);
 	
 	context.drawImage(image, 0, 0, width, height);
 	
