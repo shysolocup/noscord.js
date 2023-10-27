@@ -10,7 +10,7 @@ UserService.newF("decor", async function(user, settings={}) {
     if (!settings.name) settings.name = app.genCode(9);
 
     let stuff = att.create(decorUrl, settings);
-    stuff.originUrl = decorUrl;
+    stuff.url = decorUrl;
 
     return stuff;
 });
