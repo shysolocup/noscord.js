@@ -4,7 +4,7 @@ const { Soup } = require('stews');
 
 CommandService.newC("CooldownHandle", class {
 	constructor(cooldown) {
-        const client = this.parent.parent;
+    	const client = this.parent.parent;
         client.import("app");
         
         this.data = new Soup(Object);
@@ -12,8 +12,16 @@ CommandService.newC("CooldownHandle", class {
 
 		this.time = app.parse(cooldown);
 		this.timeMs = this.time*1000;
+	}
 
-        this.userHandle = this.CooldownUserHandle;
+	get timestamp() {
+		return new Timestamp( new Date( Date.now() + this.timeMs ) );
+	}
+
+	cool(user) {
+		let handle = new this.CooldownUserHandle(user);
+		this.data.push(user.id, handle);
+		return handle;
 	}
 });
 
