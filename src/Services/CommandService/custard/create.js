@@ -31,9 +31,10 @@ CommandService.newF("create", function(...args) {
 	if (typeof info == "string") {
 		let description = (args.length > 0) ? args.shift() : "undefined";
 		let options = (args.length > 0) ? args.shift() : null;
+		let cooldown = (args.length > 0) ? args.shift() : null;
 		let nsfw = (args.length > 0) ? args.shift() : false;
 		
-		info = { name: info, description: description, options: options, nsfw: nsfw };
+		info = { name: info, description: description, options: options, cooldown: cooldown, nsfw: nsfw };
 	}
 
 
@@ -61,6 +62,11 @@ CommandService.newF("create", function(...args) {
 
 			return v;
 		});
+	}
+
+
+	if (info.cooldown) {
+		info.cooldown = new this.CooldownHandle(info.cooldown);
 	}
 
 
