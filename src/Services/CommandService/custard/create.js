@@ -35,7 +35,7 @@ CommandService.newF("create", function(...args) {
 		
 		if (args.length > 0) {
 			args.forEach( (arg) => {
-				if ((typeof arg == "number" || typeof arg == "string") && app.parse(arg)) let cooldown = arg;
+				if ((typeof arg == "number" || typeof arg == "string") && app.parse(arg)) cooldown = arg;
 			});
 		}
 		let nsfw = (args.length > 0) ? args.shift() : false;
