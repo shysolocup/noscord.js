@@ -15,7 +15,10 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     this.onCooldown = cmd.onCooldown;
     this.userCooldown = cmd.cooldown.get(ctx.user.id);
     
-    if (this.userCooldown) this.cooldown.remaining = this.userCooldown.remaining;
+    if (this.userCooldown) {
+        this.cooldown.remaining = this.userCooldown.remaining;
+        this.cooldown.remainingMs = this.userCooldown.remainingMs;
+    }
     
     this.nsfw = cmd.nsfw;
     this.data = cmd.data;
