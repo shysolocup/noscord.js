@@ -93,7 +93,7 @@ class NosClient {
 
 		this._staticEvents = require('../Services/EventService/_staticEvents.json');
 
-		this.staticEvents.forEach( (event) => {
+		this._staticEvents.forEach( (event) => {
 			let ev = new this.Event();
 			
 			if (event instanceof Array) {
