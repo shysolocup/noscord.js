@@ -20,10 +20,8 @@ UserService.newF("get", async function(id, guild=null) {
 		this.parent._base.users.fetch(raw).catch(e=>{})
 	);
 
-	/*
 	let typed = (guild) ? new types.GuildMember : new types.User;
 	if (thing) typed.apply(thing);
-	*/
  
-    return (!thing) ? null : thing // typed;
+    return (!thing) ? null : typed;
 });
