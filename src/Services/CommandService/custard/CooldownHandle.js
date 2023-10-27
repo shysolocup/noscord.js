@@ -18,12 +18,18 @@ CommandService.newC("CooldownHandle", class {
 		return new Timestamp( new Date( Date.now() + this.timeMs ) );
 	}
 
-	cool(user) {
+	add(user) {
 		if (this.active) {
 			let handle = new this.CooldownUserHandle(user);
 			this.data.push(user.id, handle);
 			return handle;
 		}
+	}
+
+	remove(user) {
+		let handle = this.data.get( (user.id) ? user.id : user );
+		handle.remove();
+		return handle;
 	}
 });
 
