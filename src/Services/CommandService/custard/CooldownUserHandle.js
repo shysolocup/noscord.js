@@ -28,7 +28,11 @@ CooldownHandle.newC("CooldownUserHandle", class {
         this.data.remove(this.user.id);
     }
 
-    get remaining() {
+	get remaining() {
+        return (this.end.now - Date.now())/1000;
+    }
+
+    get remainingMs() {
         return this.end.now - Date.now();
     }
 });
