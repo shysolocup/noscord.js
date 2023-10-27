@@ -20,6 +20,8 @@ Attachment.newF("circlify", async function(settings={}) {
 	context.clip();
 	
 	context.drawImage(image, 0, 0, width, height);
+
+	if (!settings.name) settings.name = app.genCode(9);
 	
 	return new Attachment(canvas, settings);
 });
