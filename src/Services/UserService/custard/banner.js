@@ -3,14 +3,14 @@ const UserService = require('../index.js');
 
 UserService.newF("banner", async function(user, settings={}) {
     const client = this.parent;
-    const att = new client.AttachmentService;
+    client.import({ att: "attachments" }, "app")
 
     let bannerUrl = user.bannerURL(settings.dynamic);
 
-    if (!settings.name) settings.name = `${user.id}-banner.png`;
+    if (!settings.name) settings.name = app.genCode(9);
 
     let stuff = att.create(bannerUrl, settings);
-    stuff.originUrl = bannerUrl;
+    stuff.url = bannerUrl;
 
     return stuff;
 });
