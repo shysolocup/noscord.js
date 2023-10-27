@@ -8,8 +8,9 @@ GuildMember.newF("apply", async function(ctx) {
     // ids
     this.id = ctx.id;
     this.mention = `<@${ctx.id}>`
-    this.username = ctx.username;
     this.user = await users.get(ctx.id);
+    this.username = this.user.username;
+    this.globalName = this.user.globalName
     this.tag = (this.user.tag && this.user.tag.endsWith("#0")) ? ctx.username : this.user.tag ;
     this.discriminator = ctx.discriminator;
     this.nickname = ctx.displayName;
