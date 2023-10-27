@@ -14,7 +14,7 @@ GuildMember.newF("apply", async function(ctx) {
     this.discriminator = ctx.discriminator;
     this.nickname = ctx.displayName;
     this.flags = ctx.flags;
-    this.bot = this.users.bot;
+    this.bot = this.user.bot;
 
 
     // guild
