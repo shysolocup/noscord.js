@@ -88,10 +88,10 @@ class NosClient {
 
 		
 		// need to be awaited
-		this._defEvents = require('../Services/EventService/_deflist.js');
-		this._defPerms = require('../Services/PermissionService/_deflist.js');
+		this._baseEvents = require('../Services/EventService/_baseEvents.js');
+		this._basePerms = require('../Services/PermissionService/_basePerms.js');
 
-		this._staticEvents = require('../Services/EventService/_staticlist.json');
+		this._staticEvents = require('../Services/EventService/_staticEvents.json');
 
 		this.staticEvents.forEach( (event) => {
 			let ev = new this.Event();
@@ -106,7 +106,7 @@ class NosClient {
 
 		
 		// custom events and permissions
-		this._custPerms = require('../Services/PermissionService/_custlist.json');
+		this._customPerms = require('../Services/PermissionService/_customPerms.json');
 
 
 		/*
