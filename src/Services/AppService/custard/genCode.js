@@ -1,7 +1,7 @@
 const AppService = require('../index.js');
 
 
-AppService.newF("gcode", function(length=5, characters=null) {
+AppService.newF("genCode", function(length=5, characters=null) {
     let random = this.parent.random;
     if (!characters) characters = "abcdefghijklmnopqrstuvwxyz1234567890-_".split("");
     let code = "";
