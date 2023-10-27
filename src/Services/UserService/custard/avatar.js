@@ -3,11 +3,11 @@ const UserService = require('../index.js');
 
 UserService.newF("avatar", async function(user, settings={}) {
     const client = this.parent;
-    const att = new client.AttachmentService;
+    client.import({ att: "attachments" }, "app");
 
     let avatarUrl = user.displayAvatarURL(settings.dynamic);
 
-    if (!settings.name) settings.name = `${user.id}-avatar.png`;
+    if (!settings.name) settings.name = app.genCode(9);
 
     let stuff = att.create(avatarUrl, settings);
     stuff.originUrl = avatarUrl;
