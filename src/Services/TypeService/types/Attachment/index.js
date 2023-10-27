@@ -6,6 +6,8 @@ const fs = require('fs');
 TypeService.newC("Attachment", class {
     constructor(canvas, settings={}) {
         this.png = new AttachmentBuilder( canvas.toBuffer("image/png"), settings );
+
+		if (!this.png.name.endsWith(".png")) this.png.name += ".png";
 	
 		this.name = this.png.name
 		this.description = this.png.description;
