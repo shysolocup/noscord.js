@@ -7,6 +7,7 @@ AppService.newC("Timestamp", class {
 		let dt = (date instanceof Date) ? date : (date) ? new Date(date) : new Date();
 
 		this.date = dt;
+		this.now = dt.getTime()
 		this.embed = dt.toISOString();
 		this.default = `<t:${Math.round(dt.getTime() / 1000)}>`;
 		this.shortTime = `<t:${Math.round(dt.getTime() / 1000)}:t>`;
