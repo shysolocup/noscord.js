@@ -33,8 +33,8 @@ GuildMember.newF("apply", async function(ctx) {
 
     // presence
     this.presence = ctx.presence;
-    this.status = ctx.presence.status;
-    this.activity = ctx.presence.activity;
+    this.status = (ctx.presence) ? ctx.presence.status : undefined;
+    this.activity = (ctx.presence) ? ctx.presence.activity : undefined;
 
 
     // colors
