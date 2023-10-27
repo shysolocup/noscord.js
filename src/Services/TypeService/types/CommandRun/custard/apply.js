@@ -12,6 +12,7 @@ CommandRun.newF("apply", async function(ctx, cmd={}) {
     this.description = cmd.description;
     this.args = ctx.options.data;
     this.cooldown = cmd.cooldown;
+    this.onCooldown = this.cooldown.has(ctx.user.id);
     this.nsfw = cmd.nsfw;
     this.data = cmd.data;
     
