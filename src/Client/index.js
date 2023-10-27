@@ -167,12 +167,11 @@ class NosClient {
 		
 		// runs slash commands
 		this.on("commandRan", async (ctx, cmd) => {
-			if (this.commands.has(ctx.name) && !ctx.onCooldown) {
+			if (this.commands.has(ctx.name)) {
+				
 				await ctx.data(ctx, cmd);
-				if (ctx.cooldown) ctx.cooldown.add(ctx.user);
-			}
-			else if (ctx.onCooldown) {
-				await this.events.get("cooldown").fire(ctx, cmd);
+				if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
+				
 			}
 		});
 
