@@ -21,9 +21,9 @@ CooldownHandle.newC("CooldownUserHandle", class {
     }
 
     get remaining() {
-        return this.end.now - this.start.now
+        return this.end.now - Date.now();
     }
 });
 
 
-module.exports = CooldownHandle;
+module.exports = CooldownUserHandle;
