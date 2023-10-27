@@ -10,9 +10,10 @@ CommandService.newC("CooldownHandle", class {
         this.data = new Soup(Object);
         this.active = true;
 
-        this.userHandle = this.CooldownUserHandle;
+		this.time = app.parse(cooldown);
+		this.timeMs = this.time*1000;
 
-        this.time = app.parse(cooldown);
+        this.userHandle = this.CooldownUserHandle;
 	}
 });
 
