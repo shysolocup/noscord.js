@@ -91,18 +91,18 @@ class NosClient {
 		this._defEvents = require('../Services/EventService/_deflist.js');
 		this._defPerms = require('../Services/PermissionService/_deflist.js');
 
-		this._staticEvents = require('../Services/EventService/_staticlist.json);
+		this._staticEvents = require('../Services/EventService/_staticlist.json');
 
 		this.staticEvents.forEach( (event) => {
 			let ev = new this.Event();
 			
 			if (event instanceof Array) {
-				event.forEach( (e) => this.events.push(e, ev) );
+				event.forEach( e => this.events.push(e, ev) );
 			}
 			else {
 				this.events.push(ev);
 			}
-		})
+		});
 
 		
 		// custom events and permissions
