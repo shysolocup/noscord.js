@@ -12,8 +12,6 @@ TypeService.newC("Attachment", class {
 		this.embed = `attachment://${this.png.name}`
 
 		this.base = this.png.attachment;
-
-		this.url = canvas.toDataURL();
 		this.raw = canvas;
 
         this.width = canvas.width;
@@ -21,6 +19,11 @@ TypeService.newC("Attachment", class {
 
         this.settings = settings;
     }
+
+
+	get url() {
+		return this.raw.toDataURL();
+	}
 
 
 	[Symbol.toPrimitive](hint) {
