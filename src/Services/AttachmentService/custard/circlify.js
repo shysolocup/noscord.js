@@ -4,7 +4,7 @@ const Canvas = require('@napi-rs/canvas');
 
 AttachmentService.newF("circlify", async function(img, settings={}) {
     const client = this.parent;
-   	client.import("types", "app")
+   	client.import("types", "util")
 
     if (img instanceof types.Attachment) img = img.png.attachment;
     else if (img.constructor.name == "AttachmentBuilder") img = img.attachment;
@@ -23,7 +23,7 @@ AttachmentService.newF("circlify", async function(img, settings={}) {
 	context.closePath();
 	context.clip();
 
-	if (!settings.name) settings.name = app.genCode(9);
+	if (!settings.name) settings.name = util.genCode(9);
 	
 	context.drawImage(image, 0, 0, width, height);
 	
