@@ -1,8 +1,8 @@
-const AppService = require('../index.js');
+const UtilService = require('../index.js');
 const { Soup } = require('stews');
 
 
-AppService.newP("colors", new Soup({
+UtilService.newP("colors", new Soup({
 		white:"#FFFFFF",
 		black:'#000000',
 		teal:'#1abc9c',
