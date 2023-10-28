@@ -1,8 +1,8 @@
-const AppService = require('../index.js');
+const UtilService = require('../index.js');
 const { Soup } = require('stews');
 
 
-AppService.newC("Timestamp", class {
+UtilService.newC("Timestamp", class {
 	constructor(date) {
 		let dt = (date instanceof Date) ? date : (date) ? new Date(date) : new Date();
 
