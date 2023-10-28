@@ -5,7 +5,7 @@ const { Soup } = require('stews');
 CooldownHandle.newC("CooldownUserHandle", class {
 	constructor(user) {
         const client = this.parent.parent.parent;
-        client.import("app");
+        client.import("util");
 
         this.user = user;
         this.time = this.parent.time;
