@@ -3,7 +3,7 @@ const GuildMember = require('../index.js');
 
 GuildMember.newF("kick", async function(settings={ /* reason */ }) {
     const client = this.parent.parent;
-    client.import("app", "errors", "users");
+    client.import("util", "errors", "users");
     
     let e = errors.create("Member Kicking");
 
