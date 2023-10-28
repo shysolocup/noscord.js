@@ -3,7 +3,7 @@ const GuildMember = require('../index.js');
 
 GuildMember.newF("unban", async function(settings={ /* reason and duration */ }) {
     const client = this.parent.parent;
-    client.import("app", "errors", "users");
+    client.import("util", "errors", "users");
     
     let e = errors.create("Member Unbanning");
 
@@ -12,7 +12,7 @@ GuildMember.newF("unban", async function(settings={ /* reason and duration */ })
 
     if (settings.duration) setTimeout( () => {
          user.ban({ reason: (settings.durReason) ? settings.durReason : "duration" });
-    }, app.parseMs(settings.duration) );
+    }, util.parseMs(settings.duration) );
 
     return thing;
 });
