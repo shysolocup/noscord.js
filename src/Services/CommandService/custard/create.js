@@ -6,7 +6,7 @@ CommandService.newF("create", function(...args) {
 
 	// error handling
 	const client = this.parent;
-	client.import({ err: "errors" });
+	client.import({ err: "errors" }, "util");
 	let e = err.create(this, "Slash Command Error");
 
 
@@ -38,7 +38,7 @@ CommandService.newF("create", function(...args) {
 			args.forEach( (arg) => {
 				if ((arg instanceof Object)) options = arg;
 				else if (typeof arg == "boolean") nsfw = arg;
-				else if ((typeof arg == "number" || typeof arg == "string") && app.parse(arg)) cooldown = arg;
+				else if ((typeof arg == "number" || typeof arg == "string") && util.parse(arg)) cooldown = arg;
 				else if (typeof arg == "string") description = arg;
 			});
 		}
