@@ -3,7 +3,7 @@ const MessageService = require('../index.js');
 
 MessageService.newF("reply", async function(...args) {
     const client = this.parent;
-    client.import("app", "types", "components", "messages");
+    client.import("util", "types", "components", "messages");
 
     let msg = args.shift();
     let settings = {};
