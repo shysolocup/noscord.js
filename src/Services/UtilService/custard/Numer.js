@@ -1,8 +1,8 @@
-const AppService = require('../index.js');
+const UtilService = require('../index.js');
 const { Soup } = require('stews');
 
 
-AppService.newC("Numer", class {
+UtilService.newC("Numer", class {
 	constructor(formatted, raw, currency, roundTo) {
 		this.value = formatted;
         this.raw = raw;
