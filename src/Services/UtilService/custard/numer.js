@@ -1,7 +1,7 @@
-const AppService = require('../index.js');
+const UtilService = require('../index.js');
 
 
-AppService.newF("numer", function (number, settings={}) {
+UtilService.newF("numer", function (number, settings={}) {
     if (!(number instanceof Number)) number = parseFloat(number);
     if (!settings.roundTo) settings.roundTo = 0;
     if (!settings.currency) settings.currency = "";
