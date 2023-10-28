@@ -1,7 +1,7 @@
-const AppService = require('../index.js');
+const UtilService = require('../index.js');
 
 
-AppService.newF("latency", function(msg, timestamp=null) {
+UtilService.newF("latency", function(msg, timestamp=null) {
 	if (!timestamp) timestamp = new this.Timestamp();
 	
 	if (msg.constructor.name == "ChatInputCommandInteraction" || msg.constructor.name == "CommandRun") return this.date - msg.createdTimestamp
