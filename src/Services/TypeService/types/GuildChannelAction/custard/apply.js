@@ -3,7 +3,7 @@ const GuildChannelAction = require('../index.js');
 
 GuildChannelAction.newF("apply", async function(ctx, actionType) {
     const client = this.parent.parent;
-    client.import("messages", "channels", "guilds", "app");
+    client.import("messages", "channels", "guilds", "util");
 
     // ids
     this.id = ctx.id;
