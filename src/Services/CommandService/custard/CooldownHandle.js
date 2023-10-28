@@ -5,12 +5,12 @@ const { Soup } = require('stews');
 CommandService.newC("CooldownHandle", class {
 	constructor(cooldown) {
     	const client = this.parent.parent;
-        client.import("app");
+        client.import("util");
         
         this.data = new Soup(Object);
         this.active = true;
 
-		this.time = app.parse(cooldown);
+		this.time = util.parse(cooldown);
 		this.timeMs = this.time*1000;
 	}
 
