@@ -3,7 +3,7 @@ const TextChannel = require('../index.js');
 
 TextChannel.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("messages", "channels", "guilds", "app");
+    client.import("messages", "channels", "guilds", "util");
 
     // ids
     this.id = ctx.id;
