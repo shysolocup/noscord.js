@@ -3,7 +3,7 @@ const CommandRun = require('../index.js');
 
 CommandRun.newF("apply", async function(ctx, cmd={}) {
     const client = this.parent.parent;
-    client.import("guilds", "messages", "channels", "users", "app");
+    client.import("guilds", "messages", "channels", "users", "util");
 
     
     // info shitters
