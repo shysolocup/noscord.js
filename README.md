@@ -48,7 +48,7 @@ client.on("ready", (ctx) => {
 // imports stuff
 client.import(
     { com: "commands", comp: "components", att: "attachments" },
-    [ "channels", "users", "events", "app" ]
+    [ "channels", "users", "events", "util" ]
 );
 
 
@@ -69,7 +69,7 @@ client.on("pingCmd", async (ctx) => {
 
 // creates a ping command
 com.create("ping", "replies with pong", (ctx) => {
-    let timestamp = new app.Timestamp();
+    let timestamp = new util.Timestamp();
 
 
     let embed = new comp.Embed({
