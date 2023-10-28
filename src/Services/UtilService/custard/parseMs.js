@@ -1,7 +1,7 @@
-const AppService = require('../index.js');
+const UtilService = require('../index.js');
 
 
-AppService.newF("parseMs", function(string) {
+UtilService.newF("parseMs", function(string) {
 	if (typeof string != "string") {
 		return parseFloat(string)*1000;
 	}
