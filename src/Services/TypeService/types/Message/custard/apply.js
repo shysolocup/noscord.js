@@ -1,4 +1,5 @@
 const Message = require('../index.js');
+const { AuditLogEvent } = require('discord.js');
 
 
 Message.newF("apply", async function(ctx) {
@@ -7,9 +8,15 @@ Message.newF("apply", async function(ctx) {
 
     
     // content
-    if (!ctx) console.log("it breaks here");
     this.content = ctx.content;
     if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, ctx.channel)
+
+    if (ctx.editedAt) {
+        let logs = await ctx.guild.fetchLogs({
+            type: AuditLogEvent.MessageUpdate,
+            before: 
+        });
+    }
 
 
     // ids
