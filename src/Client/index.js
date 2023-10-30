@@ -69,9 +69,15 @@ class NosClient {
 			messages: new this.MessageService,
 			permissions: new this.PermissionService,
 			voice: new this.VoiceService,
-		})
+			logs: new this.LogService
+		});
 
-		this.types = this.services.types;
+		
+		this.services.forEach( (name, service) => {
+			if (!this[name]) this[name] = service;
+		});
+
+		
 		this._handler = new this.services.events.GlueHandler;
 		this.Embed = this.services.components.Embed;
 		this.Button = this.services.components.Button;
