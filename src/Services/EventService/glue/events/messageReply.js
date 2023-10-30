@@ -10,7 +10,7 @@ module.exports = (handler) => { handler.init(
         
         await msg.apply(...Array.from(arguments));
     
-        return [msg];
+        return [msg, msg.replier];
     }, 
 
     
