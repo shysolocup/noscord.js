@@ -18,19 +18,6 @@ Message.newF("apply", async function(ctx) {
     if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, ctx.channel)
 
 
-    // edits
-    if (ctx.editedAt) {
-        let logs = await ctx.guild.fetchAuditLogs({
-            type: AuditLogEvent.MessageUpdate,
-            after: util.snowflake(ctx.editedAt),
-        });
-            
-        logs = logs.entries.filter( m => m.id == ctx.id );
-
-        this.edits = Soup.from(logs.toJSON());
-    }
-
-
     // ids
     this.id = ctx.id;
     this.channelId = ctx.channelId;
