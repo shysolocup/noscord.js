@@ -4,13 +4,17 @@ module.exports = (handler) => { handler.init(
     name = ["messageEdit", "messageUpdate", "edit"],  // names of the event
 
     
-    func = async function (/**/) { // formatting for types and stuff
+    func = async function (ctx) { // formatting for types and stuff
         let types = this.types;
+        let client = this.client;
+        client.import("messages");
+        
         let msg = new types.Message;
         
-        await msg.apply(...Array.from(arguments));
+        await msg.apply(ctx);
+        let edited = await messages.get(ctx.id);
         
-        return [msg];
+        return [msg, edited];
     }, 
 
     
