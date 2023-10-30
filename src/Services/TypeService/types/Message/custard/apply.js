@@ -20,7 +20,7 @@ Message.newF("apply", async function(ctx) {
         let logs = await ctx.guild.fetchLogs({
             type: AuditLogEvent.MessageUpdate,
             after: util.snowflake(ctx.editedAt),
-        }).filter( m => m.id == ctx.id );
+        }).entries.filter( m => m.id == ctx.id );
 
         this.edits = Soup.from(logs.toJSON());
     }
