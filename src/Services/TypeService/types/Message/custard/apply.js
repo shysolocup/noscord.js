@@ -19,8 +19,10 @@ Message.newF("apply", async function(ctx) {
     if (ctx.editedAt) {
         let logs = await ctx.guild.fetchLogs({
             type: AuditLogEvent.MessageUpdate,
-            after: util.snowflake(ctx.editedAt)
-        }).filter( e => e.id == ctx.id );
+            after: util.snowflake(ctx.editedAt),
+        }).filter( m => m.id == ctx.id );
+
+        this.edits = Soup.from(logs.toJSON());
     }
 
 
