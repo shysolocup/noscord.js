@@ -27,9 +27,22 @@ const exp = new Soup(Object);
 
 
 class NosClient {
-    constructor(/**/) {
+    constructor(settings) {
+
+		/* stuff */
 		this.user = undefined;
-        this._base = new Client(...Array.from(arguments));
+		this.application = undefined;
+
+
+		/* fix intents */
+		if (!settings.intents) settings.intents = 3276799;
+
+		
+		/* base */
+		let _base = new Client(settings);
+		Object.defineProperty(this, "_base", {
+			get() { return _base; }
+		});
 
 
         /* service compiling */
@@ -51,7 +64,7 @@ class NosClient {
 		this.spreads = new Soup(Array);
 		
 
-
+		/* service stuff */
 		this.services = Soup.from({
 			types: new this.TypeService,
 			users: new this.UserService,
@@ -98,8 +111,9 @@ class NosClient {
 		this._baseEvents = require('../Services/EventService/_baseEvents.js');
 		this._basePerms = require('../Services/PermissionService/_basePerms.js');
 
-		this._staticEvents = require('../Services/EventService/_staticEvents.json');
 
+		// static stuff
+		this._staticEvents = require('../Services/EventService/_staticEvents.json');
 		this._staticEvents.forEach( (event) => {
 			let ev = new this.Event();
 			
@@ -112,7 +126,7 @@ class NosClient {
 		});
 
 		
-		// custom events and permissions
+		// custom permissions
 		this._customPerms = require('../Services/PermissionService/_customPerms.json');
 
 
@@ -133,7 +147,7 @@ class NosClient {
 		*/
 		
 
-		// registering slash commands
+		/* registering slash commands */
 		this._base.on("ready", async (ctx) => {
 
 			
@@ -172,7 +186,7 @@ class NosClient {
 		});
 
 		
-		// runs slash commands
+		/* runs slash commands */
 		this.on("commandRan", async (ctx, cmd) => {
 			if (this.commands.has(ctx.name)) {
 				
@@ -184,11 +198,12 @@ class NosClient {
 		});
 
 
+		/* instances */
 		this._instances = NosClient._instances;
 		this._instances.push(this);
 
 
-		// moved to the bottom of the class for screenshot protection
+		/* moved to the bottom of the class for screenshot protection */
         this.token = undefined;
 	}
 }
