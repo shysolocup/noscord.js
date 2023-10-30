@@ -46,7 +46,7 @@ npm i paigeroid/noscord.js
 
 ```js
 const { Client } = require('noscord.js');
-const client = new Client(/* stuff */);
+const client = new Client();
 
 
 
