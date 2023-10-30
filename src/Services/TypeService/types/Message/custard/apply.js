@@ -15,7 +15,7 @@ Message.newF("apply", async function(ctx) {
     if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, ctx.channel)
 
 
-    // edit
+    // edits
     if (ctx.editedAt) {
         let logs = await ctx.guild.fetchLogs({
             type: AuditLogEvent.MessageUpdate,
