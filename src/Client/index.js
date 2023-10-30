@@ -27,7 +27,7 @@ const exp = new Soup(Object);
 
 
 class NosClient {
-    constructor(settings) {
+    constructor(settings={}) {
 
 		/* stuff */
 		this.user = undefined;
