@@ -63,7 +63,7 @@ Message.newF("apply", async function(ctx) {
     this.roleSubscriptionData = ctx.roleSubscriptionData;
     this.editedAt = ctx.editedTimestamp;
     this.activity = ctx.activity;
-    this.referece = ctx.reference;
+    this.reference = ctx.reference;
     this.interaction = ctx.interaction;
     this.cleanContent = ctx.cleanContent;
 
