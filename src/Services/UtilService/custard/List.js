@@ -28,29 +28,29 @@ UtilService.newC("List", class {
 				return this.page;
 			},
 
-			next() {
+			next(by=1) {
 				let { num, content } = this.page;
 
-				if (num+1 > this.pages) {
+				if (num+by > this.pages) {
 					this.page.num = 1;
 					this.page.content = this.get(1);
 				}
 				else {
-					this.page.num = num+1;
-					this.page.content = this.get(num+1);
+					this.page.num = num+by;
+					this.page.content = this.get(num+by);
 				}
 			},
 
-			prev() {
+			prev(by=1) {
 				let { num, content } = this.page;
 
-				if (num-1 < 1) {
+				if (num-by < 1) {
 					this.page.num = this.pages;
 					this.page.content = this.get(this.pages);
 				}
 				else {
-					this.page.num = num-1;
-					this.page.content = this.get(num-1);
+					this.page.num = num-by;
+					this.page.content = this.get(num-by);
 				}
 			}
         });
