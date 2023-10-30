@@ -6,6 +6,12 @@ Message.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     client.import("guilds", "messages", "channels", "users", "util");
 
+
+    if (ctx.constructor.name == "InteractionResponse" && ctx.interaction.constructor.name == "ChatInputCommandInteraction") {
+        let channel = await channels.get(ctx.interaction.channelId);
+        ctx = await messages.get(ctx.interaction.id, channel);
+    }
+
     
     // content
     this.content = ctx.content;
