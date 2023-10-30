@@ -7,10 +7,7 @@ Message.newF("apply", async function(ctx) {
     client.import("guilds", "messages", "channels", "users", "util");
 
 
-    if (ctx.constructor.name == "InteractionResponse" && ctx.interaction.constructor.name == "ChatInputCommandInteraction") {
-        let channel = await channels.get(ctx.interaction.channelId);
-        ctx = await messages.get(ctx.interaction.id, channel);
-    }
+    if (ctx.constructor.name == "InteractionResponse") ctx = await ctx.fetch()
 
     
     // content
