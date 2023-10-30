@@ -2,7 +2,7 @@ const UtilService = require('../index.js');
 const { Soup } = require('stews');
 
 
-UtilService.newC("List", class {
+UtilService.newC("Pad", class {
 	constructor(per, object, start=1) {
         var obj = Soup.from(object);
 
