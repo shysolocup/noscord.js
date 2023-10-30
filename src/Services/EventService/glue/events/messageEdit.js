@@ -13,8 +13,6 @@ module.exports = (handler) => { handler.init(
         
         await msg.apply(ctx);
         let edited = await messages.get(ctx.id);
-
-        msg.to = edited;
         
         return [msg, edited];
     }, 
