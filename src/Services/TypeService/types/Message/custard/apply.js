@@ -37,7 +37,6 @@ Message.newF("apply", async function(ctx) {
     // other stuff
     this.createdAt = ctx.createdAt;
     this.type = ctx.type;
-    this.bot = this.author.bot;
     this.system = ctx.system;
 
 
