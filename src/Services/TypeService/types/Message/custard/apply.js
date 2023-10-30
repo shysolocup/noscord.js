@@ -38,7 +38,7 @@ Message.newF("apply", async function(ctx) {
     // moderation
     this.editable = ctx.editable;
     this.deletable = ctx.deletable;
-    this.purgeable = ctx.bulkDeletable;
+    this.purgable = ctx.bulkDeletable;
     this.pinnable = ctx.pinnable;
 
 
