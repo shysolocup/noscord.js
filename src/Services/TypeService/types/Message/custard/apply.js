@@ -37,7 +37,8 @@ Message.newF("apply", async function(ctx) {
 
     // moderation
     this.editable = ctx.editable;
-    this.deleteable = ctx.deletable;
+    this.deletable = ctx.deletable;
+    this.purgeable = ctx.bulkDeletable;
     this.pinnable = ctx.pinnable;
 
 
@@ -51,7 +52,7 @@ Message.newF("apply", async function(ctx) {
     this.embeds = ctx.embeds;
     this.ephemeral = ctx.ephemeral;
     this.components = ctx.components;
-    this.attachments = ctx.attachments;
+    this.attachments = ctx.attachments ? Soup.from(ctx.attachments.toJSON()) : null;
     this.stickers = ctx.stickers;
     this.files = ctx.files;
     this.flags = ctx.flags;
