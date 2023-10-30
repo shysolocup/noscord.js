@@ -2,18 +2,30 @@ const UtilService = require('../index.js');
 const { Soup } = require('stews');
 
 
-UtilService.newC("Pager", class {
-	constructor(per, object) {
+UtilService.newC("List", class {
+	constructor(per, object, start=1) {
         var obj = Soup.from(object);
 
         var paged = new Soup({
             pages: 1,
             length: 0,
+			
+			page: {
+				num: start,
+				content: null
+			},
+			
             contents: new Soup([ (obj.isPair()) ? Soup.from(Object) : Soup.from(Array) ]),
 
-            page(page) {
+            get(page) {
                 return this.contents[page-1];
-            }
+            },
+
+			next() {
+				let { num, content } = this.page;
+
+				if (num+1 > pages)
+			}
         });
 
 
@@ -40,6 +52,10 @@ UtilService.newC("Pager", class {
        
         }
 
+		
+		paged.page.content = paged.get(start);
+
+		
         return paged;
     }
 });
