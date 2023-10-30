@@ -23,7 +23,9 @@ Message.newF("apply", async function(ctx) {
         let logs = await ctx.guild.fetchAuditLogs({
             type: AuditLogEvent.MessageUpdate,
             after: util.snowflake(ctx.editedAt),
-        }).entries.filter( m => m.id == ctx.id );
+        });
+            
+        logs = logs.entries.filter( m => m.id == ctx.id );
 
         this.edits = Soup.from(logs.toJSON());
     }
