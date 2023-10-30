@@ -43,15 +43,14 @@ UtilService.newC("List", class {
 
 		
 		this.page.content = this.get(start);
-
-		
-        return paged;
     }
+	
 
 	get(page) {
 		return this.contents[page-1];
 	}
 
+	
 	to(page) {
 		this.page.num = page;
 		this.page.content = this.get(page);
@@ -59,6 +58,7 @@ UtilService.newC("List", class {
 		return this.page;
 	}
 
+	
 	next(by=1) {
 		let { num, content } = this.page;
 
@@ -72,6 +72,7 @@ UtilService.newC("List", class {
 		}
 	}
 
+	
 	prev(by=1) {
 		let { num, content } = this.page;
 
