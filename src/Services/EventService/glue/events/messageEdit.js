@@ -9,12 +9,12 @@ module.exports = (handler) => { handler.init(
         let client = this.client;
         client.import("messages");
 
-        console.log(arguments);
-        
         let msg = new types.Message;
         
         await msg.apply(ctx);
-        let edited = await messages.get(ctx.id);
+        let edited = await messages.get(ctx.id, ctx.channel);
+
+        msg.to = edited;
         
         return [msg, edited];
     }, 
