@@ -12,7 +12,7 @@
 
 noscord.JS is a customized Discord API wrapper for Node.JS that is similar to older versions of Discord.JS letting you access most of the API from the client using an importing system.<br>
 
-It's built on the latest versions of Discord.JS so it has all the new features and the simpler setup.<br><br>
+It's built on the latest versions of Discord.JS so it has all the new features AND the simpler setup.<br><br>
 
 
 - A TON of bug fixes
