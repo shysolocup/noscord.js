@@ -9,13 +9,18 @@ Message.newF("apply", async function(ctx) {
     
     // content
     this.content = ctx.content;
+
+    
+    // reply
     if (ctx.reference) this.replier = await messages.get(ctx.reference.messageId, ctx.channel)
 
+
+    // edit
     if (ctx.editedAt) {
         let logs = await ctx.guild.fetchLogs({
             type: AuditLogEvent.MessageUpdate,
-            before: 
-        });
+            after: util.snowflake(ctx.editedAt)
+        }).filter( e => e.id == ctx.id );
     }
 
 
