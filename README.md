@@ -10,9 +10,18 @@
 <a href="https://github.com/paigeroid/noscord.js/wiki"><img height=22 src="https://img.shields.io/badge/documentation-blue?style=flat&color=darkblue&logo=github&logoColor=white" alt="documentation" />
 <img height=22 src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-- noscord.JS is a customized Discord API wrapper for Node.JS that is similar to older versions of Discord.JS in that you can access most of the API from the client instead of having to go through types though because it's built on the latest versions of Discord.JS you can still use them if you wish<br><br>
+noscord.JS is a customized Discord API wrapper for Node.JS that is similar to older versions of Discord.JS in that you can access most of the API from the client instead of having to go through types though because it's built on the latest versions of Discord.JS you can still use them if you wish<br><br>
 
-- It contains a plethora of services letting you more easily access parts of the API from the tips of your fingers<br><br>
+
+- A TON of bug fixes
+- Built in commands
+- Fully open source
+- Modding support
+- Updated events
+
+
+<br>
+
 
 ⚠️ __PLEASE NOTE:__
 this package is currently in active development and is far from finished ⚠️ 
