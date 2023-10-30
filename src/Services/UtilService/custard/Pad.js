@@ -13,7 +13,6 @@ UtilService.newC("Pad", class {
 			num: start,
 			content: null
 		};
-
 		
     	this.contents: new Soup([ (obj.isPair()) ? Soup.from(Object) : Soup.from(Array) ]);
 
@@ -44,6 +43,11 @@ UtilService.newC("Pad", class {
 		
 		this.page.content = this.get(start);
     }
+
+
+	get current() {
+		return this.page.content;
+	}
 	
 
 	get(page) {
