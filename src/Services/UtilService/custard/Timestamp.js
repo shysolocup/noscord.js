@@ -24,7 +24,6 @@ UtilService.newC("Timestamp", class {
 	latency(msg) {
 		if (msg.constructor.name == "ChatInputCommandInteraction" || msg.constructor.name == "CommandRun") return this.date - msg.createdTimestamp
 		else if (msg.constructor.name == "Message") return this.date - msg.timestamps.created.date;
-		else if (msg.constructor.name == "MessageEdit") return this.date - msg.timestampes.edited.date;
 		else return this.date - msg.createdAt;
 	}
 	
