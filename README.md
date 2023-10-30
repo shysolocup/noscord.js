@@ -18,6 +18,7 @@ noscord.JS is a customized Discord API wrapper for Node.JS that is similar to ol
 - Fully open source
 - Modding support
 - Updated events
+- Better guides
 
 
 <br>
