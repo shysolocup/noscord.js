@@ -21,10 +21,37 @@ UtilService.newC("List", class {
                 return this.contents[page-1];
             },
 
+			to(page) {
+				this.page.num = page;
+				this.page.content = this.get(page);
+
+				return this.page;
+			},
+
 			next() {
 				let { num, content } = this.page;
 
-				if (num+1 > pages)
+				if (num+1 > this.pages) {
+					this.page.num = 1;
+					this.page.content = this.get(1);
+				}
+				else {
+					this.page.num = num+1;
+					this.page.content = this.get(num+1);
+				}
+			},
+
+			prev() {
+				let { num, content } = this.page;
+
+				if (num-1 < 1) {
+					this.page.num = this.pages;
+					this.page.content = this.get(this.pages);
+				}
+				else {
+					this.page.num = num-1;
+					this.page.content = this.get(num-1);
+				}
 			}
         });
 
