@@ -9,5 +9,5 @@ LogService.newF("get", async function(guild, settings) {
     if (settings.after) settings.after = util.snowflake(settings.after);
     if (settings.type) settings.type = this.logType(settings.type);
 
-    return await guild.fetchLogs(settings).entries;
+    return await guild.fetchAuditLogs(settings).entries;
 })
