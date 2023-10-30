@@ -6,15 +6,15 @@ UtilService.newC("Pad", class {
 	constructor(per, object, start=1) {
         var obj = Soup.from(object);
 
-        this.pages: 1;
-    	this.length: 0;
+        this.pages = 1;
+    	this.length = 0;
 			
-		this.page: {
+		this.page = {
 			num: start,
 			content: null
 		};
 		
-    	this.contents: new Soup([ (obj.isPair()) ? Soup.from(Object) : Soup.from(Array) ]);
+    	this.contents = new Soup([ (obj.isPair()) ? Soup.from(Object) : Soup.from(Array) ]);
 
 
         var page = 0;
