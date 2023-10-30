@@ -87,9 +87,9 @@ Message.newF("apply", async function(ctx) {
     // times
     this.timestamps = {
         created: new Timestamp(ctx.createdAt),
-        edited: (ctx.editedAt) ? new Timestamp(ctx.editedAt) : null,
-        
+        edited: (ctx.editedAt) ? new Timestamp(ctx.editedAt) : null,   
     }
+    
     this.latency = new Date() - this.timestamps.created.date;
 
     
