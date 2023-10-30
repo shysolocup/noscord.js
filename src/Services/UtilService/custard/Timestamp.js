@@ -17,7 +17,7 @@ UtilService.newC("Timestamp", class {
 		this.short = `<t:${Math.round(dt.getTime() / 1000)}:f>`;
 		this.long = `<t:${Math.round(dt.getTime() / 1000)}:F>`;
 		this.relative = `<t:${Math.round(dt.getTime() / 1000)}:R>`;
-		this.snowflake = this.parent.slowflake(dt);
+		this.snowflake = ( ((BigInt(dt.valueOf()) - BigInt(1420070400000)) << BigInt(22)).toString() );
 		this.raw = `${Math.round(dt.getTime() / 1000)}`;
 	}
 
