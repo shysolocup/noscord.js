@@ -8,16 +8,11 @@ EventService.newC("GlueHandler", class {
         this.client = this.parent.parent;
         this.types = this.client.types;
         this._base = this.client._base;
-        
-        this.default = this.client.DefEvents;
-        this.custom = this.client.CustEvents;
 
         this.events = new Soup(Object);
-
         
         let ev_dir = require('./events/_funkydir');
         let ev = fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
-
         
         ev.forEach( file => {
             require(`./events/${file}`)(this);
