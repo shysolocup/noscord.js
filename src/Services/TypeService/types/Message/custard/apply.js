@@ -61,7 +61,7 @@ Message.newF("apply", async function(ctx) {
     this.position = ctx.position;
     this.mentions = ctx.mentions;
     this.reactions = ctx.reactions;
-    this.roleSubscriptionData = ctx.roleSubscriptionData;
+    this.roleSubData = ctx.roleSubData;
     this.editedAt = ctx.editedTimestamp;
     this.activity = ctx.activity;
     this.reference = ctx.reference;
