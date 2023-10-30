@@ -8,6 +8,8 @@ module.exports = (handler) => { handler.init(
         let types = this.types;
         let client = this.client;
         client.import("messages");
+
+        console.log(arguments);
         
         let msg = new types.Message;
         
