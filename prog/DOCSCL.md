@@ -74,7 +74,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | 🔴 | <h2>Addons</h2> |
 | - | - |
-| 🟢 | class |
+| 🟢 | main |
 | 🔴 | Addon | 
 | 🔴 | create() | 
 <br>
@@ -330,7 +330,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | 🔴 | <h2>Voice</h2> | 
 | - | - |
-| 🔴 | class | 
+| 🔴 | main | 
 | 🔴 | deafen() | 
 | 🔴 | find() | 
 | 🔴 | get() | 
