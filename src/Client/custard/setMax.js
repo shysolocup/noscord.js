@@ -1,6 +1,6 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("setMaxListeners", function(max) {
+Client.newF("setMax", function(max) {
     this._base.setMaxListeners(max);
 });
