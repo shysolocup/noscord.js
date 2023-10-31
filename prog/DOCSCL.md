@@ -45,6 +45,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | services |
 | 🟢 | types |
 | 🟢 | spreads |
+| 🟢 | stores |
 | 🟢 | command() |
 | 🟢 | import() |
 | 🟢 | login() | 
@@ -194,74 +195,73 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | GlueHandler.init() |
 <br>
 
-| 🟠 | <h2>Expressions</h2> | Issues |
-| - | - | - |
-| 🟢 | class | None |
-| 🟠 | emojiCount() | Needs to be typed |
-| 🟠 | emojis() | Needs to be typed |
-| 🟠 | stickerCount() | Needs to be typed |
-| 🟠 | stickers() | Needs to be typed |
+| 🔴 | <h2>Expressions</h2> |
+| - | - |
+| 🔴 | main | 
+| 🔴 | emojiCount() |
+| 🔴 | emojis() | 
+| 🔴 | stickerCount() 
+| 🔴 | stickers() | 
 <br>
 
-| 🟠 | <h2>Guilds</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟠 | count() | Needs to be typed |
-| 🔵 | get() | Needs to be typed |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
+| 🔴 | <h2>Guilds</h2> |
+| - | - |
+| 🔴 | main | 
+| 🔴 | count() | 
+| 🔴 | get() | 
+| 🔴 | has() |
+| 🔴 | list() | 
 <br>
 
-| 🟠 | <h2>Logs</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟢 | get() | None |
-| 🟠 | logType() | Unfinished |
+| 🔴 | <h2>Logs</h2> | 
+| - | - |
+| 🔴 | main |
+| 🔴 | get() |
+| 🔴 | logType() |
 <br>
 
-| 🟠 | <h2>Messages</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟢 | delete() | None |
-| 🔵 | edit() | Fix embed attachments |
-| 🟠 | followUp() | Unfinished |
-| 🟢 | get() | None |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
-| 🟢 | purge() | None |
-| 🔵 | reply() | Fix embed attachments |
-| 🔵 | send() | Fix embed attachments |
+| 🔴 | <h2>Messages</h2> |
+| - | - |
+| 🔴 | main | 
+| 🔴 | delete() |
+| 🔴 | edit() | 
+| 🔴 | followUp() | 
+| 🔴 | get() | 
+| 🔴 | has() | 
+| 🔴 | list() | 
+| 🔴 | purge() | 
+| 🔴 | reply() | 
+| 🔴 | send() | 
 <br>
 
-| 🟣 | <h2>Permissions</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟢 | _basePerms | None |
-| 🟢 | _customPerms | None |
-| 🟣 | cache() | Untested |
-| 🟣 | list() | Untested |
+| 🔴 | <h2>Permissions</h2> |
+| - | - |
+| 🔴 | main | 
+| 🔴 | _basePerms |
+| 🔴 | _customPerms | 
+| 🔴 | cache() | 
+| 🔴 | list() |
 <br>
 
-| 🟠 | <h2>Roles</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟠 | get() | Needs to be typed |
-| 🟠 | list() | Needs to be typed |
+| 🔴 | <h2>Roles</h2> |
+| - | - |
+| 🔴 | main |
+| 🔴 | get() | 
+| 🔴 | list() | 
 <br>
 
-| 🟢 | <h2>Stores</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟢 | Store | None |
-| 🟢 | stores | None |
-| 🟢 | create() | None |
-| 🟢 | get() | None |
+| 🔴 | <h2>Stores</h2> |
+| - | - |
+| 🔴 | main | 
+| 🔴 | Store | 
+| 🔴 | stores | 
+| 🔴 | create() | 
+| 🔴 | get() | 
 <br>
 
-| 🟢 | <h2>Types</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| | [Type Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/TYPECL.md) | |
+| 🔴 | <h2>Types</h2> |
+| - | - |
+| 🟢 | main | 
 <br>
 
 | 🟠 | <h2>Users</h2> | Issues
