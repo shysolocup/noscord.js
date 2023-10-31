@@ -3,11 +3,11 @@ const { Soup } = require('stews');
 
 
 UtilService.newC("Numer", class {
-	constructor(formatted, raw, currency, roundTo) {
-		this.value = formatted;
-        this.raw = raw;
-        this.currency = currency;
-        this.roundTo = roundTo;
+	constructor(settings={}) {
+		this.value = settings.value;
+        this.raw = settings.raw;
+        this.currency = settings.currency;
+        this.roundTo = settings.roundTo;
         
         this.even = (raw % 2 == 0);
         this.odd = (raw % 2 == 1);
