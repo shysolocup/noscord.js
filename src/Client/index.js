@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.5 | 10/30/23 ::
+	:: noscord.js :: TypeDev 0.1.5 | 10/31/23 ::
 	https://github.com/paigeroid/noscord.js
 
 */
@@ -131,23 +131,6 @@ class NosClient {
 		
 		// custom permissions
 		this._customPerms = require('../Services/PermissionService/_customPerms.json');
-
-
-		/*
-
-		// react event
-		this._base.on("messageReactionAdd", async function() {
-			await events.get("reaction").fire(...Array.from(arguments));
-		});
-
-
-		// join/leave/move vc event
-		this._base.on("voiceStateUpdate", async function(oldVS, newVS) {
-			if (!oldVS.channelID && newVS) await events.get("joinVoice").fire(...Array.from(arguments));
-			else if (!newVS.channelID && oldVS) await events.get("leaveVoice").fire(...Array.from(arguments));
-			else await events.get("moveVoice").fire(...Array.from(arguments));
-		});
-		*/
 		
 
 		/* registering slash commands */
