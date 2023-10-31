@@ -3,6 +3,7 @@
   🟠
   🔴
   🔵
+  ⚪
 )
 
 
@@ -17,6 +18,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 🟠 = minor issue<br>
 🔴 = major issue<br>
 🔵 = unfinished but functional<br>
+⚪ = unsure<br>
 
 <br>
 
