@@ -83,7 +83,7 @@ class NosClient {
 			permissions: new this.PermissionService,
 			voice: new this.VoiceService,
 			logs: new this.LogService,
-			addon: new this.AddonService
+			addons: new this.AddonService
 		});
 
 		
