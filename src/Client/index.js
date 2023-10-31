@@ -84,7 +84,7 @@ class NosClient {
 			voice: new this.VoiceService,
 			logs: new this.LogService,
 			addons: new this.AddonService,
-			stores: new this.StorageService
+			storage: new this.StorageService
 		});
 
 		
@@ -98,6 +98,7 @@ class NosClient {
 		this.Button = this.services.components.Button;
 		this.Selection = this.services.components.Selection;
 		this.Row = this.services.components.Row;
+		this.stores = this.services.storage.stores;
 
 
 
