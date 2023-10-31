@@ -82,7 +82,8 @@ class NosClient {
 			messages: new this.MessageService,
 			permissions: new this.PermissionService,
 			voice: new this.VoiceService,
-			logs: new this.LogService
+			logs: new this.LogService,
+			addon: new this.AddonService
 		});
 
 		
