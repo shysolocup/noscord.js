@@ -36,7 +36,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | commandRan | None |
 | 🟣 | memberBan | Untested |
 | 🟢 | memberJoin | None |
-| 🟣 | memberBan | Untested |
+| 🟣 | memberKick | Untested |
 | 🟣 | memberLeave | Untested |
 | 🟣 | memberUnban | Untested |
 | 🟢 | messageCreate | None |
