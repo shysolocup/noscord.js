@@ -262,58 +262,66 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔴 | <h2>Types</h2> |
 | - | - |
 | 🟢 | main | 
+| | [Type Docs Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/TYPEDOCSCL.md)
 <br>
 
-| 🟠 | <h2>Users</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟢 | avatar() | None |
-| 🟢 | avatarUrl() | None |
-| ⚪ | banner() | Investigating a bug |
-| ⚪ | bannerUrl() | Investigating a bug |
-| 🟠 | botCount() | Needs to be typed |
-| 🟠 | botst() | Needs to be typed |
-| 🟠 | count() | Needs to be typed |
-| ⚪ | decor() | Investigating a bug |
-| ⚪ | decorUrl() | Investigating a bug |
-| 🟠 | get() | Needs to be typed |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
-| 🟠 | memberCount() | Needs to be typed |
-| 🟠 | members() | Needs to be typed |
+| 🔴 | <h2>Users</h2> |
+| - | - |
+| 🔴 | main |
+| 🔴 | avatar() |
+| 🔴 | avatarUrl() |
+| 🔴 | banner() | 
+| 🔴 | bannerUrl() |
+| 🔴 | botCount() | 
+| 🔴 | bots() | 
+| 🔴 | count() | 
+| 🔴 | decor() | 
+| 🔴 | decorUrl() | 
+| 🔴 | get() | 
+| 🔴 | has() | 
+| 🔴 | list() | 
+| 🔴 | memberCount() |
+| 🔴 | members() | 
 <br>
 
-| 🟣 | <h2>Util</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟢 | Numer | None |
-| 🟣 | Pad | Untested |
-| 🟢 | Timestamp | None |
-| 🟢 | colors | None |
-| 🟢 | genCode() | None |
-| 🟢 | latency() | None |
-| 🟢 | numer() | None |
-| 🟣 | pad() | Untested |
-| 🟢 | parse() | None |
-| 🟢 | parseMs() | None |
-| 🟢 | random | None |
-| 🟢 | sleep() | None |
-| 🟢 | snowflake() | None |
+| 🟢 | <h2>Util</h2> | 
+| - | - |
+| 🟢 | main | 
+| 🟢 | colors |
+| 🟢 | random |
+| 🟢 | parse() |
+| 🟢 | parseMs() | 
+| 🟢 | sleep() |
+| 🟢 | numer() |
+| 🟢 | pad() |
+| 🟢 | snowflake() |
+| 🟢 | Timestamp | 
+| 🟢 | Numer | 
+| 🟢 | Pad |
+| 🟢 | Pad.current |
+| 🟢 | Pad.pages |
+| 🟢 | Pad.length |
+| 🟢 | Pad.page |
+| 🟢 | Pad.contents |
+| 🟢 | Pad.next() |
+| 🟢 | Pad.prev() |
+| 🟢 | Pad.to() |
+| 🟢 | Pad.get() |
 <br>
 
-| 🟠 | <h2>Voice</h2> | Issues
-| - | - | - |
-| 🟢 | class | None |
-| 🟣 | deafen() | Untested |
-| 🟣 | find() | Untested |
-| 🟣 | get() | Untested |
-| 🟢 | join() | None |
-| 🟠 | leave() | Does nothing currently, looking into it |
-| 🟣 | me() | Untested |
-| 🟣 | mute() | Untested |
-| 🟠 | pause() | Unfinished |
-| 🟠 | play() | Unfinished |
-| 🟠 | stop() | Unfinished |
-| 🟣 | undeafen() | Untested |
-| 🟣 | unmute() | Untested |
+| 🔴 | <h2>Voice</h2> | 
+| - | - |
+| 🔴 | class | 
+| 🔴 | deafen() | 
+| 🔴 | find() | 
+| 🔴 | get() | 
+| 🔴 | join() | 
+| 🔴 | leave() | 
+| 🔴 | me() | 
+| 🔴 | mute() | 
+| 🔴 | pause() | 
+| 🔴 | play() | 
+| 🔴 | stop() | 
+| 🔴 | undeafen() | 
+| 🔴 | unmute() | 
 <br>
