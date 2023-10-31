@@ -29,6 +29,7 @@ ComponentService.newC("Embed", class {
         // timestamp
         if (data.timestamp) {
             if (data.timestamp.toLowerCase() == "now") data.timestamp = new Date().toISOString();
+            if (data.timestamp.constructor.name == "Timestamp") data.timestamp = data.timestamp.embed;
         }
 
 
