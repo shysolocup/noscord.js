@@ -30,15 +30,20 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | ❔ | Name | Issues |
 | - | - | - |
-| 🟢 | buttonPress | None |
+| 🟣 | joinVoice | Untested |
+| 🟣 | leaveVoice | Untested |
+| 🟣 | move | Untested |
+| 🟣 | reaction | Untested |
+| 🟣 | removeReaction | Untested |
 | 🟣 | channelDelete | Untested |
 | 🟣 | channelEdit | Untested |
-| 🟢 | commandRan | None |
 | 🟣 | memberBan | Untested |
-| 🟢 | memberJoin | None |
 | 🟣 | memberKick | Untested |
 | 🟣 | memberLeave | Untested |
 | 🟣 | memberUnban | Untested |
+| 🟢 | memberJoin | None |
+| 🟢 | buttonPress | None |
+| 🟢 | commandRan | None |
 | 🟢 | messageCreate | None |
 | 🟢 | messageDelete | None |
 | 🟢 | messageEdit | None |
