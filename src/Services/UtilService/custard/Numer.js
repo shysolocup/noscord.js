@@ -3,14 +3,25 @@ const { Soup } = require('stews');
 
 
 UtilService.newC("Numer", class {
-	constructor(settings={}) {
-		this.value = settings.value;
-        this.raw = settings.raw;
+	constructor(number, settings={}) {
+		if (!(number instanceof Number)) number = parseFloat(number);
+	    if (!settings.roundTo) settings.roundTo = 0;
+	    if (!settings.currency) settings.currency = "";
+	    
+	    let formatter = new Intl.NumberFormat('en-US', {
+	        style: 'currency',
+	        currency: 'USD',
+	        maximumFractionDigits: settings.roundTo
+	    });
+	    
+	    this.value = formatter.format(number).replace("$", settings.currency);
+		
+        this.raw = number;
         this.currency = settings.currency;
         this.roundTo = settings.roundTo;
         
-        this.even = (raw % 2 == 0);
-        this.odd = (raw % 2 == 1);
+        this.even = (this.raw % 2 == 0);
+        this.odd = (this.raw % 2 == 1);
         
         
         return new Proxy(this, {
