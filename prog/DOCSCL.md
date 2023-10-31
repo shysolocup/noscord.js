@@ -129,6 +129,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.time |
 | 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.timeMs |
 | 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.remaining |
+| 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.remainingMs |
 | 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.start |
 | 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.end |
 | 🟢 | SlashCommand.CooldownHandle.CooldownUserHandle.timeout |
