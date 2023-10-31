@@ -204,5 +204,44 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟠 | count() | Needs to be typed |
 | ⚪ | decor() | Investigating a bug |
 | ⚪ | decorUrl() | Investigating a bug |
+| 🟠 | get() | Needs to be typed |
+| 🟣 | has() | Untested |
+| 🟠 | list() | Needs to be typed |
+| 🟠 | memberCount() | Needs to be typed |
+| 🟠 | members() | Needs to be typed |
+<br>
 
+| 🟣 | <h2>Util</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | Numer | None |
+| 🟣 | Pad | Untested |
+| 🟢 | Timestamp | None |
+| 🟢 | colors | None |
+| 🟢 | genCode() | None |
+| 🟢 | latency() | None |
+| 🟢 | numer() | None |
+| 🟣 | pad() | Untested |
+| 🟢 | parse() | None |
+| 🟢 | parseMs() | None |
+| 🟢 | random | None |
+| 🟢 | sleep() | None |
+| 🟢 | snowflake() | None |
+<br>
+
+| 🟠 | <h2>Voice</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟣 | deafen() | Untested |
+| 🟣 | find() | Untested |
+| 🟣 | get() | Untested |
+| 🟢 | join() | None |
+| 🟠 | leave() | Does nothing currently, looking into it |
+| 🟣 | me() | Untested |
+| 🟣 | mute() | Untested |
+| 🟠 | pause() | Unfinished |
+| 🟠 | play() | Unfinished |
+| 🟠 | stop() | Unfinished |
+| 🟣 | undeafen() | Untested |
+| 🟣 | unmute() | Untested |
 <br>
