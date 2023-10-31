@@ -35,7 +35,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
-| 🔴 | <h2>Client</h2> |
+| 🟢 | <h2>Client</h2> |
 | - | - |
 | 🟢 | main |
 | 🟢 | token |
@@ -56,7 +56,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | spread() | 
 | 🟢 | logout() | 
 | 🟢 | restart() | 
-| 🔴 | setMax() |
+| 🟢 | setMax() |
 | 🟢 | off() | 
 | 🟢 | _base | 
 | 🟢 | _baseEvents | 
