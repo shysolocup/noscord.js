@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = ["reaction", "react"],  // names of the event
+    name = ["reaction", "react", "addReaction"],  // names of the event
 
     
     func = function (...args) { // formatting for types and stuff
