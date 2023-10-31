@@ -119,7 +119,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | _baseEvents | None |
 | 🟢 | _staticEvents | None |
 | 🟢 | GlueHandler | None |
-| | [Event Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/GLUECL.md) | |
+| | [Event Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/EVENTCL.md) | |
 <br>
 
 | 🟠 | <h2>Expressions</h2> | Issues |
