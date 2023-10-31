@@ -4,6 +4,7 @@
   🔴
   🔵
   ⚪
+  🟣
 )
 
 
@@ -18,7 +19,8 @@ in the source for this file there's a comment with the emoji assets used for eas
 🟠 = minor issue<br>
 🔴 = major issue<br>
 🔵 = unfinished but functional<br>
-⚪ = unsure<br>
+⚪ = temp removed<br>
+🟣 = unsure<br>
 
 <br>
 
@@ -48,10 +50,10 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | onPress() | None |
 | 🟢 | onSubmit() | None |
 | 🟢 | spread() | None |
-| ⚪ | logout() | Untested |
-| ⚪ | restart() | Untested |
-| ⚪ | setMaxListeners() | Untested |
-| ⚪ | off() | Untested |
+| 🟣 | logout() | Untested |
+| 🟣 | restart() | Untested |
+| 🟣 | setMaxListeners() | Untested |
+| 🟣 | off() | Untested |
 <br>
 
 | 🟢 | <h2>Addons</h2> | Issues |
@@ -63,13 +65,13 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | 🟠 | <h2>Channels</h2> | Issues
 | - | - | - |
-| 🔵 | class | WIP |
+| 🟢 | class | None |
 | 🟠 | all() | Needs to be typed |
 | 🟠 | categories() | Needs to be typed |
 | 🟠 | categoryCount() | Needs to be typed |
 | 🟠 | count() | Needs to be typed |
-| 🟠 | get() | Needs to be typed |
-| 🟠 | has() | Needs to be typed |
+| 🔵 | get() | Needs to be typed |
+| 🟣 | has() | Untested |
 | 🟠 | list() | Needs to be typed |
 | 🟠 | text() | Needs to be typed |
 | 🟠 | textCount() | Needs to be typed |
@@ -107,4 +109,100 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | class | None |
 | 🟢 | NosError | None |
 | 🟢 | create() | None |
+<br>
+
+| 🟢 | <h2>Events</h2> | Issues |
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | Event | None |
+| 🟢 | create() | None |
+| 🟢 | _baseEvents | None |
+| 🟢 | _staticEvents | None |
+| 🟢 | GlueHandler | None |
+| | [Event Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/GLUECL.md) | |
+<br>
+
+| 🟠 | <h2>Expressions</h2> | Issues |
+| - | - | - |
+| 🟢 | class | None |
+| 🟠 | emojiCount() | Needs to be typed |
+| 🟠 | emojis() | Needs to be typed |
+| 🟠 | stickerCount() | Needs to be typed |
+| 🟠 | stickers() | Needs to be typed |
+<br>
+
+| 🟠 | <h2>Guilds</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟠 | count() | Needs to be typed |
+| 🔵 | get() | Needs to be typed |
+| 🟣 | has() | Untested |
+| 🟠 | list() | Needs to be typed |
+<br>
+
+| 🟠 | <h2>Logs</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | get() | None |
+| 🟠 | logType() | Unfinished |
+<br>
+
+| 🟠 | <h2>Messages</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | delete() | None |
+| 🔵 | edit() | Fix embed attachments |
+| 🟠 | followUp() | Unfinished |
+| 🟢 | get() | None |
+| 🟣 | has() | Untested |
+| 🟠 | list() | Needs to be typed |
+| 🟢 | purge() | None |
+| 🔵 | reply() | Fix embed attachments |
+| 🔵 | send() | Fix embed attachments |
+<br>
+
+| 🟣 | <h2>Permissions</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | _basePerms | None |
+| 🟢 | _customPerms | None |
+| 🟣 | cache() | Untested |
+| 🟣 | list() | Untested |
+<br>
+
+| 🟠 | <h2>Roles</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟠 | get() | Needs to be typed |
+| 🟠 | list() | Needs to be typed |
+<br>
+
+| 🟢 | <h2>Stores</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | Store | None |
+| 🟢 | stores | None |
+| 🟢 | create() | None |
+| 🟢 | get() | None |
+<br>
+
+| 🟢 | <h2>Types</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| | [Type Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/TYPECL.md) | |
+<br>
+
+| 🟠 | <h2>Users</h2> | Issues
+| - | - | - |
+| 🟢 | class | None |
+| 🟢 | avatar() | None |
+| 🟢 | avatarUrl() | None |
+| ⚪ | banner() | Investigating a bug |
+| ⚪ | bannerUrl() | Investigating a bug |
+| 🟠 | botCount() | Needs to be typed |
+| 🟠 | botst() | Needs to be typed |
+| 🟠 | count() | Needs to be typed |
+| ⚪ | decor() | Investigating a bug |
+| ⚪ | decorUrl() | Investigating a bug |
+
 <br>
