@@ -11,7 +11,8 @@ GuildMember.newF("apply", async function(ctx) {
     this.user = await users.get(ctx.id);
     this.username = this.user.username;
     this.globalName = this.user.globalName
-    this.tag = (this.user.tag && this.user.tag.endsWith("#0")) ? ctx.username : this.user.tag ;
+    this.tag = (this.user.tag && this.user.tag.endsWith("#0")) ? ctx.username : this.user.tag;
+    this.url = `https://discord.com/users/${ctx.id}`;
     this.discriminator = ctx.discriminator;
     this.nickname = ctx.displayName;
     this.flags = ctx.flags;
