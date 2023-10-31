@@ -8,6 +8,7 @@ User.newF("apply", async function(ctx) {
     // names
     this.username = ctx.username;
     this.tag = (ctx.tag && ctx.tag.endsWith("#0")) ? ctx.username : (ctx.tag) ? ctx.tag : null;
+    this.url = `https://discord.com/users/${ctx.id}`;
     this.discriminator = ctx.discriminator;
     this.globalName = ctx.globalName;
     
