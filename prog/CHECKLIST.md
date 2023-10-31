@@ -26,19 +26,19 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
-| 🔵 | Client |
-| - | - |
-| 🔵 | class |
-| 🟢 | command |
-| 🟢 | import |
-| 🟢 | login |
-| 🟢 | on |
-| 🟢 | onCommand |
-| 🟢 | onPress |
-| 🟢 | onSubmit |
-| 🟢 | spread |
-| ⚪ | logout |
-| ⚪ | restart |
-| ⚪ | setMaxListeners |
-| ⚪ | off |
+| 🔵 | Client | 🟢 | Addons |
+| - | - | - | - |
+| 🔵 | class | 🟢 | class |
+| 🟢 | command() | 🟢 | Addon |
+| 🟢 | import() | 🟢 | create() |
+| 🟢 | login() |
+| 🟢 | on() |
+| 🟢 | onCommand() |
+| 🟢 | onPress() |
+| 🟢 | onSubmit() |
+| 🟢 | spread() |
+| ⚪ | logout() |
+| ⚪ | restart() |
+| ⚪ | setMaxListeners() |
+| ⚪ | off() |
 <br>
