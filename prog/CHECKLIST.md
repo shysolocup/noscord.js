@@ -12,7 +12,7 @@
 
 
 # CHECKLIST
-this list is for all features that are complete<br>
+this list documents which features are finished and unfinished <br>
 in the source for this file there's a comment with the emoji assets used for easier access
 
 🟢 = resolved issue<br>
