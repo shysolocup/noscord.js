@@ -58,6 +58,7 @@ client.on("ready", (ctx) => {
 
 
 // imports stuff
+// also components adds Embeds and util adds Timestamp
 client.import(
     { com: "commands", comp: "components", att: "attachments" },
     [ "channels", "users", "events", "util" ]
@@ -81,13 +82,13 @@ client.on("pingCmd", async (ctx) => {
 
 // creates a ping command
 com.create("ping", "replies with pong", (ctx) => {
-    let timestamp = new util.Timestamp();
+    let timestamp = new Timestamp();
 
 
-    let embed = new comp.Embed({
+    let embed = new Embed({
         description: "# Pong!",
         timestamp: timestamp.embed,
-        color: app.colors.blurple,
+        color: util.colors.blurple,
         footer: `latency: ${timestamp.latency(ctx)}ms`
     });
 
