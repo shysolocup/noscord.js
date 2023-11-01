@@ -11,7 +11,7 @@ Guild.newF("apply", async function(ctx) {
     this.url = `discord.gg/${ctx.vanityURLCode}`
     this.name = ctx.name;
     this.description = ctx.description;
-    this.owner = await users.get(ctx.ownerId, ctx);
+    this.owner;
     this.ownerId = ctx.ownerId;
     this.verified = ctx.verified;
     this.verificationLevel = ctx.verificationLevel;
@@ -33,24 +33,30 @@ Guild.newF("apply", async function(ctx) {
     // lists
     this.features = ctx.features;
     
-    this.members = await users.members(ctx);
-    this.users = await users.list(ctx);
-    this.bots = await users.bots(ctx);
+    this.members;
+    this.users;
+    this.bots;
     
-    this.channels = await channels.list(ctx);
-    this.textChannels = await channels.text(ctx);
-    this.voiceChannels = await channels.voice(ctx);
-    this.threadChannels = await channels.threads(ctx);
-    this.categories = await channels.categories(ctx);
-    this.allChannels = await channels.all(ctx);
+    this.channels;
+    this.textChannels;
+    this.voiceChannels;
+    this.threadChannels;
+    this.categories;
+    this.allChannels;
 
-    // counts
-    this.memberCount = await users.memberCount(ctx);
-    this.botCount = await users.botCount(ctx);
-    this.userCount = await users.count(ctx);
     
-    this.channelCount = await channels.count(ctx);
-    this.categoryCount = await channels.categoryCount(ctx);
+    // counts
+    this.memberCount;
+    this.botCount;
+    this.userCount;
+    this.channelCount;
+    this.categoryCount;
+    this.textChannelCount;
+    this.voiceChannelCount;
+    this.threadCount;
+
+
+    // more lists
     this.emojis = ctx.emojis;
     this.stickers = ctx.stickers;
     this.commands = ctx.commands;
@@ -129,7 +135,35 @@ Guild.newF("apply", async function(ctx) {
     // voice stuff
     this.voiceAdapterCreator = ctx.voiceAdapterCreator;
     this.voiceStates = ctx.voiceStates;
-    
-    
+
+
     this.raw = ctx;
+
+
+    // users fix
+    this.owner = await users.get(ctx.ownerId, this);
+    this.members = await users.members(this);
+    this.users = await users.list(this);
+    this.bots = await users.bots(this);
+
+
+    // channels fix
+    this.channels = await channels.list(this);
+    this.textChannels = await channels.text(this);
+    this.voiceChannels = await channels.voice(this);
+    this.threadChannels = await channels.threads(this);
+    this.categories = await channels.categories(this);
+    this.allChannels = await channels.all(this);
+
+
+    // counts fix
+    this.memberCount = await users.memberCount(this);
+    this.botCount = await users.botCount(this);
+    this.userCount = await users.count(this);
+    
+    this.channelCount = await channels.count(this);
+    this.categoryCount = await channels.categoryCount(this);
+    this.textChannelCount = await channels.textCount(this);
+    this.voiceChannelCount = await channels.voiceCount(this);
+    this.threadCount = await channels.threadCount(this);
 });
