@@ -16,9 +16,12 @@ UserService.newF("get", async function(id, guild=null) {
     raw = raw.split("").join(""); 
     
     let thing = await ( 
-		(guild) ? guild.members.get(raw) : 
-		this.parent._base.users.fetch(raw).catch(e=>{})
-	);
+		(guild) ? 
+			guild.raw.members : // if guild is given it gets from the guild
+		
+			this.parent._base.users // if a guild is not given it gets from the client's users
+		
+	).fetch(raw).catch(e=>{});
 
 	let typed = (guild) ? new types.GuildMember : new types.User;
 	if (thing) await typed.apply(thing);
