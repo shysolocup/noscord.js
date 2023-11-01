@@ -3,7 +3,7 @@ const { Soup } = require('stews');
 
 
 ChannelService.newF("voice", async function(guild=null) {
-    return new Soup( await ( (guild) ? guild.channels : this.parent._base.channels)
+    return new Soup( await ( (guild) ? guild.raw.channels : this.parent._base.channels)
         .fetch()
         .catch(e=>{})
     )
