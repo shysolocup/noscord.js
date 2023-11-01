@@ -86,7 +86,7 @@ com.create("ping", "replies with pong", (ctx) => {
 
 
     let embed = new Embed({
-        description: "# Pong!",
+        header: { text: "Pong!", size: 1 },
         timestamp: timestamp.embed,
         color: util.colors.blurple,
         footer: `latency: ${timestamp.latency(ctx)}ms`
