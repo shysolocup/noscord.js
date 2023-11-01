@@ -8,7 +8,7 @@ Guild.newF("apply", async function(ctx) {
     
     // info
     this.id = ctx.id;
-    this.url = ctx.vanityURLCode
+    this.url = `discord.gg/${ctx.vanityURLCode}`
     this.name = ctx.name;
     this.description = ctx.description;
     this.owner = await users.get(ctx.ownerId, ctx);
@@ -18,6 +18,7 @@ Guild.newF("apply", async function(ctx) {
     this.applicationId = ctx.applicationId;
     this.locale = ctx.preferredLocale;
     this.acronym = ctx.nameAcronym;
+    this.urlCode = ctx.vanityURLCode
     this.urlUses = ctx.vanityURLUses
     // this.banner
     // this.icon
