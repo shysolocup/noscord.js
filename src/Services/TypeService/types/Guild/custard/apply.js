@@ -3,7 +3,7 @@ const Guild = require('../index.js');
 
 Guild.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("guilds", "messages", "channels", "users", "util", "roles", "logs");
+    client.import("messages", "channels", "users", "util", "roles", "logs");
 
     
     // info
