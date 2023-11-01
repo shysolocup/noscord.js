@@ -31,12 +31,13 @@ in the source for this file there's a comment with the emoji assets used for eas
 | ❔ | Name | Issues |
 | - | - | - |
 | ⚪ | Category | NOT STARTED |
-| ⚪ | Guild | NOT STARTED |
 | ⚪ | Role | NOT STARTED |
 | ⚪ | ThreadChannel | NOT STARTED |
+| ⚪ | StageChannel | NOT STARTED |
 | ⚪ | VoiceChannel | NOT STARTED |
 | ⚪ | Emoji | NOT STARTED |
 | ⚪ | Sticker | NOT STARTED |
+| 🟣 | Guild | UNTESTED |
 | 🟠 | GuildChannelAction | Unfinished |
 | 🟠 | GuildMemberAction | Unfinished |
 | 🔵 | CommandRun | WIP |
