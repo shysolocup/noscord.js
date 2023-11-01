@@ -143,13 +143,17 @@ Guild.newF("apply", async function(ctx) {
     // users fix
     this.owner = await users.get(ctx.ownerId, this);
 
-    this.members = await (new this.UserGroup({ type: 0 })).init();
-    this.users = await (new this.UserGroup({ type: 1 })).init();
-    this.bots = await (new this.UserGroup({ type: 2 })).init();
+    let ugroup = new types.UserGroup(this);
+    let cgroup = new types.ChannelGroup(this);
 
-    this.channels = await (new this.ChannelGroup({ type: 0 })).init();
-    this.textChannels = await (new this.ChannelGroup({ type: 1 })).init();
-    this.voiceChannels = await (new this.ChannelGroup({ type: 2 })).init();
-    this.threadChannels = await (new this.ChannelGroup({ type: 3 })).init();
-    this.categories = await (new this.ChannelGroup({ type: 4 })).init();
+    this.members = await ugroup.weed( u => !u.bot );
+    this.users = await ugroup.weed( u => true );
+    this.bots = await ugroup.weed( u => u.bot );
+
+    this.channels = await cgroup.weed( c => c.type != 4 );
+    this.textChannels = await cgroup.weed( c => c.type == 0 );
+    this.voiceChannels = await cgroup.weed( c => c.type == 2 );
+    this.threadChannels = await cgroup.weed( c => c.type == 11 );
+    this.categories = await cgroup.weed( c => c.type == 4 );
+    this.allChannels = await cgroup.weed( c => c.type == 11 );
 });
