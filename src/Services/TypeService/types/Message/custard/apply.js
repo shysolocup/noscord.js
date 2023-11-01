@@ -31,7 +31,7 @@ Message.newF("apply", async function(ctx) {
     this.guild = await guilds.get(this.guildId);
     this.channel = await channels.get(this.channelId);
     this.author = (ctx.author) ? await users.get(ctx.author.id) : (ctx.user) ? await users.get(ctx.user.id) : undefined;
-    this.member = (ctx.member) ? await users.get(ctx.member.id, ctx.guild) : (this.author) ? await users.get(this.author.id, this.guild) : undefined;
+    this.member = (ctx.member) ? await users.get(ctx.member.id, this.guild) : (this.author) ? await users.get(this.author.id, this.guild) : undefined;
 
 
     // other stuff
