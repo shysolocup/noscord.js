@@ -3,7 +3,7 @@ const Guild = require('../index.js');
 
 Guild.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("messages", "channels", "users", "util", "roles", "logs");
+    client.import("messages", "channels", "users", "util", "roles", "logs", "types");
 
     
     // info
@@ -142,28 +142,14 @@ Guild.newF("apply", async function(ctx) {
 
     // users fix
     this.owner = await users.get(ctx.ownerId, this);
-    this.members = await users.members(this);
-    this.users = await users.list(this);
-    this.bots = await users.bots(this);
 
+    this.members = await (new this.UserGroup({ type: 0 })).init();
+    this.users = await (new this.UserGroup({ type: 1 })).init();
+    this.bots = await (new this.UserGroup({ type: 2 })).init();
 
-    // channels fix
-    this.channels = await channels.list(this);
-    this.textChannels = await channels.text(this);
-    this.voiceChannels = await channels.voice(this);
-    this.threadChannels = await channels.threads(this);
-    this.categories = await channels.categories(this);
-    this.allChannels = await channels.all(this);
-
-
-    // counts fix
-    this.memberCount = await users.memberCount(this);
-    this.botCount = await users.botCount(this);
-    this.userCount = await users.count(this);
-    
-    this.channelCount = await channels.count(this);
-    this.categoryCount = await channels.categoryCount(this);
-    this.textChannelCount = await channels.textCount(this);
-    this.voiceChannelCount = await channels.voiceCount(this);
-    this.threadCount = await channels.threadCount(this);
+    this.channels = await (new this.ChannelGroup({ type: 0 })).init();
+    this.textChannels = await (new this.ChannelGroup({ type: 1 })).init();
+    this.voiceChannels = await (new this.ChannelGroup({ type: 2 })).init();
+    this.threadChannels = await (new this.ChannelGroup({ type: 3 })).init();
+    this.categories = await (new this.ChannelGroup({ type: 4 })).init();
 });
