@@ -80,8 +80,17 @@ client.on("pingCmd", async (ctx) => {
 
 
 
+// listens for when a command goes on cooldown
+client.on("cooldown", async (ctx) => {
+    ctx.reply(`You can use this command again in ${ctx.cooldown.remaining} seconds`);
+});
+
+
+
 // creates a ping command
-com.create("ping", "replies with pong", (ctx) => {
+com.create("ping", "replies with pong", "5s", (ctx) => {
+    if (ctx.onCooldown) return;
+
     let timestamp = new Timestamp();
 
 
@@ -105,15 +114,14 @@ let options = [{ name: "user", desc: "user to get the avatar of", type: "user" }
 
 
 // avatar command
-com.create("avatar", "sends a user's avatar", options, async (ctx) => {
+com.create("avatar", "sends a user's avatar", options, "5s", async (ctx) => {
+    if (ctx.onCooldown) return
+
     let user = (ctx.args[0]) ? await users.get(ctx.args[0].value) : ctx.author;
 
+    let avatar = await users.avatar(user, { width: 200, height: 200 });
 
-    let avatar = await users.avatar(user, { width: 100, height: 100 });
-    let circle = await avatar.circlify();
-
-
-    ctx.reply({ files: [circle] });
+    ctx.reply({ files: [avatar] });
 });
 
 
