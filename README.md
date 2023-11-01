@@ -93,14 +93,12 @@ com.create("ping", "replies with pong", "5s", (ctx) => {
 
     let timestamp = new Timestamp();
 
-
     let embed = new Embed({
         header: { text: "Pong!", size: 1 },
         timestamp: timestamp.embed,
         color: util.colors.blurple,
         footer: `latency: ${timestamp.latency(ctx)}ms`
     });
-
     
     ctx.reply({ embeds: [embed] });
     event.fire(ctx, cmd);
