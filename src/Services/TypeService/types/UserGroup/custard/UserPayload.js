@@ -1,20 +1,22 @@
 const UserGroup = require('../index.js');
+const User = require('../../User');
+const deasync = require('deasync');
 
 
 UserGroup.newC("UserPayload", class {
-    constructor(id) {
+    constructor(id, guild) {
         const client = this.parent.parent.parent;
+        const data = {};
 
-        var data = {};
-        let thing = (async () => { return await data; })(); // keeps the promise pending
+        let thing = (async () => { 
+            return await data; // keeps the promise pending
+        })();
 
-        thing.finally( async () => {
-            let user = client.users.get(id);
-            Object.assign(data, user) // let user = await client.users.get(id);
+        thing.finally( function() {
+            deasync(client.users.get).bind(client.users)(id, guild);
+            // client.users.get(id).then( user => Object.assign(data, user) );
         });
 
         return thing;
     }
 });
-
-module.exports = UserPayload;
