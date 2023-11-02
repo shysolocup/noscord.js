@@ -4,7 +4,7 @@ const deasync = require('deasync');
 
 
 UserGroup.newC("UserPayload", class {
-    constructor(id, guild) {
+    constructor(id, base) {
         const client = this.parent.parent.parent;
         const data = {};
 
@@ -13,7 +13,8 @@ UserGroup.newC("UserPayload", class {
         })();
 
         thing.finally( function() {
-            deasync(client.users.get).bind(client.users)(id, guild);
+            let user = new client.types.User;
+            deasync(user.apply).bind(client.types)(base, guild);
             // client.users.get(id).then( user => Object.assign(data, user) );
         });
 
