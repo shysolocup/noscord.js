@@ -1,31 +1,53 @@
 const TypeService = require('../../index.js');
+const { Soup } = require('stews');
 const fs = require('fs');
 
 
-TypeService.newC("UserGroup", class {
-    async init(guild) {
+TypeService.newC("UserGroup", class extends Soup {
+    constructor() {
+        super(Object);
 
-        this.client = this.parent.parent;
-        this.guild = guild;
-        this.ids = Soup.from(
+        const client = this.parent.parent;
+
+        return new Proxy(this, {
+            get(target, prop) {
+                try {
+                    if (Number(prop)+1 && Number(prop) <= target.length-1) {
+                        let id = target.keys[Number(prop)];
+                        return (async () => await client.users.get(id) )();
+                    }
+
+                    else if (target.has(prop)) {
+                        return (async () => await client.users.get(prop) )();
+                    }
+
+                    else return target[prop];
+
+                } catch(e) {
+                    return target[prop]
+                }
+            }
+        });
+    }
+
+    async init(guild) {
+        this.insides = Soup.from(
             await (
-                (this.guild) ? this.guild.raw.members : this.client._base.users
+                (guild) ? guild.raw.members : this.parent.parent._base.users
             )
             .fetch()
             .catch(e=>{})
-        ).keys;
+        ).map( (id, data) => new this.UserPayload(id, data) ).pour();
     }
 });
 
 
 module.exports = UserGroup;
 
-/*
+
 let cust_dir = require('./custard/_funkydir');
-const { Soup } = require('stews');
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
 
 cust.forEach( (file) => {
     require(`./custard/${file}`);
 });
-*/
