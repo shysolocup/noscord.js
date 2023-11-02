@@ -7,13 +7,13 @@ TypeService.newC("UserGroup", class {
 
         this.client = this.parent.parent;
         this.guild = guild;
-        this.data = Soup.from(
+        this.ids = Soup.from(
             await (
                 (this.guild) ? this.guild.raw.members : this.client._base.users
             )
             .fetch()
             .catch(e=>{})
-        );
+        ).keys;
     }
 });
 
