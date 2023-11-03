@@ -16,7 +16,7 @@ UserGroup.newC("UserPayload", class {
         
 
         var stuff = payload();
-        stuff.then( () => {
+        stuff.finally( () => {
             users.get(id, guild).then( (u) => {
                 payload(u);
             })
