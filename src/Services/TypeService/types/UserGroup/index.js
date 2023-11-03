@@ -37,7 +37,7 @@ TypeService.newC("UserGroup", class extends Soup {
             )
             .fetch()
             .catch(e=>{})
-        ).map( (id, base) => new this.UserPayload(id, base, guild) ).pour();
+        ).map( (id, base) => new this.UserPayload(id, guild) ).pour();
     }
 });
 
