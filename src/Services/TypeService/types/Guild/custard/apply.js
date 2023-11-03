@@ -143,20 +143,6 @@ Guild.newF("apply", async function(ctx) {
     // users fix
     this.owner = await users.get(ctx.ownerId, this);
 
-    let ugroup = new types.UserGroup();
-    await ugroup.init(this);
-
+    let ugroup = new types.UserGroup(this);
     this.members = ugroup;
-    /*
-    this.users = ugroup.weed( u => true );
-    this.bots = ugroup.weed( u => u.bot );
-
-    
-    this.channels = cgroup.weed( c => c.type != 4 );
-    this.textChannels = cgroup.weed( c => c.type == 0 );
-    this.voiceChannels = cgroup.weed( c => c.type == 2 );
-    this.threadChannels = cgroup.weed( c => c.type == 11 );
-    this.categories = cgroup.weed( c => c.type == 4 );
-    this.allChannels = cgroup.weed( c => c.type == 11 );
-    */
 });
