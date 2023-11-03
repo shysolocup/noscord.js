@@ -9,17 +9,19 @@ UserGroup.newC("UserPayload", class {
         var data = {};
 
 
-        async function payload() {
-            if (!this) return await data;
-            Object.assign(data, this);
+        async function payload(user) {
+            if (!user) return data;
+            Object.assign(data, user);
         }
         
 
         let stuff = payload();
 
         stuff.finally( () => {
+            console.log(stuff);
             users.get(id, guild).then( async (user) => {
-                await payload.bind(user)();
+                done = true;
+                await payload(user);
             })
         })
 
