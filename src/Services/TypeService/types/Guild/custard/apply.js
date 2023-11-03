@@ -146,10 +146,8 @@ Guild.newF("apply", async function(ctx) {
     let ugroup = new types.UserGroup();
     await ugroup.init(this);
 
-    console.log(ugroup);
-
+    this.members = ugroup;
     /*
-    this.members = ugroup.weed( u => !u.bot );
     this.users = ugroup.weed( u => true );
     this.bots = ugroup.weed( u => u.bot );
 
