@@ -18,10 +18,13 @@ UserGroup.newC("UserPayload", class {
         let stuff = payload();
 
         stuff.finally( (jail) => {
-            jail.done = true;
+            console.log(jail);
+
+            /*
             users.get(id, guild).then( async (user) => {
                 await payload(user);
             })
+            */
         })
 
         return stuff;
