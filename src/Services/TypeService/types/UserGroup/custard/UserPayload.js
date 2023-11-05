@@ -10,7 +10,7 @@ UserGroup.newC("UserPayload", class {
 
 
         async function payload(user) {
-            if (!user) return data;
+            if (!user) return await data;
             Object.assign(data, user);
         }
         
@@ -20,7 +20,6 @@ UserGroup.newC("UserPayload", class {
         stuff.finally( () => {
             console.log(stuff);
             users.get(id, guild).then( async (user) => {
-                done = true;
                 await payload(user);
             })
         })
