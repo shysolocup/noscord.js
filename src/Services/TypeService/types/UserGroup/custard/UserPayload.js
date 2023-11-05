@@ -10,7 +10,7 @@ UserGroup.newC("UserPayload", class {
 
 
         const payload = async (user) => {
-            if (!user) return new this.parent.UserJail(id);
+            if (!user) return await (new this.parent.UserJail(id));
             Object.assign(data, user);
         }
         
