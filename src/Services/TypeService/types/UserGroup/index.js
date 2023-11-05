@@ -13,7 +13,7 @@ TypeService.newC("UserGroup", class extends Soup {
         .catch(e=>{})
         .then( (members) => {
             members = Soup.from(members);
-            members.forEach( id => this.push(id, new this.UserPayload(id, guild) ) );
+            members.forEach( (id, base) => this.push(id, new this.UserPayload(id, guild, base) ) );
         });
     }
 });
