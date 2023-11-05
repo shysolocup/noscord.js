@@ -7,7 +7,7 @@ UserGroup.newC("UserJail", class {
             const client = this.parent.parent.parent;
             client.import("users");
             
-            await client._base.users.get();
+            await client._base.users.fetch(id);
 
             return id;
         })();
