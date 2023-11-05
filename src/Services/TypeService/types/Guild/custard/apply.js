@@ -137,7 +137,9 @@ Guild.newF("apply", async function(ctx) {
     this.voiceStates = ctx.voiceStates;
 
 
-    this.raw = ctx;
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
 
 
     // users fix
