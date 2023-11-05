@@ -1,32 +1,33 @@
 const UserGroup = require('../index.js');
-const User = require('../../User');
 
 
 UserGroup.newC("UserPayload", class {
-    constructor(id, guild) {
-        const client = this.parent.parent.parent;
-        client.import("users");
-        var data = {};
+	constructor(id, guild) {
+		const client = this.parent.parent.parent;
+		client.import("users");
+		var data = {};
 
 
-        const payload = async (user) => {
-            if (!user) return new this.parent.UserJail();
-            Object.assign(data, user);
-        }
-        
+		function pack() {
+			users.get(id, guild).then( async (user) => {
+				Object.assign(data, user);
+			});
+		}
 
-        let stuff = payload();
 
-        stuff.finally( (jail) => {
-            console.log(jail);
+		async function payload() {
+			return new Promise( res => {
+				res();
+				pack();
+			}).then( () => data );
+		}
 
-            /*
-            users.get(id, guild).then( async (user) => {
-                await payload(user);
-            })
-            */
-        })
 
-        return stuff;
-    }
+		let stuff = payload();
+
+		return stuff;
+	}
 });
+
+
+module.exports = UserPayload
