@@ -77,5 +77,7 @@ GuildMember.newF("apply", async function(ctx) {
     this.voice = ctx.voice;
 
     
-    this.raw = ctx;
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
 });
