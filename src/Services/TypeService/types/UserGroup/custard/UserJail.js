@@ -12,7 +12,7 @@ UserGroup.newC("UserJail", class {
             
             await client._base.users.fetch(id);
         
-        })().then( () => {
+        })().finally( () => {
             this.done = true;
         });
     }
