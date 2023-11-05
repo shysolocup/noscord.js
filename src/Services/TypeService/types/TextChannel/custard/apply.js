@@ -50,6 +50,8 @@ TextChannel.newF("apply", async function(ctx) {
     this.deleteable = ctx.deleteable;
 
 
-    this.raw = ctx;
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
 
 });
