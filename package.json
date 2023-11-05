@@ -19,6 +19,7 @@
         "@napi-rs/canvas": "latest",
         "discord.js": "latest",
         "node-fetch": "latest",
+        "deasync": "latest",
         "stews": "latest",
         "aepl": "latest"
     },
