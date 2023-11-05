@@ -10,15 +10,15 @@ UserGroup.newC("UserPayload", class {
 
 
         const payload = async (user) => {
-            if (!user) return await (new this.parent.UserJail(id));
+            if (!user) return new this.parent.UserJail();
             Object.assign(data, user);
         }
         
 
         let stuff = payload();
 
-        stuff.finally( () => {
-            console.log(stuff);
+        stuff.finally( (jail) => {
+            jail.done = true;
             users.get(id, guild).then( async (user) => {
                 await payload(user);
             })
