@@ -66,4 +66,8 @@ GuildMemberAction.newF("apply", async function(ctx, actionType) {
             this.log = log;
         }
     }
+
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
 });
