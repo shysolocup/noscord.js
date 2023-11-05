@@ -54,7 +54,9 @@ User.newF("apply", async function(ctx) {
 
 
     this.dms = ctx.dmChannel
+
     
-    
-    this.raw = ctx;
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
 });
