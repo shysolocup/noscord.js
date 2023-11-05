@@ -9,7 +9,7 @@ UserGroup.newC("UserPayload", class {
         var data = {};
 
 
-        async function payload(user) {
+        const payload = async (user) => {
             if (!user) return new this.parent.UserJail(id);
             Object.assign(data, user);
         }
