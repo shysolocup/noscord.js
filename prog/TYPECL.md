@@ -35,11 +35,12 @@ in the source for this file there's a comment with the emoji assets used for eas
 | ⚪ | ThreadChannel | NOT STARTED |
 | ⚪ | StageChannel | NOT STARTED |
 | ⚪ | VoiceChannel | NOT STARTED |
-| ⚪ | Emoji | NOT STARTED |
 | ⚪ | Sticker | NOT STARTED |
-| 🟣 | Guild | UNTESTED |
-| 🟠 | GuildChannelAction | Unfinished |
-| 🟠 | GuildMemberAction | Unfinished |
+| 🟣 | Emoji | UNTESTED |
+| 🟣 | GuildEmoji | UNTESTED |
+| 🟠 | GuildChannelAction | UNFINISHED |
+| 🟠 | GuildMemberAction | UNFINISHED |
+| 🟠 | Guild | UNFINISHED |
 | 🔵 | CommandRun | WIP |
 | 🔵 | GuildMember | WIP |
 | 🔵 | Message | WIP |
