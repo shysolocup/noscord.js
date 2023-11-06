@@ -50,76 +50,35 @@ const client = new Client();
 
 
 
-// runs when the bot logs in
 client.on("ready", (ctx) => {
     console.log(`logged in as ${ctx.user.username}`);
 });
 
 
 
-// imports stuff
-// also components adds Embeds and util adds Timestamp
-client.import(
-    { com: "commands", comp: "components", att: "attachments" },
-    [ "channels", "users", "events", "util" ]
-);
+client.import("util", "components");
 
 
 
-// creates a new event called pingCmd
-let event = events.create();
-client.events.push("pingCmd", event);
-
-
-
-// creates a listener for the pingCmd event
-client.on("pingCmd", async (ctx) => {
-    let channel = await channels.get("channel id");
-    channel.send(`${ctx.name} command ran by ${ctx.author} in guild ${ctx.guild.name} (${ctx.guild.id})`);
-});
-
-
-
-// listens for when a command goes on cooldown
 client.on("cooldown", async (ctx) => {
     ctx.reply(`You can use this command again in ${ctx.cooldown.remaining} seconds`);
 });
 
 
 
-// creates a ping command
 com.create("ping", "replies with pong", "5s", (ctx) => {
     if (ctx.onCooldown) return;
 
-    let timestamp = new Timestamp();
 
     let embed = new Embed({
         header: { text: "Pong!", size: 1 },
-        timestamp: timestamp.embed,
+        timestamp: ctx.timestamps.created,
         color: util.colors.blurple,
-        footer: `latency: ${timestamp.latency(ctx)}ms`
+        footer: `latency: ${ctx.latency}ms`
     });
-    
+
+
     ctx.reply({ embeds: [embed] });
-    event.fire(ctx, cmd);
-});
-
-
-
-// option for the avatar command
-let options = [{ name: "user", desc: "user to get the avatar of", type: "user" }];
-
-
-
-// avatar command
-com.create("avatar", "sends a user's avatar", options, "5s", async (ctx) => {
-    if (ctx.onCooldown) return
-
-    let user = (ctx.args[0]) ? await users.get(ctx.args[0].value) : ctx.author;
-
-    let avatar = await users.avatar(user, { width: 200, height: 200 });
-
-    ctx.reply({ files: [avatar] });
 });
 
 
