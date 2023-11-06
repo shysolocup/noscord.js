@@ -28,7 +28,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
-| ❔ | Name | Issues |
+| ❔ | Name | State |
 | - | - | - |
 | ⚪ | Category | NOT STARTED |
 | ⚪ | Role | NOT STARTED |
