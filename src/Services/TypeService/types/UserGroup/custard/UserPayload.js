@@ -19,6 +19,7 @@ UserGroup.newC("UserPayload", class {
 				data: [],
 				promise: [],
 			}
+			
 		};
 
 		var pack = () => {
