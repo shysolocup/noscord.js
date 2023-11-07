@@ -2,28 +2,56 @@ const UserGroup = require('../index.js');
 
 
 UserGroup.newC("UserPayload", class {
-	constructor(id, guild) {
+	constructor(id, guild, base) {
 		const client = this.parent.parent.parent;
 		client.import("users");
-		var data = {};
+		
+		this.id = id;
+		this.guild = guild;
+		this.guildId = guild;
+		this.data = {};
 
+		this._promiseProxy = {
 
-		function pack() {
-			users.get(id, guild).then( async (user) => {
-				Object.assign(data, user);
+			self: null,
+
+			stores: {
+				data: [],
+				promise: [],
+			}
+		};
+
+		var pack = () => {
+			users.get(this.id, this.guild).then( async (user) => {
+				Object.assign(this.data, user);
 			});
 		}
 
 
-		async function payload() {
-			return new Promise( res => {
-				res();
-				pack();
-			}).then( () => data );
-		}
+		let stuff = new Proxy(
+			Promise.resolve(new Proxy(this.data, {
+				get: (...args) => {
+					this._promiseProxy.stores.data = args;
 
+					const { data, promise } = this._promiseProxy.stores;
+					const [ target, prop ] = args;
 
-		let stuff = payload();
+					if (data.length > 0 && promise.length > 0) Object.assign(target, base);
+					
+					return target[prop];
+				}
+			})), {
+
+			get: (...args) => {
+				this._promiseProxy.stores.promise = args;
+
+				const [ target, prop ] = args;
+				return target[prop].bind(target);
+			}
+		});
+
+		
+		this._promiseProxy.self = stuff;
 
 		return stuff;
 	}
