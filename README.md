@@ -2,13 +2,13 @@
 
 <br>
 
-<a href="https://github.com/paigeroid/noscord.js"><img height=95 src="https://github.com/paigeroid/noscord.js/blob/main/assets/noscord.js%20logo.png" alt="N⦿SCORD.JS">
+<a href="https://github.com/paishee/noscord.js"><img height=95 src="https://github.com/paishee/noscord.js/blob/main/assets/noscord.js%20logo.png" alt="N⦿SCORD.JS">
 
 <a href="https://www.npmjs.com/package/noscord.js"><img height=22 src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
 <a href="https://www.npmjs.com/package/noscord.js"><img height=22 src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
 <a href="https://www.npmjs.com/package/discord.js"><img height=22 src="https://img.shields.io/badge/powered by-Discord.JS-blue?style=flat&color=5539cc&logo=discord&logoColor=white" alt="discord.js" />
-<a href="https://github.com/paigeroid/noscord.js/wiki"><img height=22 src="https://img.shields.io/badge/documentation-blue?style=flat&color=black&logo=github&logoColor=white" alt="documentation" />
-<img height=22 src="https://github.com/paigeroid/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
+<a href="https://github.com/paishee/noscord.js/wiki"><img height=22 src="https://img.shields.io/badge/documentation-blue?style=flat&color=black&logo=github&logoColor=white" alt="documentation" />
+<img height=22 src="https://github.com/paishee/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
 noscord.JS is a customized Discord API wrapper for Node.JS that is similar to older versions of Discord.JS letting you access most of the API from the client using an importing system.<br>
 
@@ -35,7 +35,7 @@ this package is currently in active development and is far from finished ⚠️
 npm i noscord.js
 ```
 ```console
-npm i paigeroid/noscord.js
+npm i paishee/noscord.js
 ```
 
 <br>
@@ -102,7 +102,7 @@ this project and the developers behind it are:
 <table>
     
   <tr>
-    <td align="center"><a href="https://github.com/paigeroid"><img src="https://avatars.githubusercontent.com/u/88659700?v=4?s=100" width="100px;" alt="me"/><br /><sub><b>paigeroid</b></sub></a><br/>
+    <td align="center"><a href="https://github.com/paishee"><img src="https://avatars.githubusercontent.com/u/88659700?v=4?s=100" width="100px;" alt="me"/><br /><sub><b>paishee</b></sub></a><br/>
     <td align="center"><a href="https://github.com/RockyRosso"><img src="https://avatars.githubusercontent.com/u/79947006?v=4?s=100" width="100px;" alt="rocky"/><br /><sub><b>RockyRosso</b></sub></a><br/>
     <td align="center"><a href="https://github.com/polish-penguin-dev"><img src="https://avatars.githubusercontent.com/u/74113025?v=4?s=100" width="100px;" alt="penguins"/><br /><sub><b>penguin dev</b></sub></a><br/>
 </td>
