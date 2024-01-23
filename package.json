@@ -20,6 +20,7 @@
         "discord.js": "latest",
         "node-fetch": "latest",
         "deasync": "latest",
+        "pender": "latest",
         "stews": "latest",
         "aepl": "latest"
     },
