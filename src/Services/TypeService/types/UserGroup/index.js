@@ -2,7 +2,7 @@ const TypeService = require('../../index.js');
 const { Soup } = require('stews');
 const fs = require('fs');
 
-const pender = require('pender');
+const pend = require('pender');
 
 
 TypeService.newC("UserGroup", class extends Soup {
@@ -18,7 +18,7 @@ TypeService.newC("UserGroup", class extends Soup {
         .catch(e=>{})
         .then( (members) => {
             members = Soup.from(members);
-            members.forEach( (id, base) => this.push(id, pend( () => users.get(id, guild), `<@${id}>` )));
+            members.forEach( (id) => this.push(id, pend( () => users.get(id, guild), `<@${id}>` )));
         });
     }
 });
