@@ -16,8 +16,8 @@ module.exports = (handler) => { handler.init(
         let hasPrefix = false;
         let pf = null
 
-        if client.prefix {
-            if client.prefix instanceof Array) {
+        if (client.prefix) {
+            if (client.prefix instanceof Array) {
                 hasPrefix = client.prefixes.some( (prefix) => {
                     let has = ctx.content.startsWith(prefix);
                     if (has) pf = prefix;
