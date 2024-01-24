@@ -8,6 +8,7 @@ ChannelGroup.newF("apply", async function(guild) {
     client.import("guilds", "channels");
 
     let stuff  = new Soup(Object);
+    const types = new Soup(Object);
 
     if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
@@ -26,6 +27,21 @@ ChannelGroup.newF("apply", async function(guild) {
 
     stuff.forEach( (id, base) => {
         if (guild && base.guildId != guild.id) return;
+        types.push(id, base.type);
         this.push(id, pend( () => channels.get(id, guild), `<#${id}>` ))
     });
+
+    Object.defineProperties(this, {
+        text: {
+            get: () => {
+                return this.filter( (id) => types[id] == 0 );
+            }
+        },
+
+        voice: {
+            get: () => {
+                return this.filter( (id) => types[id] == 2 );
+            }
+        }
+    })
 })
