@@ -8,7 +8,7 @@ ChannelGroup.newF("apply", async function(guild) {
     client.import("guilds", "channels");
 
     let stuff  = new Soup(Object);
-    const types = new Soup(Object);
+    let types = new Soup(Object);
 
     if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
