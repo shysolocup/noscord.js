@@ -14,6 +14,10 @@ PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
     this.args = cmd.args;
     this.data = cmd.data;
 
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
+
     const msg = new types.Message;
     await msg.apply(ctx);
 
