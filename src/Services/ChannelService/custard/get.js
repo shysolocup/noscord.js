@@ -41,7 +41,7 @@ ChannelService.newF("get", async function(id, guild=null) {
         // case 16: typed = new types.MediaChannel; break;
     }
 
-	if (thing) await typed.apply(thing);
+	if (thing && typed) await typed.apply(thing);
  
-    return (!thing) ? null : typed;
+    return (!thing || !typed) ? null : typed;
 });
