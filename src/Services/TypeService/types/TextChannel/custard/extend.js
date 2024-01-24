@@ -1,6 +1,6 @@
-const Channel = require('../index.js');
+const TextChannel = require('../index.js');
 
 
-Channel.newF("extend", function(base) {
+TextChannel.newF("extend", function(base) {
     return Object.assign(base, this);
 });
