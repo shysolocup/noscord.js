@@ -145,6 +145,6 @@ Guild.newF("apply", async function(ctx) {
     // users fix
     this.owner = await users.get(ctx.ownerId, this);
 
-    let ugroup = new types.UserGroup(this);
-    this.members = ugroup;
+    this.members = new types.UserGroup(this);
+	this.channels = new types.ChannelGroup(this);
 });
