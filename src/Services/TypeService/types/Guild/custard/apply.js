@@ -142,11 +142,15 @@ Guild.newF("apply", async function(ctx) {
 	});
 
 
-    // users fix
+    // groups and fixes
     this.owner = await users.get(ctx.ownerId, this);
+    this.members = new types.UserGroup();
+	this.channels = new types.ChannelGroup();
+	this.textChannels = new types.TextChannelGroup();
+	this.voiceChannels = new types.VoiceChannelGroup();
 
-    this.members = new types.UserGroup(this);
-	this.channels = new types.ChannelGroup(this);
-	this.textChannels = new types.TextChannelGroup(this);
-	this.voiceChannels = new types.VoiceChannelGroup(this);
+    await this.members.apply(this);
+    await this.channels.apply(this);
+    await this.textChannels.apply(this);
+    await this.voiceChannels.apply(this);
 });
