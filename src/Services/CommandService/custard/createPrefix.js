@@ -2,7 +2,7 @@ const CommandService = require('../index.js');
 const { Soup } = require('stews');
 
 
-CommandService.newF("create", function(...args) {
+CommandService.newF("createPrefix", function(...args) {
 
 	// error handling
 	const client = this.parent;
@@ -34,7 +34,7 @@ CommandService.newF("create", function(...args) {
 		
 		if (args.length > 0) {
 			args.forEach( (arg) => {
-				if (instanceof arg == Array) aliases = arg;
+				if (arg instanceof Array) aliases = arg;
 				else if ((typeof arg == "number" || typeof arg == "string") && util.parse(arg)) cooldown = arg;
 			});
 		}
