@@ -8,6 +8,7 @@ MemberGroup.newF("apply", async function(guild) {
     client.import("guilds", "users");
 
     let stuff  = new Soup(Object);
+    let bots = new Soup(Object);
 
     if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
@@ -25,6 +26,22 @@ MemberGroup.newF("apply", async function(guild) {
 
 
     stuff.forEach( (id, base) => {
+        bots.push(id, base.user.bot)
         this.push(id, pend( () => users.get(id, guild), `<@${id}>` ))
     });
+
+
+    Object.defineProperties(this, {
+        users: {
+            get: () => {
+                return this.filter( (id) => !bots[id] );
+            }
+        },
+
+        bots: {
+            get: () => {
+                return this.filter( (id) => bots[id] );
+            }
+        }
+    })
 })
