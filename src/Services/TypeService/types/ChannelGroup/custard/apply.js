@@ -13,13 +13,12 @@ ChannelGroup.newF("apply", async function(guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
 
         for ( let i = 0; i < gList.length; i++) {
-            let guild = await guilds.get( gList.keys[i] );
-            let chList = await guild.raw.channels.fetch().catch(e=>console.log(e))
+            let chList = await guild.channels.fetch().catch(e=>console.log(e))
             stuff = stuff.merge( Soup.from(chList));
         }
     }
     else {
-        let chList = await guild.raw.channels.fetch().catch(e=>console.log(e))
+        let chList = await guild.channels.fetch().catch(e=>console.log(e))
         stuff = Soup.from(chList);
     }
 
