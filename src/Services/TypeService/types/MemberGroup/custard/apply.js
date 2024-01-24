@@ -19,7 +19,7 @@ MemberGroup.newF("apply", async function(guild) {
         }
     }
     else {
-        let list = await guild.members.raw.fetch().catch(e=>console.log(e))
+        let list = await guild.raw.members.fetch().catch(e=>console.log(e))
         stuff = Soup.from(list);
     }
 
