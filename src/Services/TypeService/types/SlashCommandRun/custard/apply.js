@@ -1,7 +1,7 @@
-const CommandRun = require('../index.js');
+const SlashCommandRun = require('../index.js');
 
 
-CommandRun.newF("apply", async function(ctx, cmd={}) {
+SlashCommandRun.newF("apply", async function(ctx, cmd={}) {
     const client = this.parent.parent;
     client.import("guilds", "messages", "channels", "users", "util");
 
