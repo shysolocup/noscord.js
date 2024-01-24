@@ -1,4 +1,5 @@
 const TextChannel = require('../index.js');
+const pend = require('pender');
 
 
 TextChannel.newF("apply", async function(ctx) {
@@ -20,7 +21,7 @@ TextChannel.newF("apply", async function(ctx) {
 
 
     // stuff
-    this.guild = await guilds.get(ctx.guildId);
+    this.guild = pend( async () => await guilds.get(ctx.guildId), `<Guild:${ctx.guildId}>` );
     this.flags = ctx.flags;
     this.partial = ctx.partial;
     this.permissionOverwrites = ctx.permissionOverwrites;
@@ -28,13 +29,13 @@ TextChannel.newF("apply", async function(ctx) {
     this.position = ctx.position;
     this.rateLimitPerUser = ctx.rateLimitPerUser;
     this.rawPosition = ctx.rawPosition;
-    this.threads = await channels.threads(ctx);
+    this.threads // await channels.threads(ctx);
 
 
     // messages
     this.messages = ctx.messages;
-    this.msgList = await messages.list(ctx);
-    this.lastMsg = await messages.get(ctx.lastMessageId);
+    this.msgList // = await messages.list(ctx);
+    this.lastMsg // = await messages.get(ctx.lastMessageId);
     this.lastMsgId = ctx.lastMessageId;
 
 
