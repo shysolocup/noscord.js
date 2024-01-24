@@ -1,9 +1,9 @@
 const { Soup } = require('stews');
-const GuildMemberGroup = require('../index.js');
+const MemberGroup = require('../index.js');
 const pend = require('pender');
 
 
-GuildMemberGroup.newF("apply", async function(guild) {
+MemberGroup.newF("apply", async function(guild) {
     const client = this.parent.parent;
     client.import("guilds", "users");
 
