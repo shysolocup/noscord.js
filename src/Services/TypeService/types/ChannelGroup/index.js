@@ -18,7 +18,7 @@ TypeService.newC("ChannelGroup", class extends Soup {
         .catch(e=>{})
         .then( stuff => {
             stuff = Soup.from(stuff);
-            stuff.forEach( (id) => this.push(id, pend( () => channels.get(id, guild), `<@${id}>` )));
+            stuff.forEach( (id) => this.push(id, pend( () => channels.get(id, guild), `<#${id}>` )));
         });
     }
 });
