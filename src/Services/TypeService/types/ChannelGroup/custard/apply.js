@@ -19,7 +19,7 @@ ChannelGroup.newF("apply", async function(guild) {
         }
     }
     else {
-        let chList = await guild.channels.fetch().catch(e=>console.log(e))
+        let chList = await guild.raw.channels.fetch().catch(e=>console.log(e))
         stuff = Soup.from(chList);
     }
 
