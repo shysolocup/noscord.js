@@ -150,40 +150,55 @@ class NosClient {
 			});
 
 
-			if (this.commands.length <= 0) return;
+			if (this.slashCommands.length > 0) {
 
-
-			// registering commands
-			var jsonCommands = this.commands.values.map( (command) => {
-				let info = command.info.copy()
-				
-				// removing cooldown because it breaks it because it's stupid
-				if (info.has("cooldown")) info.delete("cooldown");
-	
-				return info.toJSON()
-				
-			});
+				// registering commands
+				var jsonCommands = this.slashCommands.values.map( (command) => {
+					let info = command.info.copy()
+					
+					// removing cooldown because it breaks it because it's stupid
+					if (info.has("cooldown")) info.delete("cooldown");
+		
+					return info.toJSON()
+					
+				});
 
 			
-			this.rest = new REST().setToken(token);
-
-			await this.rest.put(
-				Routes.applicationCommands(this.application.id),
-				{ body: jsonCommands }
-			);
-		});
+				this.rest = new REST().setToken(token);
+	
+				await this.rest.put(
+					Routes.applicationCommands(this.application.id),
+					{ body: jsonCommands }
+				);
+			});
 
 		
-		/* runs slash commands */
-		this.on("commandRan", async (ctx, cmd) => {
-			if (this.commands.has(ctx.name)) {
-				
-				await ctx.data(ctx, cmd);
-				if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
-				if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
-				
-			}
-		});
+			/* runs slash commands */
+			this.on("slashCommandRan", async (ctx, cmd) => {
+				if (this.slashCommands.has(ctx.name)) {
+					
+					await ctx.data(ctx, cmd);
+					if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
+					if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
+					
+				}
+			});
+		}
+
+
+		if (this.prefixCommands.length > 0) {
+			
+			/* runs prefix commands */
+			this.on("prefixCommandRan", async (ctx, cmd) => {
+				if (this.prefixCommands.has(ctx.name)) {
+					
+					await ctx.data(ctx, cmd);
+					if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
+					if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
+					
+				}
+			});
+		}
 
 
 		/* instances */
