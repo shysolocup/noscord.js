@@ -170,35 +170,35 @@ class NosClient {
 					Routes.applicationCommands(this.application.id),
 					{ body: jsonCommands }
 				);
-			});
 
 		
-			/* runs slash commands */
-			this.on("slashCommandRan", async (ctx, cmd) => {
-				if (this.slashCommands.has(ctx.name)) {
-					
-					await ctx.data(ctx, cmd);
-					if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
-					if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
-					
-				}
-			});
-		}
+				/* runs slash commands */
+				this.on("slashCommandRan", async (ctx, cmd) => {
+					if (this.slashCommands.has(ctx.name)) {
+						
+						await ctx.data(ctx, cmd);
+						if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
+						if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
+						
+					}
+				});
+			}
 
 
-		if (this.prefixCommands.length > 0) {
-			
-			/* runs prefix commands */
-			this.on("prefixCommandRan", async (ctx, cmd) => {
-				if (this.prefixCommands.has(ctx.name)) {
-					
-					await ctx.data(ctx, cmd);
-					if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
-					if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
-					
-				}
-			});
-		}
+			if (this.prefixCommands.length > 0) {
+				
+				/* runs prefix commands */
+				this.on("prefixCommandRan", async (ctx, cmd) => {
+					if (this.prefixCommands.has(ctx.name)) {
+						
+						await ctx.data(ctx, cmd);
+						if (ctx.cooldown && ctx.cooldown.active) ctx.cooldown.add(ctx.user);
+						if (ctx.onCooldown) await this.events.get("cooldown").fire(ctx, cmd);
+						
+					}
+				});
+			}
+		});
 
 
 		/* instances */
