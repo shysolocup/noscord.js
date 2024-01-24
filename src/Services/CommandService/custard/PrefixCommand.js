@@ -2,32 +2,52 @@ const CommandService = require('../index.js');
 const { Soup } = require('stews');
 
 
-CommandService.newC("PrefixCommand", class {
-	constructor(info, data) {
-		const client = this.parent.parent;
+CommandService.newF("createPrefix", function(...args) {
 
-		info = new Soup(info);
+	// error handling
+	const client = this.parent;
+	client.import({ err: "errors" }, "util");
+	let e = err.create(this, "Prefix Command Error");
 
-		this.name = info.name;
-		this.aliases = info.aliases;
-		this.cooldown = info.cooldown;
-			
-		this.data = data;
 
-		// adds it to the list
-		client.prefixCommands.push(this.name, this);
-	}
+	// getting the function
+	let func = args.pop();
 
-	get info() {
-		let stuff = this;
+
+	// if there isn't a name given
+	if (args.length == 0) e.fire(null, `Name of the command must be given.`)
+
+
+	// getting the info
+	let info = args.shift();
+	info = (info instanceof Object) ? info : info.toString();
+
+
+	// check if it's a function or not
+	if (!(func instanceof Function)) e.fire(null, `Last argument must be a function.\ngiven arg: ${func}\n`);
+
+
+	// string stuff
+	if (typeof info == "string") {
+		let cooldown;
+		let aliases = [];
 		
-		return new Soup({ 
-			name: stuff.name,  
-			aliases: stuff.aliases,
-			cooldown: stuff.cooldown
-		});
+		if (args.length > 0) {
+			args.forEach( (arg) => {
+				if (arg instanceof Array) aliases = arg;
+				else if ((typeof arg == "number" || typeof arg == "string") && util.parse(arg)) cooldown = arg;
+			});
+		}
+		
+		info = { name: info, aliases: aliases, cooldown: cooldown };
 	}
+
+
+	if (info.cooldown) {
+		info.cooldown = new this.CooldownHandle(info.cooldown);
+	}
+
+
+	// creates the slash command
+	return new this.PrefixCommand(info, func);
 });
-
-
-module.exports = PrefixCommand;
