@@ -15,38 +15,56 @@ module.exports = (handler) => { handler.init(
 
         let hasPrefix = false;
         let pf = null
+
+        if client.prefix {
+            if client.prefix instanceof Array) {
+                hasPrefix = client.prefixes.some( (prefix) => {
+                    let has = ctx.content.startsWith(prefix);
+                    if (has) pf = prefix;
+                    return has;
+                });
+            }
+            else if (client.prefix instanceof Object) {
+                let prefixes = Soup.from(client.prefix);
+                hasPrefix = prefixes.some( (guildId, prefix) => {
+                    let has = ctx.guildId == guildId && ctx.content.startsWith(prefix)
+                    if (has) pf = prefix;
+                    return has;
+                });
+            }
+            else {
+                hasPrefix = ctx.content.startsWith(client.prefix);
+                pf = client.prefix;
+            }
+
+            if (!hasPrefix) return;
+        }
+
         
-        if client.prefix instanceof Array) {
-            hasPrefix = client.prefixes.some( (prefix) => {
-                let has = ctx.content.startsWith(prefix);
-                if (has) pf = prefix;
-                return has;
-            });
-        }
-        else if (client.prefix instanceof Object) {
-            let prefixes = Soup.from(client.prefix);
-            hasPrefix = prefixes.some( (guildId, prefix) => {
-                let has = ctx.guildId == guildId && ctx.content.startsWith(prefix)
-                if (has) pf = prefix;
-                return has;
-            });
-        }
-        else {
-            hasPrefix = ctx.content.startsWith(client.prefix);
-            pf = client.prefix;
-        }
-
-        if (!hasPrefix) return;
+		let pos = (pf) ?			
+			ctx.content.toLowerCase().indexOf(pf.toLowerCase())
+			: 0;
+		
+		
+		let rawName = (pf) ?
+			string.toLowerCase().replace(pf.toLowerCase(), "").split(" ")[pos]
+			: string.toLowerCase().split(" ")[pos];
+        let name = null;
 
 
-        let rawName = ctx.content.toLowerCase().replace(prefix.toLowerCase(), "");
-        let args = ctx.content.split()
-        let has = client.prefixCommands.some( (name, info) => {
-            return rawName == name || (info.aliases && info.aliases.some( a => rawName == a) );
+        let soup = new Soup(string.split(" "));
+		soup.delete[pos];
+        let args = soup.pour();
+
+        
+        let has = client.prefixCommands.some( (n, info) => {
+            let h = rawName == n || (info.aliases && info.aliases.some( al => rawName == al ) );
+            if (h) name = n;
+            return h;
         });
         
         if (has) {
-            let raw = client.prefixCommands.get();
+            let raw = client.prefixCommands.get(name);
             let cooldown = raw.info.get("cooldown");
             
             cmd = Soup.from({
@@ -56,7 +74,7 @@ module.exports = (handler) => { handler.init(
                 onCooldown: (cooldown) ? cooldown.has(ctx.user.id) : false,
                 data: raw.data
             }).copy().pour();
-            cmd.args = ctx.options.data;
+            cmd.args = args;
         }
         else {
             return;
