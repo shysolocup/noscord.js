@@ -47,12 +47,12 @@ module.exports = (handler) => { handler.init(
 		
 		
 		let rawName = (pf) ?
-			string.toLowerCase().replace(pf.toLowerCase(), "").split(" ")[pos]
-			: string.toLowerCase().split(" ")[pos];
+			ctx.content.toLowerCase().replace(pf.toLowerCase(), "").split(" ")[pos]
+			: ctx.content.toLowerCase().split(" ")[pos];
         let name = null;
 
 
-        let soup = new Soup(string.split(" "));
+        let soup = new Soup(ctx.content.split(" "));
 		soup.delete[pos];
         let args = soup.pour();
 
