@@ -32,16 +32,14 @@ ChannelGroup.newF("apply", async function(guild) {
     });
 
     Object.defineProperties(this, {
-        text: {
-            get: () => {
-                return this.filter( (id) => types[id] == 0 );
-            }
-        },
-
-        voice: {
-            get: () => {
-                return this.filter( (id) => types[id] == 2 );
-            }
-        }
+        text: { get: () => this.filter( (id) => types[id] == 0 ) },
+        voice: { get: () => this.filter( (id) => types[id] == 2 ) },
+        categories: { get: () => this.filter( (id) => types[id] == 4 ) },
+        threads: { get: () => this.filter( (id) => (types[id] == 11 || types[id] == 12) ) },
+        publicThreads: { get: () => this.filter( (id) => types[id] == 11 ) },
+        privateThreads: { get: () => this.filter( (id) => types[id] == 12 ) },
+        stages: { get: () => this.filter( (id) => types[id] == 13 ) },
+        forums: { get: () => this.filter( (id) => types[id] == 15 ) },
+        media: { get: () => this.filter( (id) => types[id] == 16 ) },
     })
 })
