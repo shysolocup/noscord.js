@@ -53,7 +53,7 @@ module.exports = (handler) => { handler.init(
 
 
         let soup = new Soup(ctx.content.split(" "));
-		soup.delete[pos];
+		soup.delete(pos);
         let args = soup.pour();
 
         
@@ -87,4 +87,56 @@ module.exports = (handler) => { handler.init(
 
     
     glue = "messageCreate", // what discord.js event it's tied to
+
+
+    term = function(ctx) {
+        let client = this.parent.parent;
+
+        let hasPrefix = false;
+        let pf = null
+
+        if (client.prefix) {
+            if (client.prefix instanceof Array) {
+                hasPrefix = client.prefixes.some( (prefix) => {
+                    let has = ctx.content.startsWith(prefix);
+                    if (has) pf = prefix;
+                    return has;
+                });
+            }
+            else if (client.prefix instanceof Object) {
+                let prefixes = Soup.from(client.prefix);
+                hasPrefix = prefixes.some( (guildId, prefix) => {
+                    let has = ctx.guildId == guildId && ctx.content.startsWith(prefix)
+                    if (has) pf = prefix;
+                    return has;
+                });
+            }
+            else {
+                hasPrefix = ctx.content.startsWith(client.prefix);
+                pf = client.prefix;
+            }
+
+            if (!hasPrefix) return;
+        }
+
+        
+		let pos = (pf) ?			
+			ctx.content.toLowerCase().indexOf(pf.toLowerCase())
+			: 0;
+		
+		
+		let rawName = (pf) ?
+			ctx.content.toLowerCase().replace(pf.toLowerCase(), "").split(" ")[pos]
+			: ctx.content.toLowerCase().split(" ")[pos];
+        let name = null;
+
+        
+        let has = client.prefixCommands.some( (n, info) => {
+            let h = rawName == n || (info.aliases && info.aliases.some( al => rawName == al ) );
+            if (h) name = n;
+            return h;
+        });
+
+        return has;
+    }
 )}
