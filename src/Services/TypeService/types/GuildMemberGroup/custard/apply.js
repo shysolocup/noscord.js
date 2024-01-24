@@ -25,7 +25,6 @@ GuildMemberGroup.newF("apply", async function(guild) {
 
 
     stuff.forEach( (id, base) => {
-        if (guild && base.guildId != guild.id) return;
         this.push(id, pend( () => users.get(id, guild), `<@${id}>` ))
     });
 })
