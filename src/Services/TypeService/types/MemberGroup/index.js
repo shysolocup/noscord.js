@@ -3,14 +3,14 @@ const { Soup } = require('stews');
 const fs = require('fs');
 
 
-TypeService.newC("GuildMemberGroup", class extends Soup {
+TypeService.newC("MemberGroup", class extends Soup {
     constructor(guild) {
         super(Object);
     }
 });
 
 
-module.exports = GuildMemberGroup;
+module.exports = MemberGroup;
 
 
 let cust_dir = require('./custard/_funkydir');
