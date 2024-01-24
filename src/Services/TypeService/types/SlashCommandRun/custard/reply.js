@@ -1,7 +1,7 @@
-const CommandRun = require('../index.js');
+const SlashCommandRun = require('../index.js');
 
 
-CommandRun.newF("reply", function(...args) {
+SlashCommandRun.newF("reply", function(...args) {
     const client = this.parent.parent;
     client.import("messages");
     let run = this.raw;
