@@ -12,7 +12,7 @@ TypeService.newC("ChannelGroup", class extends Soup {
         const client = this.parent.parent;
         client.import("channels");
 
-        ( (guild) ? guild.raw.channels : client._base.channels )
+        client._base.channels
         
         .fetch()
         .catch(e=>{})
