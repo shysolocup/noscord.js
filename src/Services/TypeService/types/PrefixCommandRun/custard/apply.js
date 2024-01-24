@@ -15,7 +15,7 @@ PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
     this.data = cmd.data;
 
     const msg = new types.Message;
-    let msg = await msg.apply(ctx);
+    await msg.apply(ctx);
 
     Object.assign(this, msg);
     Object.assign(this.prototype, msg.prototype);
