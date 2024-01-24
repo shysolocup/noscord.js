@@ -13,13 +13,13 @@ GuildMemberGroup.newF("apply", async function(guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
 
         for ( let i = 0; i < gList.length; i++) {
-            let guild = await guilds.get( gList.keys[i] );
-            let list = await guild.raw.members.fetch().catch(e=>console.log(e))
+            let guild = gList.values[i];
+            let list = await guild.members.fetch().catch(e=>console.log(e))
             stuff = stuff.merge( Soup.from(list));
         }
     }
     else {
-        let list = await guild.raw.members.fetch().catch(e=>console.log(e))
+        let list = await guild.members.fetch().catch(e=>console.log(e))
         stuff = Soup.from(list);
     }
 
