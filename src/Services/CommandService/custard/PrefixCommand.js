@@ -14,7 +14,7 @@ CommandService.newC("PrefixCommand", class {
 		this.data = data;
 
 		// adds it to the list
-		client.pCommands.push(this.name, this);
+		client.prefixCommands.push(this.name, this);
 	}
 
 	get info() {
