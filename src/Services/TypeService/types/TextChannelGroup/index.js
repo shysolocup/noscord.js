@@ -12,9 +12,15 @@ TypeService.newC("TextChannelGroup", class extends Soup {
         const client = this.parent.parent;
         client.import("channels");
 
-        channels.text(guild).then( stuff => {
+        ( (guild) ? guild.raw.channels : client._base.channels )
+        
+        .fetch()
+        .catch(e=>{})
+        .then( stuff => {
             stuff = Soup.from(stuff);
-            stuff.forEach( (id) => this.push(id, pend( () => channels.get(id, guild), `<#${id}>` )));
+            stuff.forEach( (id, base) => {
+                if (base.type == 0) this.push(id, pend( () => channels.get(id, guild), `<#${id}>` ))
+            });
         });
     }
 });
