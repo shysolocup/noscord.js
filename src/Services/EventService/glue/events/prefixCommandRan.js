@@ -10,6 +10,7 @@ module.exports = (handler) => { handler.init(
         let client = this.parent.parent;
         let types = this.types;
         
+        let msg = new types.Message;
         let command = new types.PrefixCommandRun;
         let cmd = {};
 
@@ -79,9 +80,8 @@ module.exports = (handler) => { handler.init(
         else {
             return;
         }
-
-        
-        await command.apply(ctx, cmd);
+        await msg.apply(ctx);
+        await command.apply(msg, cmd);
         return [command, cmd];
     }, 
 
