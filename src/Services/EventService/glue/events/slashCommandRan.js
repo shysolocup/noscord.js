@@ -1,19 +1,19 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = "commandRan",  // names of the event
+    name = [ "slashCommandRan", "commandRan", "slashRan", "slashCommand" ],  // names of the event
 
     
     func = async function (ctx) { // formatting for types and stuff
         let client = this.parent.parent;
         let types = this.types;
         
-        let command = new types.CommandRun;
+        let command = new types.SlashCommandRun;
         let cmd = {};
 
         
-        if (client.commands.has(ctx.commandName)) {
-            let raw = client.commands.get(ctx.commandName);
+        if (client.slashCommands.has(ctx.commandName)) {
+            let raw = client.slashCommands.get(ctx.commandName);
             let cooldown = raw.info.get("cooldown");
             
             cmd = Soup.from({
