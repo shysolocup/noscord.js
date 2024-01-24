@@ -26,6 +26,6 @@ TextChannelGroup.newF("apply", async function(guild) {
 
     stuff.forEach( (id, base) => {
         if (guild && base.guildId != guild.id) return;
-        if (channel.type == 0) this.push(id, pend( () => channels.get(id, guild), `<#${id}>` ))
+        if (base.type == 0) this.push(id, pend( () => channels.get(id, guild), `<#${id}>` ))
     });
 })
