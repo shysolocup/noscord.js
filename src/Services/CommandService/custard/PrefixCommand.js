@@ -30,4 +30,4 @@ CommandService.newC("PrefixCommand", class {
 });
 
 
-module.exports = SlashCommand;
+module.exports = PrefixCommand;
