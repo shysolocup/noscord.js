@@ -1,9 +1,8 @@
 const PrefixCommandRun = require('../index.js');
-const { Soup } = require('stews');
+const Message = require('../../Message');
 
 PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
     const client = this.parent.parent;
-    client.import("types");
 
     // command info
     this.name = cmd.name;
@@ -18,8 +17,5 @@ PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
 		get() { return ctx }	
 	});
 
-    const msg = new types.Message;
-    await msg.apply(ctx);
-
-    Object.assign(this, msg);
+    await Message.prototype.apply.bind(this)(ctx);
 });
