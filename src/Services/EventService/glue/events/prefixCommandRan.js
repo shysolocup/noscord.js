@@ -14,22 +14,33 @@ module.exports = (handler) => { handler.init(
         let cmd = {};
 
         let hasPrefix = false;
+        let pf = null
         
         if client.prefix instanceof Array) {
-            hasPrefix = client.prefixes.some( (prefix) => ctx.content.startsWith(prefix));
+            hasPrefix = client.prefixes.some( (prefix) => {
+                let has = ctx.content.startsWith(prefix);
+                if (has) pf = prefix;
+                return has;
+            });
         }
         else if (client.prefix instanceof Object) {
             let prefixes = Soup.from(client.prefix);
-            hasPrefix = prefixes.some( (guildId, prefix) => ctx.guildId == guildId && ctx.content.startsWith(prefix));
+            hasPrefix = prefixes.some( (guildId, prefix) => {
+                let has = ctx.guildId == guildId && ctx.content.startsWith(prefix)
+                if (has) pf = prefix;
+                return has;
+            });
         }
         else {
             hasPrefix = ctx.content.startsWith(client.prefix);
+            pf = client.prefix;
         }
 
         if (!hasPrefix) return;
 
 
-        let rawName = ctx.content.replace(prefix, "");
+        let rawName = ctx.content.toLowerCase().replace(prefix.toLowerCase(), "");
+        let args = ctx.content.split()
         let has = client.prefixCommands.some( (name, info) => {
             return rawName == name || (info.aliases && info.aliases.some( a => rawName == a) );
         });
