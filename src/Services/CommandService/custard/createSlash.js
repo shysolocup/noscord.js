@@ -2,7 +2,7 @@ const CommandService = require('../index.js');
 const { Soup } = require('stews');
 
 
-CommandService.newF("create", function(...args) {
+CommandService.newF("createSlash", function(...args) {
 
 	// error handling
 	const client = this.parent;
