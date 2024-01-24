@@ -147,4 +147,6 @@ Guild.newF("apply", async function(ctx) {
 
     this.members = new types.UserGroup(this);
 	this.channels = new types.ChannelGroup(this);
+	this.textChannels = new types.TextChannelGroup(this);
+	this.voiceChannels = new types.VoiceChannelGroup(this);
 });
