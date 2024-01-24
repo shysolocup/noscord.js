@@ -9,6 +9,7 @@ CommandService.newC("PrefixCommand", class {
 		info = new Soup(info);
 
 		this.name = info.name;
+		this.aliases = info.aliases;
 		this.cooldown = info.cooldown;
 			
 		this.data = data;
@@ -22,6 +23,7 @@ CommandService.newC("PrefixCommand", class {
 		
 		return new Soup({ 
 			name: stuff.name,  
+			aliases: stuff.aliases,
 			cooldown: stuff.cooldown
 		});
 	}
