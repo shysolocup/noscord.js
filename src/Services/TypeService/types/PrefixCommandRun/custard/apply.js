@@ -1,0 +1,22 @@
+const PrefixCommandRun = require('../index.js');
+
+
+PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
+    const client = this.parent.parent;
+    client.import("types");
+
+    // command info
+    this.name = cmd.name;
+    this.aliases = cmd.aliases;
+    this.cooldown = cmd.cooldown;
+    this.onCooldown = cmd.onCooldown;
+    this.userCooldown = (cmd.cooldown) ? cmd.cooldown.get(ctx.author.id) : undefined
+    this.args = cmd.args;
+    this.data = cmd.data;
+
+    const msg = new types.Message;
+    let msg = await msg.apply(ctx);
+
+    Object.assign(this, msg);
+    Object.assign(this.prototype, msg.prototype);
+});
