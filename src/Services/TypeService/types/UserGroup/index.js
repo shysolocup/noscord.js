@@ -16,9 +16,9 @@ TypeService.newC("UserGroup", class extends Soup {
         
         .fetch()
         .catch(e=>{})
-        .then( (members) => {
-            members = Soup.from(members);
-            members.forEach( (id) => this.push(id, pend( () => users.get(id, guild), `<@${id}>` )));
+        .then( (stuff) => {
+            stuff = Soup.from(stuff);
+            stuff.forEach( (id) => this.push(id, pend( () => users.get(id, guild), `<@${id}>` )));
         });
     }
 });
