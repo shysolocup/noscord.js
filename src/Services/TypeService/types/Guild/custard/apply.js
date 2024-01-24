@@ -52,7 +52,9 @@ Guild.newF("apply", async function(ctx) {
         }
 
         return stuff
-    }, "ChildrenGroup" );
+    }, "ChildGroups" );
+	
+	this.children = this.groups
 
 	/*
     this.channels;
