@@ -83,7 +83,7 @@ Message.newF("apply", async function(ctx) {
     
     this.latency = new Date() - this.timestamps.created.date;
 
-    
+    if (this.raw) return;
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
