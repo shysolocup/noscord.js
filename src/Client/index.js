@@ -32,6 +32,7 @@ class NosClient {
 
 		/* stuff */
 		this.user = undefined;
+		this.prefix = settings.prefix;
 		this.application = undefined;
 
 
