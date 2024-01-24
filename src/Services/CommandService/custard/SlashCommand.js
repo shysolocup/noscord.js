@@ -17,7 +17,7 @@ CommandService.newC("SlashCommand", class {
 		this.data = data;
 
 		// adds it to the list
-		client.commands.push(this.name, this);
+		client.slashCommands.push(this.name, this);
 	}
 
 	get info() {
