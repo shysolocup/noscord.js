@@ -29,12 +29,12 @@ module.exports = (handler) => { handler.init(
         if (!hasPrefix) return;
 
 
-        let name = ctx.content.replace(prefix, "");
-        let has = false;
-
-        client.prefixCommands.forEach( () )
+        let rawName = ctx.content.replace(prefix, "");
+        let has = client.prefixCommands.some( (name, info) => {
+            return rawName == name || (info.aliases && info.aliases.some( a => rawName == a) );
+        });
         
-        if () {
+        if (has) {
             let raw = client.prefixCommands.get();
             let cooldown = raw.info.get("cooldown");
             
@@ -58,9 +58,4 @@ module.exports = (handler) => { handler.init(
 
     
     glue = "messageCreate", // what discord.js event it's tied to
-
-    
-    term = function(ctx) { // specific action that triggers the event
-        return ctx
-    }
 )}
