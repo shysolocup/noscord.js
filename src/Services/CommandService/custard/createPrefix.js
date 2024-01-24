@@ -30,14 +30,16 @@ CommandService.newF("create", function(...args) {
 	// string stuff
 	if (typeof info == "string") {
 		let cooldown;
+		let aliases = [];
 		
 		if (args.length > 0) {
 			args.forEach( (arg) => {
+				if (instanceof arg == Array) aliases = arg;
 				else if ((typeof arg == "number" || typeof arg == "string") && util.parse(arg)) cooldown = arg;
 			});
 		}
 		
-		info = { name: info, cooldown: cooldown };
+		info = { name: info, aliases: aliases, cooldown: cooldown };
 	}
 
 
