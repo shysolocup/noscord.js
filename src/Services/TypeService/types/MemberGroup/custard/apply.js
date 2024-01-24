@@ -34,22 +34,8 @@ MemberGroup.newF("apply", async function(guild) {
 
 
     Object.defineProperties(this, {
-        users: {
-            get: () => {
-                return this.filter( (id) => !bots[id] );
-            }
-        },
-
-        bots: {
-            get: () => {
-                return this.filter( (id) => bots[id] );
-            }
-        },
-
-        named: {
-            value: (name) => {
-                return this.filter( (id) => names[id] == name );
-            }
-        }
+        users: { get: () => this.filter( (id) => !bots[id] ) },
+        bots: { get: () => this.filter( (id) => bots[id] ) },
+        named: { value: (name) => this.filter( (id) => names[id] == name ) }
     })
 })
