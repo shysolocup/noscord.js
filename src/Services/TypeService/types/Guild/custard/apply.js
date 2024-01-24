@@ -1,4 +1,6 @@
+const { Soup } = require('stews');
 const Guild = require('../index.js');
+const pend = require('pender');
 
 
 Guild.newF("apply", async function(ctx) {
@@ -32,17 +34,34 @@ Guild.newF("apply", async function(ctx) {
     
     // lists
     this.features = ctx.features;
-    
+
+	/*
     this.members;
     this.users;
     this.bots;
-    
+	*/
+
+    this.groups = pend( async () => {
+        let stuff = new Soup({
+            members: new types.MemberGroup(),
+            channels: new types.ChannelGroup()
+        });
+
+        for (let i = 0; i < stuff.length; i++) {
+            await stuff.values[i].apply(this);
+        }
+
+        return stuff
+    });
+
+	/*
     this.channels;
     this.textChannels;
     this.voiceChannels;
     this.threadChannels;
     this.categories;
     this.allChannels;
+	*/
 
     
     // counts
@@ -144,13 +163,4 @@ Guild.newF("apply", async function(ctx) {
 
     // groups and fixes
     this.owner = await users.get(ctx.ownerId, this);
-    this.members = new types.GuildMemberGroup();
-	this.channels = new types.ChannelGroup();
-	this.textChannels = new types.TextChannelGroup();
-	this.voiceChannels = new types.VoiceChannelGroup();
-
-    await this.members.apply(this.raw);
-    await this.channels.apply(this.raw);
-    await this.textChannels.apply(this.raw);
-    await this.voiceChannels.apply(this.raw);
 });
