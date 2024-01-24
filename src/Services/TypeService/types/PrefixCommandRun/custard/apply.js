@@ -1,5 +1,5 @@
 const PrefixCommandRun = require('../index.js');
-
+const { Soup } = require('stews');
 
 PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
     const client = this.parent.parent;
@@ -18,5 +18,4 @@ PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
     await msg.apply(ctx);
 
     Object.assign(this, msg);
-    Object.assign(this.prototype, msg.prototype);
 });
