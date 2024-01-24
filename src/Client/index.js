@@ -1,12 +1,13 @@
 /*
-	:: noscord.js :: TypeDev 0.1.5 | 10/31/23 ::
-	https://github.com/paigeroid/noscord.js
+	:: noscord.js :: TypeDev 0.1.6 | 01/24/24 ::
+	https://github.com/paishee/noscord.js
 
 */
 
-/* :: Created by @paigeroid using :: *//*
-    - aepl: https://github.com/paigeroid/aepl
-	- Stews: https://github.com/paigeroid/stews
+/* :: Created by @paishee using :: *//*
+    - aepl: https://github.com/paishee/aepl
+	- Stews: https://github.com/paishee/stews
+ 	- Pender: https://github.com/paishee/pender
     - Discord.JS: https://github.com/discordjs/discord.js
 */
 
@@ -55,7 +56,8 @@ class NosClient {
 		
 
 		/* command handling */
-        this.commands = new Soup(Object);
+        this.slashCommands = new Soup(Object);
+		this.prefixCommands = new Soup(Object);
             
 
             
