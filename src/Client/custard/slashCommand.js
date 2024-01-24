@@ -1,7 +1,10 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("slashCommand", function(...args) {
+function f(...args) {
     this.import("commands");
     return commands.createSlash(...args);
-});
+}
+
+Client.newF("slashCommand", f);
+Client.newF("command", f);
