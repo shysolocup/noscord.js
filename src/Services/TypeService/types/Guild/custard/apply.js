@@ -149,8 +149,8 @@ Guild.newF("apply", async function(ctx) {
 	this.textChannels = new types.TextChannelGroup();
 	this.voiceChannels = new types.VoiceChannelGroup();
 
-    await this.members.apply(this);
-    await this.channels.apply(this);
-    await this.textChannels.apply(this);
-    await this.voiceChannels.apply(this);
+    await this.members.apply(this.raw);
+    await this.channels.apply(this.raw);
+    await this.textChannels.apply(this.raw);
+    await this.voiceChannels.apply(this.raw);
 });
