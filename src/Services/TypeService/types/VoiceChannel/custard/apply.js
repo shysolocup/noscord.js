@@ -11,10 +11,12 @@ VoiceChannel.newF("apply", async function(ctx) {
 	base.apply(ctx);
 
 	Object.assign(this, base);
-
+	
 
     // stuff
-    this.guild = pend( async () => await guilds.get(ctx.guildId), `<Guild:${ctx.guildId}>` );
+	this.members = new types.VoiceChannelGroup;
+    this.guild = await guilds.get(ctx.guildId);
+	this.guildId = ctx.guildId;
     this.flags = ctx.flags;
     this.partial = ctx.partial;
     this.permissionOverwrites = ctx.permissionOverwrites;
@@ -39,5 +41,7 @@ VoiceChannel.newF("apply", async function(ctx) {
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
+
+	await this.members.apply(ctx);
 
 });
