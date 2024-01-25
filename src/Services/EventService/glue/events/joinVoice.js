@@ -12,7 +12,7 @@ module.exports = (handler) => { handler.init(
         await n.apply(newVS);
 
         n.joining = o.joining = !!(!oldVS.channelID && newVS.channelId);
-        n.joining = o.leaving = !!(!newVS.channelID && oldVS.channelId);
+        n.leaving = o.leaving = !!(!newVS.channelID && oldVS.channelId);
         n.moving = o.moving = !!( !(!oldVS.channelId && newVS.channelId) && !(!newVS.channelId && oldVS.channelId) );
 
         return [ o, n ];
