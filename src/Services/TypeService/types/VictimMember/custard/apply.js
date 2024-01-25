@@ -28,7 +28,7 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
         const log = logs.entries.first();
 
         if (log) {
-            this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.moderator = await users.get(log.executor.id, this.guild);
             this.reason = null
             this.log = log;
         }
@@ -43,7 +43,7 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
         const log = logs.entries.first();
 
         if (log) {
-            this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.moderator = await users.get(log.executor.id, this.guild);
             this.reason = log.reason;
             this.log = log;
         }
@@ -58,7 +58,7 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
         const log = logs.entries.first();
 
         if (log) {
-            this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.moderator = await users.get(log.executor.id, this.guild);
             this.modId = log.executor.id;
             this.reason = log.reason;
             this.log = log;
@@ -75,7 +75,7 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
         const log = logs.entries.first();
 
         if (log) {
-            this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.moderator = await users.get(log.executor.id, this.guild);
             this.modId = log.executor.id;
             this.reason = log.reason;
             this.log = log;
