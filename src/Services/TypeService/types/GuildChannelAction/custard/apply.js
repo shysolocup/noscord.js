@@ -28,7 +28,7 @@ GuildChannelAction.newF("apply", async function(ctx, actionType) {
 	Object.assign(this, channel);
 
     this.deleted = (actionType == 1);
-    this.edited = (actinType == 2);
+    this.edited = (actionType == 2);
 
 
     // times
