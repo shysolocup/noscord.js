@@ -1,8 +1,8 @@
-const GuildMemberAction = require('../index.js');
+const VictimMember = require('../index.js');
 const { AuditLogEvent } = require('discord.js');
 
 
-GuildMemberAction.newF("apply", async function(ctx, actionType) {
+VictimMember.newF("apply", async function(ctx, actionType) {
     const client = this.parent.parent;
     client.import("users", "types");
     
