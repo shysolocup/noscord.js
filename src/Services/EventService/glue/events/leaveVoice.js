@@ -13,6 +13,6 @@ module.exports = (handler) => { handler.init(
 
     
     term = function(oldVS, newVS) { // specific action that triggers the event
-        return (!newVS.channelID && oldVS)
+        return (!newVS.channelID && oldVS.channelId)
     }
 )}
