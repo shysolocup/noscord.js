@@ -3,43 +3,32 @@ const GuildChannelAction = require('../index.js');
 
 GuildChannelAction.newF("apply", async function(ctx, actionType) {
     const client = this.parent.parent;
-    client.import("messages", "channels", "guilds", "util");
+    client.import("types", "messages", "channels", "guilds", "util");
 
-    // ids
-    this.id = ctx.id;
-    this.name = ctx.name;
-    this.nsfw = ctx.nsfw;
-    this.type = ctx.type;
-    this.viewable = ctx.viewable;
-    this.category = ctx.parent;
-    this.categoryId = ctx.parentId;
-    this.guildId = ctx.guildId;
-    this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
-    this.mention = `<#${ctx.id}>`;
-    this.topic = ctx.topic;
+	let channel;
 
+	switch(ctx.type) {
+        case 0: channel = new types.TextChannel; break;
+        case 1: channel = new types.DirectMessage; break;
+        case 2: channel = new types.VoiceChannel; break;
+        case 3: channel = new types.GroupChat; break;
+        case 4: channel = new types.Category; break;
+        case 5: channel = new types.AnnouncementsChannel; break;
+        case 10: channel = new types.AnnouncementsThread; break;
+        case 11: channel = new types.ThreadChannel; break;
+        case 12: channel = new types.ThreadChannel; break;
+        case 13: channel = new types.StageChannel; break;
+        // case 14: channel = new types.HubChannel; break;
+        // case 15: channel = new types.ForumChannel; break;
+        // case 16: channel = new types.MediaChannel; break;
+    }
 
-    // stuff
-    this.guild = await guilds.get(ctx.guildId);
-    this.flags = ctx.flags;
-    this.partial = ctx.partial;
-    this.permissionOverwrites = ctx.permissionOverwrites;
-    this.permissionsLocked = ctx.permissionsLocked;
-    this.position = ctx.position;
-    this.rateLimitPerUser = ctx.rateLimitPerUser;
-    this.rawPosition = ctx.rawPosition;
-    this.threads = await channels.threads(ctx);
+	await channel.apply(ctx);
 
+	Object.assign(this, channel);
 
-    // messages
-    this.messages = ctx.messages;
-    this.msgList = await messages.list(ctx);
-    this.lastMsg = await messages.get(ctx.lastMessageId);
-    this.lastMsgId = ctx.lastMessageId;
-
-
-    this.isDelete = (actionType == 1);
-    this.isEdit = (actinType == 2);
+    this.deleted = (actionType == 1);
+    this.edited = (actinType == 2);
 
 
     // times
@@ -47,16 +36,9 @@ GuildChannelAction.newF("apply", async function(ctx, actionType) {
     let edited = this.isEdit;
     
     this.timestamps = {
-        created: new Timestamp(ctx.createdAt),
-        lastPin: new Timestamp(ctx.lastPinAt),
         deleted: (deleted) ? new Timestamp() : undefined,
         edited: (edited) ? new Timestamp() : undefined
     }
-    
-
-
-    // booleans
-    this.deleteable = ctx.deleteable;
 
 
     Object.defineProperty(this, "raw", {
