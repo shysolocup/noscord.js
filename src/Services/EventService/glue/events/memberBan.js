@@ -8,7 +8,7 @@ module.exports = (handler) => { handler.init(
         let types = this.types;
         let mbm = new types.GuildMemberAction;
         
-        await mbm.apply(member, 2);
+        await mbm.apply(member, 4);
         
         return [mbm, mbm.moderator, mbm.guild];
     },
