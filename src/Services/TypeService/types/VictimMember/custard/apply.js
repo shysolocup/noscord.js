@@ -2,24 +2,23 @@ const VictimMember = require('../index.js');
 const { AuditLogEvent } = require('discord.js');
 
 
-VictimMember.newF("apply", async function(ctx, actionType) {
+VictimMember.newF("apply", async function(ctx, actionType=null) {
     const client = this.parent.parent;
     client.import("users", "types");
-    
-    this.isKick = (actionType == 1);
-    this.isBan = (actionType == 2);
-    this.isUnban = (actionType == 3);
-    this.isTimeout = (actionType == 4);
 
-    this.victim = new types.GuildMember;
-    this.victim.apply(ctx);
-    
-    this.victimId = ctx.id;
+	let member = new types.GuildMember;
+	await member.apply(ctx);
 
-    this.guild = await guilds.get(ctx.guildId);
-    this.guildId = ctx.guildId;
+	Object.assign(this, member);
+	
+	this.joined = (actionType == 0);
+	this.left = (actionType == 1);
+    this.kicked = (actionType == 2);
+    this.banned = (actionType == 3);
+    this.unbanned = (actionType == 4);
+    this.timedOut = (actionType == 5);
 
-    if (this.isKick) {
+    if (this.kicked) {
         const logs = await ctx.guild.fetchAuditLogs({
             limit: 1,
             type: AuditLogEvent.MemberKick,
@@ -34,7 +33,7 @@ VictimMember.newF("apply", async function(ctx, actionType) {
         }
     }
 
-    else if (this.isBan) {
+    else if (this.banned) {
         const logs = await ctx.guild.fetchAuditLogs({
             limit: 1,
             type: AuditLogEvent.MemberBanAdd,
@@ -51,7 +50,7 @@ VictimMember.newF("apply", async function(ctx, actionType) {
     }
 
 
-    else if (this.isUnban) {
+    else if (this.unbanned) {
         const logs = await ctx.guild.fetchAuditLogs({
             limit: 1,
             type: AuditLogEvent.MemberBanRemove,
