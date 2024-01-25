@@ -1,9 +1,7 @@
-const GuildChannelAction = require('../index.js');
+const VictimChannel = require('../index.js');
 
 
-GuildChannelAction.newF("apply", async function(ctx, actionType) {
-    console.log("a");
-
+VictimChannel.newF("apply", async function(ctx, actionType) {
     const client = this.parent.parent;
     client.import("types", "messages", "channels", "guilds", "util");
 
@@ -44,6 +42,4 @@ GuildChannelAction.newF("apply", async function(ctx, actionType) {
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
-
-    console.log("b");
 });
