@@ -2,6 +2,8 @@ const GuildChannelAction = require('../index.js');
 
 
 GuildChannelAction.newF("apply", async function(ctx, actionType) {
+    console.log("a");
+
     const client = this.parent.parent;
     client.import("types", "messages", "channels", "guilds", "util");
 
@@ -32,16 +34,16 @@ GuildChannelAction.newF("apply", async function(ctx, actionType) {
 
 
     // times
-    let deleted = this.deleted;
+    let deleted = this.deleted
     let edited = this.edited;
     
-    this.timestamps = {
-        deleted: (deleted) ? new Timestamp() : undefined,
-        edited: (edited) ? new Timestamp() : undefined
-    }
+    this.timestamps.deleted = (deleted) ? new Timestamp() : undefined;
+    this.timestamps.edited = (edited) ? new Timestamp() : undefined;
 
 
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
+
+    console.log("b");
 });
