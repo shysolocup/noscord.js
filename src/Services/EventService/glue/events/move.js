@@ -4,8 +4,14 @@ module.exports = (handler) => { handler.init(
     name = [ "move", "moveVoice" ],  // names of the event
 
     
-    func = async function (...args) { // formatting for types and stuff
-        return args;
+    func = async function (oldVS, newVS) { // formatting for types and stuff
+        let types = this.types;
+        let [ o, n ] = [ new types.VoiceState, new types.VoiceState ];
+
+        await o.apply(oldVS, newVS);
+        await n.apply(newVS, oldVS);
+
+        return [ o, n ];
     }, 
 
     
