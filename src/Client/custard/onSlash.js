@@ -1,7 +1,7 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("onSlash", function(a, b) {
+function f (a, b) {
 	if (b && b instanceof Function) {
 		this.on("slashCommandRan", async (ctx, cmd) => {
 			if (ctx.name == a) await b(ctx, cmd);
@@ -10,4 +10,8 @@ Client.newF("onSlash", function(a, b) {
 	else {
 		this.on("slashCommandRan", a);
 	}
-});
+}
+
+
+Client.newF("onSlash", f);
+Client.newF("onCommand", f);
