@@ -9,7 +9,7 @@ Emoji.newF("apply", async function(base) {
     this.id = base.id;
     this.name = base.name;
     this.animated = base.animated;
-    this.url = base.imageURL('png');
+    this.url = (this.animated) ? base.imageURL('gif') : base.imageURL('png');
     this.attachment = await att.create(this.url);
     this.identifier = base.identifier;
 
