@@ -27,7 +27,7 @@ ChannelService.newF("get", async function(id, guild=null) {
 
     switch(thing.type) {
         case 0: typed = new types.TextChannel; break;
-        // case 1: typed = new types.DmChannel; break;
+        case 1: typed = new types.DmChannel; break;
         case 2: typed = new types.VoiceChannel; break;
         // case 3: typed = new types.GroupChatChannel; break;
         // case 4: typed = new types.Category; break;
