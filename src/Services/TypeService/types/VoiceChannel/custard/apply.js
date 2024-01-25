@@ -14,7 +14,7 @@ VoiceChannel.newF("apply", async function(ctx) {
 	
 
     // stuff
-	this.members = new types.VoiceChannelGroup;
+	this.members = new types.VoiceMemberGroup;
     this.guild = await guilds.get(ctx.guildId);
 	this.guildId = ctx.guildId;
     this.flags = ctx.flags;
