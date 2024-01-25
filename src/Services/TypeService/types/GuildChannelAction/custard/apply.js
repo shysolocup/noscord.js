@@ -32,8 +32,8 @@ GuildChannelAction.newF("apply", async function(ctx, actionType) {
 
 
     // times
-    let deleted = this.isDelete;
-    let edited = this.isEdit;
+    let deleted = this.deleted;
+    let edited = this.edited;
     
     this.timestamps = {
         deleted: (deleted) ? new Timestamp() : undefined,
