@@ -17,7 +17,6 @@ BaseChannel.newF("apply", async function(ctx) {
     this.guildId = ctx.guildId;
     this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
     this.mention = `<#${ctx.id}>`;
-    this.topic = ctx.topic;
 
 
     // stuff
