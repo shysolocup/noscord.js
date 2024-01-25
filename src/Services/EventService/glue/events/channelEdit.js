@@ -14,5 +14,5 @@ module.exports = (handler) => { handler.init(
     }, 
 
     
-    glue = "channelDelete", // what discord.js event it's tied to
+    glue = "channelUpdate", // what discord.js event it's tied to
 )}
