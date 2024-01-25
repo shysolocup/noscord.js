@@ -44,7 +44,8 @@ Guild.newF("apply", async function(ctx) {
     this.groups = pend( async () => {
         let stuff = new Soup({
             members: new types.MemberGroup(),
-            channels: new types.ChannelGroup()
+            channels: new types.ChannelGroup(),
+			emojis: new types.EmojiGroup(),
         });
 
         for (let i = 0; i < stuff.length; i++) {
