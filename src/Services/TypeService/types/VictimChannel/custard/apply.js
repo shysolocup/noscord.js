@@ -27,7 +27,7 @@ VictimChannel.newF("apply", async function(ctx, actionType=null) {
 
 	Object.assign(this, channel);
 	
-	this.created = (!actionType);
+	this.created = (actionType == 0);
     this.deleted = (actionType == 1);
     this.edited = (actionType == 2);
 
