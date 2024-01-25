@@ -79,8 +79,6 @@ Guild.newF("apply", async function(ctx) {
 
 
     // more lists
-    this.emojis = ctx.emojis;
-    this.stickers = ctx.stickers;
     this.commands = ctx.commands;
     this.invites = ctx.invites;
     this.presences = ctx.presences;
