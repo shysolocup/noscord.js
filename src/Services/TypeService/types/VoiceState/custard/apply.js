@@ -20,9 +20,9 @@ VoiceState.newF("apply", async function(ctx, ctx2=null) {
 
 
     // booleans
-	this.joining = (ctx2) ? (!ctx.channelID && ctx2.channelId) : false;
-	this.leaving = (ctx2) ? (!ctx.channelID && ctx2.channelId) : false;
-	this.moving = (ctx2) ? (!(!ctx.channelId && ctx2.channelId) && !(!ctx2.channelId && ctx.channelId)) : false;
+	this.joining = (ctx2) ? !!(!ctx.channelID && ctx2.channelId) : false;
+	this.leaving = (ctx2) ? !!(!ctx.channelID && ctx2.channelId) : false;
+	this.moving = (ctx2) ? !!(!(!ctx.channelId && ctx2.channelId) && !(!ctx2.channelId && ctx.channelId)) : false;
     this.muted = !!ctx.selfMute;
     this.deafened = !!ctx.selfDeaf;
     this.video = !!ctx.selfVideo;
