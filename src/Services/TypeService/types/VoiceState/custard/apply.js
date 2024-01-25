@@ -1,7 +1,7 @@
 const VoiceState = require('../index.js');
 
 
-VoiceState.newF("apply", async function(ctx, ctx2=null) {
+VoiceState.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     client.import("guilds", "channels", "users", "util");
 
@@ -20,9 +20,9 @@ VoiceState.newF("apply", async function(ctx, ctx2=null) {
 
 
     // booleans
-	this.joining = (ctx2) ? !!(!ctx.channelID && ctx2.channelId) : false;
-	this.leaving = (ctx2) ? !!(!ctx.channelID && ctx2.channelId) : false;
-	this.moving = (ctx2) ? !!(!(!ctx.channelId && ctx2.channelId) && !(!ctx2.channelId && ctx.channelId)) : false;
+	this.joining = null
+	this.leaving = null
+	this.moving = null
     this.muted = !!ctx.selfMute;
     this.deafened = !!ctx.selfDeaf;
     this.video = !!ctx.selfVideo;
