@@ -8,8 +8,12 @@ module.exports = (handler) => { handler.init(
         let types = this.types;
         let [ o, n ] = [ new types.VoiceState, new types.VoiceState ];
 
-        await o.apply(oldVS, newVS);
-        await n.apply(newVS, oldVS);
+        await o.apply(oldVS);
+        await n.apply(newVS);
+
+        n.joining = o.joining = !!(!oldVS.channelID && newVS.channelId);
+        n.joining = o.leaving = !!(!newVS.channelID && oldVS.channelId);
+        n.moving = o.moving = !!( !(!oldVS.channelId && newVS.channelId) && !(!newVS.channelId && oldVS.channelId) );
 
         return [ o, n ];
     }, 
