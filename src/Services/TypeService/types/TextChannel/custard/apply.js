@@ -4,20 +4,13 @@ const pend = require('pender');
 
 TextChannel.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("messages", "channels", "guilds", "util");
+    client.import("messages", "channels", "guilds", "util", "types");
 
-    // ids
-    this.id = ctx.id;
-    this.name = ctx.name;
-    this.nsfw = ctx.nsfw;
-    this.type = ctx.type;
-    this.viewable = ctx.viewable;
-    this.category = ctx.parent;
-    this.categoryId = ctx.parentId;
-    this.guildId = ctx.guildId;
-    this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
-    this.mention = `<#${ctx.id}>`;
-    this.topic = ctx.topic;
+    // information
+    let base = new types.BaseChannel;
+	base.apply(ctx);
+
+	Object.assign(this, base);
 
 
     // stuff
@@ -40,15 +33,7 @@ TextChannel.newF("apply", async function(ctx) {
 
 
     // times
-    this.timestamps = {
-        created: new Timestamp(ctx.createdAt),
-        lastPin: new Timestamp(ctx.lastPinAt)
-    }
-    
-
-
-    // booleans
-    this.deleteable = ctx.deleteable;
+    this.timestamps.lastPin = new Timestamp(ctx.lastPinAt)
 
 
     Object.defineProperty(this, "raw", {
