@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.6 | 01/24/24 ::
+	:: noscord.js :: TypeDev 0.1.6 | 01/25/24 ::
 	https://github.com/paishee/noscord.js
 
 */
@@ -26,6 +26,16 @@ const cust_dir = require('./custard/_funkydir');
 const exp = new Soup(Object);
 
 
+let intentPresets = {
+	default: 3276799,
+	all: 3276799,
+	guilds: 69631,
+	messages: 46593,
+	emojis: 42505,
+	voice: 46729
+
+}
+
 
 class NosClient {
     constructor(settings={}) {
@@ -37,7 +47,7 @@ class NosClient {
 
 
 		/* fix intents */
-		if (!settings.intents) settings.intents = 3276799;
+		if (!settings.intents) settings.intents = intentPresets.default;
 
 		
 		/* base */
@@ -226,4 +236,7 @@ if (!NosClient._instances) Object.defineProperty(NosClient, "_instances", {
 
 exp.pull("Client", cl.from(NosClient));
 exp.pull("Instances", NosClient._instances);
+exp.pull("Presets", intentPresets);
+
+
 module.exports = exp;
