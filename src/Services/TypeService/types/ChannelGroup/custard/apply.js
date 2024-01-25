@@ -7,39 +7,42 @@ ChannelGroup.newF("apply", async function(guild) {
     const client = this.parent.parent;
     client.import("guilds", "channels");
 
-    let stuff  = new Soup(Object);
-    let types = new Soup(Object);
+    let stuff = new Soup(Object);
+    let bases = new Soup(Object);
 
     if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
 
         for ( let i = 0; i < gList.length; i++) {
             let guild = gList.values[i];
-            let chList = await guild.channels.fetch().catch(e=>console.log(e))
-            stuff = stuff.merge( Soup.from(chList));
+            let list = await guild.channels.fetch().catch(e=>console.log(e))
+            stuff = stuff.merge( Soup.from(list));
         }
     }
     else {
-        let chList = await guild.raw.channels.fetch().catch(e=>console.log(e))
-        stuff = Soup.from(chList);
+        let list = await guild.raw.channels.fetch().catch(e=>console.log(e))
+        stuff = Soup.from(list);
     }
 
 
     stuff.forEach( (id, base) => {
         if (guild && base.guildId != guild.id) return;
-        types.push(id, base.type);
+        bases.push(id, base);
         this.push(id, pend( () => channels.get(id, guild), `<#${id}>` ))
     });
 
+    
     Object.defineProperties(this, {
-        text: { get: () => this.filter( (id) => types[id] == 0 ) },
-        voice: { get: () => this.filter( (id) => types[id] == 2 ) },
-        categories: { get: () => this.filter( (id) => types[id] == 4 ) },
-        threads: { get: () => this.filter( (id) => (types[id] == 11 || types[id] == 12) ) },
-        publicThreads: { get: () => this.filter( (id) => types[id] == 11 ) },
-        privateThreads: { get: () => this.filter( (id) => types[id] == 12 ) },
-        stages: { get: () => this.filter( (id) => types[id] == 13 ) },
-        forums: { get: () => this.filter( (id) => types[id] == 15 ) },
-        media: { get: () => this.filter( (id) => types[id] == 16 ) },
+        text: { get: () => this.filter( (id) => bases[id].type == 0 ) },
+        voice: { get: () => this.filter( (id) => bases[id].type == 2 ) },
+        categories: { get: () => this.filter( (id) => bases[id].type == 4 ) },
+        threads: { get: () => this.filter( (id) => (bases[id].type == 11 || bases[id].type == 12) ) },
+        publicThreads: { get: () => this.filter( (id) => bases[id].type == 11 ) },
+        privateThreads: { get: () => this.filter( (id) => bases[id].type == 12 ) },
+        stages: { get: () => this.filter( (id) => bases[id].type == 13 ) },
+        forums: { get: () => this.filter( (id) => bases[id].type == 15 ) },
+        media: { get: () => this.filter( (id) => bases[id].type == 16 ) },
+
+        named: { value: (name) => this.filter( (id) => bases[id].name == name ) }
     })
 })
