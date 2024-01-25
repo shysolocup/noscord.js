@@ -1,8 +1,8 @@
-const GroupChatChannel = require('../index.js');
+const GroupChat = require('../index.js');
 const pend = require('pender');
 
 
-GroupChatChannel.newF("apply", async function(ctx) {
+GroupChat.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     client.import("messages", "util", "types");
 
