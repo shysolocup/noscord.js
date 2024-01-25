@@ -1,7 +1,7 @@
 const TypeService = require('../../index.js');
 const fs = require('fs');
 
-TypeService.newC("DmChannel", class {
+TypeService.newC("DirectMessage", class {
     [Symbol.toPrimitive](hint) {
         if (hint === "string") {
             return `<#${this.id}>`
@@ -9,7 +9,7 @@ TypeService.newC("DmChannel", class {
     }
 });
 
-module.exports = DmChannel;
+module.exports = DirectMessage;
 
 let cust_dir = require('./custard/_funkydir');
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
