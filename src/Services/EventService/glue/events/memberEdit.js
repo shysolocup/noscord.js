@@ -14,5 +14,5 @@ module.exports = (handler) => { handler.init(
     },
 
     
-    glue = "guildMember Update", // what discord.js event it's tied to
+    glue = "guildMemberUpdate", // what discord.js event it's tied to
 )}
