@@ -77,7 +77,6 @@ class NosClient {
 			roles: new this.RoleService,
 			errors: new this.ErrorService,
 			channels: new this.ChannelService,
-			app: new this.UtilService,
 			util: new this.UtilService,
 			attachments: new this.AttachmentService,
 			components: new this.ComponentService,
@@ -90,6 +89,13 @@ class NosClient {
 			storage: new this.StorageService
 		});
 
+		this.services.app = this.services.util;
+		this.services.att = this.services.attachments;
+		this.services.perms = this.services.permissions;
+		this.services.err = this.services.errors;
+		this.services.members = this.services.users;
+		this.services.exp = this.services.expressions;
+		this.services.msg = this.services.messages;
 		
 		this.services.forEach( (name, service) => {
 			if (!this[name]) this[name] = service;
