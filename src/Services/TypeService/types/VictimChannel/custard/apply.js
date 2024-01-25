@@ -1,7 +1,7 @@
 const VictimChannel = require('../index.js');
 
 
-VictimChannel.newF("apply", async function(ctx, actionType) {
+VictimChannel.newF("apply", async function(ctx, actionType=null) {
     const client = this.parent.parent;
     client.import("types", "messages", "channels", "guilds", "util");
 
@@ -26,16 +26,19 @@ VictimChannel.newF("apply", async function(ctx, actionType) {
 	await channel.apply(ctx);
 
 	Object.assign(this, channel);
-
+	
+	this.created = (!actionType);
     this.deleted = (actionType == 1);
     this.edited = (actionType == 2);
 
 
     // times
-    let deleted = this.deleted
+	let created = this.created;
+    let deleted = this.deleted;
     let edited = this.edited;
     
-    this.timestamps.deleted = (deleted) ? new Timestamp() : undefined;
+    this.timestamps.created = (created) ? new Timestamp() : undefined;
+	this.timestamps.deleted = (deleted) ? new Timestamp() : undefined;
     this.timestamps.edited = (edited) ? new Timestamp() : undefined;
 
 
