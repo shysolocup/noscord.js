@@ -39,6 +39,6 @@ EmojiGroup.newF("apply", async function(guild) {
     Object.defineProperties(this, {
         static: { get: () => this.filter( (id) => !bases[id].animated ) },
         animated: { get: () => this.filter( (id) => bases[id].animated ) },
-        named: { value: (name) => this.filter( (id) => bases[id].username == name ) }
+        named: { value: (name) => this.filter( (id) => bases[id].name == name ) }
     })
 })
