@@ -1,7 +1,7 @@
 const TypeService = require('../../index.js');
 const fs = require('fs');
 
-TypeService.newC("GuildChannelAction", class {
+TypeService.newC("VictimChannel", class {
     [Symbol.toPrimitive](hint) {
         if (hint === "string") {
             return `<#${this.id}>`
@@ -9,7 +9,7 @@ TypeService.newC("GuildChannelAction", class {
     }
 });
 
-module.exports = GuildChannelAction;
+module.exports = VictimChannel;
 
 let cust_dir = require('./custard/_funkydir');
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
