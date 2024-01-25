@@ -29,4 +29,8 @@ Sticker.newF("apply", async function(base) {
     this.timestamps = {
         created: new Timestamp(base.createdAt)
     };
+
+    Object.defineProperty(this, "raw", {
+		get() { return base }	
+	});
 })
