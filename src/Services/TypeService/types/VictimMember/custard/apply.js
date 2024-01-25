@@ -12,13 +12,29 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
 	Object.assign(this, member);
 	
 	this.joined = (actionType == 0);
-	this.left = (actionType == 1);
-    this.kicked = (actionType == 2);
-    this.banned = (actionType == 3);
-    this.unbanned = (actionType == 4);
-    this.timedOut = (actionType == 5);
+	this.edited = (actionType == 1);
+	this.left = (actionType == 2);
+    this.kicked = (actionType == 3);
+    this.banned = (actionType == 4);
+    this.unbanned = (actionType == 5);
+    this.timedOut = (actionType == 6);
 
-    if (this.kicked) {
+	if (this.edited) {
+        const logs = await ctx.guild.fetchAuditLogs({
+            limit: 1,
+            type: AuditLogEvent.MemberUpdate,
+        });
+
+        const log = logs.entries.first();
+
+        if (log) {
+            this.moderator = await users.get(log.executor.id, ctx.guild);
+            this.reason = null
+            this.log = log;
+        }
+    }
+	
+    else if (this.kicked) {
         const logs = await ctx.guild.fetchAuditLogs({
             limit: 1,
             type: AuditLogEvent.MemberKick,
