@@ -36,9 +36,9 @@ ChannelService.newF("get", async function(id, guild=null) {
         case 11: typed = new types.ThreadChannel; break;
         case 12: typed = new types.ThreadChannel; break;
         case 13: typed = new types.StageChannel; break;
-        case 14: typed = new types.HubChannel; break;
-        case 15: typed = new types.ForumChannel; break;
-        case 16: typed = new types.MediaChannel; break;
+        // case 14: typed = new types.HubChannel; break;
+        // case 15: typed = new types.ForumChannel; break;
+        // case 16: typed = new types.MediaChannel; break;
     }
 
 	if (thing && typed) await typed.apply(thing);
