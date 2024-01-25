@@ -35,17 +35,11 @@ BaseChannel.newF("apply", async function(ctx) {
     // times
     this.timestamps = {
         created: new Timestamp(ctx.createdAt),
-        lastPin: new Timestamp(ctx.lastPinAt)
     }
     
 
 
     // booleans
     this.deleteable = ctx.deleteable;
-
-
-    Object.defineProperty(this, "raw", {
-		get() { return ctx }	
-	});
 
 });
