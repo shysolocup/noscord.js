@@ -8,7 +8,7 @@ module.exports = (handler) => { handler.init(
         let types = this.types;
         let action = new types.VictimChannel;
         
-        await action.apply(...Array.from(arguments));
+        await action.apply(ctx);
         
         return [action, action.moderator, action.guild];
     }, 
