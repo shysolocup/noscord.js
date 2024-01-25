@@ -4,7 +4,7 @@ const { AuditLogEvent } = require('discord.js');
 
 Message.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("guilds", "messages", "channels", "users", "util");
+    client.import("guilds", "messages", "channels", "users", "util", "types");
 
 
     if (ctx.constructor.name == "InteractionResponse") ctx = await ctx.fetch()
@@ -30,8 +30,18 @@ Message.newF("apply", async function(ctx) {
     // circle thingstuff
     this.guild = await guilds.get(this.guildId);
     this.channel = await channels.get(this.channelId);
-    this.author = (ctx.author) ? await users.get(ctx.author.id) : (ctx.user) ? await users.get(ctx.user.id) : undefined;
+    
+    this.author = (ctx.author) ? await users.get(ctx.author.id, this.guild) : (ctx.user) ? await users.get(ctx.user.id, this.guild).user : undefined;
     this.member = (ctx.member) ? await users.get(ctx.member.id, this.guild) : (this.author) ? await users.get(this.author.id, this.guild) : undefined;
+
+
+    if (ctx.author && ctx.author.bot) {
+        this.author = new types.User;
+        if (ctx.member) this.member = new types.GuildMember;
+        
+        await this.author.apply(ctx.author);
+        if (ctx.member) await this.author.apply(ctx.member);
+    }
 
 
     // other stuff
