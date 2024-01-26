@@ -17,7 +17,7 @@ ExpressionService.newF("getEmoji", async function(id, guild) {
 
     let [ rawName, rawId ] = raw.split(":");
     
-    let thing = await guild.raw.emojis
+    let thing = await ((guild.raw) ? guild.raw : guild) .emojis
         .fetch(rawId).catch(e=>{});
 
 	let typed = new types.Emoji
