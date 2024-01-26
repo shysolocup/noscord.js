@@ -42,6 +42,9 @@ ChannelGroup.newF("apply", async function(guild) {
         media: { get: () => this.filter( (id) => bases[id].type == 16 ) },
 
         named: { value: (name) => this.filter( (id) => bases[id].name == name ) },
+        with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].name)).has(...args) ) },
+        startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].name)).startsWith(...args) ) },
+        endingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].name)).endsWith(...args) ) },
         inCategory: { value: (id) => this.filter( (id) => {
             let base = bases[id];
             if (!base.parent) return false;
