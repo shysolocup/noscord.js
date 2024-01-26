@@ -3,14 +3,18 @@ const MemberGroup = require('../index.js');
 const pend = require('pender');
 
 
-MemberGroup.newF("apply", async function(guild) {
+MemberGroup.newF("apply", async function(guild, category=null) {
     const client = this.parent.parent;
     client.import("guilds", "users");
 
     let stuff = new Soup(Object);
     let bases = new Soup(Object);
 
-    if (!guild) {
+    if (category) {
+        let list = await ((category.raw) ? category.raw : category) .members.fetch().catch(e=>console.log(e))
+        stuff = Soup.from(list);
+    }
+    else if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
 
         for ( let i = 0; i < gList.length; i++) {
