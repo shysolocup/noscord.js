@@ -13,7 +13,6 @@ VoiceState.newF("apply", async function(ctx) {
     this.channelId = ctx.channelId;
 
     // user
-    this.user = await users.get(ctx.id)
     this.userId = ctx.id;
     this.id = ctx.id;
 
