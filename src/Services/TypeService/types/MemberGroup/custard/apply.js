@@ -19,12 +19,12 @@ MemberGroup.newF("apply", async function(guild, category=null) {
 
         for ( let i = 0; i < gList.length; i++) {
             let guild = gList.values[i];
-            let list = await guild.members.fetch().catch(e=>console.log(e))
+            let list = await ((guild.raw) ? guild.raw : guild) .members.fetch().catch(e=>console.log(e))
             stuff = stuff.merge( Soup.from(list));
         }
     }
     else {
-        let list = await guild.raw.members.fetch().catch(e=>console.log(e))
+        let list = await ((guild.raw) ? guild.raw : guild) .members.fetch().catch(e=>console.log(e))
         stuff = Soup.from(list);
     }
 
