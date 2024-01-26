@@ -87,24 +87,18 @@ Guild.newF("apply", async function(ctx) {
 
     
     // channel stuff
-    this.afkChannel = await channels.get(ctx.afkChannelId);
     this.afkChannelId = ctx.afkChannelId;
     this.afkTimeout = ctx.afkTimeout;
     
-    this.updatesChannel = await channels.get(ctx.publicUpdatesChannelId);
     this.updatesChannelId = ctx.publicUpdatesChannelId;
     
-    this.rulesChannel = await channels.get(ctx.rulesChannelId);
     this.rulesChannelId = ctx.rulesChannelId;
 
-    this.alertsChannel = await channels.get(ctx.safetyAlertsChannelId);
     this.alertsChannelId = ctx.safetyAlertsChannelId;
 
-    this.systemChannel = await channels.get(ctx.systemChannelId);
     this.systemChannelFlags = ctx.systemChannelFlags;
     this.systemChannelId = ctx.systemChannelId;
 
-    this.widgetChannel = await channels.get(ctx.widgetChannelId);
     this.widgetChannelId = ctx.widgetChannelId;
     this.widgetEnabled = ctx.widgetEnabled;
 
