@@ -10,7 +10,7 @@ Guild.newF("apply", async function(ctx) {
     
     // info
     this.id = ctx.id;
-    this.url = `discord.gg/${ctx.vanityURLCode}`
+    this.url = (ctx.vanityURLCode) ? `discord.gg/${ctx.vanityURLCode}` : null
     this.name = ctx.name;
     this.description = ctx.description;
     this.owner;
