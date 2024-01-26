@@ -23,23 +23,7 @@ ChannelService.newF("get", async function(id, guild=null) {
 		
 	).fetch(raw).catch(e=>{});
 
-    let typed
-
-    switch(thing.type) {
-        case 0: typed = new types.TextChannel; break;
-        case 1: typed = new types.DirectMessage; break;
-        case 2: typed = new types.VoiceChannel; break;
-        case 3: typed = new types.GroupChat; break;
-        case 4: typed = new types.Category; break;
-        case 5: typed = new types.AnnouncementsChannel; break;
-        case 10: typed = new types.AnnouncementsThread; break;
-        case 11: typed = new types.ThreadChannel; break;
-        case 12: typed = new types.ThreadChannel; break;
-        case 13: typed = new types.StageChannel; break;
-        // case 14: typed = new types.HubChannel; break;
-        // case 15: typed = new types.ForumChannel; break;
-        // case 16: typed = new types.MediaChannel; break;
-    }
+    let typed = this.typer(thing.type);
 
 	if (thing && typed) await typed.apply(thing);
  
