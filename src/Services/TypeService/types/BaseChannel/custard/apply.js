@@ -18,6 +18,15 @@ BaseChannel.newF("apply", async function(ctx) {
     this.guildId = ctx.guildId;
     this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
     this.mention = `<#${ctx.id}>`;
+
+    // times
+    this.timestamps = {
+        created: new Timestamp(ctx.createdAt),
+    }
+
+
+    this.deleteable = ctx.deleteable;
+
 	// this.topic = ctx.topic;
 
     // stuff
@@ -33,15 +42,5 @@ BaseChannel.newF("apply", async function(ctx) {
     this.rawPosition = ctx.rawPosition;
     this.threads // await channels.threads(ctx);
     */
-
-    // times
-    this.timestamps = {
-        created: new Timestamp(ctx.createdAt),
-    }
-    
-
-
-    // booleans
-    this.deleteable = ctx.deleteable;
 
 });
