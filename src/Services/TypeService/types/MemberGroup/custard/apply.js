@@ -11,8 +11,7 @@ MemberGroup.newF("apply", async function(guild, category=null) {
     let bases = new Soup(Object);
 
     if (category) {
-        let list = await ((category.raw) ? category.raw : category) .members.fetch().catch(e=>console.log(e))
-        stuff = Soup.from(list);
+        stuff = Soup.from( ((category.raw) ? category.raw : category) .members );
     }
     else if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
