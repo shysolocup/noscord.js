@@ -8,13 +8,12 @@ ThreadChannel.newF("apply", async function(ctx) {
 
     // information
     let base = new types.BaseChannel;
-	base.apply(ctx);
+	await base.apply(ctx);
 
 	Object.assign(this, base);
 
 
     // stuff
-    this.guild = pend( async () => await guilds.get(ctx.guildId), `<Guild:${ctx.guildId}>` );
     /*this.flags = ctx.flags;
     this.partial = ctx.partial;
     this.permissionOverwrites = ctx.permissionOverwrites;
