@@ -17,7 +17,7 @@ UserService.newF("get", async function(id, guild=null) {
     
     let thing = await ( 
 		(guild) ? 
-			guild.raw.members : // if guild is given it gets from the guild
+			((guild.raw) ? guild.raw : guild) .members : // if guild is given it gets from the guild
 		
 			this.parent._base.users // if a guild is not given it gets from the client's users
 		
