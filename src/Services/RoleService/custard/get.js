@@ -12,7 +12,7 @@ RoleService.newF("get", async function(id, guild) {
     
     raw = raw.split("").join(""); 
     
-    let thing = await guild.roles.fetch(raw).catch(e=>{});
+    let thing = await ((guild.raw) ? guild.raw : guild) .roles.fetch(raw).catch(e=>{});
     
     return (!thing) ? null : thing;
 });
