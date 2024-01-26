@@ -9,12 +9,14 @@ VoiceMemberGroup.newF("apply", async function(channel) {
 
     let stuff = new Soup(channel.members);
     let bases = new Soup(Object);
-    let guild = await guilds.get(channel.guildId);
 
 
     stuff.forEach( (id, base) => {
         bases.push(id, base);
-        this.push(id, pend( () => users.get(id, guild), `<@${id}>` ))
+        this.push(id, pend( async () => {
+            let guild = await guilds.get(ctx.guildId);
+            return await users.get(id, guild), `<@${id}>` 
+        }))
     });
 
 
@@ -23,4 +25,4 @@ VoiceMemberGroup.newF("apply", async function(channel) {
         bots: { get: () => this.filter( (id) => bases[id].user.bot ) },
         named: { value: (name) => this.filter( (id) => bases[id].username == name ) }
     })
-})
+});
