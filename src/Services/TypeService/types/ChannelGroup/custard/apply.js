@@ -20,18 +20,17 @@ ChannelGroup.newF("apply", async function(guild, category=null) {
 
         for ( let i = 0; i < gList.length; i++) {
             let guild = gList.values[i];
-            let list = await guild.channels.fetch().catch(e=>console.log(e))
+            let list = await ((guild.raw) ? guild.raw : guild) .channels.fetch().catch(e=>console.log(e))
             stuff = stuff.merge( Soup.from(list));
         }
     }
     else {
-        let list = await guild.raw.channels.fetch().catch(e=>console.log(e))
+        let list = await ((guild.raw) ? guild.raw : guild) .channels.fetch().catch(e=>console.log(e))
         stuff = Soup.from(list);
     }
 
 
     stuff.forEach( (id, base) => {
-        if (guild && base.guildId != guild.id) return;
         bases.push(id, base);
         this.push(id, pend( () => channels.get(id, guild), `<#${id}>` ))
     });
