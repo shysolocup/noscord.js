@@ -1,4 +1,10 @@
-switch(ctx.type) {
+const ChannelService = require('../index.js');
+
+
+ChannelService.newF("typer", function(type) {
+    let channel;
+
+    switch(type) {
         case 0: channel = new types.TextChannel; break;
         case 1: channel = new types.DirectMessage; break;
         case 2: channel = new types.VoiceChannel; break;
@@ -12,4 +18,7 @@ switch(ctx.type) {
         // case 14: channel = new types.HubChannel; break;
         // case 15: channel = new types.ForumChannel; break;
         // case 16: channel = new types.MediaChannel; break;
-    }
+    };
+
+    return channel
+});
