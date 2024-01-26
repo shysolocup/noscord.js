@@ -1,7 +1,7 @@
 const VoiceChannel = require('../index.js');
 
 
-VoiceChannel.newF("join", function() {
+VoiceChannel.newF("leave", function() {
     const client = this.parent.parent;
     client.import("voice");
     
