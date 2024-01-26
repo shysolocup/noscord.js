@@ -3,5 +3,5 @@ const voice = require('@discordjs/voice');
 
 
 VoiceService.newF("get", function(channel) {
-    return voice.getVoiceConnection(channel.guild.id);
+    return voice.getVoiceConnection(channel.guildId);
 })
