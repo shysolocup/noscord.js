@@ -23,6 +23,10 @@ VoiceMemberGroup.newF("apply", async function(channel) {
     Object.defineProperties(this, {
         users: { get: () => this.filter( (id) => !bases[id].user.bot ) },
         bots: { get: () => this.filter( (id) => bases[id].user.bot ) },
-        named: { value: (name) => this.filter( (id) => bases[id].username == name ) }
+        
+        named: { value: (name) => this.filter( (id) => bases[id].user.username == name ) },
+        with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).has(...args) ) },
+        startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).startsWith(...args) ) },
+        endingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).endsWith(...args) ) },
     })
 });
