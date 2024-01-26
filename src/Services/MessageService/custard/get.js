@@ -5,7 +5,7 @@ MessageService.newF("get", async function(id, channel) {
     const types = new this.parent.TypeService;
     if (!id || !channel) return null;
     
-    let thing = await channel.messages.fetch(id).catch(e=>{});
+    let thing = await ((channel.raw) ? channel.raw : channel) .messages.fetch(id).catch(e=>{});
     
     if (!thing) return;
 
