@@ -8,7 +8,7 @@ StageChannel.newF("apply", async function(ctx) {
 
     // information
     let base = new types.BaseChannel;
-	base.apply(ctx);
+	await base.apply(ctx);
 
 	Object.assign(this, base);
 
