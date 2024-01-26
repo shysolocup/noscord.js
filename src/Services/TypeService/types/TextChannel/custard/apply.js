@@ -14,7 +14,6 @@ TextChannel.newF("apply", async function(ctx) {
 
 
     // stuff
-    this.guild = pend( async () => await guilds.get(ctx.guildId), `<Guild:${ctx.guildId}>` );
     this.flags = ctx.flags;
     this.partial = ctx.partial;
     this.permissionOverwrites = ctx.permissionOverwrites;
