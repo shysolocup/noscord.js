@@ -44,8 +44,12 @@ MemberGroup.newF("apply", async function(guild, category=null) {
         bots: { get: () => this.filter( id => bases[id].user.bot ) },
         
         named: { value: (name) => this.filter( id => bases[id].user.username == name ) },
+        nicknamed: { value: (name) => this.filter( id => bases[id].displayName == name ) },
         with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).has(...args) ) },
+        nicksWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].displayName)).has(...args) ) },
         startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).startsWith(...args) ) },
+        nicksStartingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].displayName)).startsWith(...args) ) },
         endingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).endsWith(...args) ) },
+        nicksEndingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].displayName)).endsWith(...args) ) },
     })
 })
