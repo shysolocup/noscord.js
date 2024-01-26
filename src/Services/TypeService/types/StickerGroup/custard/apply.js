@@ -37,6 +37,8 @@ StickerGroup.newF("apply", async function(guild) {
     });
 
     Object.defineProperties(this, {
+        names: { get: () => this.map( id => bases[id].name ) },
+        
         static: { get: () => this.filter( (id) => !bases[id].animated ) },
         animated: { get: () => this.filter( (id) => bases[id].animated ) },
         
