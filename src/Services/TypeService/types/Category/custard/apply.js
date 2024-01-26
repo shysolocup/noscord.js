@@ -12,28 +12,27 @@ Category.newF("apply", async function(ctx) {
 	base.apply(ctx);
 
 	Object.assign(this, base);
-
 	
 	this.children = ctx.children;
 
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
 	
 	// groups
 	this.groups = pend( async () => {
         let stuff = new Soup({
-            members: new types.MemberGroup(),
-            channels: new types.ChannelGroup(),
+            members: new types.MemberGroup,
+            channels: new types.ChannelGroup,
         });
 
         for (let i = 0; i < stuff.length; i++) {
             await stuff.values[i].apply(this.guild, ctx);
         }
 
+        stuff.channels = stuff.channels.inCategory(ctx.id);
+
         return stuff
     }, "ChildGroups" );
-
-	
-    Object.defineProperty(this, "raw", {
-		get() { return ctx }	
-	});
 
 });
