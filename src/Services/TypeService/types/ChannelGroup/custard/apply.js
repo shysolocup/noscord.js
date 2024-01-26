@@ -3,19 +3,14 @@ const ChannelGroup = require('../index.js');
 const pend = require('pender');
 
 
-ChannelGroup.newF("apply", async function(guild, category=null) {
+ChannelGroup.newF("apply", async function(guild) {
     const client = this.parent.parent;
     client.import("guilds", "channels");
 
     let stuff = new Soup(Object);
     let bases = new Soup(Object);
 
-
-    if (category) {
-        let list = await ((category.raw) ? category.raw : category) .children.fetch().catch(e=>console.log(e))
-        stuff = Soup.from(list);
-    }
-    else if (!guild) {
+    if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
 
         for ( let i = 0; i < gList.length; i++) {
@@ -28,7 +23,6 @@ ChannelGroup.newF("apply", async function(guild, category=null) {
         let list = await ((guild.raw) ? guild.raw : guild) .channels.fetch().catch(e=>console.log(e))
         stuff = Soup.from(list);
     }
-
 
     stuff.forEach( (id, base) => {
         bases.push(id, base);
@@ -47,6 +41,11 @@ ChannelGroup.newF("apply", async function(guild, category=null) {
         forums: { get: () => this.filter( (id) => bases[id].type == 15 ) },
         media: { get: () => this.filter( (id) => bases[id].type == 16 ) },
 
-        named: { value: (name) => this.filter( (id) => bases[id].name == name ) }
+        named: { value: (name) => this.filter( (id) => bases[id].name == name ) },
+        inCategory: { value: (id) => this.filter( (id) => {
+            let base = bases[id];
+            if (!base.parent) return false;
+            return base.parent.id == id
+        }) }
     })
 })
