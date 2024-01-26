@@ -27,7 +27,7 @@ Category.newF("apply", async function(ctx) {
         });
 
         for (let i = 0; i < stuff.length; i++) {
-            await stuff.values[i].apply(this.guild, ctx);
+            await stuff.values[i].apply(ctx.guild, ctx);
         }
 
         stuff.channels = stuff.channels.inCategory(ctx.id);
