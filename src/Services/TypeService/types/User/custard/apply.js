@@ -34,7 +34,8 @@ User.newF("apply", async function(ctx) {
     
     this.accent = {
         base10: ctx.acccentColor,
-        hex: ctx.hexAccentColor
+        hex: ctx.hexAccentColor,
+	hexInt: Number(ctx.hexAccentColor.replace("#", "0x"))
     };
     
 
