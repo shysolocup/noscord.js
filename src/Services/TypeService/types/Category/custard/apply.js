@@ -8,14 +8,13 @@ Category.newF("apply", async function(ctx) {
 
 	
     // information
-    let base = new types.TextChannel;
+    let base = new types.BaseChannel;
 	base.apply(ctx);
 
 	Object.assign(this, base);
 
 	
 	this.children = ctx.children;
-	this.guild = await guilds.get(ctx.guildId);
 
 	
 	// groups
