@@ -16,7 +16,7 @@ VoiceMemberGroup.newF("apply", async function(channel) {
         this.push(id, pend( async () => {
             let guild = await guilds.get(ctx.guildId);
             return await users.get(id, guild), `<@${id}>` 
-        }))
+        }, `<@${id}>`))
     });
 
 
