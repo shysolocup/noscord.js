@@ -42,7 +42,8 @@ GuildMember.newF("apply", async function(ctx) {
     // colors
     this.color = {
         base10: ctx.displayColor,
-        hex: ctx.displayHexColor
+        hex: ctx.displayHexColor,
+		hexInt: Number(ctx.displayHexColor.replace("#", "0x"))
     };
 
     
