@@ -17,7 +17,7 @@ ChannelService.newF("get", async function(id, guild=null) {
     
     let thing = await ( 
 		(guild) ? 
-			guild.raw.channels : // if guild is given it gets from the guild
+			((guild.raw) ? guild.raw : guild) .channels : // if guild is given it gets from the guild
 		
 			this.parent._base.channels // if a guild is not given it gets from the client's channels
 		
