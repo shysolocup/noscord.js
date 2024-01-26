@@ -12,11 +12,18 @@ BaseChannel.newF("apply", async function(ctx) {
     this.nsfw = ctx.nsfw;
     this.type = ctx.type;
     this.viewable = ctx.viewable;
-    this.category;
-    this.categoryId = ctx.parentId;
-	this.guild;
-    this.guildId = ctx.guildId;
-    this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
+	if (ctx.parentId) {
+		this.category = await channels.get(ctx.parentId, this.guild);
+		this.categoryId = ctx.parentId;
+	}
+	if (ctx.guildId) {
+		this.guild;
+    	this.guildId = ctx.guildId;
+		this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
+	}
+	else {
+		this.url = `https://discord.com/channels/@me/${ctx.id}`;
+	}
     this.mention = `<#${ctx.id}>`;
 
     // times
