@@ -12,7 +12,7 @@ ChannelGroup.newF("apply", async function(guild, category=null) {
 
 
     if (category) {
-        let list = await ((category.raw) ? category.raw : category) .channels.fetch().catch(e=>console.log(e))
+        let list = await ((category.raw) ? category.raw : category) .children.fetch().catch(e=>console.log(e))
         stuff = Soup.from(list);
     }
     else if (!guild) {
