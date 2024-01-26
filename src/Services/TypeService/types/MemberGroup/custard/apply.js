@@ -37,11 +37,14 @@ MemberGroup.newF("apply", async function(guild, category=null) {
 
 
     Object.defineProperties(this, {
+        usernames: { get: () => this.map( id => bases[id].user.username ) },
+        nicknames: { get: () => this.map( id => { let name = bases[id].displayName; return (name) ? name : bases[id].user.username } ) },
         users: { get: () => this.filter( id => !bases[id].user.bot ) },
         bots: { get: () => this.filter( id => bases[id].user.bot ) },
-        named: { value: (name) => this.filter( id => bases[id].username == name ) },
-        with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].username )).includes(...args) ) },
-        startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].username )).startsWith(...args) ) },
-        endingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].username )).endsWith(...args) ) }
+        
+        named: { value: (name) => this.filter( id => bases[id].user.username == name ) },
+        with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).has(...args) ) },
+        startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).startsWith(...args) ) },
+        endingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].user.username)).endsWith(...args) ) },
     })
 })
