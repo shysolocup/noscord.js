@@ -2,5 +2,5 @@ const UserService = require('../index.js');
 
 
 UserService.newF("avatarUrl", function(user, dynamic) {
-    return user.displayAvatarURL(dynamic);
+    return ((user.raw) ? user.raw : user) .displayAvatarURL(dynamic);
 });
