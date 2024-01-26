@@ -2,6 +2,8 @@ const { Soup } = require('stews');
 const MemberGroup = require('../index.js');
 const pend = require('pender');
 
+const { Noodle } = require('stews');
+
 
 MemberGroup.newF("apply", async function(guild, category=null) {
     const client = this.parent.parent;
@@ -35,8 +37,11 @@ MemberGroup.newF("apply", async function(guild, category=null) {
 
 
     Object.defineProperties(this, {
-        users: { get: () => this.filter( (id) => !bases[id].user.bot ) },
-        bots: { get: () => this.filter( (id) => bases[id].user.bot ) },
-        named: { value: (name) => this.filter( (id) => bases[id].username == name ) }
+        users: { get: () => this.filter( id => !bases[id].user.bot ) },
+        bots: { get: () => this.filter( id => bases[id].user.bot ) },
+        named: { value: (name) => this.filter( id => bases[id].username == name ) },
+        with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].username )).includes(...args) ) },
+        startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].username )).startsWith(...args) ) },
+        endingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].username )).endsWith(...args) ) }
     })
 })
