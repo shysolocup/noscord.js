@@ -15,11 +15,11 @@ noscord.JS is a customized Discord API wrapper for Node.JS that is similar to ol
 It's built on the latest versions of Discord.JS so it has all the new features AND the simpler setup.<br><br>
 
 
-- A TON of bug fixes
-- Built in commands
+- Built in command support
+- Numerous Bug Fixes
 - Fully open source
 - Modding support
-- Updated events
+- Custom events
 - Better guides
 
 
