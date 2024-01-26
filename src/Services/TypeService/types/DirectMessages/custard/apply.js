@@ -1,8 +1,8 @@
-const DirectMessage = require('../index.js');
+const DirectMessages = require('../index.js');
 const pend = require('pender');
 
 
-DirectMessage.newF("apply", async function(ctx) {
+DirectMessages.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     client.import("messages", "util", "types");
 
