@@ -21,6 +21,9 @@ VoiceMemberGroup.newF("apply", async function(channel) {
 
 
     Object.defineProperties(this, {
+        usernames: { get: () => this.map( id => bases[id].user.username ) },
+        nicknames: { get: () => this.map( id => { let name = bases[id].displayName; return (name) ? name : bases[id].user.username } ) },
+        
         users: { get: () => this.filter( (id) => !bases[id].user.bot ) },
         bots: { get: () => this.filter( (id) => bases[id].user.bot ) },
         
