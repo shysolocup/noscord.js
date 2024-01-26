@@ -12,17 +12,19 @@ BaseChannel.newF("apply", async function(ctx) {
     this.nsfw = ctx.nsfw;
     this.type = ctx.type;
     this.viewable = ctx.viewable;
-    this.category = ctx.parent;
+    this.category;
     this.categoryId = ctx.parentId;
+	this.guild;
     this.guildId = ctx.guildId;
     this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
     this.mention = `<#${ctx.id}>`;
 	// this.topic = ctx.topic;
 
     // stuff
-    /*
-    this.guild = pend( async () => await guilds.get(ctx.guildId), `<Guild:${ctx.guildId}>` );
-    this.flags = ctx.flags;
+    if (ctx.guildId) this.guild = await guilds.get(ctx.guildId);
+	if (ctx.parentId) this.category = await channels.get(ctx.parentId, this.guild);
+    
+	/*this.flags = ctx.flags;
     this.partial = ctx.partial;
     this.permissionOverwrites = ctx.permissionOverwrites;
     this.permissionsLocked = ctx.permissionsLocked;
