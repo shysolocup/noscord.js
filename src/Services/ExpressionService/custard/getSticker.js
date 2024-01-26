@@ -7,7 +7,7 @@ ExpressionService.newF("getSticker", async function(id, guild) {
 	
     if (!id) return null; 
     
-    let thing = await guild.raw.stickers
+    let thing = await ((guild.raw) ? guild.raw : guild) .stickers
         .fetch(id).catch(e=>{});
 
 	let typed = new types.Sticker
