@@ -75,8 +75,7 @@ GuildMember.newF("apply", async function(ctx) {
 
     // other stuff idk
     this.pending = ctx.pending;
-    this.voice = new types.VoiceState;
-	await this.voice.apply(ctx.voice);
+    this.voice = ctx.voice;
 
     
     Object.defineProperty(this, "raw", {
