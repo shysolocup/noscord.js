@@ -11,7 +11,7 @@ PermissionService.newF("list", async function(obj) {
     if (await users.get(obj.id, obj.guild)) {
         let user = await users.get(obj.id, obj.guild);
 
-        let stuff = Soup.from(user.permissions.toArray());
+        let stuff = Soup.from( ((user.raw) ? user.raw : user) .permissions.toArray());
 
         stuff = stuff.map( (name) => {
             return Noodle.from(name).toLowerCase(0).toString();
@@ -23,7 +23,7 @@ PermissionService.newF("list", async function(obj) {
     else if (await roles.get(obj.id, obj.guild)) {
         let role = await roles.get(obj.id, obj.guild);
 
-        let stuff = Soup.from(role.permissions.toArray());
+        let stuff = Soup.from( ((role.raw) ? role.raw : role) .permissions.toArray());
 
         stuff = stuff.map( (name) => {
             return Noodle.from(name).toLowerCase(0).toString();
@@ -35,7 +35,7 @@ PermissionService.newF("list", async function(obj) {
     else if (await channels.get(obj.id, obj.guild)) {
         let channel = await channels.get(obj.id, obj.guild);
 
-        let overwrites = Soup.from(channel.permissionOverwrites.cache);
+        let overwrites = Soup.from( ((channel.raw) ? channel.raw : channel).permissionOverwrites.cache);
         let perms = Soup.from(await this.parent.DefPerms);
 
         let returns = new Soup(Object);
