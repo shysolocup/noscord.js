@@ -20,7 +20,6 @@ It's built on the latest versions of Discord.JS so it has all the new features A
 - Fully open source
 - Modding support
 - Custom events
-- Better guides
 
 
 <br>
