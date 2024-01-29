@@ -21,7 +21,7 @@ MessageGroup.newF("apply", async function(channel) {
 
 
     Object.defineProperties(this, {
-        pins: { get: () => pins ) },
+        pins: { get: () => pins },
         
         equals: { value: (content) => this.filter( id => bases[id].content == content ) },
         with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].content)).has(...args) ) },
