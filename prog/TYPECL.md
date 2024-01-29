@@ -30,8 +30,6 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | ❔ | Name | State |
 | - | - | - |
-| ⚪ | Role | NOT STARTED |
-| 🟣 | MessageGroup | UNTESTED |
 | 🟠 | Category | UNFINISHED |
 | 🟠 | VoiceState | UNFINISHED |
 | 🟠 | AnnouncementChannel | UNFINISHED |
@@ -41,6 +39,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟠 | ThreadChannel | UNFINISHED |
 | 🟠 | StageChannel | UNFINISHED |
 | 🟠 | VoiceChannel | UNFINISHED |
+| 🔵 | Role | WIP |
 | 🔵 | Guild | WIP |
 | 🔵 | GuildMember | WIP |
 | 🔵 | Message | WIP |
@@ -55,7 +54,11 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | ChannelGroup | FUNCTIONING |
 | 🟢 | MemberGroup | FUNCTIONING |
 | 🟢 | VoiceMemberGroup | FUNCTIONING |
-| 🟢 | ChannelGroup | FUNCTIONING |
+| 🟢 | MessageGroup | FUNCTIONING |
+| 🟢 | RoleGroup | FUNCTIONING |
+| 🟢 | GuildGroup | FUNCTIONING |
+| 🟢 | EmojiGroup | FUNCTIONING |
+| 🟢 | StickerGroup | FUNCTIONING |
 | 🟢 | PrefixCommandRun | FUNCTIONING |
 | 🟢 | SlashCommandRun | FUNCTIONING |
 | 🟢 | Attachment | FUNCTIONING |
