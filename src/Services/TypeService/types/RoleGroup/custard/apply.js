@@ -26,7 +26,6 @@ RoleGroup.newF("apply", async function(guild) {
 
     stuff.forEach( (id, base) => {
         bases.push(id, base);
-        console.log(id);
         this.push(id, pend( () => roles.get(id, guild), `<@&${id}>` ))
     });
 
