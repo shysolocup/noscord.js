@@ -3,7 +3,7 @@
 <table>
 
 <tr>
-<td> <b>Client</b> </td><td> <b>Types</b> </td>
+<td> <b>Client</b> </td><td> <b>Types</b> </td><td> <b>Events</b> </td>
 </tr>
 
 <tr><td>
@@ -14,6 +14,10 @@
 </td><td>
 
 [List](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types) <br>
+  
+</td><td>
+
+[List](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/glue/events) <br>
   
 </td></tr>
 
