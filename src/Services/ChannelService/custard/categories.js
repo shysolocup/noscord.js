@@ -9,5 +9,5 @@ ChannelService.newF("categories", async function(guild=null) {
    	let group = new types.ChannelGroup;
 	await group.apply(guild);
 
-    return group;
+    return group.categories;
 });
