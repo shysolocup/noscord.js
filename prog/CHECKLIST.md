@@ -39,21 +39,23 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
-| 🔵 | <h2>Client</h2> | Issues |
+| 🟢 | <h2>Client</h2> | Issues |
 | - | - | - |
-| 🔵 | class | WIP |
-| 🟢 | command() | None |
+| 🟢 | class | WIP |
+| 🟢 | slashCommand() | None |
+| 🟢 | prefixCommand() | None |
 | 🟢 | import() | None |
 | 🟢 | login() | None |
 | 🟢 | on() | None |
-| 🟢 | onCommand() | None |
+| 🟢 | onPrefix() | None |
+| 🟢 | onSlash() | None |
 | 🟢 | onPress() | None |
 | 🟢 | onSubmit() | None |
 | 🟢 | spread() | None |
-| 🟣 | logout() | Untested |
-| 🟣 | restart() | Untested |
-| 🟣 | max() | Untested |
-| 🟣 | off() | Untested |
+| 🟢 | logout() | Untested |
+| 🟢 | restart() | Untested |
+| 🟢 | setMax() | Untested |
+| 🟢 | off() | Untested |
 <br>
 
 | 🟢 | <h2>Addons</h2> | Issues |
@@ -70,7 +72,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟠 | categories() | Needs to be typed |
 | 🟠 | categoryCount() | Needs to be typed |
 | 🟠 | count() | Needs to be typed |
-| 🔵 | get() | Needs to be typed |
+| 🟢 | get() | None |
 | 🟣 | has() | Untested |
 | 🟠 | list() | Needs to be typed |
 | 🟠 | text() | Needs to be typed |
