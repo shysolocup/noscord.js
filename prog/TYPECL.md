@@ -49,8 +49,8 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔵 | VictimMember | WIP |
 | 🔵 | VictimGuild | WIP |
 | 🔵 | BaseChannel | WIP |
-| 🔵 | Sticker | UNFINISHED |
-| 🔵 | Emoji | UNFINISHED |
+| 🔵 | Sticker | WIP |
+| 🔵 | Emoji | WIP |
 | 🟢 | ChannelGroup | FUNCTIONING |
 | 🟢 | MemberGroup | FUNCTIONING |
 | 🟢 | VoiceMemberGroup | FUNCTIONING |
