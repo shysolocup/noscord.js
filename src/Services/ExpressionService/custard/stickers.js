@@ -6,13 +6,8 @@ ExpressionService.newF("stickers", async function(guild) {
     const client = this.parent;
     client.import("types");
     
-    let stuff = Soup.from(await ((guild.raw) ? guild.raw : guild) .stickers.fetch())
-    for (let [id, raw] of stuff) {
-        let thing = new types.Sticker;
-        await thing.apply(raw);
+   	let group = new types.StickerGroup;
+	await group.apply(guild);
 
-        stuff.set(id, thing);
-    }
-
-    return stuff;
+    return group;
 });
