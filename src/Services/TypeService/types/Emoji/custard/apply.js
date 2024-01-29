@@ -13,6 +13,19 @@ Emoji.newF("apply", async function(base) {
     this.attachment = await att.create(this.url);
     this.identifier = base.identifier;
 
+	if (base.author) {
+		this.author = await users.get(base.author.id, guild);
+	}
+	if (base.guild) {
+		this.guild = await guilds.get(base.guild.id);
+		this.guildId = base.guild.id;
+	}
+
+	this.available = base.available;
+    this.deletable = base.deletable;
+    this.managed = base.managed;
+    this.requiresColons = base.requiresColons
+
     // timestamps
     this.createdAt = base.createdAt;
     this.timestamps = {
