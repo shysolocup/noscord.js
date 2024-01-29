@@ -7,7 +7,7 @@ ChannelService.newF("list", async function() {
     client.import("types");
     
    	let group = new types.GuildGroup;
-	await group.apply(guild);
+	await group.apply();
 
     return group;
 });
