@@ -30,20 +30,30 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | ❔ | Name | State |
 | - | - | - |
-| ⚪ | Category | NOT STARTED |
 | ⚪ | Role | NOT STARTED |
-| ⚪ | ThreadChannel | NOT STARTED |
-| ⚪ | StageChannel | NOT STARTED |
-| ⚪ | VoiceChannel | NOT STARTED |
-| ⚪ | Sticker | NOT STARTED |
-| 🟣 | Emoji | UNTESTED |
-| 🟣 | GuildEmoji | UNTESTED |
-| 🟠 | GuildChannelAction | UNFINISHED |
-| 🟠 | GuildMemberAction | UNFINISHED |
-| 🟠 | Guild | UNFINISHED |
-| 🔵 | CommandRun | WIP |
+| 🟣 | MessageGroup | UNTESTED |
+| 🟠 | Category | UNFINISHED |
+| 🟠 | AnnouncementChannel | UNFINISHED |
+| 🟠 | AnnouncementThread | UNFINISHED |
+| 🟠 | DirectMessages | UNFINISHED |
+| 🟠 | GroupChat | UNFINISHED |
+| 🟠 | ThreadChannel | UNFINISHED |
+| 🟠 | StageChannel | UNFINISHED |
+| 🟠 | VoiceChannel | UNFINISHED |
+| 🔵 | Guild | WIP |
 | 🔵 | GuildMember | WIP |
 | 🔵 | Message | WIP |
 | 🔵 | TextChannel | WIP |
 | 🔵 | User | WIP |
-| 🟢 | Attachment | None |
+| 🔵 | VictimChannel | WIP |
+| 🔵 | VictimMember | WIP |
+| 🔵 | VictimGuild | WIP |
+| 🔵 | BaseChannel | WIP |
+| 🔵 | Sticker | UNFINISHED |
+| 🔵 | Emoji | UNFINISHED |
+| 🟢 | ChannelGroup | FUNCTIONING |
+| 🟢 | MemberGroup | FUNCTIONING |
+| 🟢 | ChannelGroup | FUNCTIONING |
+| 🟢 | PrefixCommandRun | FUNCTIONING |
+| 🟢 | SlashCommandRun | FUNCTIONING |
+| 🟢 | Attachment | FUNCTIONING |
