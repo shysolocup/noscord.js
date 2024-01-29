@@ -1,6 +1,13 @@
 const MessageService = require('../index.js');
+const { Soup } = require('stews');
 
 
-MessageService.newF("list", async function(channel, limit=100) {
-    return Soup.from(await ((channel.raw) ? channel.raw : channel) .messages.fetch({ limit: limit })).pour();
+MessageService.newF("list", async function(channel) {
+    const client = this.parent;
+    client.import("types");
+    
+   	let group = new types.MessageGroup;
+	await group.apply(channel);
+
+    return group;
 });
