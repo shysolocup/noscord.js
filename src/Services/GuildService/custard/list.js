@@ -1,13 +1,13 @@
-const GuildService = require('../index.js');
+const ChannelService = require('../index.js');
 const { Soup } = require('stews');
 
 
-GuildService.newF("list", async function() {
-    let guilds = Soup.from(await this.parent._base.guilds.fetch().catch(e=>{}));
-	
-	for (let i = 0; i < guilds.length; i++) {
-		guilds[i] = await this.get(guilds.keys[i]);
-	};
+ChannelService.newF("list", async function() {
+    const client = this.parent;
+    client.import("types");
+    
+   	let group = new types.GuildGroup;
+	await group.apply(guild);
 
-	return guilds.pour();
+    return group;
 });
