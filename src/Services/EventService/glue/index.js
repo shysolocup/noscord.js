@@ -9,7 +9,7 @@ EventService.newC("GlueHandler", class {
         this.types = this.client.types;
         this._base = this.client._base;
         
-        let ev_dir = require('./events/_funkydir');
+        let ev_dir = `${__dirname}/events`;
         let ev = fs.readdirSync(ev_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
         
         ev.forEach( file => {
@@ -22,7 +22,7 @@ EventService.newC("GlueHandler", class {
 module.exports = GlueHandler;
 
 
-const cust_dir = require('./custard/_funkydir');
+const cust_dir = `${__dirname}/custard`;
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
         
 cust.forEach( (file) => {
