@@ -3,5 +3,16 @@ const { Soup } = require('stews');
 
 
 ExpressionService.newF("emojis", async function(guild) {
-    return Soup.from(await ((guild.raw) ? guild.raw : guild) .emojis.fetch()).pour();
+    const client = this.parent;
+    client.import("types");
+    
+    let stuff = Soup.from(await ((guild.raw) ? guild.raw : guild) .emojis.fetch())
+    for ([id, raw] in stuff) {
+        let thing = new types.Emoji;
+        await thing.apply(raw);
+
+        stuff.set(id, thing);
+    }
+
+    return stuff;
 });
