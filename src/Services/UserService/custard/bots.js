@@ -3,18 +3,11 @@ const { Soup } = require('stews');
 
 
 UserService.newF("bots", async function(guild=null) {
-    let users = new Soup( await ( (guild) ? ((guild.raw) ? guild.raw : guild) .members : this.parent._base.users)
-        .fetch()
-        .catch(e=>{})
-    );
+    const client = this.parent;
+    client.import("types");
+    
+   	let group = new types.MemberGroup;
+	await group.apply(guild);
 
-	
-	for (let i = 0; i < users.length; i++) {
-		users[i] = await this.get(users.keys[i]);
-	}
-	
-
-	return users
-		.filter( (id, user) => { return user.bot })
-		.pour();
+    return group.bots;
 });
