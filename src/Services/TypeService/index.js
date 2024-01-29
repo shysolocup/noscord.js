@@ -5,7 +5,7 @@ Client.newC("TypeService");
 
 module.exports = TypeService;
 
-let type_dir = require('./types/_funkydir');
+let type_dir = `${__dirname}/types`
 let types = fs.readdirSync(type_dir).filter( folder => ( folder != "_funkydir" ) );
 
 types.forEach( (folder) => {
