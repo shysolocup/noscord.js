@@ -8,7 +8,7 @@
 
 <tr><td>
   
-[Main](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js) <br>
+[Main](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js) <br><br>
 [Functions](https://github.com/paishee/noscord.js/tree/main/src/Client/custard)
 
 </td><td>
