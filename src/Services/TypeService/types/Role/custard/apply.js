@@ -8,9 +8,10 @@ Role.newF("apply", async function(ctx) {
     // ids
     this.id = ctx.id;
     this.mention = `<@&${ctx.id}>`;
-	this.icon = att.create(ctx.iconURL(), util.genCode(9));
-	this.iconUrl = ctx.iconURL();
-	this.iconURL = this.iconUrl;
+	let iconUrl = ctx.iconURL({ extention: "png" });
+	this.icon = att.create(iconUrl, util.genCode(9));
+	this.iconUrl = iconUrl;
+	this.iconURL = iconUrl;
 	this.position = ctx.position;
 	this.rawPosition = ctx.rawPosition;
 	this.tags = ctx.tags;
