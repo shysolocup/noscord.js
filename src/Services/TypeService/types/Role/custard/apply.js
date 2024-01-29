@@ -8,7 +8,7 @@ Role.newF("apply", async function(ctx) {
     // ids
     this.id = ctx.id;
     this.mention = `<@&${ctx.id}>`;
-	let iconUrl = ctx.iconURL({ extention: "png" });
+	let iconUrl = ctx.iconURL().replace(".webp", ".png");
 	this.icon = att.create(iconUrl, util.genCode(9));
 	this.iconUrl = iconUrl;
 	this.iconURL = iconUrl;
