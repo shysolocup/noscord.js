@@ -34,7 +34,9 @@ ChannelGroup.newF("apply", async function(guild) {
         names: { get: () => this.map( id => bases[id].name ) },
         
         text: { get: () => this.filter( (id) => bases[id].type == 0 ) },
+        dms: { get: () => this.filter( (id) => bases[id].type == 1 ) },
         voice: { get: () => this.filter( (id) => bases[id].type == 2 ) },
+        gcs: { get: () => this.filter( (id) => bases[id].type == 3 ) },
         categories: { get: () => this.filter( (id) => bases[id].type == 4 ) },
         threads: { get: () => this.filter( (id) => (bases[id].type == 11 || bases[id].type == 12) ) },
         publicThreads: { get: () => this.filter( (id) => bases[id].type == 11 ) },
