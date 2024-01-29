@@ -13,8 +13,8 @@ EmojiGroup.newF("apply", async function(guild) {
     if (!guild) {
         let gList = Soup.from( await client._base.guilds.fetch() );
 
-        for ( let i = 0; i < gList.length; i++) {
-            let guild = gList.values[i];
+        for ( let [id, guild] of gList ) {
+            guild = await guild.fetch();
             let list = await guild.emojis.fetch().catch(e=>console.log(e))
             stuff = stuff.merge( Soup.from(list));
         }
