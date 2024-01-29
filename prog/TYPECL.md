@@ -33,6 +33,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | ⚪ | Role | NOT STARTED |
 | 🟣 | MessageGroup | UNTESTED |
 | 🟠 | Category | UNFINISHED |
+| 🟠 | VoiceState | UNFINISHED |
 | 🟠 | AnnouncementChannel | UNFINISHED |
 | 🟠 | AnnouncementThread | UNFINISHED |
 | 🟠 | DirectMessages | UNFINISHED |
@@ -53,6 +54,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔵 | Emoji | UNFINISHED |
 | 🟢 | ChannelGroup | FUNCTIONING |
 | 🟢 | MemberGroup | FUNCTIONING |
+| 🟢 | VoiceMemberGroup | FUNCTIONING |
 | 🟢 | ChannelGroup | FUNCTIONING |
 | 🟢 | PrefixCommandRun | FUNCTIONING |
 | 🟢 | SlashCommandRun | FUNCTIONING |
