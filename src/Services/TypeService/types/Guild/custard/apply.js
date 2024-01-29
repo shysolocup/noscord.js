@@ -41,6 +41,26 @@ Guild.newF("apply", async function(ctx) {
     this.bots;
 	*/
 
+	let groups = new Soup({
+		members: get () => new types.MemberGroup,
+		channels: get () => new types.ChannelGroup,
+		emois: get () => new types.EmojiGroup,
+		stickers: get () => new types.StickerGroup,
+		roles: get () => new types.RoleGroup
+	});
+
+	Object.defineProperties( this, {
+		members: get () => {
+			let stuff = new types.MemberGroup;
+
+			( async () => {
+				await stuff.apply(this);
+			})();
+
+			return stuff;
+		}
+	});
+
     this.groups = pend( async () => {
         let stuff = new Soup({
             members: new types.MemberGroup(),
