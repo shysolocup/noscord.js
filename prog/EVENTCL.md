@@ -30,7 +30,6 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | ❔ | Name | Issues |
 | - | - | - |
-
 | 🟣 | automod | Untested |
 | 🟣 | reaction | Untested |
 | 🟣 | memberBan | Untested |
