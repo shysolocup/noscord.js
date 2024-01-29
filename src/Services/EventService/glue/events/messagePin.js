@@ -1,7 +1,7 @@
 module.exports = (handler) => { handler.init(
 
     
-    name = ["messagePin", "pin"],  // names of the event
+    name = ["messagePin", "pin", "messagePinned", "pinned"],  // names of the event
 
     
     func = async function (ctx) { // formatting for types and stuff
