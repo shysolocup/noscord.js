@@ -3,10 +3,11 @@ const { Soup } = require('stews');
 
 
 ChannelService.newF("dms", async function() {
-    return new Soup( await (this.parent._base.channels)
-        .fetch()
-        .catch(e=>{})
-    )
-		.filter( (id, channel) => { return channel.type == 1; })
-		.pour();
+    const client = this.parent;
+    client.import("types");
+    
+   	let group = new types.ChannelGroup;
+	await group.apply(guild);
+
+    return group.dms;
 });
