@@ -13,7 +13,7 @@ TypeService.newC("GuildGroup", class extends Soup {
 module.exports = GuildGroup;
 
 
-let cust_dir = require('./custard/_funkydir');
+let cust_dir = `${__dirname}/custard`;
 let cust = fs.readdirSync(cust_dir).filter( file => ((file.endsWith('.js') || file.endsWith('.ts')) ));
 
 cust.forEach( (file) => {
