@@ -28,10 +28,10 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 <br>
 
-| 🟣🔵 | TypeDev 11/06/23 |
+| 🟢 | TypeDev 11/06/23 |
 | - | - |
-| 🔵 | finish Guild.members |
-| 🟣 | finish Emoji and GuildEmoji types |
+| 🟢 | finish Guild.members |
+| 🟢 | finish Emoji type |
 <br>
 
 | 🟢 | TypeDev 10/25/23 |
@@ -46,10 +46,10 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | test command stuff |
 <br>
 
-| 🔴🟠🔵 | TypeDev 10/19/23 |
+| 🔴🔵 | TypeDev 10/19/23 |
 | - | - |
 | 🔴 | update services to use types |
-| 🟠 | finish GuildChannelAction type |
+| 🟢 | finish VictimChannel type |
 | 🔵 | finish voice play stuff |
 | 🔵 | make symbol stuff |
 | 🟢 | add has functions |
