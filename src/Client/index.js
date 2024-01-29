@@ -20,8 +20,8 @@ import('node-fetch');
 const { Soup, Noodle } = require('stews');
 const { Client, Routes, REST } = require('discord.js');
 
-const serv_dir = require('../Services/_funkydir');
-const cust_dir = require('./custard/_funkydir');
+const serv_dir = `${__dirname.replace("Client", "")}/Services`;
+const cust_dir = `${__dirname}/custard`;
 
 const exp = new Soup(Object);
 
