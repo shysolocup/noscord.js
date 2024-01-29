@@ -41,7 +41,7 @@ in the source for this file there's a comment with the emoji assets used for eas
 
 | 🟢 | <h2>Client</h2> | Issues |
 | - | - | - |
-| 🟢 | class | WIP |
+| 🟢 | class | None |
 | 🟢 | slashCommand() | None |
 | 🟢 | prefixCommand() | None |
 | 🟢 | import() | None |
@@ -52,10 +52,10 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | onPress() | None |
 | 🟢 | onSubmit() | None |
 | 🟢 | spread() | None |
-| 🟢 | logout() | Untested |
-| 🟢 | restart() | Untested |
-| 🟢 | setMax() | Untested |
-| 🟢 | off() | Untested |
+| 🟢 | logout() | None |
+| 🟢 | restart() | None |
+| 🟢 | setMax() | None |
+| 🟢 | off() | None |
 <br>
 
 | 🟢 | <h2>Addons</h2> | Issues |
@@ -65,31 +65,33 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟢 | create() | None |
 <br>
 
-| 🟠 | <h2>Channels</h2> | Issues
+| 🟢 | <h2>Channels</h2> | Issues
 | - | - | - |
 | 🟢 | class | None |
-| 🟠 | all() | Needs to be typed |
-| 🟠 | categories() | Needs to be typed |
-| 🟠 | categoryCount() | Needs to be typed |
-| 🟠 | count() | Needs to be typed |
+| 🟢 | categories() | None |
+| 🟢 | categoryCount() | None |
+| 🟢 | count() | None |
 | 🟢 | get() | None |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
-| 🟠 | text() | Needs to be typed |
-| 🟠 | textCount() | Needs to be typed |
-| 🟠 | threadCount() | Needs to be typed |
-| 🟠 | threads() | Needs to be typed |
+| 🟢 | has() | None |
+| 🟢 | list() | None |
+| 🟢 | text() | None |
+| 🟢 | textCount() | None |
+| 🟢 | threadCount() | None |
+| 🟢 | threads() | None |
 | 🟢 | url() | None |
-| 🟠 | voice() | Needs to be typed |
-| 🟠 | voiceCount() | Needs to be typed |
+| 🟢 | voice() | None |
+| 🟢 | voiceCount() | None |
 <br>
 
 | 🟢 | <h2>Commands</h2> | Issues |
 | - | - | - |
 | 🟢 | class | None |
-| 🟢 | create() | None |
-| 🟢 | list() | None |
+| 🟢 | createPrefix() | None |
+| 🟢 | createSlash() | None |
+| 🟢 | listPrefix() | None |
+| 🟢 | listSlash() | None |
 | 🟢 | optionType() | None |
+| 🟢 | PrefixCommand | None |
 | 🟢 | SlashCommand | None |
 | 🟢 | CooldownHandle | None |
 | 🟢 | CooldownUserHandle | None |
@@ -124,22 +126,22 @@ in the source for this file there's a comment with the emoji assets used for eas
 | | [Event Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/EVENTCL.md) | |
 <br>
 
-| 🟠 | <h2>Expressions</h2> | Issues |
+| 🟢 | <h2>Expressions</h2> | Issues |
 | - | - | - |
 | 🟢 | class | None |
-| 🟠 | emojiCount() | Needs to be typed |
-| 🟠 | emojis() | Needs to be typed |
-| 🟠 | stickerCount() | Needs to be typed |
-| 🟠 | stickers() | Needs to be typed |
+| 🟢 | emojiCount() | None |
+| 🟢 | emojis() | None |
+| 🟢 | stickerCount() | None |
+| 🟢 | stickers() | None |
 <br>
 
-| 🟠 | <h2>Guilds</h2> | Issues
+| 🟢 | <h2>Guilds</h2> | Issues
 | - | - | - |
 | 🟢 | class | None |
-| 🟠 | count() | Needs to be typed |
-| 🔵 | get() | Needs to be typed |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
+| 🟢 | count() | None |
+| 🟢 | get() | None |
+| 🟢 | has() | None |
+| 🟢 | list() | None |
 <br>
 
 | 🟠 | <h2>Logs</h2> | Issues
@@ -156,8 +158,8 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🔵 | edit() | Fix embed attachments |
 | 🟠 | followUp() | Unfinished |
 | 🟢 | get() | None |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
+| 🟢 | has() | None |
+| 🟢 | list() | None |
 | 🟢 | purge() | None |
 | 🔵 | reply() | Fix embed attachments |
 | 🔵 | send() | Fix embed attachments |
@@ -172,11 +174,11 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟣 | list() | Untested |
 <br>
 
-| 🟠 | <h2>Roles</h2> | Issues
+| 🟢 | <h2>Roles</h2> | Issues
 | - | - | - |
 | 🟢 | class | None |
-| 🟠 | get() | Needs to be typed |
-| 🟠 | list() | Needs to be typed |
+| 🟢 | get() | None |
+| 🟢 | list() | None |
 <br>
 
 | 🟢 | <h2>Stores</h2> | Issues
@@ -194,36 +196,36 @@ in the source for this file there's a comment with the emoji assets used for eas
 | | [Type Checklist](https://github.com/paigeroid/noscord.js/blob/main/prog/TYPECL.md) | |
 <br>
 
-| 🟠 | <h2>Users</h2> | Issues
+| 🟢⚪ | <h2>Users</h2> | Issues
 | - | - | - |
 | 🟢 | class | None |
 | 🟢 | avatar() | None |
 | 🟢 | avatarUrl() | None |
 | ⚪ | banner() | Investigating a bug |
 | ⚪ | bannerUrl() | Investigating a bug |
-| 🟠 | botCount() | Needs to be typed |
-| 🟠 | botst() | Needs to be typed |
-| 🟠 | count() | Needs to be typed |
+| 🟢 | botCount() | None |
+| 🟢 | botst() | None |
+| 🟢 | count() | None |
 | ⚪ | decor() | Investigating a bug |
 | ⚪ | decorUrl() | Investigating a bug |
-| 🟠 | get() | Needs to be typed |
-| 🟣 | has() | Untested |
-| 🟠 | list() | Needs to be typed |
-| 🟠 | memberCount() | Needs to be typed |
-| 🟠 | members() | Needs to be typed |
+| 🟢 | get() | None |
+| 🟢 | has() | None |
+| 🟢 | list() | None |
+| 🟢 | memberCount() | None |
+| 🟢 | members() | None |
 <br>
 
-| 🟣 | <h2>Util</h2> | Issues
+| 🟢 | <h2>Util</h2> | Issues
 | - | - | - |
 | 🟢 | class | None |
 | 🟢 | Numer | None |
-| 🟣 | Pad | Untested |
+| 🟢 | Pad | None |
 | 🟢 | Timestamp | None |
 | 🟢 | colors | None |
 | 🟢 | genCode() | None |
 | 🟢 | latency() | None |
 | 🟢 | numer() | None |
-| 🟣 | pad() | Untested |
+| 🟢 | pad() | None |
 | 🟢 | parse() | None |
 | 🟢 | parseMs() | None |
 | 🟢 | random | None |
@@ -234,16 +236,16 @@ in the source for this file there's a comment with the emoji assets used for eas
 | 🟠 | <h2>Voice</h2> | Issues
 | - | - | - |
 | 🟢 | class | None |
-| 🟣 | deafen() | Untested |
-| 🟣 | find() | Untested |
-| 🟣 | get() | Untested |
-| 🟢 | join() | None |
+| 🟠 | deafen() | Untested |
+| 🟢 | find() | None |
+| 🟢 | get() | None |
+| 🟠 | join() | Does nothing currently, looking into it |
 | 🟠 | leave() | Does nothing currently, looking into it |
-| 🟣 | me() | Untested |
-| 🟣 | mute() | Untested |
+| 🟢 | me() | None |
+| 🟠 | mute() | Does nothing currently, looking into it |
 | 🟠 | pause() | Unfinished |
 | 🟠 | play() | Unfinished |
 | 🟠 | stop() | Unfinished |
-| 🟣 | undeafen() | Untested |
-| 🟣 | unmute() | Untested |
+| 🟠 | undeafen() | Does nothing currently, looking into it |
+| 🟠 | unmute() | Does nothing currently, looking into it |
 <br>
