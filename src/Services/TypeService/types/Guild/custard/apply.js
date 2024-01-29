@@ -46,6 +46,8 @@ Guild.newF("apply", async function(ctx) {
             members: new types.MemberGroup(),
             channels: new types.ChannelGroup(),
 			emojis: new types.EmojiGroup(),
+			stickers: new types.StickerGroup,
+			roles: new types.RoleGroup,
         });
 
         for (let i = 0; i < stuff.length; i++) {
