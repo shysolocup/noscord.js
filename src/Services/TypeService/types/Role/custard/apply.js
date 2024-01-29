@@ -9,7 +9,7 @@ Role.newF("apply", async function(ctx) {
     this.id = ctx.id;
     this.mention = `<@&${ctx.id}>`;
 	let iconUrl = ctx.iconURL().replace(".webp", ".png");
-	this.icon = await att.create(iconUrl, util.genCode(9));
+	this.icon = await att.create(iconUrl, { name: util.genCode(9) });
 	this.iconUrl = iconUrl;
 	this.iconURL = iconUrl;
 	this.position = ctx.position;
