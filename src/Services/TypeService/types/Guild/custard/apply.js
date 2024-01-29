@@ -50,7 +50,7 @@ Guild.newF("apply", async function(ctx) {
 	});
 
 	Object.defineProperties( this, {
-		members: get: () => {
+		members: { get: () => {
 			let stuff = new types.MemberGroup;
 
 			( async () => {
@@ -58,7 +58,7 @@ Guild.newF("apply", async function(ctx) {
 			})();
 
 			return stuff;
-		}
+		}}
 	});
 
     this.groups = pend( async () => {
