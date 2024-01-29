@@ -8,16 +8,16 @@
 
 <tr><td>
   
-[Main](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js) <br><br>
-[Functions](https://github.com/paishee/noscord.js/tree/main/src/Client/custard)
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [Functions](https://github.com/paishee/noscord.js/tree/main/src/Client/custard)
 
 </td><td>
 
-[List](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types) <br>
+- [List](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types)
   
 </td><td>
 
-[List](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/glue/events) <br>
+- [List](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/glue/events)
   
 </td></tr>
 
