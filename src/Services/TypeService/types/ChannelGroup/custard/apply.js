@@ -31,6 +31,7 @@ ChannelGroup.newF("apply", async function(guild) {
 
     
     Object.defineProperties(this, {
+        raw: { get: () => this.map( id => bases[id] ) },
         names: { get: () => this.map( id => bases[id].name ) },
         
         text: { get: () => this.filter( (id) => bases[id].type == 0 ) },
