@@ -25,7 +25,9 @@ GuildGroup.newF("apply", async function() {
     }
 
     Object.defineProperties(this, {
+        raw: { get: () => this.map( id => bases[id] ) },
         names: { get: () => this.map( id => bases[id].name ) },
+        
         named: { value: (name) => this.filter( (id) => bases[id].name == name ) },
         with: { value: (...args) => this.filter( id => (Noodle.from(bases[id].name)).has(...args) ) },
         startingWith: { value: (...args) => this.filter( id => (Noodle.from(bases[id].name)).startsWith(...args) ) },
