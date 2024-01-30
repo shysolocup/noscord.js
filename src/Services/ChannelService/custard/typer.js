@@ -10,8 +10,8 @@ ChannelService.newF("typer", function(type) {
         case 2: channel = new types.VoiceChannel; break;
         case 3: channel = new types.GroupChat; break;
         case 4: channel = new types.Category; break;
-        case 5: channel = new types.AnnouncementsChannel; break;
-        case 10: channel = new types.AnnouncementsThread; break;
+        case 5: channel = new types.TextChannel; break;
+        case 10: channel = new types.ThreadChannel; break;
         case 11: channel = new types.ThreadChannel; break;
         case 12: channel = new types.ThreadChannel; break;
         case 13: channel = new types.StageChannel; break;
