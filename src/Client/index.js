@@ -57,6 +57,7 @@ class NosClient {
 		});
 
 
+	    /* function forking */
 		let pd = Soup.from( Object.getOwnPropertyDescriptors( _base.__proto__ ));
 
 		for ( let [ prop, data ] of pd ) {
