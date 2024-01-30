@@ -40,9 +40,9 @@ BaseChannel.newF("apply", async function(ctx) {
     if (ctx.guildId) this.guild = await guilds.get(ctx.guildId);
 	if (ctx.parentId) this.category = await channels.get(ctx.parentId, this.guild);
     
-	/*this.flags = ctx.flags;
+	this.flags = ctx.flags;
     this.partial = ctx.partial;
-    this.permissionOverwrites = ctx.permissionOverwrites;
+    /*this.permissionOverwrites = ctx.permissionOverwrites;
     this.permissionsLocked = ctx.permissionsLocked;
     this.position = ctx.position;
     this.rateLimitPerUser = ctx.rateLimitPerUser;
