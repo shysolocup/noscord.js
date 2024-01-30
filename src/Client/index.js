@@ -61,7 +61,7 @@ class NosClient {
 		let pd = Soup.from( Object.getOwnPropertyDescriptors( _base.__proto__ ));
 
 		for ( let [ prop, data ] of pd ) {
-			if (!this.__proto__[prop] && !this[prop]) {
+			if (this.__proto__[prop] == undefined && this[prop] == undefined) {
 				if (data.value) data.value = data.value.bind(_base);
 				else if (data.get) data.get = data.get.bind(_base);
 	
