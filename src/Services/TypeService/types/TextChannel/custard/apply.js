@@ -49,7 +49,7 @@ TextChannel.newF("apply", async function(ctx) {
     let basepd = Soup.from( Object.getOwnPropertyDescriptors(ctx.__proto__.__proto__.__proto__));
 
     for ( let [ prop, data ] of basepd ) {
-        if (!this.__proto__[prop] && !this[prop]) {
+        if (this.__proto__[prop] == undefined && this[prop] == undefined) {
             if (data.value) data.value = data.value.bind(ctx);
             else if (data.get) data.get = data.get.bind(ctx);
 
@@ -58,7 +58,7 @@ TextChannel.newF("apply", async function(ctx) {
     }
 
     for ( let [ prop, data ] of pd ) {
-        if (!this.__proto__[prop] && !this[prop]) {
+        if (this.__proto__[prop] == undefined && this[prop] == undefined) {
             if (data.value && data.value instanceof Function) data.value = data.value.bind(ctx);
             else if (data.get) data.get = data.get.bind(ctx);
 
