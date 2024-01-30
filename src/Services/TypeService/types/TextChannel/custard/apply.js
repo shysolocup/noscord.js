@@ -42,7 +42,7 @@ TextChannel.newF("apply", async function(ctx) {
 	});
 
 
-	// function porting
+	// function forking
 	let pd = Soup.from(Object.getOwnPropertyDescriptors(ctx.__proto__));
     pd = pd.merge( Soup.from(Object.getOwnPropertyDescriptors(ctx.__proto__.__proto__)) );
 
