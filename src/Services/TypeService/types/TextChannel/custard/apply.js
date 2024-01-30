@@ -1,4 +1,5 @@
 const TextChannel = require('../index.js');
+const { Soup } = require('stews');
 const pend = require('pender');
 
 
@@ -35,8 +36,21 @@ TextChannel.newF("apply", async function(ctx) {
     this.timestamps.lastPin = new Timestamp(ctx.lastPinAt)
 
 
+	// raw
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
 
+
+	// function porting
+	let pd = Soup.from(Object.getOwnPropertyDescriptors(ctx.__proto__));
+
+    for ( [ prop, data ] of pd ) {
+        if (!this.__proto__[prop]) {
+            if (data.value) data.value = data.value.bind(ctx);
+            else if (data.get) data.get = data.get.bind(ctx);
+
+            Object.defineProperty(this, prop, data);
+        }
+    }
 });
