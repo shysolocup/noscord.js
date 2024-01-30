@@ -1,4 +1,4 @@
-const TypeService = require('../../index.js');
+const TypeService = require('../../../index.js');
 const { Soup } = require('stews');
 const fs = require('fs');
 
