@@ -35,7 +35,7 @@ GroupChat.newF("apply", async function(ctx) {
 
     let basepd = Soup.from( Object.getOwnPropertyDescriptors(ctx.__proto__.__proto__.__proto__));
 
-    for ( [ prop, data ] of basepd ) {
+    for ( let [ prop, data ] of basepd ) {
         if (this.__proto__[prop] == undefined && this[prop] == undefined) {
             if (data.value) data.value = data.value.bind(ctx);
             else if (data.get) data.get = data.get.bind(ctx);
@@ -44,7 +44,7 @@ GroupChat.newF("apply", async function(ctx) {
         }
     }
 
-    for ( [ prop, data ] of pd ) {
+    for ( let [ prop, data ] of pd ) {
         if (this.__proto__[prop] == undefined && this[prop] == undefined) {
             if (data.value && data.value instanceof Function) data.value = data.value.bind(ctx);
             else if (data.get) data.get = data.get.bind(ctx);
