@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.6 | 01/25/24 ::
+	:: noscord.js :: TypeDev 0.1.6 | 01/30/24 ::
 	https://github.com/paishee/noscord.js
 
 */
@@ -55,6 +55,18 @@ class NosClient {
 		Object.defineProperty(this, "_base", {
 			get() { return _base; }
 		});
+
+
+		let pd = Soup.from( Object.getOwnPropertyDescriptors( _base.__proto__ ));
+
+		for ( let [ prop, data ] of pd ) {
+			if (!this.__proto__[prop] && !this[prop]) {
+				if (data.value) data.value = data.value.bind(_base);
+				else if (data.get) data.get = data.get.bind(_base);
+	
+				Object.defineProperty(this.__proto__, prop, data);
+			}
+		}
 
 
         /* service compiling */
