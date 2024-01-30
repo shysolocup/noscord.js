@@ -31,6 +31,7 @@ RoleGroup.newF("apply", async function(guild) {
 
     
     Object.defineProperties(this, {
+        raw: { get: () => this.map( id => bases[id] ) },
         names: { get: () => this.map( id => bases[id].name ) },
 
         named: { value: (name) => this.filter( (id) => bases[id].name == name ) },
