@@ -40,17 +40,4 @@ TextChannel.newF("apply", async function(ctx) {
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
-
-
-	// function porting
-	let pd = Soup.from(Object.getOwnPropertyDescriptors(ctx.__proto__));
-
-    for ( [ prop, data ] of pd ) {
-        if (!this.__proto__[prop]) {
-            if (data.value) data.value = data.value.bind(ctx);
-            else if (data.get) data.get = data.get.bind(ctx);
-
-            Object.defineProperty(this, prop, data);
-        }
-    }
 });
