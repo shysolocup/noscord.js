@@ -24,7 +24,7 @@ MessageService.newF("reply", async function(...args) {
     }
 
     let reply = new types.Message();
-    await reply.apply( await msg.reply(settings).catch(e=>{}) );
+    await reply.apply( await ((msg.raw) ? msg.raw : msg) .reply(settings).catch(e=>{}) );
 
     if (settings.deleteAfter) await reply.delete(settings.deleteAfter);
 
