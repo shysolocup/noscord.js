@@ -1,3 +1,4 @@
+const { AuditLogEvent } = require('discord.js');
 const VictimChannel = require('../index.js');
 const { Soup } = require('stews');
 const util = require('util');
@@ -31,6 +32,22 @@ VictimChannel.newF("apply", async function(ctx, actionType=null) {
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
+
+
+	if (this.edited) {
+        const logs = await ctx.guild.fetchAuditLogs({
+            limit: 1,
+            type: AuditLogEvent.ChannelUpdate,
+        });
+
+        const log = logs.entries.first();
+
+        if (log) {
+            this.moderator = await users.get(log.executor.id, this.guild);
+            this.reason = null
+            this.log = log;
+        }
+    }
 
 	
 	let pd = Soup.from(Object.getOwnPropertyDescriptors(channel.__proto__));
