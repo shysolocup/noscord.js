@@ -8,8 +8,8 @@ MessageService.newF("delete", async function(msg, settings={}) {
     if (!settings.after) settings.after = 0;
 
     setTimeout( () => {
-        msg.delete().catch(e=>{});
+        ((msg.raw) ? msg.raw : msg) .delete().catch(e=>{});
     }, util.parseMs(settings.after) );
 
-    return this;
+    return msg;
 });
