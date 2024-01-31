@@ -1,4 +1,5 @@
 const VictimGuild = require('../index.js');
+const util = require('util');
 
 
 VictimGuild.newF("apply", async function(ctx, actionType=null) {
@@ -10,6 +11,7 @@ VictimGuild.newF("apply", async function(ctx, actionType=null) {
 	await guild.apply(ctx);
 
 	Object.assign(this, guild);
+	util.inherits(this.constructor, guild);
 	
 	this.created = (actionType == 0);
     this.deleted = (actionType == 1);
