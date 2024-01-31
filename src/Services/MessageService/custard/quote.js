@@ -11,7 +11,7 @@ MessageService.newF("quote", async function(...args) {
     let user = (msg.author) ? msg.author : (msg.member) ? msg.member : null
 
     function format(text) {
-        return `${msg.content.replace(/(?:\r\n|\r|\n)/g, "\n> ")}\n${ (user) ? `<@${user.id}> ` : "" }`;
+        return `> ${msg.content.replace(/(?:\r\n|\r|\n)/g, "\n> ")}\n${ (user) ? `<@${user.id}> ` : "" }${text}`;
     }
 
     if (args[1] && args[1] instanceof Object) {
