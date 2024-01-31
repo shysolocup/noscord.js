@@ -24,7 +24,7 @@ MessageService.newF("edit", async function(...args) {
     }
 
     let edit = new types.Message();
-    await edit.apply( await msg.edit(settings).catch(e=>{}) );
+    await edit.apply( await ((msg.raw) ? msg.raw : msg) .edit(settings).catch(e=>{}) );
 
     if (settings.deleteAfter) await edit.delete(settings.deleteAfter);
 
