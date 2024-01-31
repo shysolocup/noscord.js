@@ -7,6 +7,12 @@ Message.newF("apply", async function(ctx) {
     client.import("guilds", "messages", "channels", "users", "util", "types");
 
 
+	if (this.raw) return;
+    Object.defineProperty(this, "raw", {
+		get() { return ctx }	
+	});
+	
+
     if (ctx.constructor.name == "InteractionResponse") ctx = await ctx.fetch()
 
     
@@ -92,11 +98,6 @@ Message.newF("apply", async function(ctx) {
     }
     
     this.latency = new Date() - this.timestamps.created.date;
-
-    if (this.raw) return;
-    Object.defineProperty(this, "raw", {
-		get() { return ctx }	
-	});
 
 	this.client = client;
 });
