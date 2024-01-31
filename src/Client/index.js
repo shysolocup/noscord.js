@@ -112,6 +112,8 @@ class NosClient {
 			storage: new this.StorageService
 		});
 
+		exp.Types = this.services.types;
+
 		this.services.app = this.services.util;
 		this.services.att = this.services.attachments;
 		this.services.perms = this.services.permissions;
@@ -245,6 +247,9 @@ class NosClient {
 if (!NosClient._instances) Object.defineProperty(NosClient, "_instances", {
 	value: new Soup(Array)
 });
+
+
+
 
 
 exp.pull("Client", cl.from(NosClient));
