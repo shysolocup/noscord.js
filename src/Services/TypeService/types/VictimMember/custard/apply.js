@@ -82,7 +82,20 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
         }
     }
 
+	
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
+
+	
+	let pd = Soup.from(Object.getOwnPropertyDescriptors(member.__proto__));
+
+	for ( let [ prop, data ] of pd ) {
+        if (this.__proto__[prop] == undefined && this[prop] == undefined) {
+            if (data.value && data.value instanceof Function) data.value = data.value.bind(member);
+            else if (data.get) data.get = data.get.bind(member);
+
+            Object.defineProperty(this.__proto__, prop, data);
+        }
+    }
 });
