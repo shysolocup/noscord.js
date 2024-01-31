@@ -3,13 +3,16 @@ const ChannelService = require('../index.js');
 
 ChannelService.newF("delete", async function(channel, settings={}) {
     const client = this.parent;
-    client.import("util");
+    client.import("util", "types");
 
     if (!settings.after) settings.after = 0;
+    let data = (channel.raw) ? channel.raw : channel;
 
     setTimeout( () => {
-        ((channel.raw) ? channel.raw : channel) .delete().catch(e=>{});
+       data.delete().catch(e=>{});
     }, util.parseMs(settings.after) );
 
-    return channel;
+    let typed = this.typer(data.type);
+    await typed.apply(data);
+    return typed;
 });
