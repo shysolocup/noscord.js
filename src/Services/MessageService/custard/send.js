@@ -24,9 +24,9 @@ MessageService.newF("send", async function(...args) {
     }
 
     let msg = new types.Message();
-    await msg.apply( await channel.send(settings).catch(e=>{}) );
+    await msg.apply( await ((channel.raw) ? channel.raw : channel) .send(settings).catch(e=>{}) );
 
-    if (settings.deleteAfter) await msg.delete(settings.deleteAfter);
+    if (settings.deleteAfter) await ((msg.raw) ? msg.raw : msg) .delete(settings.deleteAfter);
 
     return msg;
 });
