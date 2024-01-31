@@ -11,7 +11,7 @@ VictimChannel.newF("apply", async function(ctx, actionType=null) {
 	await channel.apply(ctx);
 
 	Object.assign(this, channel);
-	util.inherits(this.constructor, channel);
+	util.inherits(this.constructor, channel.constructor);
 	
 	this.created = (actionType == 0);
     this.deleted = (actionType == 1);
