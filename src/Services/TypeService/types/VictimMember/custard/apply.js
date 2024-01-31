@@ -10,6 +10,7 @@ VictimMember.newF("apply", async function(ctx, actionType=null) {
 	await member.apply(ctx);
 
 	Object.assign(this, member);
+	util.inherits(this.constructor, member);
 	
 	this.joined = (actionType == 0);
 	this.edited = (actionType == 1);
