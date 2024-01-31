@@ -39,8 +39,6 @@ BaseChannel.newF("apply", async function(ctx) {
     // stuff
     if (ctx.guildId) this.guild = await guilds.get(ctx.guildId);
 	if (ctx.parentId) this.category = await channels.get(ctx.parentId, this.guild);
-
-	this.client = client;
     
 	this.flags = ctx.flags;
     this.partial = ctx.partial;
