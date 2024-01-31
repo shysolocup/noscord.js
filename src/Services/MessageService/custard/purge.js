@@ -2,5 +2,6 @@ const MessageService = require('../index.js');
 
 
 MessageService.newF("purge", function(amount, channel) {
-    return channel.bulkDelete(amount);
+    let data = (channel.raw) ? channel.raw : channel;
+    return data.bulkDelete(amount);
 });
