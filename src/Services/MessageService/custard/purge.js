@@ -1,7 +1,14 @@
 const MessageService = require('../index.js');
 
 
-MessageService.newF("purge", function(amount, channel) {
+MessageService.newF("purge", async function(amount, channel) {
+    const client = this.parent;
+    client.import("types");
+    
     let data = (channel.raw) ? channel.raw : channel;
-    return data.bulkDelete(amount);
+
+    let messages = new types.SelectMessageGroup;
+    await messages.apply( await data.bulkDelete(amount) );
+
+    return messages;
 });
