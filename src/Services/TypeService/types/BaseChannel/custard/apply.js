@@ -12,6 +12,8 @@ BaseChannel.newF("apply", async function(ctx) {
     this.nsfw = ctx.nsfw;
     this.type = ctx.type;
     this.viewable = ctx.viewable;
+	this.deleteable = ctx.deleteable;
+	this.managable = ctx.managable;
 	if (ctx.parentId) {
 		this.category = await channels.get(ctx.parentId, this.guild);
 		this.categoryId = ctx.parentId;
@@ -30,9 +32,6 @@ BaseChannel.newF("apply", async function(ctx) {
     this.timestamps = {
         created: new Timestamp(ctx.createdAt),
     }
-
-
-    this.deleteable = ctx.deleteable;
 
 	// this.topic = ctx.topic;
 
