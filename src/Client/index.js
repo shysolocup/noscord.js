@@ -255,6 +255,7 @@ if (!NosClient._instances) Object.defineProperty(NosClient, "_instances", {
 exp.pull("Client", cl.from(NosClient));
 exp.pull("Instances", NosClient._instances);
 exp.pull("Presets", intentPresets);
+exp.pull("Types", {});
 
 
 module.exports = exp;
