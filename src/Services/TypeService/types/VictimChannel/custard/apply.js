@@ -1,5 +1,6 @@
 const VictimChannel = require('../index.js');
 const { Soup } = require('stews');
+const util = require('util');
 
 
 VictimChannel.newF("apply", async function(ctx, actionType=null) {
@@ -10,6 +11,7 @@ VictimChannel.newF("apply", async function(ctx, actionType=null) {
 	await channel.apply(ctx);
 
 	Object.assign(this, channel);
+	util.inherits(this.constructor, channel);
 	
 	this.created = (actionType == 0);
     this.deleted = (actionType == 1);
