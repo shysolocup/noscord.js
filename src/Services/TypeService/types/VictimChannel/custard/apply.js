@@ -44,7 +44,37 @@ VictimChannel.newF("apply", async function(ctx, actionType=null) {
 
         if (log) {
             this.moderator = await users.get(log.executor.id, this.guild);
-            this.reason = null
+            this.reason = log.reason;
+            this.log = log;
+        }
+    }
+
+	else if (this.deleted) {
+        const logs = await ctx.guild.fetchAuditLogs({
+            limit: 1,
+            type: AuditLogEvent.ChannelDelete,
+        });
+
+        const log = logs.entries.first();
+
+        if (log) {
+            this.moderator = await users.get(log.executor.id, this.guild);
+            this.reason = log.reason;
+            this.log = log;
+        }
+    }
+
+	else if (this.create) {
+        const logs = await ctx.guild.fetchAuditLogs({
+            limit: 1,
+            type: AuditLogEvent.ChannelCreate,
+        });
+
+        const log = logs.entries.first();
+
+        if (log) {
+            this.moderator = await users.get(log.executor.id, this.guild);
+            this.reason = log.reason;
             this.log = log;
         }
     }
