@@ -24,7 +24,7 @@ MessageService.newF("followUp", async function(...args) {
     }
 
     let flw = new types.Message();
-    let thing =  await cmd.followUp(settings).catch(e=>{})
+    let thing =  await ((cmd.raw) ? cmd.raw : cmd) .followUp(settings).catch(e=>{})
     await flw.apply( await messages.get(thing.id, cmd.channel) );
 
     if (settings.deleteAfter) await flw.delete(settings.deleteAfter);
