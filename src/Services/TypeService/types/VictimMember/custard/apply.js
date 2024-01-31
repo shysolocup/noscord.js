@@ -1,5 +1,6 @@
 const VictimMember = require('../index.js');
 const { AuditLogEvent } = require('discord.js');
+const util = require('util');
 
 
 VictimMember.newF("apply", async function(ctx, actionType=null) {
