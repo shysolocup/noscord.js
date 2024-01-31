@@ -11,7 +11,7 @@ VictimGuild.newF("apply", async function(ctx, actionType=null) {
 	await guild.apply(ctx);
 
 	Object.assign(this, guild);
-	util.inherits(this.constructor, guild);
+	util.inherits(this.constructor, guild.constructor);
 	
 	this.created = (actionType == 0);
     this.deleted = (actionType == 1);
