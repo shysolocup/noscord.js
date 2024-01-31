@@ -156,6 +156,4 @@ Guild.newF("apply", async function(ctx) {
 
     // groups and fixes
     this.owner = await users.get(ctx.ownerId, this);
-
-	this.client = client;
 });
