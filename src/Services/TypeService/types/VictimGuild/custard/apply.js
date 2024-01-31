@@ -29,4 +29,16 @@ VictimGuild.newF("apply", async function(ctx, actionType=null) {
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
+
+
+	let pd = Soup.from(Object.getOwnPropertyDescriptors(guild.__proto__));
+
+	for ( let [ prop, data ] of pd ) {
+        if (this.__proto__[prop] == undefined && this[prop] == undefined) {
+            if (data.value && data.value instanceof Function) data.value = data.value.bind(guild);
+            else if (data.get) data.get = data.get.bind(guild);
+
+            Object.defineProperty(this.__proto__, prop, data);
+        }
+    }
 });
