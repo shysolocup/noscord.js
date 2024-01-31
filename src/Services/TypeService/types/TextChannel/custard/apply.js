@@ -25,9 +25,21 @@ TextChannel.newF("apply", async function(ctx) {
     this.threads // await channels.threads(ctx);
 
 
-    // messages
-    this.messages = new types.MessageGroup;
-	await this.messages.apply(ctx);
+	// groups
+    this.groups = pend( async () => {
+        let stuff = new Soup({
+            messages: new types.MessageGroup(),
+        });
+
+        for (let i = 0; i < stuff.length; i++) {
+            await stuff.values[i].apply(this);
+        }
+
+        return stuff
+    }, "ChildGroups" );
+	
+	this.children = this.groups
+
 	
     if (ctx.lastMessageId) {
 		this.lastMsg = await messages.get(ctx.lastMessageId);
