@@ -11,7 +11,7 @@ module.exports = (handler) => { handler.init(
 
         let msg = new types.VictimMessage;
         
-        await msg.apply(ctx, 0);
+        await msg.apply(ctx, 1);
 
         msg.to = edited;
         
