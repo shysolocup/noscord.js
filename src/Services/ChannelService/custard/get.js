@@ -23,6 +23,7 @@ ChannelService.newF("get", async function(id, guild=null) {
 		
 	).fetch(raw).catch(e=>{});
 
+	if (!thing) return null;
     let typed = this.typer(thing.type);
 
 	if (thing && typed) await typed.apply(thing);
