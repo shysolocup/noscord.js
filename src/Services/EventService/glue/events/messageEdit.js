@@ -13,7 +13,7 @@ module.exports = (handler) => { handler.init(
         
         await msg.apply(ctx, 1);
 
-        msg.to = edited;
+        // msg.to = edited;
         
         return [msg, msg.edits];
     }, 
