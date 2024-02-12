@@ -66,6 +66,4 @@ SlashCommandRun.newF("apply", async function(ctx, cmd={}) {
     this.commandType = ctx.commandType;
     
     this.raw = ctx;
-
-    this.client = client;
 });
