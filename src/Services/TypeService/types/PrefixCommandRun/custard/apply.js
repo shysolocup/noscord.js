@@ -18,6 +18,4 @@ PrefixCommandRun.newF("apply", async function(ctx, cmd={}) {
 	});
 
     await Message.prototype.apply.bind(this)(ctx);
-
-	this.client = client;
 });
