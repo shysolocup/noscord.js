@@ -35,6 +35,4 @@ Emoji.newF("apply", async function(base) {
     Object.defineProperty(this, "raw", {
 		get() { return base }	
 	});
-
-	this.client = client;
 })
