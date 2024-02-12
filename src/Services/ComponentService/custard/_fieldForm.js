@@ -4,6 +4,9 @@ const { Soup } = require('stews');
 
 ComponentService.newF("_fieldForm", (fields) => {
 	fields = Soup.from(fields);
+	fields = fields.map( f => {
+		if (f.row && !f.line) f.line = f.row;
+	});
 
 	
 	// sorts by their line
