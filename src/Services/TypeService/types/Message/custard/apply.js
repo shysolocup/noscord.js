@@ -98,6 +98,4 @@ Message.newF("apply", async function(ctx) {
     }
     
     this.latency = new Date() - this.timestamps.created.date;
-
-	this.client = client;
 });
