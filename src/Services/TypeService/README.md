@@ -84,6 +84,58 @@
 
 </td><td>
 
+ <b>StageChannel</b> 
+
+</td><td>
+
+ <b>Sticker</b> 
+
+</td><td>
+
+ <b>StickerGroup</b> 
+
+</td><td>
+
+ <b>TextChannel</b> 
+
+</td><td>
+
+ <b>ThreadChannel</b> 
+
+</td><td>
+
+ <b>User</b> 
+
+</td><td>
+
+ <b>VictimChannel</b> 
+
+</td><td>
+
+ <b>VictimGuild</b> 
+
+</td><td>
+
+ <b>VictimMember</b> 
+
+</td><td>
+
+ <b>VictimMessage</b> 
+
+</td><td>
+
+ <b>VoiceChannel</b> 
+
+</td><td>
+
+ <b>VoiceMemberGroup</b> 
+
+</td><td>
+
+ <b>VoiceState</b> 
+
+</td><td>
+
 </tr>
 
 <tr><td>
@@ -184,6 +236,71 @@
 
 - [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/SlashCommandRun/index.js)
 - [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/SlashCommandRun/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/StageChannel/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/StageChannel/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/Sticker/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/Sticker/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/StickerGroup/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/StickerGroup/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/TextChannel/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/TextChannel/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/ThreadChannel/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/ThreadChannel/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/User/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/User/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimChannel/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimChannel/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimGuild/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimGuild/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimMember/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimMember/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimMessage/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VictimMessage/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VoiceChannel/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VoiceChannel/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VoiceMemberGroup/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VoiceMemberGroup/custard/apply.js)
+  
+</td><td>
+
+- [Main](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VoiceState/index.js)
+- [Applier](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/VoiceState/custard/apply.js)
   
 </td><td>
 
