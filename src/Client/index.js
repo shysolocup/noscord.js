@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.6 | 01/30/24 ::
+	:: noscord.js :: TypeDev 0.1.6 | 02/12/24 ::
 	https://github.com/paishee/noscord.js
 
 */
@@ -121,6 +121,7 @@ class NosClient {
 		this.services.members = this.services.users;
 		this.services.exp = this.services.expressions;
 		this.services.msg = this.services.messages;
+		this.services.stores = this.services.storage
 		
 		this.services.forEach( (name, service) => {
 			if (!this[name]) this[name] = service;
