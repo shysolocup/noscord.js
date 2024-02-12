@@ -39,6 +39,4 @@ VoiceState.newF("apply", async function(ctx) {
     Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
-
-	this.client = client;
 });
