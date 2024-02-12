@@ -4,11 +4,15 @@ const { AuditLogEvent } = require('discord.js');
 
 Message.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("guilds", "messages", "channels", "users", "util", "types");
+    client.import("guilds", "messages", "channels", "users", "util", "types", { err: "errors" });
 
+	let e = err.create(this, "Message Type Error");
 
-	if (this.raw) return;
-    Object.defineProperty(this, "raw", {
+	if (ctx == undefined) {
+		e.fire(null, "Message context was undefined most likely because of a Discord.JS error\nCheck your code for any body errors");
+	}
+	
+	if (this.raw == undefined) Object.defineProperty(this, "raw", {
 		get() { return ctx }	
 	});
 	
