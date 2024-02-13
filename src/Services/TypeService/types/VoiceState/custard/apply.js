@@ -6,7 +6,6 @@ VoiceState.newF("apply", async function(ctx) {
     client.import("guilds", "channels", "users", "util");
 
     // guild
-    this.guild = await guilds.get(ctx.guild.id);
     this.guildId = ctx.guild.id;
 
     // channel
@@ -18,9 +17,9 @@ VoiceState.newF("apply", async function(ctx) {
 
 
     // booleans
-	this.joining = null
-	this.leaving = null
-	this.moving = null
+	this.joining = false;
+	this.leaving = false;
+	this.moving = false;
     this.muted = !!ctx.selfMute;
     this.deafened = !!ctx.selfDeaf;
     this.video = !!ctx.selfVideo;
