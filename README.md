@@ -10,7 +10,7 @@
 <a href="https://github.com/paishee/noscord.js/wiki"><img height=22 src="https://img.shields.io/badge/documentation-blue?style=flat&color=black&logo=github&logoColor=white" alt="documentation" />
 <img height=22 src="https://github.com/paishee/noscord.js/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
-NOSCORD.JS is a customized Discord API wrapper for Node.JS that is similar to older versions of Discord.JS letting you access most of the API from the client using an importing system.<br>
+NOSCORD.JS is a customized Discord API wrapper for Node.JS that lets you access much of the Discord.JS API from the client using an importing system as well as services and parenting systems similar to Roblox.<br>
 
 It's built on the latest versions of Discord.JS so it has all the new features AND the simpler setup.<br><br>
 
