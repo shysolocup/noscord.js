@@ -3,7 +3,7 @@ const { Client } = require('../index.js');
 
 Client.newF("off", function(event, func) {
 	if (event instanceof Array) event.forEach( ev => {
-		if (events.includes(ev)) {
+		if (this.events.includes(ev)) {
     		this.events.get(ev).listeners.remove(func);
 		}
 		else {
@@ -11,7 +11,7 @@ Client.newF("off", function(event, func) {
 		}
 	});
 	else {
-		if (events.includes(event)) {
+		if (this.events.includes(event)) {
 	    		this.events.get(event).listeners.remove(func);
 		}
 		else {
