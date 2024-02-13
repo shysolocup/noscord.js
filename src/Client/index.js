@@ -114,6 +114,7 @@ class NosClient {
 
 		this.services.app = this.services.util;
 		this.services.com = this.services.commands;
+		this.services.comm = this.services.commands;
 		this.services.att = this.services.attachments;
 		this.services.perms = this.services.permissions;
 		this.services.err = this.services.errors;
