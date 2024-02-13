@@ -1,5 +1,5 @@
 /*
-	:: noscord.js :: TypeDev 0.1.6 | 02/12/24 ::
+	:: noscord.js :: TypeDev 0.1.6 | 02/13/24 ::
 	https://github.com/paishee/noscord.js
 
 */
@@ -24,6 +24,7 @@ const serv_dir = `${__dirname.replace("Client", "")}/Services`;
 const cust_dir = `${__dirname}/custard`;
 
 const exp = new Soup(Object);
+const Addons = new Soup(Object);
 
 
 let intentPresets = {
@@ -111,8 +112,6 @@ class NosClient {
 			addons: new this.AddonService,
 			storage: new this.StorageService
 		});
-
-		exp.Types = this.services.types;
 
 		this.services.app = this.services.util;
 		this.services.att = this.services.attachments;
@@ -256,7 +255,7 @@ if (!NosClient._instances) Object.defineProperty(NosClient, "_instances", {
 exp.pull("Client", cl.from(NosClient));
 exp.pull("Instances", NosClient._instances);
 exp.pull("Presets", intentPresets);
-exp.pull("Types", {});
+exp.pull("Addons", Addons);
 
 
 module.exports = exp;
