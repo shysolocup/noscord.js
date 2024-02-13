@@ -3,12 +3,12 @@ const { Client } = require('../../Client');
 
 
 AddonService.newC("Addon", class {
-    constructor(className, importName, classData) {
+    constructor(className, serviceName, classData) {
         let instances = Client._instances;
         let cl = Client.newC(className, classData);
         
         instances.forEach( (client) => {
-            client.services.push(importName, new client[className]());
+            client.services.push(serviceName, new client[className]());
         });
         
         return cl;
