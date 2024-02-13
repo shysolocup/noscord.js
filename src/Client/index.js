@@ -134,6 +134,7 @@ class NosClient {
 		this.Button = this.services.components.Button;
 		this.Selection = this.services.components.Selection;
 		this.Row = this.services.components.Row;
+		this.store = this.services.storage.store;
 
 
 
