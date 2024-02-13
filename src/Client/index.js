@@ -24,7 +24,6 @@ const serv_dir = `${__dirname.replace("Client", "")}/Services`;
 const cust_dir = `${__dirname}/custard`;
 
 const exp = new Soup(Object);
-const Addons = new Soup(Object);
 
 
 let intentPresets = {
@@ -255,7 +254,6 @@ if (!NosClient._instances) Object.defineProperty(NosClient, "_instances", {
 exp.pull("Client", cl.from(NosClient));
 exp.pull("Instances", NosClient._instances);
 exp.pull("Presets", intentPresets);
-exp.pull("Addons", Addons);
 
 
 module.exports = exp;
