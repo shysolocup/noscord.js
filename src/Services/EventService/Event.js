@@ -17,7 +17,7 @@ Client.newClass("Event", class {
     // firing
     fire(...args) {
         this.listeners.forEach( async (lst) => {
-            await lst(...Array.from(...args));
+            await lst(...args);
         });
     }
 });
