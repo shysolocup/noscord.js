@@ -11,6 +11,7 @@ Store.newF("post", async function(name, postData) {
 
     const ret = {
         id: null,
+        data: null,
         newData: null,
         oldData: null,
         storeName: storeName,
@@ -20,6 +21,7 @@ Store.newF("post", async function(name, postData) {
     const channel = await this.shandle(name);
     const { id, data } = await this.get(name);
 
+    ret.data = postData;
     ret.newData = postData;
     ret.oldData = data;
 
