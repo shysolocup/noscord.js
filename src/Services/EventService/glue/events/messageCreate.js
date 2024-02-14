@@ -8,7 +8,7 @@ module.exports = (handler) => { handler.init(
         let types = this.types;
         let msg = new types.Message;
         
-        await msg.apply(...Array.from(arguments));
+        await msg.apply(ctx);
     
         return [msg];
     }, 
