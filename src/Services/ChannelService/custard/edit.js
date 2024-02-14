@@ -24,6 +24,6 @@ ChannelService.newF("edit", async function(channel, settings={}, reason) {
     let data = (channel.raw) ? channel.raw : channel;
 
     let edit = new types.VictimChannel;
-    await edit.apply( await data.edit(settings).catch(e=>{}) );
+    await edit.apply( await data.edit(settings).catch(e=>{}), 2 );
     return edit;
 });
