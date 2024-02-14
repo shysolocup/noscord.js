@@ -9,7 +9,7 @@ ChannelService.newF("delete", async function(channel, settings={}) {
     let data = (channel.raw) ? channel.raw : channel;
 
     setTimeout( () => {
-       data.delete().catch(e=>{});
+       data.delete(settings).catch(e=>{});
     }, util.parseMs(settings.after) );
 
     let typed = this.typer(data.type);
