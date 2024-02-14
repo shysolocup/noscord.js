@@ -13,6 +13,6 @@ ChannelService.newF("delete", async function(channel, settings={}) {
     }, util.parseMs(settings.after) );
 
     let typed = new types.VictimChannel;
-    await typed.apply(data);
+    await typed.apply(data, 1);
     return typed;
 });
