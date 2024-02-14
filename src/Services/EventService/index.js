@@ -1,8 +1,8 @@
 const { Client } = require('../../Client');
 
 Client.newC("EventService", class {
-    create() {
-        return new this.Event(...Array.from(arguments));
+    create(...args) {
+        return new this.Event(...args);
     }
 
     get list() {
