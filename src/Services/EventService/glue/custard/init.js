@@ -1,9 +1,8 @@
 const GlueHandler = require('../index.js');
 
 
-GlueHandler.newF("init", async function(name, func, glue, term) {
+GlueHandler.newF("init", function(name, func, glue, term) {
 	let client = this.client;
-	
 	let event = new client.Event();
 
 	if (name instanceof Array) {
@@ -28,4 +27,6 @@ GlueHandler.newF("init", async function(name, func, glue, term) {
 			}
         });
     };
+
+	return event;
 });
