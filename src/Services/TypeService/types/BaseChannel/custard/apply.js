@@ -12,7 +12,7 @@ BaseChannel.newF("apply", async function(ctx) {
     this.nsfw = ctx.nsfw;
     this.type = ctx.type;
     this.viewable = ctx.viewable;
-	this.deleteable = ctx.deleteable;
+	this.deletable = ctx.deletable;
 	this.managable = ctx.managable;
 	if (ctx.parentId) {
 		this.category = await channels.get(ctx.parentId, this.guild);
