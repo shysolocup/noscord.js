@@ -14,7 +14,7 @@ Store.newF("json", async function(name, messageId) {
         await channel.messages.fetch(messageId) : 
         
         ( Array.from( (await channel.messages.fetch()) .values()) )
-        .filter( msg => msg.attachments && msg.attachments.size > 0 )[0];
+        .filter( msg => msg.attachments && msg.attachments.size > 0 ) [0];
     
     if (!ctx) return ret;
 
