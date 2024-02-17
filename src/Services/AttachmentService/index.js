@@ -1,14 +1,7 @@
 const { Client } = require('../../Client');
 const fs = require('fs');
 
-Client.newC("AttachmentService", class {
-    constructor() {
-        const client = this.parent;
-        client.import("types");
-        
-        this.Attachment = types.Attachment;
-    }
-});
+Client.newC("AttachmentService");
 
 module.exports = AttachmentService;
 
