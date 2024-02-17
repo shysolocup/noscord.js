@@ -17,7 +17,11 @@ Store.newF("get", async function(name, messageId) {
 
     const channel = await this.shandle(name);
 
-    const ctx = (messageId) ? await channel.messages.fetch(messageId) : (await channel.messages.fetch()).first();
+    const ctx = (messageId) ? 
+        await channel.messages.fetch(messageId) : 
+        
+        Object.values(await channel.messages.fetch()).filter( msg => msg.attachments && msg.attachments.length > 0)[0];
+    
     if (!ctx) return ret;
 
     let link = ctx.attachments.first().url;
