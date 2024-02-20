@@ -19,7 +19,9 @@ Base.newF("apply", async function(ctx) {
 	if (ctx.available) this.available = ctx.available;
 	if (ctx.nsfw) this.nsfw = ctx.nsfw;
 	if (ctx.viewable) this.viewable = ctx.viewable;
+	if (ctx.editable) this.editable = ctx.editable;
 	if (ctx.deletable) this.deletable = ctx.deletable;
+	if (ctx.bulkDeletable) { this.purgable = ctx.bulkDeletable; this.bulkDeletable = ctx.bulkDeletable; }
 	if (ctx.moderatable) this.moderatable = ctx.moderatable;
 	if (ctx.bannable) this.bannable = ctx.bannable;
 	if (ctx.kickable) this.kickable = ctx.kickable;
