@@ -6,10 +6,10 @@ Base.newF("apply", async function(ctx) {
     const client = this.parent.parent;
     client.import("messages", "channels", "guilds", "util");
 
-    // ids
+    // id
     this.id = ctx.id;
-    this.name = ctx.name;
-    
+	
+    if (ctx.name) this.name = ctx.name;
     if (ctx.type) this.type = ctx.type;
 	if (ctx.guildId) {
 		this.guild;
