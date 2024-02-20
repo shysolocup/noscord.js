@@ -56,7 +56,7 @@ client.on("ready", (ctx) => {
 
 
 // components has Embeds, Buttons, etc
-// util has utility stuff
+// util has utility stuff like colors and Timestamps
 client.import("util", "components");
 
 
