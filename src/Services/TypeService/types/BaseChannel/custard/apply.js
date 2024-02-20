@@ -4,13 +4,16 @@ const pend = require('pender');
 
 BaseChannel.newF("apply", async function(ctx) {
     const client = this.parent.parent;
-    client.import("messages", "channels", "guilds", "util");
+    client.import("messages", "channels", "guilds", "util", "types");
 
-    // ids
-    this.id = ctx.id;
+	let base = new types.Base;
+	await base.apply(ctx);
+
+	Object.assign(this, base);
+
+    // stuff
     this.name = ctx.name;
     this.nsfw = ctx.nsfw;
-    this.type = ctx.type;
     this.viewable = ctx.viewable;
 	this.deletable = ctx.deletable;
 	this.managable = ctx.managable;
@@ -19,8 +22,6 @@ BaseChannel.newF("apply", async function(ctx) {
 		this.categoryId = ctx.parentId;
 	}
 	if (ctx.guildId) {
-		this.guild;
-    	this.guildId = ctx.guildId;
 		this.url = `https://discord.com/channels/${ctx.guildId}/${ctx.id}`;
 	}
 	else {
@@ -41,9 +42,10 @@ BaseChannel.newF("apply", async function(ctx) {
     
 	this.flags = ctx.flags;
     this.partial = ctx.partial;
+	this.position = ctx.position;
+	
     /*this.permissionOverwrites = ctx.permissionOverwrites;
     this.permissionsLocked = ctx.permissionsLocked;
-    this.position = ctx.position;
     this.rateLimitPerUser = ctx.rateLimitPerUser;
     this.rawPosition = ctx.rawPosition;
     this.threads // await channels.threads(ctx);
