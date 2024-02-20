@@ -28,7 +28,12 @@ Base.newF("apply", async function(ctx) {
 	if (ctx.kickable) this.kickable = ctx.kickable;
 	if (ctx.manageable) { this.manageable = ctx.manageable; this.managable = ctx.manageable; }
 	if (ctx.managed) this.managed = ctx.managed;
-	if (ctx.requiresColons) this.requiresColons = ctx.requiresColons
+	if (ctx.requiresColons) this.requiresColons = ctx.requiresColons;
+	if (ctx.pinned) this.pinned = ctx.pinned;
+    if (ctx.tts) this.tts = ctx.tts;
+	if (ctx.verified) this.verified = ctx.verified;
+	if (ctx.partnered) this.partnered = ctx.partnered;
+    if (ctx.large) this.large = ctx.large;
 	
 	// guild info
 	if (ctx.guildId) {
