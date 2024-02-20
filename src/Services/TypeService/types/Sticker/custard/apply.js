@@ -21,6 +21,7 @@ Sticker.newF("apply", async function(base) {
     this.tags = base.tags;
     this.packId = base.packId;
     this.available = base.available;
+	this.animated = (base.format == 2);
     this.format = base.format;
     this.partial = base.partial;
 
