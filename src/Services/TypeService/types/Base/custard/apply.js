@@ -34,6 +34,7 @@ Base.newF("apply", async function(ctx) {
 	if (ctx.verified) this.verified = ctx.verified;
 	if (ctx.partnered) this.partnered = ctx.partnered;
     if (ctx.large) this.large = ctx.large;
+	if (ctx.widgetEnabled) this.widgetEnabled = ctx.widgetEnabled;
 	
 	// guild info
 	if (ctx.guildId) {
