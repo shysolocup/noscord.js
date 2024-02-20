@@ -22,6 +22,7 @@ GuildMember.newF("apply", async function(ctx) {
     // guild
     this.guildId = ctx.guildId;
     this.guild = await guilds.get(ctx.guildId);
+	this.owner = (guild.owner.id == ctx.id);
 
 
     // avatar
