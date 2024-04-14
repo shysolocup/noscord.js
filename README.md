@@ -34,7 +34,7 @@ this package is currently in active development and is far from finished ⚠️
 npm i noscord.js
 ```
 ```console
-npm i revameg/noscord.js
+npm i /noscord.js
 ```
 
 <br>
