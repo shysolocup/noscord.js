@@ -2,7 +2,7 @@
 
 <br>
 
-<a href="https://github.com/paishee/noscord.js"><img height=95 src="https://github.com/paishee/noscord.js/blob/main/assets/noscord.js%20logo.png" alt="N⦿SCORD.JS">
+<a href="https://github.com/paishee/noscord.js"><img height=95 src="https://github.com/revameg/noscord.js/blob/main/assets/noscord.js%20logo.png" alt="N⦿SCORD.JS">
 
 <a href="https://www.npmjs.com/package/noscord.js"><img height=22 src="https://img.shields.io/npm/v/noscord.js?style=flat&color=red&logo=npm&logoColor=white" alt="version" />
 <a href="https://www.npmjs.com/package/noscord.js"><img height=22 src="https://img.shields.io/npm/dt/noscord.js?style=flat&color=green&logo=docusign&logoColor=white" alt="downloads" />
@@ -34,7 +34,7 @@ this package is currently in active development and is far from finished ⚠️
 npm i noscord.js
 ```
 ```console
-npm i paishee/noscord.js
+npm i revameg/noscord.js
 ```
 
 <br>
