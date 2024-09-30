@@ -1,13 +1,13 @@
 /*
 	:: noscord.js :: TypeDev 0.1.6 | 02/13/24 ::
-	https://github.com/paishee/noscord.js
+	https://github.com/shysolocup/noscord.js
 
 */
 
-/* :: Created by @paishee using :: *//*
-    - aepl: https://github.com/paishee/aepl
-	- Stews: https://github.com/paishee/stews
- 	- Pender: https://github.com/paishee/pender
+/* :: Created by shysolocup using :: *//*
+    - aepl: https://github.com/shysolocup/aepl
+	- Stews: https://github.com/shysolocup/stews
+ 	- Pender: https://github.com/shysolocup/pender
     - Discord.JS: https://github.com/discordjs/discord.js
 */
 
