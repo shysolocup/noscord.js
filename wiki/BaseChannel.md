@@ -9,8 +9,8 @@ base channel type that most of the other channels extend from<br>
 
 </td><td>
 
-- [src / Services / TypeService / types / BaseChannel](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/BaseChannel)
-- [src / Services / TypeService / types / BaseChannel / custard / apply.js](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/BaseChannel/custard/apply.js)
+- [src / Services / TypeService / types / BaseChannel](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/BaseChannel)
+- [src / Services / TypeService / types / BaseChannel / custard / apply.js](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/BaseChannel/custard/apply.js)
 
 </td></tr>
 
@@ -27,9 +27,9 @@ base channel type that most of the other channels extend from<br>
 
 </td></tr></table></td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements)
 
 </td></tr></table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Types) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Types) </h1>

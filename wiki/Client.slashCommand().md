@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-creates a new global [Slash Command](https://github.com/paishee/noscord.js/SlashCommand)<br>
+creates a new global [Slash Command](https://github.com/shysolocup/noscord.js/SlashCommand)<br>
 
-works the same as [CommandService.createSlash()](https://github.com/paishee/noscord.js/wiki/CommandService.createSlash())
+works the same as [CommandService.createSlash()](https://github.com/shysolocup/noscord.js/wiki/CommandService.createSlash())
 
 </td><td> 
 
@@ -11,9 +11,9 @@ works the same as [CommandService.createSlash()](https://github.com/paishee/nosc
 
 </td><td>
 
-- [src / Client / custard / slashCommand.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/slashCommand.js)
-- [src / Services / CommandService / custard / createSlash.js](https://github.com/paishee/noscord.js/blob/main/src/Services/CommandService/custard/createSlash.js)
-- [src / Services / CommandService / custard / SlashCommand.js](https://github.com/paishee/noscord.js/blob/main/src/Services/CommandService/custard/SlashCommand.js)
+- [src / Client / custard / slashCommand.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/slashCommand.js)
+- [src / Services / CommandService / custard / createSlash.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/CommandService/custard/createSlash.js)
+- [src / Services / CommandService / custard / SlashCommand.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/CommandService/custard/SlashCommand.js)
 
 
 </td></tr>
@@ -71,4 +71,4 @@ client.slashCommand("example", "example command", async (ctx) => {
 </td></tr>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

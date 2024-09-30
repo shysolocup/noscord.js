@@ -18,15 +18,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.colors) colors
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.colors) colors
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.parse()) parse()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.parse()) parse()
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Timestamp) Timestamp
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Timestamp) Timestamp
 </td></tr>
 
 
@@ -36,15 +36,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.random) random
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.random) random
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.parseMs()) parseMs()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.parseMs()) parseMs()
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Numer) Numer
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Numer) Numer
 </td></tr>
 
 
@@ -57,11 +57,11 @@
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.sleep()) sleep()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.sleep()) sleep()
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Pad) Pad
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Pad) Pad
 </td></tr>
 
 
@@ -74,7 +74,7 @@
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.numer()) numer()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.numer()) numer()
 </td><td>
 
 [comment]: <> (Class)
@@ -90,7 +90,7 @@
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService.pad()) pad()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService.pad()) pad()
 </td><td>
 
 [comment]: <> (Class)
@@ -103,4 +103,4 @@
 </table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/UtilService) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/UtilService) </h1>

@@ -24,7 +24,7 @@ client.on("send", async (ctx) => {
 
 </td><td>
 
-- [src / Client / custard / on.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/on.js)
+- [src / Client / custard / on.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/on.js)
 
 </td></tr>
 
@@ -49,4 +49,4 @@ client.on("send", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

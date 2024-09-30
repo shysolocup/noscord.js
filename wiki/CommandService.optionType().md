@@ -7,7 +7,7 @@ arguments:
 commands.optionType("user"); // 6
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/CommandService/custard/optionType.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/CommandService/custard/optionType.js)
 
 <br>
 
@@ -28,4 +28,4 @@ commands.optionType("user"); // 6
 <br>
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Commands) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Commands) </h1>

@@ -1,21 +1,21 @@
 <table>
 <tr><td>
 
-the client's user data stemming from the [User](https://github.com/paishee/noscord.js/wiki/User) typing
+the client's user data stemming from the [User](https://github.com/shysolocup/noscord.js/wiki/User) typing
 <br>
 
 > notes: 
-> - the user can only be accessed after running [Client.login()](https://github.com/paishee/noscord.js/wiki/Client.login())
+> - the user can only be accessed after running [Client.login()](https://github.com/shysolocup/noscord.js/wiki/Client.login())
 > <br>
 
 </td><td> 
 
-[`User`](https://github.com/paishee/noscord.js/wiki/User)
+[`User`](https://github.com/shysolocup/noscord.js/wiki/User)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / TypeService / types / User](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/User)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / TypeService / types / User](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/User)
 
 </td></tr>
 
@@ -29,4 +29,4 @@ the client's user data stemming from the [User](https://github.com/paishee/nosco
 </tr></td>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

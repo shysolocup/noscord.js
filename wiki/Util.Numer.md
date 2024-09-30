@@ -15,17 +15,17 @@ settings:
 new Numer(2500); // "2,500"
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/UtilService/custard/Numer.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/UtilService/custard/Numer.js)
 
 <br>
 
 | <h3>Properties</h3> |
 | - |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Util.Numer.value) value |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Util.Numer.raw) raw |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Util.Numer.currency) currency |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Util.Numer.roundTo) roundTo |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Util.Numer.even) even |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Util.Numer.odd) odd |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Util.Numer.value) value |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Util.Numer.raw) raw |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Util.Numer.currency) currency |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Util.Numer.roundTo) roundTo |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Util.Numer.even) even |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Util.Numer.odd) odd |
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Util) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Util) </h1>

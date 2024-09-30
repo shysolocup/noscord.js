@@ -4,6 +4,6 @@ type: `Object`<br><br>
 client._customPerms
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/PermissionService/_customPerms.json)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/PermissionService/_customPerms.json)
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

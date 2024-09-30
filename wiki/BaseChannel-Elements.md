@@ -15,11 +15,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.id) id
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.id) id
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -29,11 +29,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.name) name
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.name) name
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -43,11 +43,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.nsfw) nsfw
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.nsfw) nsfw
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -57,11 +57,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.type) type
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.type) type
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -71,11 +71,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.viewable) viewable
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.viewable) viewable
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -85,11 +85,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.deletable) deletable
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.deletable) deletable
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -99,11 +99,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.managable) managable
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.managable) managable
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -113,11 +113,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.category) category
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.category) category
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -127,11 +127,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.categoryId) categoryId
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.categoryId) categoryId
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -141,11 +141,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.guild) guild
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.guild) guild
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -155,11 +155,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.guildId) guildId
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.guildId) guildId
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -169,11 +169,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.url) url
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.url) url
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -183,11 +183,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.mention) mention
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.mention) mention
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -197,11 +197,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.timestamps) timestamps
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.timestamps) timestamps
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -211,11 +211,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.flags) flags
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.flags) flags
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -225,11 +225,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel.partial) partial
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel.partial) partial
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) WIP
+[🛈](https://github.com/shysolocup/noscord.js/wiki/BaseChannel-Elements) WIP
 </td></tr>
 
 
@@ -237,4 +237,4 @@
 </table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/BaseChannel) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/BaseChannel) </h1>

@@ -4,6 +4,6 @@ type: `Base Client`<br><br>
 client._base
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Client/index.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

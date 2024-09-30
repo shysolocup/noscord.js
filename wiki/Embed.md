@@ -8,21 +8,21 @@ let embed = new Embed({
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/ComponentService/components/Embed.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/ComponentService/components/Embed.js)
 
 <br>
 
 | <h3>Parts</h3> |
 | - |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.title) title |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.header) header |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.description) description |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.image) image |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.thumbnail) thumbnail |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.fields) fields |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.footer) footer |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.author) author |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.url) url |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Embed.timestamp) timestamp |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.title) title |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.header) header |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.description) description |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.image) image |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.thumbnail) thumbnail |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.fields) fields |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.footer) footer |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.author) author |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.url) url |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Embed.timestamp) timestamp |
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Components) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Components) </h1>

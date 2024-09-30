@@ -1,7 +1,7 @@
 <table>
 <tr><td>
 
-the client's slash commands stemming from a [Soup](https://github.com/paishee/stews/wiki/Soup) object
+the client's slash commands stemming from a [Soup](https://github.com/shysolocup/stews/wiki/Soup) object
 
 contains [SlashCommand]() objects
 
@@ -9,14 +9,14 @@ contains [SlashCommand]() objects
 
 </td><td> 
 
-[`Soup`](https://github.com/paishee/stews/wiki/Soup)
+[`Soup`](https://github.com/shysolocup/stews/wiki/Soup)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

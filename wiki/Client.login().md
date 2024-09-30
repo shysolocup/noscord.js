@@ -22,7 +22,7 @@ client.login(token);
 
 </td><td>
 
-- [src / Client / custard / login.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/login.js)
+- [src / Client / custard / login.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/login.js)
 
 </td></tr>
 
@@ -56,4 +56,4 @@ client.login(token);
 </tr></td>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

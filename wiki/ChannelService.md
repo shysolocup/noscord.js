@@ -3,15 +3,15 @@
 
 service class for channel related methods
 
-if you're looking for specific channel types look to the [Channel Types Guide](https://github.com/paishee/wiki/noscord.js/Channel-Types-Guide)
+if you're looking for specific channel types look to the [Channel Types Guide](https://github.com/shysolocup/wiki/noscord.js/Channel-Types-Guide)
 </td><td> 
 
 `AeplSubClass`
 
 </td><td>
 
-- [src / Services / ChannelService](https://github.com/paishee/noscord.js/tree/main/src/Services/ChannelService)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / ChannelService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/ChannelService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -37,9 +37,9 @@ client.on("ready", async () => {
 
 </td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/ChannelService-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/ChannelService-Elements)
 
 </td></tr>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

@@ -11,7 +11,7 @@ arguments:
 returns:
 - context: interaction and info for the command
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/CommandService/custard/create.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/CommandService/custard/create.js)
 
 <br>
 
@@ -46,4 +46,4 @@ client.command({ name: "test4", desc: "fourth test command", options: options },
 ```
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

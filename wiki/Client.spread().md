@@ -3,7 +3,7 @@
 
 spreads out data over another directory if you want to have commands in a separate folder<br>
 
-spread tasks are stored in [Client.spreads](https://github.com/paishee/noscord.js/wiki/Client.spreads) and they're ran when the client logs in<br>
+spread tasks are stored in [Client.spreads](https://github.com/shysolocup/noscord.js/wiki/Client.spreads) and they're ran when the client logs in<br>
 
 </td><td> 
 
@@ -11,8 +11,8 @@ spread tasks are stored in [Client.spreads](https://github.com/paishee/noscord.j
 
 </td><td>
 
-- [src / Client / custard / spread.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/spread.js)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Client / custard / spread.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/spread.js)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -86,4 +86,4 @@ module.exports = (client) => {
 </td></tr>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-creates a new [Prefix Command](https://github.com/paishee/noscord.js/SlashCommand)<br>
+creates a new [Prefix Command](https://github.com/shysolocup/noscord.js/SlashCommand)<br>
 
-works the same as [CommandService.createPrefix()](https://github.com/paishee/noscord.js/wiki/CommandService.createPrefix())
+works the same as [CommandService.createPrefix()](https://github.com/shysolocup/noscord.js/wiki/CommandService.createPrefix())
 
 </td><td> 
 
@@ -11,9 +11,9 @@ works the same as [CommandService.createPrefix()](https://github.com/paishee/nos
 
 </td><td>
 
-- [src / Client / custard / prefixCommand.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/prefixCommand.js)
-- [src / Services / CommandService / custard / createPrefix.js](https://github.com/paishee/noscord.js/blob/main/src/Services/CommandService/custard/createPrefix.js)
-- [src / Services / CommandService / custard / PrefixCommand.js](https://github.com/paishee/noscord.js/blob/main/src/Services/CommandService/custard/PrefixCommand.js)
+- [src / Client / custard / prefixCommand.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/prefixCommand.js)
+- [src / Services / CommandService / custard / createPrefix.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/CommandService/custard/createPrefix.js)
+- [src / Services / CommandService / custard / PrefixCommand.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/CommandService/custard/PrefixCommand.js)
 
 
 </td></tr>
@@ -64,4 +64,4 @@ client.prefixCommand("example", ["ex", "exp"], async (ctx) => {
 </td></tr>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

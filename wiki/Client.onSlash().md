@@ -1,7 +1,7 @@
 <table>
 <tr><td>
 
-adds a new listener to [SlashCommandRun](https://github.com/paishee/noscord.js/wiki/SlashCommandRun) events<br>
+adds a new listener to [SlashCommandRun](https://github.com/shysolocup/noscord.js/wiki/SlashCommandRun) events<br>
 
 <table>
 
@@ -28,7 +28,7 @@ client.onSlash("my_command", async (ctx) => {
 
 </td><td>
 
-- [src / Client / custard / onSlash.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/onSlash.js)
+- [src / Client / custard / onSlash.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/onSlash.js)
 
 </td></tr>
 
@@ -53,4 +53,4 @@ client.onSlash("my_command", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

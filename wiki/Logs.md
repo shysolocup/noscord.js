@@ -11,15 +11,15 @@ await logs.get(guild, {
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/tree/main/src/Services/LogService)
+### [source](https://github.com/shysolocup/noscord.js/tree/main/src/Services/LogService)
 
 <br>
 
 | <h3>Methods</h3> |
 | - |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Logs.get()) get() |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Logs.logType()) logType() |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Logs.get()) get() |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Logs.logType()) logType() |
 
 <br>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki) </h1>

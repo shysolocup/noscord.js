@@ -27,7 +27,7 @@ client.off("send", callback); // removes the listener
 
 </td><td>
 
-- [src / Client / custard / off.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/off.js)
+- [src / Client / custard / off.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/off.js)
 
 </td></tr>
 
@@ -52,4 +52,4 @@ client.off("send", callback); // removes the listener
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's guilds accessed through the [GuildService](https://github.com/paishee/noscord.js/wiki/GuildService) 
+the client's guilds accessed through the [GuildService](https://github.com/shysolocup/noscord.js/wiki/GuildService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,15 +20,15 @@ client.import("guilds");
 
 </td><td> 
 
-[`GuildServiceInstance`](https://github.com/paishee/noscord.js/wiki/GuildService)
+[`GuildServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/GuildService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / GuildService](https://github.com/paishee/noscord.js/tree/main/src/Services/GuildService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / GuildService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/GuildService)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

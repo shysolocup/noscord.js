@@ -22,11 +22,11 @@ client.logout();
 
 </td><td>
 
-- [src / Client / custard / logout.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/logout.js)
+- [src / Client / custard / logout.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/logout.js)
 
 </td></tr>
 
 </table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -3,7 +3,7 @@
 
 gets a list of categories <br>
 
-returns a [ChannelGroup](https://github.com/paishee/noscord.js/wiki/ChannelGroup)
+returns a [ChannelGroup](https://github.com/shysolocup/noscord.js/wiki/ChannelGroup)
 
 <table>
 
@@ -28,7 +28,7 @@ client.on("send", async (ctx) => {
 
 </td><td>
 
-- [src / Services / ChannelService / custard / categories.js](https://github.com/paishee/noscord.js/blob/main/src/Services/ChannelService/custard/categories.js)
+- [src / Services / ChannelService / custard / categories.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/ChannelService/custard/categories.js)
 
 </td></tr>
 
@@ -40,7 +40,7 @@ client.on("send", async (ctx) => {
 <td>
 
 #### Arguments:
-> - *?guild* [`Guild`](https://github.com/paishee/noscord.js/wiki/Guild)<br>
+> - *?guild* [`Guild`](https://github.com/shysolocup/noscord.js/wiki/Guild)<br>
 > guild to get the categories from<br>
 > <br>
 
@@ -50,4 +50,4 @@ client.on("send", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/ChannelService-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/ChannelService-Elements) </h1>

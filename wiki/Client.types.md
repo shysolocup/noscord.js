@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's typings accessed through the [TypeService](https://github.com/paishee/noscord.js/wiki/TypeService) 
+the client's typings accessed through the [TypeService](https://github.com/shysolocup/noscord.js/wiki/TypeService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,12 +20,12 @@ client.import("types");
 
 </td><td> 
 
-[`TypeServiceInstance`](https://github.com/paishee/noscord.js/wiki/TypeService)
+[`TypeServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/TypeService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / TypeService](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / TypeService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService)
 
 </td></tr>
 
@@ -39,4 +39,4 @@ client.import("types");
 </tr></td>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

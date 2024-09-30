@@ -3,7 +3,7 @@
 
 edits a given channel<br>
 
-returns one of the [channel types](https://github.com/paishee/noscord.js/Channel-Types-Guide)
+returns one of the [channel types](https://github.com/shysolocup/noscord.js/Channel-Types-Guide)
 
 <table>
 
@@ -28,7 +28,7 @@ client.on("send", async (ctx) => {
 
 </td><td>
 
-- [src / Services / ChannelService / custard / edit.js](https://github.com/paishee/noscord.js/blob/main/src/Services/ChannelService/custard/edit.js)
+- [src / Services / ChannelService / custard / edit.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/ChannelService/custard/edit.js)
 
 </td></tr>
 
@@ -40,7 +40,7 @@ client.on("send", async (ctx) => {
 <td>
 
 #### Arguments:
-> - *?guild* [`Guild`](https://github.com/paishee/noscord.js/wiki/Guild)<br>
+> - *?guild* [`Guild`](https://github.com/shysolocup/noscord.js/wiki/Guild)<br>
 > guild to get the categories from<br>
 >
 > - *?settings* `Object`<br>
@@ -67,4 +67,4 @@ client.on("send", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/ChannelService-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/ChannelService-Elements) </h1>

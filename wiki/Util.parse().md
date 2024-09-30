@@ -23,6 +23,6 @@ util.parse("5w"); // 3024000
 util.parse("5y"); // 157680000
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/UtilService/custard/parse.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/UtilService/custard/parse.js)
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Util) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Util) </h1>

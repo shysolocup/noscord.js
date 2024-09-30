@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's guild storage parts accessed through the [StorageService](https://github.com/paishee/noscord.js/wiki/StorageService) 
+the client's guild storage parts accessed through the [StorageService](https://github.com/shysolocup/noscord.js/wiki/StorageService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,15 +20,15 @@ client.import("storage");
 
 </td><td> 
 
-[`StorageServiceInstance`](https://github.com/paishee/noscord.js/wiki/StorageService)
+[`StorageServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/StorageService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / StorageService](https://github.com/paishee/noscord.js/tree/main/src/Services/StorageService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / StorageService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/StorageService)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

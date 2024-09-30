@@ -6,7 +6,7 @@ let button = new Button({
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/ComponentService/components/Button.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/ComponentService/components/Button.js)
 
 <br>
 
@@ -19,4 +19,4 @@ let button = new Button({
 | Link | 5 |
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Components.Button) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Components.Button) </h1>

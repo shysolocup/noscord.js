@@ -10,7 +10,7 @@ util.random.choice([ "a", "b", "c" ]);
 util.random.choice({ key1: "val1", key2: "val2", key3: "val3" });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/UtilService/custard/random.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/UtilService/custard/random.js)
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Util.random) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Util.random) </h1>

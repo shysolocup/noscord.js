@@ -9,8 +9,8 @@ base info class that most other type classes extend from<br>
 
 </td><td>
 
-- [src / Services / TypeService / types / Base](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/Base)
-- [src / Services / TypeService / types / Base / custard / apply.js](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/Base/custard/apply.js)
+- [src / Services / TypeService / types / Base](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/Base)
+- [src / Services / TypeService / types / Base / custard / apply.js](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/Base/custard/apply.js)
 
 </td></tr>
 
@@ -27,9 +27,9 @@ base info class that most other type classes extend from<br>
 
 </td></tr></table></td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/Base-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/Base-Elements)
 
 </td></tr></table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Types) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Types) </h1>

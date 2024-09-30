@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's command parts accessed through the [CommandService](https://github.com/paishee/noscord.js/wiki/CommandService) 
+the client's command parts accessed through the [CommandService](https://github.com/shysolocup/noscord.js/wiki/CommandService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,15 +20,15 @@ client.import("commands");
 
 </td><td> 
 
-[`CommandServiceInstance`](https://github.com/paishee/noscord.js/wiki/CommandService)
+[`CommandServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/CommandService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / CommandService](https://github.com/paishee/noscord.js/tree/main/src/Services/CommandService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / CommandService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/CommandService)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

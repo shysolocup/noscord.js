@@ -10,7 +10,7 @@ let pad = new util.Pad(2, [
 pad.current; // [ "a", "b" ]
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/UtilService/custard/Pad.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/UtilService/custard/Pad.js)
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Util.Pad) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Util.Pad) </h1>

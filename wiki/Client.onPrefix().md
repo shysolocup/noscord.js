@@ -28,7 +28,7 @@ client.onPrefix("my_command", async (ctx) => {
 
 </td><td>
 
-- [src / Client / custard / onPrefix.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/onPrefix.js)
+- [src / Client / custard / onPrefix.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/onPrefix.js)
 
 </td></tr>
 
@@ -53,4 +53,4 @@ client.onPrefix("my_command", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's attachment parts accessed through the [AttachmentService](https://github.com/paishee/noscord.js/wiki/AttachmentService) 
+the client's attachment parts accessed through the [AttachmentService](https://github.com/shysolocup/noscord.js/wiki/AttachmentService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,15 +20,15 @@ client.import("attachments");
 
 </td><td> 
 
-[`AttachmentServiceInstance`](https://github.com/paishee/noscord.js/wiki/AttachmentService)
+[`AttachmentServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/AttachmentService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / AttachmentService](https://github.com/paishee/noscord.js/tree/main/src/Services/AttachmentService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / AttachmentService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/AttachmentService)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -13,7 +13,7 @@ dynamically imports services with a custom syntax that<br>lets you mix and match
 
 </td><td>
 
-- [src / Client / custard / import.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/import.js)
+- [src / Client / custard / import.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/import.js)
 
 </td></tr>
 
@@ -51,4 +51,4 @@ client.import("users", "util", [ "guilds", "channels" ], { com: "commands", exp:
 </td></tr>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -15,11 +15,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.name) name
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.name) name
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.resize()) resize()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.resize()) resize()
 </td></tr>
 
 
@@ -29,11 +29,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.description) description
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.description) description
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.circlify()) circlify()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.circlify()) circlify()
 </td></tr>
 
 
@@ -43,11 +43,11 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.embed) embed
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.embed) embed
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.blow()) blow()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.blow()) blow()
 </td></tr>
 
 
@@ -57,7 +57,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.base) base
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.base) base
 </td><td>
 
 
@@ -67,7 +67,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.raw) raw
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.raw) raw
 </td><td>
 
 
@@ -77,7 +77,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.width) width
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.width) width
 </td><td>
 
 
@@ -87,7 +87,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.height) height
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.height) height
 </td><td>
 
 
@@ -97,10 +97,10 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment.settings) settings
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment.settings) settings
 </td><td>
 
 </table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Attachment) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Attachment) </h1>

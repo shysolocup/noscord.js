@@ -24,7 +24,7 @@ event.listen( (a, b, c) => {
 
 </td><td>
 
-- [src / Services/ EventService / Event.js](https://github.com/paishee/noscord.js/blob/main/src/Services/EventService/Event.js)
+- [src / Services/ EventService / Event.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/EventService/Event.js)
 
 </td></tr>
 
@@ -46,4 +46,4 @@ event.listen( (a, b, c) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Event) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Event) </h1>

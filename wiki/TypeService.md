@@ -3,7 +3,7 @@
 
 service class for handling, creating, and storing type classes
 
-types are [AeplSubClasses](https://github.com/paishee/aepl/wiki/SubClass)
+types are [AeplSubClasses](https://github.com/shysolocup/aepl/wiki/SubClass)
 
 </td><td> 
 
@@ -11,8 +11,8 @@ types are [AeplSubClasses](https://github.com/paishee/aepl/wiki/SubClass)
 
 </td><td>
 
-- [src / Services / TypeService](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / TypeService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -32,9 +32,9 @@ await msg.apply(raw);
 
 </td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/Types)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/Types)
 
 </td></tr>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

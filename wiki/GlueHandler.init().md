@@ -15,9 +15,9 @@ creates a new glued event with the given info<br>
 
 </td><td>
 
-- [src / Services / EventService / glue / custard / init.js](https://github.com/paishee/noscord.js/blob/main/src/Services/EventService/glue/custard/init.js)
-- [src / Services / EventService / glue / events](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/glue/events)
-- [src / Services / EventService / Event.js](https://github.com/paishee/noscord.js/blob/main/src/Services/EventService/Event.js)
+- [src / Services / EventService / glue / custard / init.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/EventService/glue/custard/init.js)
+- [src / Services / EventService / glue / events](https://github.com/shysolocup/noscord.js/tree/main/src/Services/EventService/glue/events)
+- [src / Services / EventService / Event.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/EventService/Event.js)
 
 </td></tr>
 
@@ -49,4 +49,4 @@ creates a new glued event with the given info<br>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/GlueHandler) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/GlueHandler) </h1>

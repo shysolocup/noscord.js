@@ -5,7 +5,7 @@ the client's auth token from the [Discord Developer Portal](https://discord.com/
 
 > notes: 
 > - the token is a get value for security so it doesn't log in the console
-> - the token can only be accessed after running [client.login()](https://github.com/paishee/noscord.js/wiki/Client.login())
+> - the token can only be accessed after running [client.login()](https://github.com/shysolocup/noscord.js/wiki/Client.login())
 > <br>
 
 </td><td> 
@@ -14,7 +14,7 @@ the client's auth token from the [Discord Developer Portal](https://discord.com/
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -30,4 +30,4 @@ the client's auth token from the [Discord Developer Portal](https://discord.com/
 </tr></td>
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

@@ -9,8 +9,8 @@ type class for guild category channels<br>
 
 </td><td>
 
-- [src / Services / TypeService / types / Category](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/Category)
-- [src / Services / TypeService / types / Category / custard / apply.js](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/Category/custard/apply.js)
+- [src / Services / TypeService / types / Category](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/Category)
+- [src / Services / TypeService / types / Category / custard / apply.js](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/Category/custard/apply.js)
 
 </td></tr>
 
@@ -27,9 +27,9 @@ type class for guild category channels<br>
 
 </td></tr></table></td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/Category-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/Category-Elements)
 
 </td></tr></table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Types) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Types) </h1>

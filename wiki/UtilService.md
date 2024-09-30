@@ -13,8 +13,8 @@ service class for general utilities such as<br>
 
 </td><td>
 
-- [src / Services / UtilService](https://github.com/paishee/noscord.js/tree/main/src/Services/UtilService)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / UtilService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/UtilService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -51,10 +51,10 @@ client.on("ready", async () =>
 
 </td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/UtilService-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/UtilService-Elements)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

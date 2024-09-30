@@ -4,7 +4,7 @@ type: `Soup`<br><br>
 util.colors
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/UtilService/custard/colors.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/UtilService/custard/colors.js)
 
 | Name | Hex |
 | - | - |
@@ -41,4 +41,4 @@ util.colors
 | water | #2F99E3 |
 
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Util) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Util) </h1>

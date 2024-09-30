@@ -11,9 +11,9 @@ heavily uses [skr canvas](https://www.npmjs.com/package/@napi-rs/canvas)
 
 </td><td>
 
-- [src / Services / AttachmentService](https://github.com/paishee/noscord.js/tree/main/src/Services/AttachmentService)
-- [src / Services / TypeService / types / Attachment](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/Attachment)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / AttachmentService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/AttachmentService)
+- [src / Services / TypeService / types / Attachment](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/Attachment)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -30,7 +30,7 @@ const client = new Client();
 
 client.import("attachments");
 
-let imgUrl = "https://raw.githubusercontent.com/paishee/noscord.js/main/assets/mini%20noscord.js.png";
+let imgUrl = "https://raw.githubusercontent.com/shysolocup/noscord.js/main/assets/mini%20noscord.js.png";
 
 client.on("ready", async () => 
     await attachments.create(imgUrl, { name: "logo", width: 50, height: 50 });
@@ -59,11 +59,11 @@ client.on("ready", async () =>
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/AttachmentService.create()) create()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AttachmentService.create()) create()
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Attachment) Attachment
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Attachment) Attachment
 </td></tr>
 
 
@@ -73,7 +73,7 @@ client.on("ready", async () =>
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/AttachmentService.resize()) resize()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AttachmentService.resize()) resize()
 </td><td>
 
 [comment]: <> (Class)
@@ -86,7 +86,7 @@ client.on("ready", async () =>
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/AttachmentService.circlify()) circlify()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AttachmentService.circlify()) circlify()
 </td><td>
 
 [comment]: <> (Class)
@@ -99,7 +99,7 @@ client.on("ready", async () =>
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/AttachmentService.blow()) blow()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AttachmentService.blow()) blow()
 </td><td>
 
 [comment]: <> (Class)
@@ -109,4 +109,4 @@ client.on("ready", async () =>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

@@ -17,6 +17,6 @@ client.onCommand("ping", (ctx) => {
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Client/custard/onCommand.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/onCommand.js)
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

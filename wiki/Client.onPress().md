@@ -28,7 +28,7 @@ client.onPress("my_button", async (ctx) => {
 
 </td><td>
 
-- [src / Client / custard / onPress.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/onPress.js)
+- [src / Client / custard / onPress.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/onPress.js)
 
 </td></tr>
 
@@ -53,4 +53,4 @@ client.onPress("my_button", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

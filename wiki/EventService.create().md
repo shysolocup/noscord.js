@@ -25,10 +25,10 @@ client.events.push("name", event);
 
 </td><td>
 
-- [src / Services / EventService / index.js](https://github.com/paishee/noscord.js/blob/main/src/Services/EventService/index.js)
+- [src / Services / EventService / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/EventService/index.js)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/EventService) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/EventService) </h1>

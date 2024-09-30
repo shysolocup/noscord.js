@@ -9,7 +9,7 @@ type class for message attachments<br>
 
 </td><td>
 
-- [src / Services / TypeService / types / Attachment](https://github.com/paishee/noscord.js/tree/main/src/Services/TypeService/types/Attachment)
+- [src / Services / TypeService / types / Attachment](https://github.com/shysolocup/noscord.js/tree/main/src/Services/TypeService/types/Attachment)
 
 </td></tr>
 
@@ -38,10 +38,10 @@ type class for message attachments<br>
 
 </td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/Attachment-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/Attachment-Elements)
 
 </td>
 </tr></table>
 
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Types) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Types) </h1>

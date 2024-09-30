@@ -1,4 +1,9 @@
 # [N⦿SCORD.JS Docs](https://youtu.be/dQw4w9WgXcQ)
+
+<img height=22 src="https://github.com/shysolocup/noscord.js/actions/workflows/publish-wiki.yml/badge.svg" alt="wiki publish">
+
+<br>
+
 a hub for N⦿SCORD.JS development information, most things will appear here.. eventually.. when I get around to it<br>
 
 almost everything in the package is built off of [aepl](https://npmjs.com/package/aepl) and [stews](https://npmjs.com/package/stews) so there are various ways of modding<br>

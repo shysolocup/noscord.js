@@ -4,8 +4,8 @@
 service class for handling, creating, and storing event-related stuff
 
 > notes:
-> - events are stored in [Client.events](https://github.com/paishee/noscord.js/wiki/Client.events)<br>
-> - [glue handling](https://github.com/paishee/noscord.js/wiki/GlueHandler) is a big rabbit hole I don't suggest going through it unless you really want to learn how it works internally
+> - events are stored in [Client.events](https://github.com/shysolocup/noscord.js/wiki/Client.events)<br>
+> - [glue handling](https://github.com/shysolocup/noscord.js/wiki/GlueHandler) is a big rabbit hole I don't suggest going through it unless you really want to learn how it works internally
 
 </td><td> 
 
@@ -13,8 +13,8 @@ service class for handling, creating, and storing event-related stuff
 
 </td><td>
 
-- [src / Services / EventService](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / EventService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/EventService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -65,15 +65,15 @@ event.fire(1, 2);
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.events) list
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.events) list
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/EventService.create()) create()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/EventService.create()) create()
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Event) Event
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Event) Event
 </td></tr>
 
 
@@ -89,11 +89,11 @@ event.fire(1, 2);
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/GlueHandler) GlueHandler
+[🛈](https://github.com/shysolocup/noscord.js/wiki/GlueHandler) GlueHandler
 </td></tr>
 
 
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

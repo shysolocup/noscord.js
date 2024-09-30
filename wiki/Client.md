@@ -23,8 +23,8 @@ const client = new Client();
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Client](https://github.com/paishee/noscord.js/tree/main/src/Client)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Client](https://github.com/shysolocup/noscord.js/tree/main/src/Client)
 
 </td></tr>
 
@@ -47,10 +47,10 @@ const client = new Client();
 
 </td><td>
 
-# [[ + ]](https://github.com/paishee/noscord.js/wiki/Client-Elements)
+# [[ + ]](https://github.com/shysolocup/noscord.js/wiki/Client-Elements)
 
 </td>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki) </h1>

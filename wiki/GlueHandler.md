@@ -4,8 +4,8 @@
 handles Discord.JS-tied events and acts as a middle-man between Discord.JS, the client, and the developer
 
 > notes:
-> - there should be a default glue handler in the client named [Client._handler](https://github.com/paishee/noscord.js/wiki/Client._handler)
-> - glue events are stored in [ src / Services / EventService / glue / events](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/glue/events)
+> - there should be a default glue handler in the client named [Client._handler](https://github.com/shysolocup/noscord.js/wiki/Client._handler)
+> - glue events are stored in [ src / Services / EventService / glue / events](https://github.com/shysolocup/noscord.js/tree/main/src/Services/EventService/glue/events)
 
 <br>
 </td><td> 
@@ -14,9 +14,9 @@ handles Discord.JS-tied events and acts as a middle-man between Discord.JS, the 
 
 </td><td>
 
-- [src / Services / EventService / glue / index.js](https://github.com/paishee/noscord.js/blob/main/src/Services/EventService/glue/index.js)
-- [src / Services / EventService / glue / events](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/glue/events)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/tree/main/src/Client/index.js)
+- [src / Services / EventService / glue / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Services/EventService/glue/index.js)
+- [src / Services / EventService / glue / events](https://github.com/shysolocup/noscord.js/tree/main/src/Services/EventService/glue/events)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/tree/main/src/Client/index.js)
 
 </td></tr>
 
@@ -74,11 +74,11 @@ client._handler.init(
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client) client
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client) client
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/GlueHandler.init()) init()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/GlueHandler.init()) init()
 </td></tr>
 
 
@@ -88,7 +88,7 @@ client._handler.init(
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.types) types
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.types) types
 </td></tr>
 
 
@@ -98,11 +98,11 @@ client._handler.init(
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._base) _base
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._base) _base
 </td></tr>
 
 
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/EventService) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/EventService) </h1>

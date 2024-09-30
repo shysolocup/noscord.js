@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's users accessed through the [UserService](https://github.com/paishee/noscord.js/wiki/UserService) 
+the client's users accessed through the [UserService](https://github.com/shysolocup/noscord.js/wiki/UserService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,15 +20,15 @@ client.import("users");
 
 </td><td> 
 
-[`UserServiceInstance`](https://github.com/paishee/noscord.js/wiki/UserService)
+[`UserServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/UserService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / UserService](https://github.com/paishee/noscord.js/tree/main/src/Services/UserService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / UserService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/UserService)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

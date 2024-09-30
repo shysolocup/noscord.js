@@ -16,11 +16,11 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.categories()) categories()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.categories()) categories()
 </td><td>
 
 [comment]: <> (internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.typer()) typer()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.typer()) typer()
 </td></tr>
 
 
@@ -30,7 +30,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.categoryCount()) categoryCount()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.categoryCount()) categoryCount()
 </td><td>
 
 
@@ -40,7 +40,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.count()) count()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.count()) count()
 </td><td>
 
 
@@ -50,7 +50,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.delete()) delete()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.delete()) delete()
 </td><td>
 
 
@@ -60,7 +60,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.dms()) dms()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.dms()) dms()
 </td><td>
 
 
@@ -70,7 +70,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.edit()) edit()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.edit()) edit()
 </td><td>
 
 
@@ -80,7 +80,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.get()) get()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.get()) get()
 </td><td>
 
 
@@ -90,7 +90,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.has()) has()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.has()) has()
 </td><td>
 
 
@@ -100,7 +100,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.list()) list()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.list()) list()
 </td><td>
 
 
@@ -110,7 +110,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.text()) text()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.text()) text()
 </td><td>
 
 
@@ -120,7 +120,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.textCount()) textCount()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.textCount()) textCount()
 </td><td>
 
 
@@ -130,7 +130,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.threadCount()) threadCount()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.threadCount()) threadCount()
 </td><td>
 
 
@@ -140,7 +140,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.threads()) threads()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.threads()) threads()
 </td><td>
 
 
@@ -150,7 +150,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.url()) url()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.url()) url()
 </td><td>
 
 
@@ -160,7 +160,7 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.voice()) voice()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.voice()) voice()
 </td><td>
 
 
@@ -170,10 +170,10 @@
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService.voiceCount()) voiceCount()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService.voiceCount()) voiceCount()
 </td><td>
 
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/ChannelService) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/ChannelService) </h1>

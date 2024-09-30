@@ -10,13 +10,13 @@ commands.create("ping", "replies with pong", (ctx) => {
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/tree/main/src/Services/CommandService)
+### [source](https://github.com/shysolocup/noscord.js/tree/main/src/Services/CommandService)
 
 <br>
 
 | <h3>Properties</h3> | <h3>Methods</h3> | <h3>Classes</h3> |
 | - | - | - |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Commands.list) list | [🛈](https://github.com/paigeroid/noscord.js/wiki/Commands.create()) create() | [🛈](https://github.com/paigeroid/noscord.js/wiki/Commands.SlashCommand) SlashCommand |
-| | [🛈](https://github.com/paigeroid/noscord.js/wiki/Commands.optionType()) optionType() | |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Commands.list) list | [🛈](https://github.com/shysolocup/noscord.js/wiki/Commands.create()) create() | [🛈](https://github.com/shysolocup/noscord.js/wiki/Commands.SlashCommand) SlashCommand |
+| | [🛈](https://github.com/shysolocup/noscord.js/wiki/Commands.optionType()) optionType() | |
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki) </h1>

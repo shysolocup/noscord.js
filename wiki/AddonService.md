@@ -3,7 +3,7 @@
 
 service class for creating addon service classes
 
-if you want to make addons I highly suggest studying [aepl](https://github.com/paishee/aepl)
+if you want to make addons I highly suggest studying [aepl](https://github.com/shysolocup/aepl)
 
 </td><td> 
 
@@ -11,8 +11,8 @@ if you want to make addons I highly suggest studying [aepl](https://github.com/p
 
 </td><td>
 
-- [src / Services / AddonService](https://github.com/paishee/noscord.js/tree/main/src/Services/AddonService)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / AddonService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/AddonService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -64,15 +64,15 @@ client.import("ex");
 <tr><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/AddonService.create()) create()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AddonService.create()) create()
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Addon) Addon
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Addon) Addon
 </td></tr>
 
 
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

@@ -23,23 +23,23 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.token) token
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.token) token
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.import()) import()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.import()) import()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/AddonService) AddonService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AddonService) AddonService
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Event) Event
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Event) Event
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._base) _base
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._base) _base
 </td></tr>
 
 
@@ -50,23 +50,23 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.user) user
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.user) user
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.login()) login()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.login()) login()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/AttachmentService) AttachmentService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/AttachmentService) AttachmentService
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Embed) Embed
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Embed) Embed
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._handler) _handler
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._handler) _handler
 </td></tr>
 
 
@@ -76,23 +76,23 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.events) events
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.events) events
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.logout()) logout()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.logout()) logout()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/ChannelService) ChannelService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ChannelService) ChannelService
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Button) Button
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Button) Button
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._baseEvents) _baseEvents
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._baseEvents) _baseEvents
 </td></tr>
 
 
@@ -102,23 +102,23 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.services) services
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.services) services
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.restart()) restart()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.restart()) restart()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/CommandService) CommandService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/CommandService) CommandService
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Selection) Selection
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Selection) Selection
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._basePerms) _basePerms
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._basePerms) _basePerms
 </td></tr>
 
 
@@ -128,23 +128,23 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.spreads) spreads
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.spreads) spreads
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.on()) on()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.on()) on()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/ComponentService) ComponentService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ComponentService) ComponentService
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Row) Row
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Row) Row
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._staticEvents) _staticEvents
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._staticEvents) _staticEvents
 </td></tr>
 
 
@@ -154,23 +154,23 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.slashCommands) slashCommands
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.slashCommands) slashCommands
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.off()) off()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.off()) off()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/ErrorService) ErrorService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ErrorService) ErrorService
 </td><td>
 
 [comment]: <> (Class)
-[🛈](https://github.com/paishee/noscord.js/wiki/Blank) Blank
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Blank) Blank
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._customPerms) _customPerms
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._customPerms) _customPerms
 </td></tr>
 
 
@@ -180,22 +180,22 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.prefixCommands) prefixCommands
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.prefixCommands) prefixCommands
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.onPress()) onPress()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.onPress()) onPress()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/EventService) EventService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/EventService) EventService
 </td><td>
 
 [comment]: <> (Class)
 </td><td>
 
 [comment]: <> (Internal)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client._instances) _instances
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client._instances) _instances
 </td></tr>
 
 
@@ -205,15 +205,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.types) types
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.types) types
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.onSubmit()) onSubmit()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.onSubmit()) onSubmit()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/ExpressionService) ExpressionService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/ExpressionService) ExpressionService
 </td><td>
 
 [comment]: <> (Class)
@@ -229,15 +229,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.users) users/members
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.users) users/members
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.onSlash()) onSlash()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.onSlash()) onSlash()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/GuildService) GuildService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/GuildService) GuildService
 </td><td>
 
 [comment]: <> (Class)
@@ -253,15 +253,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.commands) commands/comm/com
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.commands) commands/comm/com
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.onPrefix()) onPrefix()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.onPrefix()) onPrefix()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/LogService) LogService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/LogService) LogService
 </td><td>
 
 [comment]: <> (Class)
@@ -277,15 +277,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.guilds) guilds
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.guilds) guilds
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.slashCommand()) slashCommand()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.slashCommand()) slashCommand()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/MessageService) MessageService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/MessageService) MessageService
 </td><td>
 
 [comment]: <> (Class)
@@ -301,15 +301,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.roles) roles
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.roles) roles
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.prefixCommand()) prefixCommand()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.prefixCommand()) prefixCommand()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/PermissionService) PermissionService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/PermissionService) PermissionService
 </td><td>
 
 [comment]: <> (Class)
@@ -325,15 +325,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.errors) errors/err
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.errors) errors/err
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.spread()) spread()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.spread()) spread()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/RoleService) RoleService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/RoleService) RoleService
 </td><td>
 
 [comment]: <> (Class)
@@ -349,16 +349,16 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.channels) channels
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.channels) channels
 </td><td>
 
 [comment]: <> (Method)
 
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.setMax()) setMax()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.setMax()) setMax()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/StorageService) StorageService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/StorageService) StorageService
 </td><td>
 
 [comment]: <> (Class)
@@ -374,15 +374,15 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.util) util/app
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.util) util/app
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.store()) store()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.store()) store()
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/TypeService) TypeService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/TypeService) TypeService
 </td><td>
 
 [comment]: <> (Class)
@@ -398,14 +398,14 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.attachments) attachments/att
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.attachments) attachments/att
 </td><td>
 
 [comment]: <> (Method)
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/UserService) UserService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UserService) UserService
 </td><td>
 
 [comment]: <> (Class)
@@ -421,14 +421,14 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.components) components/comp
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.components) components/comp
 </td><td>
 
 [comment]: <> (Method)
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/UtilService) UtilService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/UtilService) UtilService
 </td><td>
 
 [comment]: <> (Class)
@@ -444,14 +444,14 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.expressions) expressions/exp
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.expressions) expressions/exp
 </td><td>
 
 [comment]: <> (Method)
 </td><td>
 
 [comment]: <> (Service)
-[🛈](https://github.com/paishee/noscord.js/wiki/VoiceService) VoiceService
+[🛈](https://github.com/shysolocup/noscord.js/wiki/VoiceService) VoiceService
 </td><td>
 
 [comment]: <> (Class)
@@ -467,7 +467,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.messages) messages/msg
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.messages) messages/msg
 </td><td>
 
 [comment]: <> (Method)
@@ -489,7 +489,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.permissions) permissions/perms
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.permissions) permissions/perms
 </td><td>
 
 [comment]: <> (Method)
@@ -511,7 +511,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.voice) voice
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.voice) voice
 </td><td>
 
 [comment]: <> (Method)
@@ -533,7 +533,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.logs) logs
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.logs) logs
 </td><td>
 
 [comment]: <> (Method)
@@ -555,7 +555,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.addons) addons
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.addons) addons
 </td><td>
 
 [comment]: <> (Method)
@@ -577,7 +577,7 @@
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Client.storage) storage/stores
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Client.storage) storage/stores
 </td><td>
 
 [comment]: <> (Method)
@@ -596,4 +596,4 @@
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client) </h1>

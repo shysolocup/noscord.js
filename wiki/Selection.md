@@ -17,16 +17,16 @@ let selection = new Selection({
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/blob/main/src/Services/ComponentService/components/Selection.js)
+### [source](https://github.com/shysolocup/noscord.js/blob/main/src/Services/ComponentService/components/Selection.js)
 
 <br>
 
 | <h3>Parts</h3> |
 | - |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Selection.id) id |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Selection.placeholder) placeholder |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Selection.options) options |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Selection.min) min |
-| [🛈](https://github.com/paigeroid/noscord.js/wiki/Components.Selection.max) max |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Selection.id) id |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Selection.placeholder) placeholder |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Selection.options) options |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Selection.min) min |
+| [🛈](https://github.com/shysolocup/noscord.js/wiki/Components.Selection.max) max |
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Components) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Components) </h1>

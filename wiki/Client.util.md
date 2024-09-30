@@ -1,9 +1,9 @@
 <table>
 <tr><td>
 
-the client's utility parts accessed through the [UtilService](https://github.com/paishee/noscord.js/wiki/UtilService) 
+the client's utility parts accessed through the [UtilService](https://github.com/shysolocup/noscord.js/wiki/UtilService) 
 
-alternatively you could use [Client.import()](https://github.com/paishee/noscord.js/wiki/Client.import()) like this:
+alternatively you could use [Client.import()](https://github.com/shysolocup/noscord.js/wiki/Client.import()) like this:
 <table>
 
 <tr><td> JS </td></tr>
@@ -20,15 +20,15 @@ client.import("util");
 
 </td><td> 
 
-[`UtilServiceInstance`](https://github.com/paishee/noscord.js/wiki/UtilService)
+[`UtilServiceInstance`](https://github.com/shysolocup/noscord.js/wiki/UtilService)
 
 </td><td>
 
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
-- [src / Services / UtilService](https://github.com/paishee/noscord.js/tree/main/src/Services/UtilService)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / UtilService](https://github.com/shysolocup/noscord.js/tree/main/src/Services/UtilService)
 
 </td></tr>
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>

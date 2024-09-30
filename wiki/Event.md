@@ -3,7 +3,7 @@
 
 class for blank events
 
-events are stored in [Client.events](https://github.com/paishee/noscord.js/wiki/Client.events)
+events are stored in [Client.events](https://github.com/shysolocup/noscord.js/wiki/Client.events)
 
 <br>
 </td><td> 
@@ -12,8 +12,8 @@ events are stored in [Client.events](https://github.com/paishee/noscord.js/wiki/
 
 </td><td>
 
-- [src / Services / EventService / Event.js ](https://github.com/paishee/noscord.js/tree/main/src/Services/EventService/Event.js)
-- [src / Client / index.js](https://github.com/paishee/noscord.js/blob/main/src/Client/index.js)
+- [src / Services / EventService / Event.js ](https://github.com/shysolocup/noscord.js/tree/main/src/Services/EventService/Event.js)
+- [src / Client / index.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/index.js)
 
 </td></tr>
 
@@ -56,11 +56,11 @@ event.fire(1, 2);
 <tr><td>
 
 [comment]: <> (Property)
-[🛈](https://github.com/paishee/noscord.js/wiki/Event.listeners) listeners
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Event.listeners) listeners
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Event.listen()) listen()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Event.listen()) listen()
 </td></tr>
 
 
@@ -73,11 +73,11 @@ event.fire(1, 2);
 </td><td>
 
 [comment]: <> (Method)
-[🛈](https://github.com/paishee/noscord.js/wiki/Event.fire()) fire()
+[🛈](https://github.com/shysolocup/noscord.js/wiki/Event.fire()) fire()
 </td></tr>
 
 
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/EventService) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/EventService) </h1>

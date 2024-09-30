@@ -9,6 +9,6 @@ commands.create("ping", "replies with pong", (ctx) => {
 });
 ```
 
-### [source](https://github.com/paigeroid/noscord.js/tree/main/src/Services/CommandService)
+### [source](https://github.com/shysolocup/noscord.js/tree/main/src/Services/CommandService)
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Guides) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Guides) </h1>

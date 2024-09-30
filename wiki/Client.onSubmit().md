@@ -28,7 +28,7 @@ client.onSubmit("my_selection", async (ctx) => {
 
 </td><td>
 
-- [src / Client / custard / onSubmit.js](https://github.com/paishee/noscord.js/blob/main/src/Client/custard/onSubmit.js)
+- [src / Client / custard / onSubmit.js](https://github.com/shysolocup/noscord.js/blob/main/src/Client/custard/onSubmit.js)
 
 </td></tr>
 
@@ -53,4 +53,4 @@ client.onSubmit("my_selection", async (ctx) => {
 
 </table>
 
-<br> <h1> [🢀 Back](https://github.com/paigeroid/noscord.js/wiki/Client-Elements) </h1>
+<br> <h1> [🢀 Back](https://github.com/shysolocup/noscord.js/wiki/Client-Elements) </h1>
