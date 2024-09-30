@@ -1,6 +1,6 @@
 {
     "name": "noscord.js",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "author": "shysolocup",
     "description": "A customized Discord API wrapper for Node.JS that lets you access much of the Discord.JS API from the client using an importing system as well as services and parenting systems similar to Roblox Studio.",
     "repository": {
