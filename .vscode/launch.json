@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/tests/bulkwiki/index.js"
+            "program": "${workspaceFolder}/tests/bulkwiki.js"
         }
     ]
 }
