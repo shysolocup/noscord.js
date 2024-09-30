@@ -1,0 +1,18 @@
+<table>
+<tr><td>
+
+string snowflake id for the parent category if it exists<br>
+
+</td><td> 
+
+`String`
+
+</td><td>
+
+- [src / Services/ TypeService / types / BaseChannel / custard / apply.js](https://github.com/paishee/noscord.js/blob/main/src/Services/TypeService/types/BaseChannel/custard/apply.js)
+
+</td></tr>
+
+</table>
+
+<br> <h1> [🢀 Back](https://github.com/paishee/noscord.js/wiki/BaseChannel-Elements) </h1>
