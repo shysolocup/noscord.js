@@ -23,7 +23,7 @@ client.prefixCommand("test", (ctx) => {
     if (emoji) {
         let embed = new comp.Embed({
             body: `# ${emoji[1]}`,
-            footer: `of ${emojis.length}\ other in query`,
+            footer: `of ${emojis.length}\ other in query | latency: ${ctx.latency}ms`,
             color: util.colors.blurple
         });
 
