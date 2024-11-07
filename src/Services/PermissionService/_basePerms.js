@@ -1,18 +1,25 @@
 import('node-fetch');
-const { Noodle } = require('stews');
+const { Soup } = require('stews');
 
 
 module.exports = (async () => {
-    let thing = await fetch("https://github.com/discordjs/discord-api-types/blob/main/payloads/common.ts");
-    let result = await thing.json();
+    let thing = await fetch("https://raw.githubusercontent.com/discordjs/discord-api-types/refs/heads/main/payloads/common.ts");
 
-    let stuff = Noodle.from(result.payload.blob.rawLines.join("\n"));
-    let index0 = stuff.indexOf("PermissionFlagsBits");
-    let index1 = stuff.indexOf("as const;");
-    
-    stuff.scoop( (v, i) => {
-        return i < index0 || i >= index1;
+    let buffer = (await thing.body.getReader().read()).value.buffer;
+	let result = Buffer.from(buffer).toString();
+
+    let stuff = Soup.from(result.split("\n"));
+
+    let lines = stuff.filter( (l, i) => {
+        return l.includes("1n <<");
+    });
+
+    lines = lines.map( (l, i) => {
+        let rep = l.replace("1n <<", "");
+        let sub = ((rep.substring(0, rep.length - 4)).trim()).replace(":", "");
+        return sub;
     });
     
-    return eval(stuff.toString());
+    
+    return lines
 })();

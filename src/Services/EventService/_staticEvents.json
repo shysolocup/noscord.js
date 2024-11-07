@@ -1,3 +1,6 @@
 [
-    ["cooldown", "onCooldown"]
+    ["cooldown", "onCooldown"],
+    ["audioPlayed", "voicePlayed"],
+    ["audioPaused", "voicePaused"],
+    ["audioStopped", "voiceStopped"]
 ]

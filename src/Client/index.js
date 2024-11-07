@@ -45,6 +45,8 @@ class NosClient {
 		this.prefix = settings.prefix;
 		this.application = undefined;
 
+		this.alive = false;
+
 
 		/* fix intents */
 		if (!settings.intents) settings.intents = intentPresets.default;
@@ -112,6 +114,7 @@ class NosClient {
 			storage: new this.StorageService
 		});
 
+
 		this.services.app = this.services.util;
 		this.services.com = this.services.commands;
 		this.services.comm = this.services.commands;
@@ -145,6 +148,10 @@ class NosClient {
             require(`./custard/${file}`);
         });
 
+
+		// built in event priorities
+		this._eventPriorities = require('../Services/EventService/_eventPriorities.json');
+
 		
 		// need to be awaited
 		this._baseEvents = require('../Services/EventService/_baseEvents.js');
@@ -170,7 +177,9 @@ class NosClient {
 		
 
 		/* registering slash commands */
-		this._base.on("ready", async (ctx) => {
+		this._base.onPriority(1, "ready", async (ctx) => {
+
+			this.alive = true;
 
 			
 			// setup
@@ -232,6 +241,8 @@ class NosClient {
 					}
 				});
 			}
+
+			this.services.util.emojis = await this.services.util.emojis;
 		});
 
 

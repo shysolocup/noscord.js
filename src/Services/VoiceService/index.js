@@ -1,7 +1,18 @@
 const { Client } = require('../../Client');
 const fs = require('fs');
+const { Soup } = require('stews');
 
-Client.newC("VoiceService");
+
+Client.newC("VoiceService", {
+    players: new Soup(),
+    
+    playing: new Soup(),
+    paused: new Soup(),
+
+    playing: false,
+    paused: true,
+});
+
 
 module.exports = VoiceService;
 
