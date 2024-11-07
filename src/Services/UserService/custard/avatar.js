@@ -5,7 +5,8 @@ UserService.newF("avatar", async function(user, settings={}) {
     const client = this.parent;
     client.import({ att: "attachments" }, "util");
 
-    let avatarUrl = ((user.raw) ? user.raw : user) .displayAvatarURL(settings.dynamic);
+    let raw = ((user.raw) ? user.raw : user)
+    let avatarUrl = raw.displayAvatarURL(settings.dynamic);
 
     if (!settings.name) settings.name = util.genCode(9);
 

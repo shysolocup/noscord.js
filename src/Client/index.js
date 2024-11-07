@@ -33,8 +33,8 @@ let intentPresets = {
 	messages: 46593,
 	emojis: 42505,
 	voice: 46729
-
 }
+
 
 
 class NosClient {

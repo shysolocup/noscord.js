@@ -1,6 +1,6 @@
 {
     "name": "noscord.js",
-    "version": "0.1.7",
+    "version": "0.2.0",
     "author": "shysolocup",
     "description": "A customized Discord API wrapper for Node.JS that lets you access much of the Discord.JS API from the client using an importing system as well as services and parenting systems similar to Roblox Studio.",
     "repository": {
@@ -10,17 +10,13 @@
     "bugs": {
         "url": "https://github.com/shysolocup/noscord.js/issues"
     },
-    "license": {
-        "type": "MIT",
-        "url": "https://github.com/shysolocup/noscord.js/blob/main/LICENSE"
-    },
+    "license": "MIT",
     "dependencies": {
         "@discordjs/voice": "latest",
         "@napi-rs/canvas": "latest",
         "aepl": "latest",
         "deasync": "latest",
         "discord.js": "latest",
-        "emoji.json": "latest",
         "node-fetch": "latest",
         "pender": "latest",
         "stews": "latest"

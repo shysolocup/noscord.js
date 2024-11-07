@@ -1,5 +1,6 @@
 [
     "default",
     "elevated",
-    "internal"
+    "internal",
+    "init"
 ]

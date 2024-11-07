@@ -15,7 +15,7 @@ Client.newClass("EventListener", class {
             this.event.listeners.set(this.priority, new Soup(Array));
         }
 
-        this.event.listeners[this.priority].push(this);
+        this.event.listeners.get(this.priority).push(this);
     }
 })
 

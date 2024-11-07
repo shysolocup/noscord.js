@@ -9,7 +9,7 @@ let list = (async () => {
 	
 	let result = await emojis.json();
 
-	return result
+	return Soup.from(result)
 })();
 
 

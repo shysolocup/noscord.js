@@ -5,6 +5,7 @@ const { token } = require('./config.json');
 const client = new Client({
     "prefix": "."
 });
+
 client.import("util");
 
 
@@ -13,17 +14,10 @@ client.on("ready", (ctx) => {
 });
 
 
-client.onPriority(0, 'messageCreate', (ctx) => {
-    console.log('a');
-})
-
-client.onPriority(1, 'messageCreate', (ctx) => {
-    console.log('b');
-});
-
-
 client.prefixCommand("test", (ctx) => {
-    ctx.reply('a');
+    let emoji = util.emojis.random.choice();
+
+    ctx.reply(emoji[1]);
 })
 
 
