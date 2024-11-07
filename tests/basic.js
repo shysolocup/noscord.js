@@ -2,7 +2,9 @@ const { main } = require('../package.json');
 const { Client } = require(`../${main}`);
 const { token } = require('./config.json');
 
-const client = new Client();
+const client = new Client({
+    "prefix": "."
+});
 client.import("util");
 
 
@@ -17,6 +19,11 @@ client.onPriority(0, 'messageCreate', (ctx) => {
 
 client.onPriority(1, 'messageCreate', (ctx) => {
     console.log('b');
+});
+
+
+client.prefixCommand("test", (ctx) => {
+    ctx.reply('a');
 })
 
 
