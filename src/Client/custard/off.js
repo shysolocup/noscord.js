@@ -1,23 +1,23 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("off", function(event, func) {
+Client.newF("off", function(event, listener) {
 	if (event instanceof Array) event.forEach( ev => {
 		if (this.events.includes(ev)) {
-    		this.events.get(ev).listeners.remove(func);
+    		this.events.get(ev).unlisten(listener);
 		}
 		else {
-			this._base.off(ev, func);
+			this._base.off(ev, listener);
 		}
 	});
 	else {
 		if (this.events.includes(event)) {
-	    		this.events.get(event).listeners.remove(func);
+			this.events.get(event).unlisten(listener);
 		}
 		else {
-			this._base.off(event, func);
+			this._base.off(event, listener);
 		}
 	}
 
-	return func;
+	return listener;
 });

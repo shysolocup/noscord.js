@@ -177,14 +177,18 @@ class NosClient {
 		
 
 		/* registering slash commands */
-		this._base.onPriority(1, "ready", async (ctx) => {
+		this._base.on("ready", async (ctx) => {
 
 			this.alive = true;
+			this.services.util.emojis.then( em => this.services.util.emojis = em );
 
 			
 			// setup
 			let token = this.token;
-			this.user = ctx.user;
+
+			this.user = new this.types.User;
+			await this.user.apply(ctx.user)
+
 			this.application = ctx.application;
 
 
@@ -241,8 +245,6 @@ class NosClient {
 					}
 				});
 			}
-
-			this.services.util.emojis = await this.services.util.emojis;
 		});
 
 

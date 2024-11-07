@@ -3,40 +3,55 @@ const { Soup } = require('stews');
 
 
 Client.newClass("EventListener", class {
-    constructor(event, callback, priority=3) {
-        this.callback = callback
+    constructor(event, callback, priority=0) {
+        this.callback = callback;
         this.event = event;
-        this.priority = (priority instanceof String) 
+
+        this.priority = (typeof priority == "string") 
             ? this.parent._eventPriorities.indexOf(priority.toLowerCase()) 
             : priority;
+
+        if (!this.event.listeners[this.priority]) {
+            this.event.listeners.set(this.priority, new Soup(Array));
+        }
+
+        this.event.listeners[this.priority].push(this);
     }
 })
 
 
 Client.newClass("Event", class {
     constructor() {
-        this.client = this.parent;
-        this.listeners = new Soup(Object);
+        this.listeners = new Soup(Array);
+    }
+
+
+    // unlisten
+    unlisten(listener) {
+        this.listeners.forEach( (l, p) => l.forEach( (lst, i) => {
+            if (lst == listener || lst.callback == listener) {
+                lst.remove(i);
+            }
+        }));
     }
 
     
     // listener
     listen(callback, priority) {
-        let listener = new this.client.EventListener(this, callback)
-
-        if (!this.listeners[listener.priority]) {
-            this.listeners[listener.priority] = new Soup(Array);
-        }
-
-        this.listeners[listener.priority].push(listener);
+        let listener = new this.parent.EventListener(this, callback, priority);
+        return listener;
     }
 
     
     // firing
     fire(...args) {
-        this.listeners.forEach( async (p, l) => l.forEach( async (lst) => {
-            await lst.callback(...args);
-        }));
+        let listeners = this.listeners.sort().reverse()
+
+        listeners.forEach( (l, p) => {
+            l.forEach( async (lst) => {
+                await lst.callback(...args);
+            });
+        });
     }
 });
 

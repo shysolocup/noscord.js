@@ -1,27 +1,27 @@
 const { Client } = require('../index.js');
 
 
-Client.newF("on", function(event, func) {
+Client.newF("on", function(event, callback, priority) {
 	if (event instanceof Array) {
 		event.forEach( (e) => {
 			if (this.events.has(e)) {
-				this.events.get(e).listen(func);
+				return this.events.get(e).listen(callback, priority);
 			}
 
 			else {
-				this._base.on(e, func);
+				return this._base.on(e, callback);
 			}
 		})
 	}
 	else {
 		if (this.events.has(event)) {
-			this.events.get(event).listen(func);
+			return this.events.get(event).listen(callback, priority);
 		}
 
 		else {
-			this._base.on(event, func);
+			return this._base.on(event, callback);
 		}
 	}
 
-	return func;
+	return callback;
 });

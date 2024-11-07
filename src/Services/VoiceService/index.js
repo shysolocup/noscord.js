@@ -5,6 +5,8 @@ const { Soup } = require('stews');
 
 Client.newC("VoiceService", {
     players: new Soup(),
+    sounds: new Soup(),
+    audiocache: new Soup(),
     
     playing: new Soup(),
     paused: new Soup(),
@@ -12,6 +14,11 @@ Client.newC("VoiceService", {
     playing: false,
     paused: true,
 });
+
+
+VoiceService.newP("Sound", function() {
+    return this.parent.types.Sound;
+})
 
 
 module.exports = VoiceService;
