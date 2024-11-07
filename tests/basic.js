@@ -6,7 +6,7 @@ const client = new Client({
     "prefix": "."
 });
 
-client.import("util");
+client.import("util", "comp");
 
 
 client.on("ready", (ctx) => {
@@ -15,9 +15,25 @@ client.on("ready", (ctx) => {
 
 
 client.prefixCommand("test", (ctx) => {
-    let emoji = util.emojis.random.choice();
+    let query = ctx.args.join("_");
+    let emojis = ctx.args.length > 0 ? (util.emojis.filter( n => n.includes(query))) : util.emojis
 
-    ctx.reply(emoji[1]);
+    let emoji = emojis.random.choice();
+
+    if (emoji) {
+        let embed = new comp.Embed({
+            body: `# ${emoji[1]}`,
+            footer: `of ${emojis.length}\ other in query`,
+            color: util.colors.blurple
+        });
+
+        ctx.reply({
+            embeds: [ embed ]
+        });
+    }
+    else {
+        ctx.reply('no emojis found');
+    }
 })
 
 

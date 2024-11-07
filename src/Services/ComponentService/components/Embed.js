@@ -4,6 +4,10 @@ const ComponentService = require('../index.js');
 ComponentService.newC("Embed", class {
     constructor(data) {
 
+        if (data.body) {
+            data.description = data.body;
+        }
+
         // author
         if (data.author) {
             if (typeof data.author == "string") data.author = { name: data.author };
