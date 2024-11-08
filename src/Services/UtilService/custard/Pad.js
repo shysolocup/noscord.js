@@ -92,4 +92,9 @@ UtilService.newC("Pad", class {
 });
 
 
+UtilService.newF("pad", function (...args) {
+    return new this.Pad(...args);
+});
+
+
 module.exports = Pad;
