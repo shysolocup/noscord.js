@@ -45,4 +45,11 @@ UtilService.newC("Numer", class {
 });
 
 
+
+UtilService.newF("numer", function (...args) {
+    return new this.Numer(...args);
+});
+
+
+
 module.exports = Numer;
