@@ -17,6 +17,9 @@
         "aepl": "latest",
         "deasync": "latest",
         "discord.js": "latest",
+        "ffmpeg": "latest",
+        "ffmpeg-static": "latest",
+        "libsodium-wrappers": "latest",
         "node-fetch": "latest",
         "pender": "latest",
         "stews": "latest"

@@ -3,22 +3,14 @@ const fs = require('fs');
 const { Soup } = require('stews');
 
 
-Client.newC("VoiceService", {
-    players: new Soup(),
-    sounds: new Soup(),
-    audiocache: new Soup(),
+Client.newC("VoiceService", class {
+    players = new Soup(Array)
+    sounds = new Soup(Array)
+    audiocache = new Soup(Array)
     
-    playing: new Soup(),
-    paused: new Soup(),
-
-    playing: false,
-    paused: true,
+    playing = new Soup(Array)
+    paused = new Soup(Array)
 });
-
-
-VoiceService.newP("Sound", function() {
-    return this.parent.types.Sound;
-})
 
 
 module.exports = VoiceService;

@@ -111,7 +111,7 @@ class NosClient {
 			voice: new this.VoiceService,
 			logs: new this.LogService,
 			addons: new this.AddonService,
-			storage: new this.StorageService
+			storage: new this.StorageService,
 		});
 
 
@@ -174,6 +174,21 @@ class NosClient {
 		
 		// custom permissions
 		this._customPerms = require('../Services/PermissionService/_customPerms.json');
+
+
+		// instance service
+		this.services.instance = {
+			new: async (i, ...args) => {
+				let typ;
+
+				if (typeof i == 'string') typ = this.types[i];
+				else typ = i;
+
+				let inst = new typ;
+				await inst.apply(...args);
+				return inst;
+			}
+		}
 		
 
 		/* registering slash commands */

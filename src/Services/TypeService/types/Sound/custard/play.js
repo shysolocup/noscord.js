@@ -1,17 +1,24 @@
+const djsvoice = require('@discordjs/voice');
 const Sound = require('../index.js');
 
-Sound.newF("play", async function(guild) {
+
+Sound.newF("play", async function(channel) {
+    const client = this.parent.parent;
+    client.import("channels");
+
     this.playing = true;
     this.paused = false;
 
-    let id = (typeof guild == "string") ? guild : guild.id
-    let connection = voice.getVoiceConnection(id);
+    channel = (typeof channel == "string") ? await channels.get(channel) : channel
 
-    player.play(this.audio);    
-    this.voiceservice.playing.push(this);
+    let id = channel.guild.id;
+    let connection = djsvoice.getVoiceConnection(id);
     
     this.connections.push(id, connection);
-    connection.subscribe(channel);
+    connection.subscribe(this.player);
 
-    await self.events.played.fire(this, channels);
+    this.player.play(this.audio);
+    this.voiceservice.playing.push(this);
+
+    await this.events.played.fire(this, channel);
 });

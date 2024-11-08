@@ -15,7 +15,14 @@ const djsvoice = require('@discordjs/voice');
 */
 
 
-Sound.newF("apply", async function(audio, settings) {
+const basesettings = {
+	behaviors: {
+		noSubscriber: djsvoice.NoSubscriberBehavior.Pause,
+	},
+}
+
+
+Sound.newF("apply", async function(audio, settings=basesettings) {
     const client = this.parent.parent;
     client.import("voice");
 
@@ -37,6 +44,7 @@ Sound.newF("apply", async function(audio, settings) {
 
 
     this.voiceservice = voice;
+    this.connections = new Soup(Object);
 
 
     this.audio = djsvoice.createAudioResource(audio, settings.metadata);
