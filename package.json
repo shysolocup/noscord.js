@@ -14,6 +14,7 @@
     "dependencies": {
         "@discordjs/voice": "latest",
         "@napi-rs/canvas": "latest",
+        "@napi-rs/image": "latest",
         "aepl": "latest",
         "deasync": "latest",
         "discord.js": "latest",
