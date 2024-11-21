@@ -195,7 +195,7 @@ class NosClient {
 		this._base.on("ready", async (ctx) => {
 
 			this.alive = true;
-			this.services.util.emojis.then( em => this.services.util.emojis = em );
+			// this.services.util.emojis.then( em => this.services.util.emojis = em );
 
 			
 			// setup
