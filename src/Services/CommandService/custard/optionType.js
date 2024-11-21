@@ -25,6 +25,6 @@ CommandService.newF("optionType", function (type) {
 	: ( ["number", "num"].includes(type.toLowerCase()) )
 		? 10
 	: ( ["attachment", "file"].includes(type.toLowerCase()) )
-		? 5
+		? 11
 	: null;
 });
