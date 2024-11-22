@@ -189,6 +189,9 @@ class NosClient {
 				return inst;
 			}
 		}
+
+
+		this.services.types.newF("newInstance", this.services.instance.new);
 		
 
 		/* registering slash commands */
@@ -211,11 +214,10 @@ class NosClient {
 				await s.data(...s.content);
 			});
 
-
 			if (this.slashCommands.length > 0) {
 
 				// registering commands
-				var jsonCommands = this.slashCommands.values.map( (command) => {
+				let jsonCommands = this.slashCommands.values.map( (command) => {
 					let info = command.info.copy()
 					
 					// removing cooldown because it breaks it because it's stupid
@@ -227,11 +229,11 @@ class NosClient {
 
 			
 				this.rest = new REST().setToken(token);
-	
+
 				await this.rest.put(
 					Routes.applicationCommands(this.application.id),
 					{ body: jsonCommands }
-				);
+				)
 
 		
 				/* runs slash commands */
